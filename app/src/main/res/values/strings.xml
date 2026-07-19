@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- 🔹 App -->
+
+    <string name="app_name">Capybara</string>
+
+    <string name="exit_application_quistion">Capybara</string>
+    <string name="exit_application_yes">Yes</string>
+    <string name="exit_application_no">No</string>
+
+</resources>

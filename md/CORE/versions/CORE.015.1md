@@ -1,0 +1,475 @@
+# CORE
+
+## Version
+
+0.15
+
+---
+
+# 🎯 Project Identity
+
+Intuition is a:
+
+```text
+supportable deterministic cognitive training product
+```
+
+built around:
+
+* explicit ownership
+* bounded contexts
+* deterministic gameplay runtime
+* explainable analytics
+* deployment-oriented architecture
+
+The project intentionally prioritizes:
+
+```text
+supportability over theoretical elegance
+```
+
+and:
+
+```text
+explicit ownership over generalized abstraction
+```
+
+---
+
+# 🧠 Core Philosophy
+
+The system is designed around:
+
+```text
+small explicit bounded systems
+```
+
+instead of:
+
+```text
+implicit orchestration frameworks
+```
+
+The architecture intentionally avoids:
+
+* hidden lifecycle coordination
+* generalized runtime engines
+* adaptive orchestration graphs
+* mega-context environments
+* cross-cutting runtime ownership
+
+---
+
+# 🧩 Bounded Contexts
+
+## Gameplay
+
+Responsible for:
+
+* deterministic runtime
+* reducer lifecycle
+* round generation
+* gameplay semantics
+* session progression
+
+Gameplay does NOT own:
+
+* persistence orchestration
+* analytics
+* renderer infrastructure
+* profile lifecycle
+* telemetry
+
+---
+
+## Statistics
+
+Responsible for:
+
+* observational analytics
+* reconstruction-based insights
+* transforms
+* trend analysis
+* selection-driven exploration
+
+Statistics are:
+
+```text
+read-only observational systems
+```
+
+Statistics MUST NOT:
+
+* influence gameplay runtime
+* affect reducers
+* inject adaptive difficulty
+* mutate gameplay lifecycle
+
+---
+
+## Profile
+
+Responsible for:
+
+* identity
+* profile persistence
+* active profile runtime state
+* parent/child structure
+* PIN security
+* recovery state
+
+Profile subsystem is intentionally separated into:
+
+| Responsibility               | Owner              |
+| ---------------------------- | ------------------ |
+| profile persistence          | ProfileRepository  |
+| runtime active profile state | ProfileManager     |
+| runtime synchronization      | ProfileRuntime     |
+| bootstrap lifecycle          | ProfileInitializer |
+| UI lifecycle                 | ProfileViewModel   |
+
+The profile subsystem intentionally avoids:
+
+* orchestration responsibilities
+* application-wide coordination
+* telemetry ownership
+* capability orchestration
+* generalized identity runtime
+
+---
+
+## Rendering
+
+Responsible for:
+
+* visual projection
+* renderer semantics
+* resource interpretation
+* notebook ownership
+* stimulus presentation
+
+Rendering does NOT own:
+
+* gameplay semantics
+* analytics
+* profile state
+* lifecycle coordination
+
+---
+
+## Markdown Explainability
+
+Responsible for:
+
+* help content
+* localized explanations
+* markdown dialogs
+* semantic illustrations
+
+Markdown subsystem is:
+
+```text
+passive and declarative
+```
+
+It is NOT:
+
+* runtime orchestration
+* feature coordination
+* gameplay logic
+
+---
+
+# 🔄 Runtime Philosophy
+
+The runtime architecture is:
+
+```text
+reducer-first
+```
+
+Gameplay lifecycle must remain:
+
+* deterministic
+* explicit
+* bounded
+* traceable
+* supportable
+
+The project intentionally avoids:
+
+* orchestration engines
+* generalized transition systems
+* implicit runtime graphs
+* distributed lifecycle ownership
+
+---
+
+# 🧱 Persistence Philosophy
+
+Persistence layers are intentionally:
+
+```text
+boring bounded adapters
+```
+
+Repositories SHOULD:
+
+* persist validated data
+* expose storage queries
+* remain runtime-agnostic
+
+Repositories MUST NOT:
+
+* orchestrate runtime lifecycle
+* mutate gameplay state
+* coordinate subsystems
+* own telemetry
+* perform hidden synchronization
+
+Runtime synchronization must remain:
+
+```text
+explicit
+```
+
+and visible in:
+
+* bootstrap layers
+* runtime boundaries
+* UI lifecycle owners
+
+---
+
+# 🚀 Bootstrap Philosophy
+
+Application bootstrap must remain:
+
+* explicit
+* deterministic
+* bounded
+* sequentially understandable
+
+Bootstrap layers are responsible for:
+
+* persistence initialization
+* runtime restoration
+* explicit synchronization
+
+Bootstrap layers are NOT:
+
+* orchestration engines
+* generalized lifecycle coordinators
+
+---
+
+# 🔒 Security Philosophy
+
+Security systems are isolated bounded contexts.
+
+They are responsible for:
+
+* PIN hashing
+* recovery state
+* failed attempt tracking
+* parent profile protection
+
+Security systems MUST remain isolated from:
+
+* gameplay runtime
+* analytics
+* renderer infrastructure
+
+---
+
+# 📊 Analytics Philosophy
+
+Analytics are reconstruction-based.
+
+The project intentionally prefers:
+
+```text
+derive insights from persisted runtime records
+```
+
+instead of:
+
+```text
+opaque cached aggregate systems
+```
+
+This improves:
+
+* explainability
+* determinism
+* supportability
+* auditability
+
+---
+
+# ⚠️ Explicitly Avoided Directions
+
+The project intentionally freezes or avoids:
+
+* orchestration runtime frameworks
+* generalized process engines
+* adaptive gameplay AI
+* opaque scoring systems
+* universal lifecycle coordinators
+* implicit subsystem synchronization
+* mega-context environments
+
+These directions are considered high-risk for:
+
+* ownership erosion
+* lifecycle coupling
+* supportability collapse
+* debugging paralysis
+* implicit relationship explosion
+
+---
+
+# 🧠 Architectural Risk Awareness
+
+The project continuously monitors risks of:
+
+## Ownership Erosion
+
+When subsystems begin to:
+
+```text
+know a little about everything
+```
+
+---
+
+## Implicit Relationship Explosion
+
+Especially dangerous in:
+
+* capability systems
+* orchestration remnants
+* profile lifecycle
+* telemetry integration
+* adaptive runtime systems
+
+---
+
+## Lifecycle Coupling
+
+When:
+
+* UI
+* telemetry
+* analytics
+* persistence
+
+begin influencing gameplay runtime semantics.
+
+---
+
+## Mega-Context Growth
+
+Especially dangerous for:
+
+* AppContainer
+* environment systems
+* profile runtime
+* capability infrastructure
+
+---
+
+# 🎯 Product Direction
+
+The project is intentionally transitioning from:
+
+```text
+experimental architecture playground
+```
+
+toward:
+
+```text
+supportable long-term product
+```
+
+The architectural priority is now:
+
+* bounded ownership
+* deterministic lifecycle
+* deployment safety
+* supportability
+* explainability
+* maintainability
+
+instead of:
+
+* maximal abstraction
+* theoretical generalization
+* framework experimentation
+
+---
+
+# ✅ Core Architectural Principles
+
+## Explicit ownership
+
+Every subsystem must have:
+
+* clear boundaries
+* clear lifecycle ownership
+* clear responsibilities
+
+---
+
+## Explicit synchronization
+
+Runtime synchronization must remain:
+
+```text
+visible and intentional
+```
+
+not hidden inside repositories or infrastructure.
+
+---
+
+## Deterministic runtime
+
+Gameplay semantics must remain:
+
+* reproducible
+* traceable
+* bounded
+* testable
+
+---
+
+## Supportability-first architecture
+
+Architectural decisions are evaluated primarily by:
+
+* debuggability
+* maintainability
+* bounded complexity
+* lifecycle clarity
+* operational supportability
+
+---
+
+# 📌 Strategic Position
+
+Version 0.15 represents the transition point where the project:
+
+stops optimizing for:
+
+```text
+architectural experimentation
+```
+
+and begins optimizing for:
+
+```text
+long-term supportable evolution
+```
+

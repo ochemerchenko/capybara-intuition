@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "code": "AFTER"
+  },
+  {
+    "id": 2,
+    "code": "BEFORE"
+  },
+  {
+    "id": 3,
+    "code": "HYBRID"
+  }
+]

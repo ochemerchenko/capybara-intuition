@@ -1,0 +1,243 @@
+# MEGA (CLEANED)
+
+## Profile Operational Semantics
+
+### Child Profile Ownership
+
+Child profiles belong to a parent operational profile.
+
+Child profiles:
+
+* inherit operational environment,
+* do not own monetization,
+* do not own publication identity,
+* may own gameplay observations,
+* may own independent gameplay statistics.
+
+Parent profile remains operationally authoritative for:
+
+* access control,
+* capability availability,
+* profile lifecycle management.
+
+---
+
+## Profile Recovery Semantics
+
+PIN recovery remains intentionally bounded.
+
+The system intentionally avoids:
+
+* remote identity recovery,
+* cloud identity reconstruction,
+* external authentication dependencies.
+
+Recovery flows are operational rather than security-critical.
+
+---
+
+## Gameplay Observation Semantics
+
+Gameplay observations are reconstructive rather than interpretive.
+
+Observed gameplay data should remain sufficient for:
+
+* statistics reconstruction,
+* telemetry export,
+* historical replay support,
+* Firebase analytics export,
+* gameplay sequence reconstruction.
+
+The system intentionally preserves raw observational fidelity.
+
+---
+
+## Firebase Export Semantics
+
+Firebase export acts as external observational projection.
+
+Firebase payloads should preserve:
+
+* gameplay context,
+* topology metadata,
+* renderer metadata,
+* mode metadata,
+* session linkage,
+* round linkage,
+* profile linkage,
+* timestamps.
+
+Firebase export must remain append-oriented.
+
+Export infrastructure must avoid reinterpretation of historical observations.
+
+---
+
+## Renderer Compatibility Semantics
+
+Topology/render compatibility remains explicit.
+
+A topology may support:
+
+* one renderer,
+* multiple compatible renderers,
+* renderer family constraints.
+
+Renderer compatibility metadata may participate in:
+
+* export schemas,
+* telemetry payloads,
+* reconstruction support,
+* compatibility validation.
+
+Renderer compatibility does not alter gameplay semantics.
+
+---
+
+## Statistics Reconstruction Semantics
+
+Statistics are reconstructive.
+
+Statistics should be derivable from:
+
+* persisted gameplay observations,
+* topology metadata,
+* gameplay metadata,
+* timestamps,
+* renderer metadata when required for reconstruction compatibility.
+
+Statistics infrastructure must avoid mutation of historical observations.
+
+---
+
+## Graph Semantics
+
+Graphs represent observational projections rather than authoritative gameplay structures.
+
+Graphs may include:
+
+* density projections,
+* spline projections,
+* smoothed curves,
+* temporal aggregations,
+* gameplay distributions.
+
+Graphs intentionally prioritize readability over raw-point rendering fidelity.
+
+---
+
+## Spline / Projection Experiments
+
+Spline rendering experiments remain implementation-level concerns.
+
+Spline smoothing:
+
+* may evolve,
+* may be replaced,
+* does not alter gameplay observations,
+* does not alter persisted historical truth.
+
+Projection infrastructure remains replaceable.
+
+---
+
+## Resource Semantics
+
+Resources remain self-describing gameplay artifacts.
+
+Resources may contain:
+
+* resource type metadata,
+* renderer compatibility metadata,
+* ownership metadata,
+* projection metadata.
+
+Resource rendering remains renderer-dependent.
+
+---
+
+## Telemetry Field Semantics
+
+Telemetry payloads should preserve:
+
+* operational context,
+* gameplay context,
+* topology metadata,
+* renderer metadata,
+* timestamps,
+* gameplay linkage identifiers.
+
+Telemetry payloads should remain reconstruction-capable.
+
+---
+
+## Localization Constraints
+
+Localization completeness remains operationally important.
+
+Production publication requires:
+
+* Ukrainian localization completeness,
+* English localization completeness.
+
+Localization gaps should be treated as publication blockers.
+
+---
+
+## Publication Constraints
+
+The project intentionally maintains bounded production scope.
+
+Production scope currently includes:
+
+* matrix/table topology projection,
+* local statistics,
+* Firebase export,
+* FREE/PREMIUM separation,
+* bounded capability system.
+
+Experimental infrastructure should not leak into production runtime behavior.
+
+---
+
+## Testing Environment Semantics
+
+TESTER operational infrastructure remains isolated from production publication semantics.
+
+TESTER-specific functionality:
+
+* must not leak into production publication flows,
+* must remain operationally isolated,
+* may bypass monetization restrictions inside testing environments.
+
+---
+
+## Export / Reconstruction Principle
+
+The project intentionally preserves sufficient observational fidelity to allow future reconstruction outside the application.
+
+External reconstruction targets may include:
+
+* spreadsheets,
+* telemetry analysis systems,
+* Firebase exports,
+* analytical tooling,
+* future statistics engines.
+
+The architecture intentionally favors observational completeness over aggressive data minimization.
+
+---
+
+## Implementation Residue
+
+The following areas remain intentionally implementation-fluid:
+
+* graph smoothing,
+* chart rendering,
+* renderer internals,
+* telemetry formatting,
+* export formatting,
+* projection infrastructure details.
+
+These areas may evolve without architectural restructuring provided semantic invariants remain preserved.
+

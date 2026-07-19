@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 🔹 Statistics screen -->
+    <string name="statistics_title">To analyze:</string>
+    <string name="statistics_session_activity">Last 30 days sessions</string>
+
+    <!-- 🔹 Modes -->
+    <string name="statistics_all_sessions">All</string>
+    <string name="statistics_mode_before">Before</string>
+    <string name="statistics_mode_after">After</string>
+    <string name="statistics_mode_hybrid">Hybrid</string>
+
+    <!-- 🔹 Detail density card preview headers-->
+    <string name="statistics_detail_card_preview_header">Level %1$d</string>
+
+
+    <!-- 🔹 Density detail screen -->
+    <string name="statistics_density_header">Level %1$d • %2$s</string>
+
+    <!-- 🔹 Insight builder -->
+    <string name="statistics_performance_above_random">You perform above random</string>
+    <string name="statistics_performance_above_random_improved">You perform above random and improving</string>
+    <string name="statistics_performance_above_random_declined">You perform above random and declining</string>
+
+
+    <string name="statistics_performance_below_random">You perform below random</string>
+    <string name="statistics_performance_below_random_improved">You perform below random and improving</string>
+    <string name="statistics_performance_below_random_declined">You perform below random and declining</string>
+
+
+    <string name="statistics_performance_near_random">Your performance is close to random</string>
+    <string name="statistics_performance_near_random_improved">Your performance is close to random and improving</string>
+    <string name="statistics_performance_near_random_declined">Your performance is close to random and declining</string>
+
+
+    <!-- 🔹 Pivot -->
+    <string name="statistics_pivot_level_label">Level</string>
+    <string name="statistics_pivot_mode_label">Mode</string>
+
+    <!-- 🔹 Level mode analysis screen -->
+    <string name="statistics_level_selected">%1$d</string>
+
+
+    <string name="statistics_activity_graph_title">Sessions per Day</string>
+
+    <string name="statistics_decision_time_unit_seconds">s</string>
+    <string name="statistics_decision_time_unit_minutes">min</string>
+    <string name="statistics_decision_time_axis_title">Time, %1$s</string>
+
+    <string name="statistics_decision_time_title">Decision Time</string>
+
+    <string name="statistics_density_axis_title">Average Success Rate, %</string>
+    <string name="statistics_density_full_graph_title">Session Success Rate</string>
+
+    <string name="statistics_markdown_help_close_button">Ok</string>
+
+    <string name="statistics_empty_screen_title">Statistics not yet formed.</string>
+    <string name="statistics_empty_screen_text">Play at least a few rounds to start accumulating stats. After that, graphs of your progress will appear here.</string>
+
+</resources>

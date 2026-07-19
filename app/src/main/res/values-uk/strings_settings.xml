@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 🔹 Settings screen -->
+
+    <!-- 🔹 Mode selector -->
+    <string name="settings_mode_selector_header">Режим тренування</string>
+
+    <string name="settings_mode_after">Ставка після розіграшу</string>
+    <string name="settings_mode_before">Ставка до розіграшу</string>
+    <string name="settings_mode_hybrid">Випадкова ставка</string>
+
+    <!-- 🔹 Level selector -->
+    <string name="settings_level_selector_header">Рівень</string>
+    <string name="settings_level_selector_value">%1$d варіанти</string>
+    <string name="settings_level_selector_up">+</string>
+    <string name="settings_level_selector_down">-</string>
+
+    <string name="settings_profile_section_title">Ігрових профілів: %1$d</string>
+
+
+
+    <string name="settings_training_intensity_selector_title">Інтенсивність тренувань</string>
+    <string name="settings_training_intensity_selector_low">Низька</string>
+    <string name="settings_training_intensity_selector_medium">Середня</string>
+    <string name="settings_training_intensity_selector_high">Висока</string>
+
+    <string name="settings_period_selector_title">Період</string>
+    <string name="settings_period_selector_days">Днів: %1$d</string>
+
+
+
+    <string name="settings_generate_historical_dataset_button">Згенерувати</string>
+    <string name="settings_delete_historical_dataset_button">Видалити</string>
+
+
+    <string name="settings_historical_dataset_title">Генерація історичних даних</string>
+    <string name="settings_historical_dataset_scope">Обмеження</string>
+    <string name="settings_historical_behavior_model">Поведінкова модель</string>
+    <string name="settings_historical_dataset_generated">Дані згенеровано</string>
+    <string name="settings_historical_dataset_generation_failed">Генерація не вдалась</string>
+    <string name="settings_historical_dataset_cleaned">Дані видалено</string>
+    <string name="settings_historical_dataset_cleaning_failed">Не вдалось видалити дані</string>
+
+    <string name="settings_child_profile_create_section_title">Створити профіль дитини</string>
+    <string name="settings_child_profile_create_section_name_label">Ім\'я дитини</string>
+    <string name="settings_child_profile_create_section_button_text">Створити</string>
+
+    <string name="settings_free_human_setup_profile_section_title">Налаштування профілю</string>
+    <string name="settings_free_human_setup_profile_set_player_name">Вкажіть ваше ім\'я</string>
+    <string name="settings_free_human_setup_profile_player_name">Ім\'я</string>
+    <string name="settings_free_human_setup_profile_correct">Коректно</string>
+    <string name="settings_free_human_setup_profile_incorrect">Очикую не менше 3 символів в імені</string>
+    <string name="settings_free_human_setup_profile_continue">Продовжити</string>
+
+    <string name="settings_parent_access_recovery_section_title">Відновлення батьківського доступу</string>
+    <string name="settings_parent_access_recovery_section_your_answer">Ваша відповідь</string>
+    <string name="settings_parent_access_recovery_section_verify">Перевірити</string>
+    <string name="settings_parent_access_recovery_section_new_pin">Новий PIN</string>
+    <string name="settings_parent_access_recovery_section_confirm_pin">Підтвердіть PIN</string>
+    <string name="settings_parent_access_recovery_section_update_pin">Оновити</string>
+
+    <string name="settings_premium_human_profile_setup_title">Налаштування профілю</string>
+    <string name="settings_premium_human_profile_setup_label">Для створення дитячих профайлів налаштуйте ваш профіль</string>
+    <string name="settings_premium_human_profile_setup_name">Ваше ім\'я</string>
+    <string name="settings_premium_human_profile_setup_correct">Коректно</string>
+    <string name="settings_premium_human_profile_setup_incorrect">Очикую не менше 3 символів в імені</string>
+    <string name="settings_premium_human_profile_setup_rename">Optional profile rename</string>
+    <string name="settings_premium_human_profile_setup_pin">PIN</string>
+    <string name="settings_premium_human_profile_setup_pin_incorrect">PIN має містити 4 цифри</string>
+    <string name="settings_premium_human_profile_setup_confirm_pin">Підтвердіть PIN</string>
+    <string name="settings_premium_human_profile_setup_pin_not_matched">Не співпали</string>
+    <string name="settings_premium_human_profile_setup_save">Зберегти</string>
+
+    <string name="settings_profile_list_owner">Власник</string>
+    <string name="settings_profile_list_child">Дитина</string>
+    <string name="settings_profile_list_tester">Тестувальник</string>
+    <string name="settings_profile_list_active">АКТИВНИЙ</string>
+
+    <string name="settings_return_by_pin_section_title">PIN власника</string>
+    <string name="settings_return_by_pin_section_enter_pin">Вкажіть PIN власника, щоб повернутись</string>
+    <string name="settings_return_by_pin_section_enter_pin_label">Вкажіть PIN</string>
+    <string name="settings_return_by_pin_section_confirm">Підтвердіть</string>
+
+    <string name="settings_recovery_pin_previous_year">• минулий рік</string>
+    <string name="settings_recovery_pin_current_year">• поточний рік</string>
+    <string name="settings_recovery_pin_next_year">• наступний рік</string>
+
+    <string name="settings_recovery_pin_previous_month">• минулий місяць</string>
+    <string name="settings_recovery_pin_current_month">• поточний місяць</string>
+    <string name="settings_recovery_pin_next_month">• наступний місяць</string>
+
+    <string name="settings_recovery_pin_previous_date">• минула дата</string>
+    <string name="settings_recovery_pin_current_date">• поточна дата</string>
+    <string name="settings_recovery_pin_next_date">• наступна дата</string>
+
+    <string name="settings_recovery_pin_previous_week_day">• минулий день тижня</string>
+    <string name="settings_recovery_pin_current_week_day">• поточний день тижня</string>
+    <string name="settings_recovery_pin_next_week_day">• наступний день тижня</string>
+
+    <string name="settings_recovery_pin_number">• число %1$d</string>
+
+    <string name="settings_recovery_pin_plus_operation">Знайдіть суму двох чисел:</string>
+    <string name="settings_recovery_pin_minus_operation">Знайдіть різницю двох чисел:</string>
+
+    <string name="settings_profile_recovery_enter_number_error">Введіть число</string>
+    <string name="settings_profile_recovery_wrong_answer_error">Не правільна відповідь</string>
+
+
+
+
+    <string name="settings_competence">Компетентність: %1$s</string>
+    <string name="settings_motivation_boost">Кількість мотивуючих подій на місяць: %1$d</string>
+    <string name="settings_motivation_scale">Розмір мотивуючої події: %1$d</string>
+    <string name="settings_self_confidence">Впевненість у собі: %1$s</string>
+
+    <string name="settings_license_label">Ліцензія</string>
+    <string name="settings_tester_tools">Інструменти тестувальника</string>
+
+    <string name="settings_mode_restricted_header">Тільки для PREMIUM-клієнтів</string>
+    <string name="settings_mode_restricted_description">Зараз вам доступний тільки один режим: \"Ставка після роздачі\", - ви робите ставку після того, як виграшна опція вже визначена системою. Вам потрібен PREMIUM щоб мати можливість перевірити себе у режимах \"Ставка до роздачі\" та \"Випадкова ставка\", Крім того, PREMIUM надасть можливість створювати додаткові ігрові профайли.</string>
+    <string name="settings_buy_premium">Отримати PREMIUM</string>
+    <string name="settings_learn_more">Дізнатися більше</string>
+
+
+
+</resources>

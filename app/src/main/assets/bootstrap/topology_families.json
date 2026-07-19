@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "code": "CAPYBARA_PORTRAIT_WIDTH_TO_NARROW"
+  },
+  {
+    "id": 2,
+    "code": "CAPYBARA_PORTRAIT_NARROW_TO_WIDTH"
+  },
+  {
+    "id": 3,
+    "code": "CAPYBARA_LANDSCAPE_WIDTH_TO_NARROW"
+  },
+  {
+    "id": 4,
+    "code": "CAPYBARA_LANDSCAPE_NARROW_WIDTH"
+  }
+]

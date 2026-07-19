@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 🔹 Settings screen -->
+
+    <!-- 🔹 Mode selector -->
+    <string name="settings_mode_selector_header">Training mode</string>
+    <string name="settings_mode_after">Bet after draw</string>
+    <string name="settings_mode_before">Bet before draw</string>
+    <string name="settings_mode_hybrid">Hybrid bet</string>
+
+    <!-- 🔹 Level selector -->
+    <string name="settings_level_selector_header">Level</string>
+    <string name="settings_level_selector_value">%1$d variants</string>
+    <string name="settings_level_selector_up">+</string>
+    <string name="settings_level_selector_down">-</string>
+
+    <string name="settings_profile_section_title">Profiles: %1$d</string>
+
+    <string name="settings_training_intensity_selector_title">Training Intensity</string>
+    <string name="settings_training_intensity_selector_low">Low</string>
+    <string name="settings_training_intensity_selector_medium">Medium</string>
+    <string name="settings_training_intensity_selector_high">High</string>
+
+    <string name="settings_period_selector_title">Period</string>
+    <string name="settings_period_selector_days">Days: %1$d</string>
+
+    <string name="settings_generate_historical_dataset_button">Generate</string>
+    <string name="settings_delete_historical_dataset_button">Clear</string>
+
+
+    <string name="settings_historical_dataset_title">Historical Dataset</string>
+    <string name="settings_historical_dataset_scope">Dataset Scope</string>
+    <string name="settings_historical_behavior_model">Behavior Model</string>
+    <string name="settings_historical_dataset_generated">Dataset generated</string>
+    <string name="settings_historical_dataset_generation_failed">Dataset generation failed</string>
+    <string name="settings_historical_dataset_cleaned">Dataset cleaned</string>
+    <string name="settings_historical_dataset_cleaning_failed">Dataset cleaning failed</string>
+
+    <string name="settings_child_profile_create_section_title">Create child profile</string>
+    <string name="settings_child_profile_create_section_name_label">Child profile name</string>
+    <string name="settings_child_profile_create_section_button_text">Create</string>
+
+
+    <string name="settings_free_human_setup_profile_section_title">Owner profile setup</string>
+    <string name="settings_free_human_setup_profile_set_player_name">Set your player name</string>
+    <string name="settings_free_human_setup_profile_player_name">Your name</string>
+    <string name="settings_free_human_setup_profile_correct">Correct</string>
+    <string name="settings_free_human_setup_profile_incorrect">Enter at least 3 characters and use a custom name</string>
+    <string name="settings_free_human_setup_profile_continue">Continue</string>
+
+    <string name="settings_parent_access_recovery_section_title">Recover Parent Access</string>
+    <string name="settings_parent_access_recovery_section_your_answer">Your answer</string>
+    <string name="settings_parent_access_recovery_section_verify">Verify</string>
+    <string name="settings_parent_access_recovery_section_new_pin">New PIN</string>
+    <string name="settings_parent_access_recovery_section_confirm_pin">Confirm PIN</string>
+    <string name="settings_parent_access_recovery_section_update_pin">Update PIN</string>
+
+    <string name="settings_premium_human_profile_setup_title">Owner profile setup</string>
+    <string name="settings_premium_human_profile_setup_label">Set owner profile to enable child profiles</string>
+    <string name="settings_premium_human_profile_setup_name">Your name</string>
+    <string name="settings_premium_human_profile_setup_correct">Correct</string>
+    <string name="settings_premium_human_profile_setup_incorrect">Enter at least 3 characters and use a custom name</string>
+    <string name="settings_premium_human_profile_setup_rename">Optional profile rename</string>
+    <string name="settings_premium_human_profile_setup_pin">PIN</string>
+    <string name="settings_premium_human_profile_setup_pin_incorrect">PIN must contain exactly 4 digits</string>
+    <string name="settings_premium_human_profile_setup_confirm_pin">Confirm PIN</string>
+    <string name="settings_premium_human_profile_setup_pin_not_matched">PIN values do not match</string>
+    <string name="settings_premium_human_profile_setup_save">Save</string>
+
+    <string name="settings_profile_list_owner">Owner</string>
+    <string name="settings_profile_list_child">Child</string>
+    <string name="settings_profile_list_tester">Tester</string>
+    <string name="settings_profile_list_active">ACTIVE</string>
+
+    <string name="settings_return_by_pin_section_title">Parent PIN</string>
+    <string name="settings_return_by_pin_section_enter_pin">Enter parent PIN to return to owner profile</string>
+    <string name="settings_return_by_pin_section_enter_pin_label">Enter PIN</string>
+    <string name="settings_return_by_pin_section_confirm">Confirm</string>
+
+    <string name="settings_recovery_pin_previous_year">• previous year</string>
+    <string name="settings_recovery_pin_current_year">• current year</string>
+    <string name="settings_recovery_pin_next_year">• next year</string>
+
+    <string name="settings_recovery_pin_previous_month">• previous month</string>
+    <string name="settings_recovery_pin_current_month">• current month</string>
+    <string name="settings_recovery_pin_next_month">• next month</string>
+
+    <string name="settings_recovery_pin_previous_date">• previous date</string>
+    <string name="settings_recovery_pin_current_date">• current date</string>
+    <string name="settings_recovery_pin_next_date">• next date</string>
+
+    <string name="settings_recovery_pin_previous_week_day">• previous day of week</string>
+    <string name="settings_recovery_pin_current_week_day">• current day of week</string>
+    <string name="settings_recovery_pin_next_week_day">• next day of week</string>
+
+    <string name="settings_recovery_pin_number">• number %1$d</string>
+
+    <string name="settings_recovery_pin_plus_operation">Find the sum of two numbers:</string>
+    <string name="settings_recovery_pin_minus_operation">Find the difference of two numbers:</string>
+
+    <string name="settings_profile_recovery_enter_number_error">Input number, please</string>
+    <string name="settings_profile_recovery_wrong_answer_error">Wrong answer</string>
+
+    <string name="settings_competence">Competence: %1$s</string>
+    <string name="settings_motivation_boost">Motivation boost: %1$d</string>
+    <string name="settings_motivation_scale">Motivation scale: %1$d</string>
+    <string name="settings_self_confidence">Self-confidence: %1$s</string>
+
+
+    <string name="settings_license_label">License</string>
+    <string name="settings_tester_tools">Tester tools</string>
+
+    <string name="settings_mode_restricted_header">Available only with PREMIUM license</string>
+    <string name="settings_mode_restricted_description">Currently, only one mode is available to you: \"Bet after the deal\" - you place a bet after the winning option has already been determined by the system. You need PREMIUM to be able to test yourself in the \"Bet before the deal\" and \"Random bet\" modes. In addition, PREMIUM will provide the ability to create additional game profiles.</string>
+    <string name="settings_buy_premium">Get PREMIUM</string>
+    <string name="settings_learn_more">Learn more</string>
+
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "code": "DEFAULT",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 2,
+    "code": "CAPYBARA",
+    "createdByProfileId": null,
+    "isEditable": false
+  }
+]

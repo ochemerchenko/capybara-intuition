@@ -1,0 +1,3536 @@
+[
+  {
+    "id": 1,
+    "code": "2",
+    "spaceWidth": 2,
+    "spaceHeight": 1,
+    "occupancyCapacity": 2,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 3,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "code": "1_1",
+    "spaceWidth": 1,
+    "spaceHeight": 2,
+    "occupancyCapacity": 2,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 2,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "code": "2_1",
+    "spaceWidth": 2,
+    "spaceHeight": 2,
+    "occupancyCapacity": 3,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "code": "1_2",
+    "spaceWidth": 2,
+    "spaceHeight": 2,
+    "occupancyCapacity": 3,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 2,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "code": "2_2",
+    "spaceWidth": 2,
+    "spaceHeight": 2,
+    "occupancyCapacity": 4,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "code": "2_2_1",
+    "spaceWidth": 3,
+    "spaceHeight": 3,
+    "occupancyCapacity": 5,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 3,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 6,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "code": "1_2_2",
+    "spaceWidth": 2,
+    "spaceHeight": 3,
+    "occupancyCapacity": 5,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 3,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 6,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 8,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "code": "3_2",
+    "spaceWidth": 3,
+    "spaceHeight": 2,
+    "occupancyCapacity": 5,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 6,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 7,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "code": "2_3",
+    "spaceWidth": 3,
+    "spaceHeight": 2,
+    "occupancyCapacity": 5,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 3,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 7,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "code": "3_2_1",
+    "spaceWidth": 3,
+    "spaceHeight": 3,
+    "occupancyCapacity": 6,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 6,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "code": "1_2_3",
+    "spaceWidth": 3,
+    "spaceHeight": 3,
+    "occupancyCapacity": 6,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 3,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 6,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 8,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "code": "3_3",
+    "spaceWidth": 3,
+    "spaceHeight": 2,
+    "occupancyCapacity": 6,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 7,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "code": "3_2_2",
+    "spaceWidth": 3,
+    "spaceHeight": 3,
+    "occupancyCapacity": 7,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 6,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 8,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "code": "2_2_3",
+    "spaceWidth": 3,
+    "spaceHeight": 3,
+    "occupancyCapacity": 7,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 3,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 6,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 8,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "code": "4_3",
+    "spaceWidth": 4,
+    "spaceHeight": 2,
+    "occupancyCapacity": 7,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "code": "3_4",
+    "spaceWidth": 4,
+    "spaceHeight": 2,
+    "occupancyCapacity": 7,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "code": "3_3_2",
+    "spaceWidth": 3,
+    "spaceHeight": 3,
+    "occupancyCapacity": 8,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 8,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "code": "2_3_3",
+    "spaceWidth": 3,
+    "spaceHeight": 3,
+    "occupancyCapacity": 8,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 3,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 8,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "code": "4_3_1",
+    "spaceWidth": 4,
+    "spaceHeight": 3,
+    "occupancyCapacity": 8,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "code": "1_3_4",
+    "spaceWidth": 4,
+    "spaceHeight": 3,
+    "occupancyCapacity": 8,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "code": "3_3_3",
+    "spaceWidth": 3,
+    "spaceHeight": 3,
+    "occupancyCapacity": 9,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 8,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "code": "4_3_2",
+    "spaceWidth": 4,
+    "spaceHeight": 3,
+    "occupancyCapacity": 9,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "code": "2_3_4",
+    "spaceWidth": 4,
+    "spaceHeight": 3,
+    "occupancyCapacity": 9,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "code": "3_3_2_2",
+    "spaceWidth": 3,
+    "spaceHeight": 4,
+    "occupancyCapacity": 10,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "code": "2_2_3_3",
+    "spaceWidth": 3,
+    "spaceHeight": 4,
+    "occupancyCapacity": 10,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "code": "4_3_3",
+    "spaceWidth": 4,
+    "spaceHeight": 3,
+    "occupancyCapacity": 10,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "code": "3_3_4",
+    "spaceWidth": 4,
+    "spaceHeight": 3,
+    "occupancyCapacity": 10,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "code": "3_3_3_2",
+    "spaceWidth": 3,
+    "spaceHeight": 4,
+    "occupancyCapacity": 11,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "code": "2_3_3_3",
+    "spaceWidth": 3,
+    "spaceHeight": 4,
+    "occupancyCapacity": 11,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "code": "4_4_3",
+    "spaceWidth": 4,
+    "spaceHeight": 3,
+    "occupancyCapacity": 11,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "code": "3_4_4",
+    "spaceWidth": 4,
+    "spaceHeight": 3,
+    "occupancyCapacity": 11,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "code": "3_3_3_3",
+    "spaceWidth": 3,
+    "spaceHeight": 4,
+    "occupancyCapacity": 12,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "code": "4_4_4",
+    "spaceWidth": 4,
+    "spaceHeight": 3,
+    "occupancyCapacity": 12,
+    "projection": {
+      "horizontalAlignment": "CENTER",
+      "verticalAlignment": "CENTER",
+      "scaleMode": "MAXIMIZE"
+    },
+    "cells": [
+      {
+        "index": 0,
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 1,
+        "x": 1,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 2,
+        "x": 2,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 3,
+        "x": 3,
+        "y": 0,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 4,
+        "x": 0,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 5,
+        "x": 1,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 6,
+        "x": 2,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 7,
+        "x": 3,
+        "y": 1,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 8,
+        "x": 0,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 9,
+        "x": 1,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 10,
+        "x": 2,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 11,
+        "x": 3,
+        "y": 2,
+        "width": 1,
+        "height": 1,
+        "blocked": false
+      },
+      {
+        "index": 12,
+        "x": 0,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 13,
+        "x": 1,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 14,
+        "x": 2,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      },
+      {
+        "index": 15,
+        "x": 3,
+        "y": 3,
+        "width": 1,
+        "height": 1,
+        "blocked": true
+      }
+    ]
+  }
+]

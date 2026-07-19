@@ -1,0 +1,222 @@
+[
+  {
+    "family_id": 1,
+    "topology_id": 1,
+    "occupancy_capacity": 2
+  },
+  {
+    "family_id": 1,
+    "topology_id": 3,
+    "occupancy_capacity": 3
+  },
+  {
+    "family_id": 1,
+    "topology_id": 5,
+    "occupancy_capacity": 4
+  },
+  {
+    "family_id": 1,
+    "topology_id": 6,
+    "occupancy_capacity": 5
+  },
+  {
+    "family_id": 1,
+    "topology_id": 10,
+    "occupancy_capacity": 6
+  },
+  {
+    "family_id": 1,
+    "topology_id": 13,
+    "occupancy_capacity": 7
+  },
+  {
+    "family_id": 1,
+    "topology_id": 17,
+    "occupancy_capacity": 8
+  },
+  {
+    "family_id": 1,
+    "topology_id": 21,
+    "occupancy_capacity": 9
+  },
+  {
+    "family_id": 1,
+    "topology_id": 24,
+    "occupancy_capacity": 10
+  },
+  {
+    "family_id": 1,
+    "topology_id": 28,
+    "occupancy_capacity": 11
+  },
+  {
+    "family_id": 1,
+    "topology_id": 32,
+    "occupancy_capacity": 12
+  },
+  {
+    "family_id": 2,
+    "topology_id": 1,
+    "occupancy_capacity": 2
+  },
+  {
+    "family_id": 2,
+    "topology_id": 4,
+    "occupancy_capacity": 3
+  },
+  {
+    "family_id": 2,
+    "topology_id": 5,
+    "occupancy_capacity": 4
+  },
+  {
+    "family_id": 2,
+    "topology_id": 7,
+    "occupancy_capacity": 5
+  },
+  {
+    "family_id": 2,
+    "topology_id": 11,
+    "occupancy_capacity": 6
+  },
+  {
+    "family_id": 2,
+    "topology_id": 14,
+    "occupancy_capacity": 7
+  },
+  {
+    "family_id": 2,
+    "topology_id": 18,
+    "occupancy_capacity": 8
+  },
+  {
+    "family_id": 2,
+    "topology_id": 21,
+    "occupancy_capacity": 9
+  },
+  {
+    "family_id": 2,
+    "topology_id": 25,
+    "occupancy_capacity": 10
+  },
+  {
+    "family_id": 2,
+    "topology_id": 29,
+    "occupancy_capacity": 11
+  },
+  {
+    "family_id": 2,
+    "topology_id": 32,
+    "occupancy_capacity": 12
+  },
+  {
+    "family_id": 3,
+    "topology_id": 1,
+    "occupancy_capacity": 2
+  },
+  {
+    "family_id": 3,
+    "topology_id": 3,
+    "occupancy_capacity": 3
+  },
+  {
+    "family_id": 3,
+    "topology_id": 5,
+    "occupancy_capacity": 4
+  },
+  {
+    "family_id": 3,
+    "topology_id": 8,
+    "occupancy_capacity": 5
+  },
+  {
+    "family_id": 3,
+    "topology_id": 12,
+    "occupancy_capacity": 6
+  },
+  {
+    "family_id": 3,
+    "topology_id": 15,
+    "occupancy_capacity": 7
+  },
+  {
+    "family_id": 3,
+    "topology_id": 19,
+    "occupancy_capacity": 8
+  },
+  {
+    "family_id": 3,
+    "topology_id": 22,
+    "occupancy_capacity": 9
+  },
+  {
+    "family_id": 3,
+    "topology_id": 26,
+    "occupancy_capacity": 10
+  },
+  {
+    "family_id": 3,
+    "topology_id": 30,
+    "occupancy_capacity": 11
+  },
+  {
+    "family_id": 3,
+    "topology_id": 33,
+    "occupancy_capacity": 12
+  },
+  {
+    "family_id": 4,
+    "topology_id": 1,
+    "occupancy_capacity": 2
+  },
+  {
+    "family_id": 4,
+    "topology_id": 3,
+    "occupancy_capacity": 3
+  },
+  {
+    "family_id": 4,
+    "topology_id": 5,
+    "occupancy_capacity": 4
+  },
+  {
+    "family_id": 4,
+    "topology_id": 9,
+    "occupancy_capacity": 5
+  },
+  {
+    "family_id": 4,
+    "topology_id": 12,
+    "occupancy_capacity": 6
+  },
+  {
+    "family_id": 4,
+    "topology_id": 16,
+    "occupancy_capacity": 7
+  },
+  {
+    "family_id": 4,
+    "topology_id": 20,
+    "occupancy_capacity": 8
+  },
+  {
+    "family_id": 4,
+    "topology_id": 23,
+    "occupancy_capacity": 9
+  },
+  {
+    "family_id": 4,
+    "topology_id": 27,
+    "occupancy_capacity": 10
+  },
+  {
+    "family_id": 4,
+    "topology_id": 31,
+    "occupancy_capacity": 11
+  },
+  {
+    "family_id": 4,
+    "topology_id": 33,
+    "occupancy_capacity": 12
+  }
+]

@@ -1,0 +1,61 @@
+package com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.arts.activity.components
+
+
+import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.text.TextMeasurer
+import com.capybara.intuition.app.presentation.theme.colors.IntuitionColors
+import com.capybara.intuition.app.presentation.theme.typography.IntuitionTypography
+import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.arts.activity.components.content.drawActivityGraphActivityBars
+import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.arts.activity.components.content.drawActivityGraphHorizontalGrid
+import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.arts.activity.components.content.drawActivityGraphVerticalGrid
+import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.calculators.yScale.model.ActivityYScaleModel
+import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.chartsAreas.Area
+import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.AnalyticsChartPoint
+
+fun DrawScope.activityGraphContentArea (
+    layoutModel: Area,
+    yScaleModel: ActivityYScaleModel,
+    chartsData: List<AnalyticsChartPoint>,
+    textMeasurer: TextMeasurer,
+    colors: IntuitionColors,
+    typography: IntuitionTypography
+) {
+
+    // Горизонтальна сітка
+    drawActivityGraphHorizontalGrid(
+        layoutModel = layoutModel,
+        activityYScaleModel = yScaleModel,
+        colors = colors,
+        typography = typography
+    )
+
+    // Вертикальна сітка
+    drawActivityGraphVerticalGrid(
+        layoutModel = layoutModel,
+        chartsData = chartsData,
+        colors = colors,
+        typography = typography
+    )
+
+    // Стовпчики активності
+    drawActivityGraphActivityBars(
+        layoutModel = layoutModel,
+        chartsData = chartsData,
+        activityYScaleModel = yScaleModel,
+        colors = colors,
+        typography = typography
+    )
+
+    // Підписи над стовпчиками
+    /*
+    drawActivityGraphActivityValues(
+        layoutModel = layoutModel,
+        chartsData = chartsData,
+        activityYScaleModel = yScaleModel,
+        textMeasurer = textMeasurer,
+        colors = colors,
+        typography = typography
+    )
+
+     */
+}

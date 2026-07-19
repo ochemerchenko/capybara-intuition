@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "SYSTEM",
+    "type": "SYSTEM",
+    "isSystemDefault": true,
+    "active": false,
+
+    "activeNotebookId": 2,
+
+    "preferredMode": 1,
+
+    "minLevel": 2,
+    "maxLevel": 12,
+    "currentLevel": 2,
+
+    "rendererId": 1,
+    "maskId": 1,
+
+    "topologyFamilyId": 1,
+    "maxTopologyWidth": 4,
+    "maxTopologyHeight": 3,
+
+    "activeTopologyId": 1
+  },
+
+  {
+    "id": 2,
+    "name": "Player",
+    "type": "HUMAN",
+    "isSystemDefault": false,
+    "active": true,
+
+    "activeNotebookId": 2,
+
+    "preferredMode": 1,
+
+    "minLevel": 2,
+    "maxLevel": 12,
+    "currentLevel": 2,
+
+    "rendererId": 1,
+    "maskId": 1,
+    "topologyFamilyId": 1,
+    "maxTopologyWidth": 4,
+    "maxTopologyHeight": 3,
+    "activeTopologyId": 1
+  },
+
+  {
+    "id": 3,
+    "name": "TESTER",
+    "type": "TESTER",
+    "isSystemDefault": false,
+    "active": false,
+
+    "activeNotebookId": 2,
+
+    "preferredMode": 1,
+
+    "minLevel": 2,
+    "maxLevel": 12,
+    "currentLevel": 12,
+
+    "rendererId": 1,
+    "maskId": 1,
+    "topologyFamilyId": 1,
+
+    "maxTopologyWidth": 4,
+    "maxTopologyHeight": 3,
+
+    "activeTopologyId": 32
+  }
+]

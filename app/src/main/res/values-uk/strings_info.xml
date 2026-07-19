@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="info_welcome">Знайомство</string>
+    <string name="info_about">Про додаток</string>
+    <string name="info_privacy">Конфіденційнійсть</string>
+    <string name="info_terms">Умови використання</string>
+    <string name="info_license">Ліцензії</string>
+    <string name="info_contact">Контакти</string>
+
+    <!--
+    Про додаток
+
+Умови використання (Terms of Service)
+
+Конфіденційність (Privacy)
+
+Ліцензії (Licenses)
+    -->
+
+</resources>

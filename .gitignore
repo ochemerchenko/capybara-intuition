@@ -1,0 +1,29 @@
+# IntelliJ / Android Studio
+*.iml
+.gradle/
+/local.properties
+
+.idea/caches/
+.idea/libraries/
+.idea/modules/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/deploymentTargetSelector.xml
+.idea/deviceManager.xml
+.idea/appInsightsSettings.xml
+
+# macOS
+.DS_Store
+
+# Build outputs
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+
+# Personal work materials
+Images/
+image_sources/
+UML/

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "code": "CHECKER"
+  },
+  {
+    "id": 2,
+    "code": "CIRCUMFERENCE"
+  },
+  {
+    "id": 3,
+    "code": "SOLID_FILL"
+  },
+  {
+    "id": 4,
+    "code": "DIRECT_IMAGE"
+  },
+  {
+    "id": 5,
+    "code": "DISTORTED_IMAGE"
+  }
+]

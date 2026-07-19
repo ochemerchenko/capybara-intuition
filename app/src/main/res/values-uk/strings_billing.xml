@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="billing_connection_setup">З\'єднання з Google Play...</string>
+
+    <string name="billing_purchase_failed">Не вдалося завершити покупку</string>
+    <string name="billing_purchase_again">Спробувати ще раз</string>
+    <string name="billing_purchase_close">Закрити</string>
+
+    <string name="billing_purchase_offer_title">PREMIUM</string>
+    <string name="billing_purchase_offer">Після натискання кнопки відкриється офіційне вікно покупки Google Play. Після підтвердження покупки ліцензія стане доступною автоматично.</string>
+    <string name="billing_purchase_go">Перейти до покупки</string>
+
+    <string name="billing_purchase_pending_title">Очікується оплата</string>
+    <string name="billing_purchase_pending_state">Google Play зареєстрував покупку, але платіж ще не підтверджено.</string>
+    <string name="billing_purchase_pending_offer">Після підтвердження платежу ліцензія буде активована автоматично. Якщо підтвердження відбудеться після закриття застосунку, нові можливості стануть доступними під час наступного відкриття.</string>
+    <string name="billing_purchase_pending_ok">Зрозуміло</string>
+
+    <string name="billing_purchase_success_title">Дякуємо!</string>
+    <string name="billing_purchase_success_text">Ліцензію успішно активовано. Нові можливості вже доступні у застосунку.</string>
+    <string name="billing_purchase_success_ok">Зрозуміло</string>
+
+    <string name="billing_unconfirmed_title">Не вдалося підтвердити покупку</string>
+    <string name="billing_unconfirmed_result">Google Play не зміг однозначно підтвердити результат покупки.</string>
+    <string name="billing_unconfirmed_offer">Якщо оплата була успішною, ліцензія буде автоматично активована під час наступної синхронізації.</string>
+    <string name="billing_unconfirmed_alter_offer">Зазвичай проблема вирішується автоматично після повторного запуску застосунку або трохи пізніше. Якщо після повторної перевірки проблема не зникне, будь ласка, зверніться до служби підтримки.</string>
+    <string name="billing_unconfirmed_retry">Перевірити ще раз</string>
+    <string name="billing_unconfirmed_ok">Зрозуміло</string>
+
+
+</resources>

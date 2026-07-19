@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 🔹 App -->
+    <string name="app_name">Капібара</string>
+
+    <string name="exit_application_quistion">Вийти з додатку?</string>
+    <string name="exit_application_yes">Так</string>
+    <string name="exit_application_no">Ні</string>
+</resources>

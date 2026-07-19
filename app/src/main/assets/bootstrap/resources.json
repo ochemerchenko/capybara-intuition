@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "type": "COLOR",
+    "name": "RED",
+    "value": "#E53935",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 2,
+    "type": "COLOR",
+    "name": "BLUE",
+    "value": "#1E88E5",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 3,
+    "type": "COLOR",
+    "name": "GREEN",
+    "value": "#43A047",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 4,
+    "type": "COLOR",
+    "name": "YELLOW",
+    "value": "#FDD835",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 5,
+    "type": "COLOR",
+    "name": "ORANGE",
+    "value": "#FB8C00",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 6,
+    "type": "COLOR",
+    "name": "PURPLE",
+    "value": "#8E24AA",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 7,
+    "type": "COLOR",
+    "name": "CYAN",
+    "value": "#00ACC1",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 8,
+    "type": "COLOR",
+    "name": "PINK",
+    "value": "#D81B60",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 9,
+    "type": "COLOR",
+    "name": "BROWN",
+    "value": "#6D4C41",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 10,
+    "type": "COLOR",
+    "name": "GRAY",
+    "value": "#757575",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 11,
+    "type": "COLOR",
+    "name": "BLACK",
+    "value": "#212121",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 12,
+    "type": "COLOR",
+    "name": "WHITE",
+    "value": "#F5F5F5",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 13,
+    "type": "COLOR",
+    "name": "SOFT_RED",
+    "value": "#E57373",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 14,
+    "type": "COLOR",
+    "name": "SKY_BLUE",
+    "value": "#64B5F6",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 15,
+    "type": "COLOR",
+    "name": "MINT_GREEN",
+    "value": "#81C784",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 16,
+    "type": "COLOR",
+    "name": "SUN_YELLOW",
+    "value": "#FFD54F",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 17,
+    "type": "COLOR",
+    "name": "LAVENDER",
+    "value": "#BA68C8",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 18,
+    "type": "COLOR",
+    "name": "CORAL_ORANGE",
+    "value": "#FF8A65",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 19,
+    "type": "COLOR",
+    "name": "TEAL",
+    "value": "#4DB6AC",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 20,
+    "type": "COLOR",
+    "name": "MOCHA",
+    "value": "#A1887F",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 21,
+    "type": "COLOR",
+    "name": "SLATE_GRAY",
+    "value": "#90A4AE",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 22,
+    "type": "COLOR",
+    "name": "ROSE_PINK",
+    "value": "#F06292",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 23,
+    "type": "COLOR",
+    "name": "VIOLET",
+    "value": "#9575CD",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 24,
+    "type": "COLOR",
+    "name": "PEACH",
+    "value": "#FFB59E",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 25,
+    "type": "COLOR",
+    "name": "SAGE",
+    "value": "#A5D6A7",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 26,
+    "type": "COLOR",
+    "name": "OCEAN_BLUE",
+    "value": "#81D4FA",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 27,
+    "type": "COLOR",
+    "name": "CREAM",
+    "value": "#FFF0B3",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 28,
+    "type": "COLOR",
+    "name": "LILAC",
+    "value": "#D1B3FF",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 29,
+    "type": "COLOR",
+    "name": "APRICOT",
+    "value": "#FFCC80",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 30,
+    "type": "COLOR",
+    "name": "SEAFOAM",
+    "value": "#80CBC4",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 31,
+    "type": "COLOR",
+    "name": "COCOA",
+    "value": "#8D6E63",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 32,
+    "type": "COLOR",
+    "name": "FOG",
+    "value": "#B0BEC5",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 33,
+    "type": "COLOR",
+    "name": "BLUSH",
+    "value": "#F8BBD0",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 34,
+    "type": "COLOR",
+    "name": "PERIWINKLE",
+    "value": "#9FA8DA",
+    "createdByProfileId": null,
+    "isEditable": false
+  },
+  {
+    "id": 35,
+    "type": "COLOR",
+    "name": "ICE_BLUE",
+    "value": "#B3E5FC",
+    "createdByProfileId": null,
+    "isEditable": false
+  }
+]

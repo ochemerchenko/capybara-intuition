@@ -1,0 +1,204 @@
+# MEGA (POST-ARCHITECTURE + POST-GAMEPLAY CLEANED)
+
+## Purpose
+
+This document contains non-canonical operational residue, implementation observations, future extraction candidates, and temporary semantic notes that are not yet formalized into dedicated project documents.
+
+This document is NOT:
+
+* an architecture document,
+* a gameplay model,
+* a canonical truth source.
+
+Canonical truths are described in:
+
+* `ARCHITECTURE.md`
+* `GAMEPLAY_MODEL.md`
+
+---
+
+# Firebase Export Residue
+
+Firebase export payloads should remain reconstruction-capable.
+
+Payloads may include:
+
+* profile linkage,
+* session linkage,
+* round linkage,
+* topology metadata,
+* renderer metadata,
+* notebook metadata,
+* resource metadata,
+* timestamps,
+* gameplay mode metadata.
+
+Firebase payload structure should remain append-oriented.
+
+Export compatibility between application versions should be preserved whenever possible.
+
+---
+
+# Export Reconstruction Goals
+
+Persisted gameplay observations should remain sufficient for:
+
+* spreadsheet reconstruction,
+* telemetry reconstruction,
+* analytical replay,
+* future external analysis tooling,
+* future export pipelines.
+
+The project intentionally preserves high observational fidelity.
+
+---
+
+# Notebook Semantics
+
+Notebooks group gameplay resources into selectable gameplay resource collections.
+
+A notebook may:
+
+* contain visual resource families,
+* contain thematic resource collections,
+* contain color/image combinations.
+
+Notebook organization semantics remain implementation-flexible.
+
+---
+
+# Resource Family Notes
+
+Resources currently exist primarily as:
+
+* colors,
+* drawable images.
+
+Future resource families may expand independently from gameplay mechanics provided gameplay interaction semantics remain preserved.
+
+---
+
+# Renderer Compatibility Metadata
+
+Topology/renderer compatibility metadata may participate in:
+
+* export compatibility,
+* telemetry compatibility,
+* future reconstruction support,
+* backward-compatible analytical processing.
+
+Compatibility metadata remains observational rather than gameplay-authoritative.
+
+---
+
+# Graph Rendering Residue
+
+Graph rendering infrastructure currently supports:
+
+* session activity graphs,
+* gameplay result graphs,
+* smoothed projections,
+* spline approximations.
+
+Graph readability currently has higher priority than exact raw-point visualization.
+
+Graph projection internals remain implementation-fluid.
+
+---
+
+# Statistics Projection Notes
+
+Current statistics intentionally remain lightweight.
+
+The current production implementation intentionally avoids:
+
+* predictive analytics,
+* adaptive gameplay systems,
+* recommendation systems,
+* progression systems,
+* behavioral manipulation systems.
+
+Statistics remain observational summaries.
+
+---
+
+# Emotional Reinforcement Placeholder
+
+Capybara emotional behavior, emotional reinforcement semantics, and motivational feedback systems are intentionally excluded from canonical gameplay semantics at the current documentation stage.
+
+These systems require separate semantic formalization.
+
+---
+
+# Educational / Cognitive Placeholder
+
+Educational semantics, perceptual training semantics, memory-support semantics, and cognitive interpretation semantics are intentionally excluded from current canonical documentation.
+
+The current production implementation does not operationally depend on these interpretations.
+
+---
+
+# Research Separation Principle
+
+The application itself is not a scientific analysis system.
+
+The application acts only as:
+
+* gameplay system,
+* gameplay observation producer,
+* observational export source.
+
+Research systems consuming exported observational datasets are external to the application project.
+
+Research semantics are intentionally separated from gameplay semantics.
+
+---
+
+# Telemetry Residue
+
+Telemetry infrastructure should preserve:
+
+* append-oriented exports,
+* reconstruction compatibility,
+* version compatibility,
+* gameplay linkage consistency.
+
+Telemetry infrastructure should avoid:
+
+* gameplay mutation,
+* gameplay reinterpretation,
+* authoritative gameplay ownership.
+
+---
+
+# Implementation-Fluid Areas
+
+The following areas intentionally remain implementation-fluid:
+
+* graph smoothing,
+* graph rendering internals,
+* export formatting,
+* telemetry formatting,
+* notebook organization strategies,
+* renderer internals,
+* projection internals,
+* visualization details.
+
+These areas may evolve without architectural restructuring provided canonical semantics remain preserved.
+
+---
+
+# Deferred Semantic Areas
+
+The following semantic areas intentionally remain outside canonical documentation at the current stage:
+
+* emotional reinforcement philosophy,
+* capybara behavioral semantics,
+* educational interpretation,
+* cognitive interpretation,
+* external research semantics,
+* advanced analytical semantics,
+* adaptive gameplay semantics.
+
+These areas may receive dedicated future documentation if operationally required.
+

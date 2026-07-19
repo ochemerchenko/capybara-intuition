@@ -1,0 +1,137 @@
+package com.capybara.intuition.statistics.presentation.ui.free
+
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.capybara.intuition.statistics.presentation.ui.free.header.FreeStatisticsHeader
+import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.arts.activity.ActivityGraphic
+import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.calculators.calculateAnalyticsChartPoints
+import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.arts.decisionTime.DecisionTimeGraphic
+import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.arts.fullDensity.DensityFullGraphic
+import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.DayDensity
+
+
+@Composable
+fun FreeStatisticsScreen (
+    selectedLevel: Int,
+    availableLevels: IntRange,
+    emaModelingPeriod: Int,
+    analyticPeriod: Int,
+    dateFrom: Long,
+    dateNow: Long,
+    analyticalGraph: List<DayDensity>,
+    onLevelSelected: (Int) -> Unit,
+    onHelpLinkClick: (String) -> Unit = {},
+    modifier: Modifier = Modifier
+)  {
+
+    val statisticsSelectorSpacing = 12.dp
+    val densityDetailChartHorizontalPadding = 8.dp
+    val scrollState = rememberScrollState()
+    val statisticsActivityTitleHorizontalPadding = 16.dp
+    val statisticsActivityBottomSpacing = 24.dp
+
+
+    val chartsData = remember(
+        selectedLevel,
+        analyticalGraph
+    ) {
+        calculateAnalyticsChartPoints(
+            level = selectedLevel,
+            dayDensities = analyticalGraph,
+            dateFrom = dateFrom,
+            dateNow = dateNow,
+            emaModelingPeriod = emaModelingPeriod,
+            analyticPeriod = analyticPeriod
+        )
+    }
+
+    Column (
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(scrollState)
+            .padding(8.dp)
+    ) {
+        FreeStatisticsHeader(
+            selectedLevel = selectedLevel,
+            availableLevels = availableLevels,
+            onLevelSelected = onLevelSelected
+        )
+
+        Spacer(
+            modifier = Modifier.height(
+                statisticsSelectorSpacing
+            )
+        )
+
+        // =========================================
+        // MAIN CHART
+        // =========================================
+        DensityFullGraphic (
+            chartsData = chartsData,
+            onHelpLinkClick = onHelpLinkClick
+        )
+
+        Spacer(
+            modifier = Modifier.height(
+                statisticsSelectorSpacing
+            )
+        )
+
+        // =========================================
+        // INSIGHT
+        // =========================================
+
+        /*
+        PerformanceInsightSection(
+            chartPoints = chartsData
+        )
+
+        Spacer(
+            modifier = Modifier.height(
+                statisticsSelectorSpacing
+            )
+        )
+
+         */
+
+        // =========================================
+        // DECISION TIME
+        // =========================================
+
+        DecisionTimeGraphic(
+            chartsData = chartsData,
+            onHelpLinkClick = onHelpLinkClick
+        )
+
+        Spacer(
+            modifier = Modifier.height(
+                statisticsSelectorSpacing
+            )
+        )
+
+        // =========================================
+        // ACTIVITY CHART
+        // =========================================
+
+        ActivityGraphic(
+            chartsData = chartsData,
+            onHelpLinkClick = onHelpLinkClick
+        )
+
+
+        Spacer(
+            modifier = Modifier.height(
+                statisticsActivityBottomSpacing
+            )
+        )
+    }
+}

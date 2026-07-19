@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <!-- 🔹 Modes -->
+    <string name="game_mode_before">Bet before draw</string>
+    <string name="game_mode_after">Bet after draw</string>
+
+
+</resources>

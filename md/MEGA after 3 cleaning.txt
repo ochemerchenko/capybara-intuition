@@ -1,0 +1,177 @@
+# MEGA (POST-ARCHITECTURE + POST-GAMEPLAY + POST-OBSERVATIONAL CLEANED)
+
+## Purpose
+
+This document contains temporary semantic residue, deferred conceptual areas, implementation-fluid notes, and future extraction candidates that are not yet formalized into dedicated canonical project documents.
+
+Canonical project semantics are currently described in:
+
+* `ARCHITECTURE.md`
+* `GAMEPLAY_MODEL.md`
+* `OBSERVATIONAL_MODEL.md`
+
+This document is intentionally non-authoritative.
+
+---
+
+# Emotional Reinforcement Residue
+
+The project contains emotional reinforcement mechanics that intentionally remain outside canonical gameplay semantics.
+
+These currently include:
+
+* capybara emotional reactions,
+* session emotional feedback,
+* motivational reinforcement behavior,
+* emotional session continuity visualization.
+
+The emotional reinforcement system exists to:
+
+* support repetitive gameplay continuity,
+* improve long-session engagement,
+* provide lightweight emotional feedback,
+* visually reinforce gameplay outcomes.
+
+Emotional reinforcement semantics are intentionally not gameplay-authoritative.
+
+Gameplay mechanics remain independent from emotional feedback systems.
+
+---
+
+# Capybara Semantic Residue
+
+Capybara behavior currently acts as:
+
+* emotional feedback projection,
+* motivational continuity support,
+* lightweight session companion system.
+
+Capybara behavior currently does not:
+
+* alter gameplay rules,
+* alter gameplay outcomes,
+* participate in gameplay authority,
+* participate in observational authority.
+
+Capybara semantics remain intentionally implementation-fluid.
+
+Future emotional behaviors may evolve independently from gameplay mechanics.
+
+---
+
+# Educational / Cognitive Interpretation Residue
+
+The project intentionally avoids canonical educational claims.
+
+The current implementation does not formally define itself as:
+
+* educational software,
+* cognitive training software,
+* psychological assessment software,
+* therapeutic software.
+
+Possible future interpretations may include:
+
+* perceptual exercises,
+* repetitive attention training,
+* lightweight recognition exercises,
+* memory-support interaction patterns.
+
+These interpretations currently remain external semantic interpretations rather than canonical gameplay semantics.
+
+---
+
+# Graph Rendering Residue
+
+Graph systems currently support:
+
+* gameplay activity visualization,
+* gameplay result visualization,
+* smoothed graph projections,
+* spline approximation rendering.
+
+Graph readability currently has higher priority than raw-point precision visualization.
+
+Graph rendering internals intentionally remain implementation-fluid.
+
+---
+
+# Visualization Flexibility Residue
+
+The project intentionally preserves future flexibility for:
+
+* alternative topology renderers,
+* alternative resource projection systems,
+* alternative visual styles,
+* alternative emotional feedback systems,
+* alternative graph visualizations.
+
+The current production implementation intentionally remains bounded despite preserving future extensibility space.
+
+---
+
+# Notebook Organization Residue
+
+Notebook organization semantics intentionally remain flexible.
+
+Notebooks may evolve toward:
+
+* thematic groupings,
+* visual grouping systems,
+* educational grouping systems,
+* experimental grouping systems,
+* resource-family grouping systems.
+
+Current gameplay semantics do not depend on notebook organizational philosophy.
+
+---
+
+# Projection / Materialization Residue
+
+Projection/materialization internals intentionally remain implementation-fluid.
+
+This includes:
+
+* topology materialization strategies,
+* adaptive layout behavior,
+* renderer adaptation strategies,
+* projection scaling behavior,
+* projection density strategies.
+
+Canonical gameplay semantics remain renderer-independent.
+
+Canonical topology semantics remain projection-independent.
+
+---
+
+# Future Semantic Extraction Candidates
+
+The following areas may eventually receive dedicated canonical documents if operationally justified:
+
+* emotional reinforcement model,
+* capybara behavior model,
+* renderer/materialization model,
+* visualization model,
+* educational interpretation model,
+* graph/statistics visualization model.
+
+The current project intentionally avoids speculative semantic overformalization.
+
+---
+
+# Current Semantic Status
+
+The project currently has stabilized canonical semantics for:
+
+* architecture,
+* gameplay,
+* observational persistence/export semantics.
+
+Remaining semantic areas are intentionally:
+
+* bounded,
+* optional,
+* implementation-fluid,
+* non-authoritative,
+* future-extensible.
+

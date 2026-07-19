@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- 🔹 Modes -->
+    <string name="game_mode_before">Що обере тренажер?</string>
+    <string name="game_mode_after">Яку фішку загадано?</string>
+
+</resources>

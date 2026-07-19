@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="capybara_emotion_options_shown_start_mode_after">
+        <item>Hi, {profileName}!</item>
+    </string-array>
+    <string-array name="capybara_emotion_options_shown_start_mode_before">
+        <item>Hi, {profileName}!</item>
+    </string-array>
+    <string-array name="capybara_emotion_options_shown_start_mode_hybrid">
+        <item>Hi, {profileName}!</item>
+    </string-array>
+
+
+    <string-array name="capybara_emotion_options_shown_after_win_ordinary">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_options_shown_after_win_interesting">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_options_shown_after_win_unusual">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_options_shown_after_win_rare">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_options_shown_after_win_amazing">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_options_shown_after_win_incredible">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_options_shown_after_win_legendary">
+        <item>
+        </item>
+    </string-array>
+
+
+    <string-array name="capybara_emotion_options_shown_after_lose_ordinary">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_options_shown_after_lose_interesting">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_options_shown_after_lose_unusual">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_options_shown_after_lose_rare">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_options_shown_after_lose_amazing">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_options_shown_after_lose_incredible">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_options_shown_after_lose_legendary">
+        <item>
+        </item>
+    </string-array>
+
+
+    <string-array name="capybara_emotion_win_continues_ordinary">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_win_continues_interesting">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_win_continues_unusual">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_win_continues_rare">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_win_continues_amazing">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_win_continues_incredible">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_win_continues_legendary">
+        <item>
+        </item>
+    </string-array>
+
+
+    <string-array name="capybara_emotion_win_streak_broken_ordinary">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_win_streak_broken_interesting">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_win_streak_broken_unusual">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_win_streak_broken_rare">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_win_streak_broken_amazing">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_win_streak_broken_incredible">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_win_streak_broken_legendary">
+        <item>
+        </item>
+    </string-array>
+
+
+    <string-array name="capybara_emotion_lose_continues_ordinary">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_lose_continues_interesting">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_lose_continues_unusual">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_lose_continues_rare">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_lose_continues_amazing">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_lose_continues_incredible">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_lose_continues_legendary">
+        <item>
+        </item>
+    </string-array>
+
+
+    <string-array name="capybara_emotion_lose_streak_broken_ordinary">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_lose_streak_broken_interesting">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_lose_streak_broken_unusual">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_lose_streak_broken_rare">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_lose_streak_broken_amazing">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_lose_streak_broken_incredible">
+        <item>
+        </item>
+    </string-array>
+    <string-array name="capybara_emotion_lose_streak_broken_legendary">
+        <item>
+        </item>
+    </string-array>
+
+
+
+    <!-- 🟡 WAITING — NEUTRAL -->
+
+    <!-- 🟡 WAITING — SUPPORT -->
+
+    <!-- 🟡 WAITING — CHALLENGE -->
+
+    <!-- 🟢 WIN — NEUTRAL -->
+
+    <!-- 🟢 WIN — CHALLENGE -->
+
+    <!-- 🟢 WIN — SUPPORT -->
+
+    <!-- 🔴 LOSE — SUPPORT -->
+
+    <!-- 🔴 LOSE — NEUTRAL -->
+
+    <!-- 🔴 LOSE — CHALLENGE -->
+
+</resources>

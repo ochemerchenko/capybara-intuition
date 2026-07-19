@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 🔹 Statistics screen -->
+    <string name="statistics_title">Аналізувати:</string>
+    <string name="statistics_session_activity">Сесії останніх 30 діб</string>
+
+    <!-- 🔹 Modes -->
+    <string name="statistics_all_sessions">Усі</string>
+    <string name="statistics_mode_before">До</string>
+    <string name="statistics_mode_after">Після</string>
+    <string name="statistics_mode_hybrid">Гібрид</string>
+
+    <!-- 🔹 Session activity graphs headers-->
+
+    <!-- 🔹 Detail density card preview headers-->
+    <string name="statistics_detail_card_preview_header">Рівень %1$d</string>
+
+    <!-- 🔹 Density detail screen -->
+    <string name="statistics_density_header">Рівень %1$d • %2$s</string>
+
+    <!-- 🔹 Insight builder -->
+    <string name="statistics_performance_above_random">Ваші показники краще випадкових</string>
+    <string name="statistics_performance_above_random_improved">Ваші показники краще випадкових і зростають</string>
+    <string name="statistics_performance_above_random_declined">Ваші показники краще випадкових і знижуються</string>
+    <string name="statistics_performance_below_random">Ваші показники нижче випадкових</string>
+    <string name="statistics_performance_below_random_improved">Ваші показники нижче випадкових і зростають</string>
+    <string name="statistics_performance_below_random_declined">Ваші показники нижче випадкових і знижуються</string>
+    <string name="statistics_performance_near_random">Ваші показники в межах випадкових</string>
+    <string name="statistics_performance_near_random_improved">Ваші показники в межах випадкових і зростають</string>
+    <string name="statistics_performance_near_random_declined">Ваші показники в межах випадкових і знижуються</string>
+
+
+    <!-- 🔹 Pivot -->
+    <string name="statistics_pivot_level_label">Рівень</string>
+    <string name="statistics_pivot_mode_label">Тип сесії</string>
+
+    <!-- 🔹 Level mode analysis screen -->
+    <string name="statistics_level_selected">%1$d</string>
+
+    <string name="statistics_activity_graph_title">Кількість сесій по днях</string>
+
+    <string name="statistics_decision_time_unit_seconds">сек</string>
+    <string name="statistics_decision_time_unit_minutes">мін</string>
+    <string name="statistics_decision_time_axis_title">Час</string>
+
+    <string name="statistics_decision_time_title">Час на прийняття рішення</string>
+
+    <string name="statistics_density_axis_title">Середня успішність, %</string>
+    <string name="statistics_density_full_graph_title">Успішність сесій</string>
+
+    <string name="statistics_markdown_help_close_button">Зрозуміло</string>
+
+    <string name="statistics_empty_screen_title">Статистика ще не сформована.</string>
+    <string name="statistics_empty_screen_text">Зіграйте хоча б кілька раундів, щоб почати накопичувати статистику. Після цього тут з\'являться графіки вашого прогресу.</string>
+
+
+</resources>
