@@ -28,6 +28,12 @@ richtext = "0.20.0"
 # --- Datastore ---
 datastore = "1.1.7"
 
+# --- Firebase ---
+firebaseBom = "34.3.0"
+googleServices = "4.4.3"
+firebaseCrashlyticsPlugin = "3.0.6"
+
+
 [libraries]
 
 # --- Core ---
@@ -58,8 +64,17 @@ richtext-material3 = { group = "com.halilibo.compose-richtext", name = "richtext
 # --- Datastore ---
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
 
+# --- Firebase ---
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+
 [plugins]
 
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+# --- Firebase ---
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlyticsPlugin" }

@@ -27,3 +27,6 @@
 Images/
 image_sources/
 UML/
+
+# Firebase
+app/google-services.json

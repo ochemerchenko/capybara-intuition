@@ -2,6 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
+
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.firebase.crashlytics)
 }
 
 android {
@@ -81,7 +84,7 @@ dependencies {
     // implementation("com.patrykandpatrick.vico:core:1.13.1")
     // implementation("com.patrykandpatrick.vico:compose:1.13.1")
 
-    implementation("androidx.navigation:navigation-compose:2.7.7")
+    //implementation("androidx.navigation:navigation-compose:2.7.7")
     implementation("androidx.compose.material:material-icons-extended")
 
     implementation("androidx.navigation:navigation-compose:2.8.0")
@@ -95,4 +98,11 @@ dependencies {
 
     // --- Google Billing System ---
     implementation("com.android.billingclient:billing-ktx:7.1.1")
+
+
+    // --- Google Firebase ---
+    implementation(platform(libs.firebase.bom))
+
+    implementation(libs.firebase.crashlytics)
+    implementation(libs.firebase.analytics)
 }
