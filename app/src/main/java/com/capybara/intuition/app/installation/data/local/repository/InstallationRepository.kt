@@ -13,12 +13,10 @@ class InstallationRepository(
     // =========================================================
 
     suspend fun getInstallation(): InstallationEntity {
-
         return dao.getInstallation()
     }
 
     suspend fun countInstallations(): Int {
-
         return dao.countInstallations()
     }
 

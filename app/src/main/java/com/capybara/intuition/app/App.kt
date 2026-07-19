@@ -12,12 +12,15 @@ import kotlinx.coroutines.withContext
 
 class App : Application() {
 
+
     lateinit var appContainer: AppContainer
         private set
+
 
     private val appScope = CoroutineScope(
         SupervisorJob() + Dispatchers.IO
     )
+
 
     override fun onCreate() {
         super.onCreate()
@@ -28,10 +31,12 @@ class App : Application() {
 
         )
 
+
         // =========================================
         // Application initialization
         // =========================================
         appScope.launch {
+
             try {
 
                 // =========================================
@@ -70,74 +75,17 @@ class App : Application() {
                         .addObserver(
                             appContainer.jobManager
                             //(
-                                //billingManager = appContainer.googlePlayBillingManager,
-                                //scope = appScope
+                            //billingManager = appContainer.googlePlayBillingManager,
+                            //scope = appScope
                             //)
                         )
                 }
 
 
             } catch (e: Exception) {
-                // TODO Log initialization error
+                android.util.Log.e("APP_INIT", "Initialization failed", e)
             }
         }
     }
 }
 
-
-/*
-class App : Application() {
-
-    lateinit var appContainer: AppContainer
-        private set
-
-    private val appScope = CoroutineScope(
-        SupervisorJob() + Dispatchers.IO
-    )
-
-    override fun onCreate() {
-        super.onCreate()
-
-        appContainer = AppContainer(this)
-
-        appScope.launch {
-            try {
-                // =========================================
-                // Installation
-                // =========================================
-                appContainer
-                    .installation
-                    .installationInitializer
-                    .ensureInstallationExists()
-
-                // =========================================
-                // Bootstrap
-                // =========================================
-                appContainer
-                    .bootstrapLoader
-                    .bootstrap()
-
-                // =========================================
-                // Google Play Billing
-                // =========================================
-                appContainer
-                    .googlePlayBillingManager
-                    .start()
-
-                // =========================================
-                // Startup synchronization
-                // =========================================
-                JobManager(
-                    billingManager = appContainer.googlePlayBillingManager
-                ).synchronize()
-
-            } catch (e: Exception) {
-                // TODO Log initialization error
-            }
-        }
-    }
-}
-
-
-
- */

@@ -8,8 +8,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -22,7 +20,6 @@ import androidx.compose.ui.unit.dp
 import com.capybara.intuition.R
 import com.capybara.intuition.app.presentation.theme.IntuitionTheme
 import com.capybara.intuition.profile.presentation.ui.components.SettingsSection
-import com.capybara.intuition.profile.tester.presentation.ui.ChangeLicenseTypeSection
 import com.capybara.intuition.profile.tester.components.CompetenceSelector
 import com.capybara.intuition.profile.tester.components.DeleteHistoricalDatasetButton
 import com.capybara.intuition.profile.tester.components.GenerateHistoricalDatasetButton
@@ -103,6 +100,7 @@ fun TesterToolsScreen (
                     16.dp
                 )
             )
+
             SettingsSection(
                 title = stringResource(
                     R.string.settings_historical_dataset_title
@@ -230,8 +228,6 @@ fun TesterToolsScreen (
                             .weight(1f)
                     )
                 }
-
-
 
                 HistoricalDatasetStatus(
                     source = source,

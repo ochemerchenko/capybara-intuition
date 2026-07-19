@@ -2,9 +2,9 @@ package com.capybara.intuition.app.installation.domain.installation
 
 import android.content.Context
 import android.os.Build
-import com.capybara.intuition.BuildConfig
 import com.capybara.intuition.app.installation.data.local.db.entity.InstallationEntity
 import com.capybara.intuition.app.installation.data.local.repository.InstallationRepository
+import com.capybara.intuition.BuildConfig
 import java.util.Locale
 import java.util.TimeZone
 import java.util.UUID
@@ -16,9 +16,8 @@ class InstallationInitializer(
 
     suspend fun ensureInstallationExists() {
 
-        val existing = installationRepository.getInstallation()
-
-        if (existing != null) {
+        val existing = installationRepository.countInstallations()
+        if (existing > 0) {
             return
         }
 
