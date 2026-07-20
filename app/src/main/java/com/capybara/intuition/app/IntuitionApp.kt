@@ -31,10 +31,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
+import com.capybara.intuition.app.navigation.AppRoot
 
 @Composable
 fun IntuitionApp() {
 
+    val app = LocalContext.current.applicationContext as App
+    val appContainer = app.appContainer
     val navController = rememberNavController()
     val layoutEnvironment = rememberAppLayoutEnvironment()
     val colors = IntuitionTheme.colors
@@ -82,8 +85,10 @@ fun IntuitionApp() {
                     )
                 }
             ) { paddingValues ->
-                AppNavHost(
+                AppRoot(
                     navController = navController,
+                    bootstrapStateRepository = appContainer.installation.bootstrapStateRepository,
+                    releaseNotesRepository = appContainer.installation.releaseNotesRepository,
                     modifier = Modifier
                         .padding(paddingValues)
                         .fillMaxSize()

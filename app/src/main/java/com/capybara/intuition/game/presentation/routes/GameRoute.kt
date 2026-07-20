@@ -42,7 +42,11 @@ fun GameRoute(
 
     val session = state.session
     val currentRound = state.currentRound
-    Log.d("SUBMIT", "GameRoute: state.session = $session, currentRound = $currentRound")
+    Log.d("BOOT", "GameRoute: state.session = $session, currentRound = $currentRound")
+    Log.d(
+        "BOOT",
+        "GameRoute recomposed: session=${state.session != null}, round=${state.currentRound != null}"
+    )
     if (
         state.session == null || state.currentRound == null
     ) {

@@ -78,7 +78,8 @@ class AppContainer(
     // =====================================================
     val installation = InstallationModule(
         database = database,
-        context = context
+        context = context,
+        dataStoreAdapter
     )
 
     val profile = ProfileModule(
@@ -102,7 +103,8 @@ class AppContainer(
         database = database,
         capabilities = license.capabilities,
         installationRepository = installation.installationRepository,
-        licenseRepository = license.licenseRepository
+        licenseRepository = license.licenseRepository,
+        bootstrapStateRepository = installation.bootstrapStateRepository
     )
 
 

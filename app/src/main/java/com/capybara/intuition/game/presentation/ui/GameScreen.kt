@@ -31,6 +31,8 @@ fun GameScreen(
     modifier: Modifier = Modifier
 ) {
 
+    Log.d("BOOT", "GameScreen entered")
+
     val context by gameViewModel.state.collectAsState()
 
     // =====================================================
