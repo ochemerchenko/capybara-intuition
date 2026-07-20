@@ -18,7 +18,7 @@ android {
         targetSdk = 34
 
         versionCode = 1
-        versionName = "1.0"
+        versionName = "0.17"
     }
 
     buildFeatures {
