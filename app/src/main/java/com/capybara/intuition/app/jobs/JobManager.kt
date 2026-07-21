@@ -12,6 +12,7 @@ class JobManager(
     private val billingManager: GooglePlayBillingManager,
     // private val historicalExportManager: HistoricalExportManager,
     // private val databaseCleanupManager: DatabaseCleanupManager,
+    private val databaseCleanupManager: DatabaseCleanupManager,
 ) : DefaultLifecycleObserver {
 
 
@@ -41,6 +42,10 @@ class JobManager(
         // executeSafely("Database Cleanup") {
         //     databaseCleanupManager.cleanup()
         // }
+
+        executeSafely("Database Cleanup") {
+            databaseCleanupManager.cleanup()
+        }
     }
 
     private suspend fun executeSafely(

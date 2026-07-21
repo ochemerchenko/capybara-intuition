@@ -35,11 +35,13 @@ import com.capybara.intuition.profile.presentation.ui.sections.premium.PremiumHu
 import com.capybara.intuition.profile.presentation.viewmodel.ProfileViewModel
 import com.capybara.intuition.profile.presentation.ui.sections.ProfileList
 import com.capybara.intuition.profile.presentation.ui.sections.premium.ReturnToParentByPinSection
+import com.capybara.intuition.profile.presentation.viewmodel.SettingsViewModel
 
 
 @Composable
 fun SettingsScreen(
     profileViewModel: ProfileViewModel,
+    settingsViewModel: SettingsViewModel,
     capabilities: RuntimeCapabilities,
     onOpenTesterTools: () -> Unit = {},
     onLearnMoreClick: () -> Unit = {},
@@ -56,6 +58,10 @@ fun SettingsScreen(
 
     val profiles by profileViewModel
         .profiles
+        .collectAsState()
+
+    val retentionPeriod by settingsViewModel
+        .retentionPeriod
         .collectAsState()
 
     val activeProfile =
@@ -104,27 +110,6 @@ fun SettingsScreen(
                 .verticalScroll(scrollState)
         ) {
 
-            /*
-            ModeSettingsSection(
-                profile = activeProfile,
-                onModeSelected = profileViewModel ::updatePreferredMode
-            )
-
-
-            LevelSettingsSection(
-                profile = activeProfile,
-                onDecreaseLevel = profileViewModel ::decreaseLevel,
-                onIncreaseLevel = profileViewModel ::increaseLevel
-            )
-
-
-            ProfileList(
-                profiles,
-                profileViewModel ::onProfileSelected,
-            )
-
-             */
-
             Log.d("CAPABILITIES", "$capabilities")
 
             if ( capabilities.supportsMultiProfileRuntime ) {
@@ -134,7 +119,9 @@ fun SettingsScreen(
                     onProfileSelected = profileViewModel ::onProfileSelected,
                     onDecreaseLevel = profileViewModel ::decreaseLevel,
                     onIncreaseLevel = profileViewModel ::increaseLevel,
-                    onModeSelected = profileViewModel ::updatePreferredMode
+                    onModeSelected = profileViewModel ::updatePreferredMode,
+                    retentionPeriod = retentionPeriod,
+                    onRetentionPeriodChanged = settingsViewModel::setRetentionPeriod
                 )
             }
             else {
@@ -144,7 +131,9 @@ fun SettingsScreen(
                     onProfileSelected = profileViewModel ::onProfileSelected,
                     onDecreaseLevel = profileViewModel ::decreaseLevel,
                     onIncreaseLevel = profileViewModel ::increaseLevel,
-                    onLearnMoreClick = onLearnMoreClick
+                    onLearnMoreClick = onLearnMoreClick,
+                    retentionPeriod = retentionPeriod,
+                    onRetentionPeriodChanged = settingsViewModel::setRetentionPeriod
                 )
             }
 

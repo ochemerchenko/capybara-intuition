@@ -1,10 +1,12 @@
 package com.capybara.intuition.profile.presentation.ui.sections.free
 
 import androidx.compose.runtime.Composable
+import com.capybara.intuition.app.db_cleaner.DatabaseRetentionPeriod
 import com.capybara.intuition.profile.domain.model.Profile
 import com.capybara.intuition.profile.domain.model.ProfileType
 import com.capybara.intuition.profile.presentation.ui.sections.LevelSettingsSection
 import com.capybara.intuition.profile.presentation.ui.sections.ProfileList
+import com.capybara.intuition.profile.presentation.ui.sections.ThresholdHistorySection
 
 @Composable
 fun FreeHumanProfileSetupSection(
@@ -13,7 +15,9 @@ fun FreeHumanProfileSetupSection(
     onProfileSelected: (Profile) -> Unit,
     onDecreaseLevel: () -> Unit,
     onIncreaseLevel: () -> Unit,
-    onLearnMoreClick: () -> Unit
+    onLearnMoreClick: () -> Unit,
+    retentionPeriod: DatabaseRetentionPeriod,
+    onRetentionPeriodChanged: (DatabaseRetentionPeriod) -> Unit
 ) {
 
     // =====================================================
@@ -46,6 +50,11 @@ fun FreeHumanProfileSetupSection(
         profile = activeProfile,
         onDecreaseLevel = onDecreaseLevel,
         onIncreaseLevel = onIncreaseLevel
+    )
+
+    ThresholdHistorySection(
+        retentionPeriod = retentionPeriod,
+        onRetentionPeriodChanged = onRetentionPeriodChanged
     )
 
     ProfileList(

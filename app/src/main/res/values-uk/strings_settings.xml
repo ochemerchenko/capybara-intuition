@@ -121,6 +121,11 @@
     <string name="settings_buy_premium">Отримати PREMIUM</string>
     <string name="settings_learn_more">Дізнатися більше</string>
 
+    <string name="settings_threshold_history_header">Термін зберігання даних, днів</string>
 
+    <string name="settings_threshold_history_retention_90_days">90</string>
+    <string name="settings_threshold_history_retention_180_days">180</string>
+    <string name="settings_threshold_history_retention_360_days">360</string>
+    <string name="settings_threshold_history_retention_forever">Завжди</string>
 
 </resources>

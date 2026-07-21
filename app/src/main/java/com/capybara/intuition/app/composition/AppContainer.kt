@@ -1,6 +1,7 @@
 package com.capybara.intuition.app.composition
 
 
+import DatabaseRetentionRepository
 import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -15,6 +16,9 @@ import com.capybara.intuition.app.AppDatabase
 import com.capybara.intuition.app.DataStoreAdapter
 import com.capybara.intuition.app.billing.GooglePlayBillingManager
 import com.capybara.intuition.app.bootstrap.BootstrapLoader
+import com.capybara.intuition.app.composition.modules.SettingsModule
+import com.capybara.intuition.app.db_cleaner.DatabaseRetentionDataStore
+import com.capybara.intuition.app.jobs.DatabaseCleanupManager
 import com.capybara.intuition.app.jobs.JobManager
 import kotlinx.coroutines.CoroutineScope
 
@@ -64,12 +68,26 @@ class AppContainer(
             synchronizationRepository = license.synchronizationRepository
         )
 
+    val databaseRetentionDataStore =
+        DatabaseRetentionDataStore(dataStoreAdapter)
+
+    val databaseRetentionRepository =
+        DatabaseRetentionRepository(
+            databaseRetentionDataStore
+        )
+
+    val databaseCleanupManager = DatabaseCleanupManager(
+        sessionDao = database.sessionDao(),
+        databaseRetentionRepository = databaseRetentionRepository
+    )
+
     val jobManager =
         JobManager(
             scope = appScope,
             billingManager = googlePlayBillingManager,
 
             // historicalExportManager = ...
+            databaseCleanupManager = databaseCleanupManager,
         )
 
 
@@ -85,6 +103,12 @@ class AppContainer(
     val profile = ProfileModule(
         database = database
     )
+
+    val settings =
+        SettingsModule(
+            databaseRetentionRepository = databaseRetentionRepository
+        )
+
     val gameplay = GameplayModule(
         database = database
     )

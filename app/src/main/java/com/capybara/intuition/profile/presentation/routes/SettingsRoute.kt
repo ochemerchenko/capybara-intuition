@@ -19,6 +19,7 @@ fun SettingsRoute(
     val container = app.appContainer
 
     val profileViewModel = container.profile.profileViewModel
+    val settingsViewModel = container.settings.settingsViewModel
 
     val capabilities = container.license.capabilities
 
@@ -37,6 +38,7 @@ fun SettingsRoute(
 
     SettingsScreen(
         profileViewModel = profileViewModel,
+        settingsViewModel = settingsViewModel,
         capabilities = capabilities,
         onOpenTesterTools = onOpenTesterTools,
         onLearnMoreClick = onLearnMoreClick,

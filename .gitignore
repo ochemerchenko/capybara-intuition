@@ -30,3 +30,6 @@ UML/
 
 # Firebase
 app/google-services.json
+
+# Release
+app/release/

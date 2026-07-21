@@ -21,6 +21,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.capybara.intuition.R
+import com.capybara.intuition.app.db_cleaner.DatabaseRetentionPeriod
 import com.capybara.intuition.app.presentation.styles.IntuitionOutlinedTextFieldStyle
 import com.capybara.intuition.app.presentation.theme.IntuitionTheme
 import com.capybara.intuition.game.domain.model.GameMode
@@ -30,6 +31,7 @@ import com.capybara.intuition.profile.domain.model.ProfileType
 import com.capybara.intuition.profile.presentation.ui.components.SettingsSection
 import com.capybara.intuition.profile.presentation.ui.sections.LevelSettingsSection
 import com.capybara.intuition.profile.presentation.ui.sections.ProfileList
+import com.capybara.intuition.profile.presentation.ui.sections.ThresholdHistorySection
 
 
 @Composable
@@ -40,6 +42,8 @@ fun PremiumHumanProfileSetupSection(
     onDecreaseLevel: () -> Unit,
     onIncreaseLevel: () -> Unit,
     onModeSelected: (GameMode) -> Unit,
+    retentionPeriod: DatabaseRetentionPeriod,
+    onRetentionPeriodChanged: (DatabaseRetentionPeriod) -> Unit
 ) {
 
     // =====================================================
@@ -91,6 +95,11 @@ fun PremiumHumanProfileSetupSection(
             profile = activeProfile,
             onDecreaseLevel = onDecreaseLevel,
             onIncreaseLevel = onIncreaseLevel
+        )
+
+        ThresholdHistorySection(
+            retentionPeriod = retentionPeriod,
+            onRetentionPeriodChanged = onRetentionPeriodChanged
         )
 
         ProfileList(

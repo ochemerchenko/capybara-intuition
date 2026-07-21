@@ -118,4 +118,12 @@ interface SessionDao {
     """
     )
     suspend fun getLastSessionId(): Long
+
+    @Query("""
+        DELETE FROM sessions
+        WHERE startedAt < :threshold
+    """)
+    suspend fun deleteSessionsStartedBefore(
+        threshold: Long
+    ): Int
 }
