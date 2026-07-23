@@ -12,7 +12,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
-import com.capybara.intuition.app.navigation.AppNavHost
 import com.capybara.intuition.app.navigation.ui.topnav.TopNavigation
 import com.capybara.intuition.app.presentation.layout.LocalAppLayoutEnvironment
 import com.capybara.intuition.app.presentation.layout.rememberAppLayoutEnvironment
@@ -22,15 +21,19 @@ import com.capybara.intuition.app.presentation.theme.IntuitionTheme
 
 
 import android.app.Activity
+import android.util.Log
 import androidx.activity.compose.BackHandler
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
+import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
+import com.capybara.intuition.app.bootstrap.BootstrapState
+import com.capybara.intuition.app.navigation.AppLaunchState
 import com.capybara.intuition.app.navigation.AppRoot
 
 @Composable
@@ -47,9 +50,40 @@ fun IntuitionApp() {
     var showExitDialog by rememberSaveable {
         mutableStateOf(false)
     }
-    BackHandler {
-        showExitDialog = true
+
+    val bootstrapState by
+    appContainer.installation.bootstrapStateRepository.state
+        .collectAsState(
+            initial = BootstrapState.NOT_STARTED
+        )
+
+    val releaseNotesVersionRead by
+    appContainer.installation.releaseNotesRepository
+        .releaseNotesVersionRead
+        .collectAsState(
+            initial = 0
+        )
+
+    val launchState =
+        when {
+            releaseNotesVersionRead == 0 -> AppLaunchState.ONBOARDING
+            bootstrapState == BootstrapState.FAILED -> AppLaunchState.ERROR
+            bootstrapState == BootstrapState.COMPLETED -> AppLaunchState.READY
+            else -> AppLaunchState.INSTALLING
+        }
+
+
+    //val dispatcherOwner = LocalOnBackPressedDispatcherOwner.current
+
+    //LaunchedEffect(dispatcherOwner) {
+    //    Log.d("BackTest", "dispatcherOwner, msg 1 = $dispatcherOwner")
+    //}
+
+
+    LaunchedEffect(showExitDialog) {
+        Log.d("BackTest", "showExitDialog = $showExitDialog")
     }
+
 
     if (showExitDialog) {
         ExitDialog(
@@ -80,15 +114,30 @@ fun IntuitionApp() {
             Scaffold(
                 containerColor = Color.Transparent,
                 topBar = {
-                    TopNavigation(
-                        navController = navController
-                    )
+                    if (launchState == AppLaunchState.READY) {
+                        TopNavigation(
+                            navController = navController
+                        )
+                    }
                 }
             ) { paddingValues ->
+                DisposableEffect(Unit) {
+                    Log.d("BackTest", "IntuitionApp BackHandler ENTER")
+
+                    onDispose {
+                        Log.d("BackTest", "IntuitionApp BackHandler EXIT")
+                    }
+                }
+
+                BackHandler {
+                    Log.d("BackTest", "Global BackHandler")
+                    showExitDialog = true
+                }
                 AppRoot(
                     navController = navController,
-                    bootstrapStateRepository = appContainer.installation.bootstrapStateRepository,
+                    //launchState = launchState,
                     releaseNotesRepository = appContainer.installation.releaseNotesRepository,
+                    bootstrapStateRepository = appContainer.installation.bootstrapStateRepository,
                     modifier = Modifier
                         .padding(paddingValues)
                         .fillMaxSize()

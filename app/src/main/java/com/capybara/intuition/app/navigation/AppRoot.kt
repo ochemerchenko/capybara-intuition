@@ -1,6 +1,8 @@
 package com.capybara.intuition.app.navigation
 
+import android.util.Log
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
@@ -17,6 +19,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun AppRoot(
     navController: NavHostController,
+    //launchState: AppLaunchState,
     bootstrapStateRepository: BootstrapStateRepository,
     releaseNotesRepository: ReleaseNotesRepository,
     modifier: Modifier = Modifier,
@@ -44,30 +47,31 @@ fun AppRoot(
             else -> AppLaunchState.INSTALLING
         }
 
-    //val launchState = AppLaunchState.ONBOARDING
+    LaunchedEffect(launchState) {
+        Log.d("ROOT", "launchState = $launchState")
+    }
 
     when (launchState) {
 
-        AppLaunchState.INSTALLING ->
-            InstallationScreen()
+        AppLaunchState.INSTALLING -> InstallationScreen()
 
-        AppLaunchState.ONBOARDING ->
-            ReleaseNotesScreen(
-                onConfirm = {
-                    scope.launch {
-                        releaseNotesRepository.completeOnboarding()
-                    }
+        AppLaunchState.ONBOARDING -> ReleaseNotesScreen(
+            onConfirm = {
+                scope.launch {
+                    releaseNotesRepository.completeOnboarding()
                 }
-            )
+            }
+        )
 
-        AppLaunchState.READY ->
+        AppLaunchState.READY -> {
+            Log.d("ROOT", "Creating AppNavHost")
             AppNavHost(
                 navController = navController,
                 modifier = modifier,
             )
+        }
 
-        AppLaunchState.ERROR ->
-            InstallationErrorScreen()
+        AppLaunchState.ERROR -> InstallationErrorScreen()
 
     }
 }

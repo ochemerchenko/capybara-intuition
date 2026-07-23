@@ -1,5 +1,6 @@
 package com.capybara.intuition.app.navigation.ui.topnav
 
+import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -63,6 +64,10 @@ fun TopNavigation(
             icon = Icons.Default.Info,
             selected = currentRoute == AppDestination.Info.route,
             onClick = {
+                Log.d(
+                    "NAV",
+                    "Navigate to Statistics, controller=${navController.hashCode()}, currentRoute=$currentRoute"
+                )
                 navController.navigate(
                     AppDestination.Info.route
                 ) {
@@ -75,6 +80,10 @@ fun TopNavigation(
             icon = Icons.Default.PlayArrow,
             selected = currentRoute == AppDestination.Game.route,
             onClick = {
+                Log.d(
+                    "NAV",
+                    "Navigate to Statistics, controller=${navController.hashCode()}, currentRoute=$currentRoute"
+                )
                 navController.navigate(
                     AppDestination.Game.route
                 ) {
@@ -87,6 +96,10 @@ fun TopNavigation(
             icon = Icons.Default.BarChart,
             selected = currentRoute == AppDestination.Statistics.route,
             onClick = {
+                Log.d(
+                    "NAV",
+                    "Navigate to Statistics, controller=${navController.hashCode()}, currentRoute=$currentRoute"
+                )
                 navController.navigate(
                     AppDestination.Statistics.route
                 ) {
@@ -99,6 +112,10 @@ fun TopNavigation(
             icon = Icons.Default.Settings,
             selected = currentRoute == AppDestination.Settings.route,
             onClick = {
+                Log.d(
+                    "NAV",
+                    "Navigate to Statistics, controller=${navController.hashCode()}, currentRoute=$currentRoute"
+                )
                 navController.navigate(
                     AppDestination.Settings.route
                 ) {

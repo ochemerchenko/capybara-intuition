@@ -1,7 +1,10 @@
 package com.capybara.intuition.app.navigation
 
 
+import android.util.Log
+import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
@@ -26,6 +29,7 @@ fun AppNavHost(
     val app = LocalContext.current.applicationContext as App
     val container = app.appContainer
     val capabilities = container.license.capabilities
+
 
     NavHost(
         navController = navController,

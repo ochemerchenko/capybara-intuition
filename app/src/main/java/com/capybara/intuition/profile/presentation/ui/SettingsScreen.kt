@@ -1,6 +1,8 @@
 package com.capybara.intuition.profile.presentation.ui
 
+import android.app.Activity
 import android.util.Log
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,11 +19,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.capybara.intuition.R
+import com.capybara.intuition.app.ExitDialog
 import com.capybara.intuition.app.presentation.theme.IntuitionTheme
 import com.capybara.intuition.license.capability.RuntimeCapabilities
 import com.capybara.intuition.app.presentation.layout.LocalAppLayoutEnvironment
@@ -89,6 +96,31 @@ fun SettingsScreen(
             )
         }
     }
+
+    // Start of BACK-dialog
+
+    var showExitDialog by rememberSaveable { mutableStateOf(false) }
+
+    val activity = LocalContext.current as? Activity
+
+    BackHandler {
+        showExitDialog = true
+    }
+
+    if (showExitDialog) {
+        ExitDialog(
+            onConfirm = {
+                activity?.finish()
+            },
+            onDismiss = {
+                showExitDialog = false
+            }
+        )
+    }
+
+
+    // End of BACK-dialog
+
 
     // =====================================================
     // UI

@@ -1,15 +1,20 @@
 package com.capybara.intuition.statistics.presentation.ui
 
 
+import android.app.Activity
 import android.util.Log
+import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import com.capybara.intuition.app.ExitDialog
 import com.capybara.intuition.license.domain.LicenseType
 import com.capybara.intuition.game.domain.model.GameMode
 import com.capybara.intuition.profile.presentation.viewmodel.ProfileViewModel
@@ -109,6 +114,30 @@ fun StatisticsScreen(
             toTimestamp = now
         )
     }
+
+    // Start of BACK-dialog
+
+    var showExitDialog by rememberSaveable { mutableStateOf(false) }
+
+    val activity = LocalContext.current as? Activity
+
+    BackHandler {
+        showExitDialog = true
+    }
+
+    if (showExitDialog) {
+        ExitDialog(
+            onConfirm = {
+                activity?.finish()
+            },
+            onDismiss = {
+                showExitDialog = false
+            }
+        )
+    }
+
+
+    // End of BACK-dialog
 
 
     // =====================================================

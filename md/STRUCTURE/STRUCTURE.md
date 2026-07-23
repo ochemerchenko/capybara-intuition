@@ -1,5 +1,5 @@
 ## Version: 0.17
-## Last Updated: 2026-07-19
+## Last Updated: 2026-07-23
 
 Intuition/app/src/main/java/com/capybara/intuition$ tree
 .
@@ -42,13 +42,31 @@ Intuition/app/src/main/java/com/capybara/intuition$ tree
 │   │           ├── BillingState.kt
 │   │           └── BillingUiState.kt
 │   ├── bootstrap
+│   │   ├── BootstrapDataStore.kt
 │   │   ├── BootstrapLoader.kt
+│   │   ├── BootstrapState.kt
+│   │   ├── BootstrapStateRepository.kt
 │   │   ├── colors
 │   │   │   ├── NotebookResourceLinkSeeder.kt
 │   │   │   ├── NotebookSeeder.kt
 │   │   │   └── ResourceSeeder.kt
 │   │   ├── gameModes
 │   │   │   └── GameModeSeeder.kt
+│   │   ├── installation
+│   │   │   ├── data
+│   │   │   │   └── local
+│   │   │   │       ├── db
+│   │   │   │       │   ├── dao
+│   │   │   │       │   │   └── InstallationDao.kt
+│   │   │   │       │   └── entity
+│   │   │   │       │       └── InstallationEntity.kt
+│   │   │   │       └── repository
+│   │   │   │           ├── InstallationRepository.kt
+│   │   │   │           ├── ReleaseNotesDataStore.kt
+│   │   │   │           └── ReleaseNotesRepository.kt
+│   │   │   └── domain
+│   │   │       └── installation
+│   │   │           └── InstallationInitializer.kt
 │   │   ├── masks
 │   │   │   └── MaskSeeder.kt
 │   │   ├── ProfileSeeder.kt
@@ -72,25 +90,18 @@ Intuition/app/src/main/java/com/capybara/intuition$ tree
 │   │       │   ├── ProfileSecurityModule.kt
 │   │       │   └── ProfileTopologyModule.kt
 │   │       ├── ProfileModule.kt
+│   │       ├── SettingsModule.kt
 │   │       ├── StatisticsModule.kt
 │   │       └── TesterModule.kt
 │   ├── DataStoreAdapter.kt
 │   ├── ExitDialog.kt
-│   ├── installation
-│   │   ├── data
-│   │   │   └── local
-│   │   │       ├── db
-│   │   │       │   ├── dao
-│   │   │       │   │   └── InstallationDao.kt
-│   │   │       │   └── entity
-│   │   │       │       └── InstallationEntity.kt
-│   │   │       └── repository
-│   │   │           └── InstallationRepository.kt
-│   │   └── domain
-│   │       └── installation
-│   │           └── InstallationInitializer.kt
 │   ├── IntuitionApp.kt
 │   ├── jobs
+│   │   ├── DatabaseCleanupManager.kt
+│   │   ├── db_cleaner
+│   │   │   ├── DatabaseRetentionDataStore.kt
+│   │   │   ├── DatabaseRetentionPeriod.kt
+│   │   │   └── DatabaseRetentionRepository.kt
 │   │   └── JobManager.kt
 │   ├── license
 │   │   ├── capability
@@ -113,8 +124,14 @@ Intuition/app/src/main/java/com/capybara/intuition$ tree
 │   ├── MainActivity.kt
 │   ├── navigation
 │   │   ├── AppDestination.kt
+│   │   ├── AppLaunchState.kt
 │   │   ├── AppNavHost.kt
+│   │   ├── AppRoot.kt
 │   │   └── ui
+│   │       ├── setup
+│   │       │   ├── InstallationErrorScreen.kt
+│   │       │   ├── InstallationScreen.kt
+│   │       │   └── ReleaseNotesScreen.kt
 │   │       └── topnav
 │   │           ├── NavIcon.kt
 │   │           └── TopNavigation.kt
@@ -134,15 +151,16 @@ Intuition/app/src/main/java/com/capybara/intuition$ tree
 │   │           ├── ChartTypography.kt
 │   │           ├── IntuitionTypography.kt
 │   │           └── Type.kt
-│   └── tools
-│       └── markdown
-│           ├── ActivityLegendImage.kt
-│           ├── DensityPreviewLegendImage.kt
-│           ├── HelpActivityChartImage.kt
-│           ├── HelpDecisionTimeChartImage.kt
-│           ├── HelpFullDensityChartImage.kt
-│           ├── MarkdownImage.kt
-│           └── MarkdownText.kt
+│   ├── tools
+│   │   └── markdown
+│   │       ├── ActivityLegendImage.kt
+│   │       ├── DensityPreviewLegendImage.kt
+│   │       ├── HelpActivityChartImage.kt
+│   │       ├── HelpDecisionTimeChartImage.kt
+│   │       ├── HelpFullDensityChartImage.kt
+│   │       ├── MarkdownImage.kt
+│   │       └── MarkdownText.kt
+│   └── voiting
 ├── game
 │   ├── data
 │   │   ├── local
@@ -353,10 +371,12 @@ Intuition/app/src/main/java/com/capybara/intuition$ tree
 │   │   │   │   │   ├── PremiumHumanProfileSetupSection.kt
 │   │   │   │   │   ├── PremiumPersonalizationSetupSection.kt
 │   │   │   │   │   └── ReturnToParentByPinSection.kt
-│   │   │   │   └── ProfileList.kt
+│   │   │   │   ├── ProfileList.kt
+│   │   │   │   └── ThresholdHistorySection.kt
 │   │   │   └── SettingsScreen.kt
 │   │   └── viewmodel
-│   │       └── ProfileViewModel.kt
+│   │       ├── ProfileViewModel.kt
+│   │       └── SettingsViewModel.kt
 │   └── tester
 │       ├── components
 │       │   ├── CompetenceSelector.kt
@@ -419,6 +439,104 @@ Intuition/app/src/main/java/com/capybara/intuition$ tree
 │       └── repository
 │           └── HistoricalDatasetRepository.kt
 └── statistics
+    ├── charts
+    │   ├── arts
+    │   │   ├── activity
+    │   │   │   ├── ActivityGraphic.kt
+    │   │   │   └── components
+    │   │   │       ├── activityGraphContentArea.kt
+    │   │   │       ├── activityGraphStartPointArea.kt
+    │   │   │       ├── activityGraphXAxisArea.kt
+    │   │   │       ├── activityGraphYAxisArea.kt
+    │   │   │       ├── activityGraphYTitleArea.kt
+    │   │   │       └── content
+    │   │   │           ├── drawActivityGraphActivityBars.kt
+    │   │   │           ├── drawActivityGraphActivityValues.kt
+    │   │   │           ├── drawActivityGraphHorizontalGrid.kt
+    │   │   │           └── drawActivityGraphVerticalGrid.kt
+    │   │   ├── decisionTime
+    │   │   │   ├── components
+    │   │   │   │   ├── content
+    │   │   │   │   │   ├── drawDecisionTimeGraphHorizontalGrid.kt
+    │   │   │   │   │   ├── drawDecisionTimeGraphLine.kt
+    │   │   │   │   │   └── drawDecisionTimeGraphVerticalGrid.kt
+    │   │   │   │   ├── drawDecisionTimeGraphContentArea.kt
+    │   │   │   │   ├── drawDecisionTimeGraphStartPointArea.kt
+    │   │   │   │   ├── drawDecisionTimeGraphXAxisArea.kt
+    │   │   │   │   ├── drawDecisionTimeGraphYAxisArea.kt
+    │   │   │   │   └── drawDecisionTimeGraphYTitleArea.kt
+    │   │   │   └── DecisionTimeGraphic.kt
+    │   │   ├── fullDensity
+    │   │   │   ├── components
+    │   │   │   │   ├── content
+    │   │   │   │   │   ├── drawDensityFullGraphBaselineCorridor.kt
+    │   │   │   │   │   ├── drawDensityFullGraphBaseline.kt
+    │   │   │   │   │   ├── drawDensityFullGraphHorizontalGrid.kt
+    │   │   │   │   │   ├── drawDensityFullGraphUserLine.kt
+    │   │   │   │   │   └── drawDensityFullGraphVerticalGrid.kt
+    │   │   │   │   ├── drawDensityFullGraphContentArea.kt
+    │   │   │   │   ├── drawDensityFullGraphStartPointArea.kt
+    │   │   │   │   ├── drawDensityFullGraphXAxisArea.kt
+    │   │   │   │   ├── drawDensityFullGraphYAxisArea.kt
+    │   │   │   │   ├── drawDensityFullGraphYTitleArea.kt
+    │   │   │   │   └── header
+    │   │   │   │       └── ChartHeader.kt
+    │   │   │   └── DensityFullGraphic.kt
+    │   │   └── preview
+    │   │       ├── components
+    │   │       │   ├── content
+    │   │       │   │   ├── drawPreviewGraphBaseline.kt
+    │   │       │   │   └── drawPreviewGraphUserLine.kt
+    │   │       │   ├── drawPreviewDensityGraphContentArea.kt
+    │   │       │   ├── drawPreviewDensityGraphTitleArea.kt
+    │   │       │   └── drawPreviewDensityGraphYAxisArea.kt
+    │   │       └── previewDensityGraphic.kt
+    │   ├── calculators
+    │   │   ├── applyDayDensities.kt
+    │   │   ├── buildChartPoints.kt
+    │   │   ├── buildChartPointsTimeDecision.kt
+    │   │   ├── buildSmoothPath.kt
+    │   │   ├── buildSmoothPathTimeDecision.kt
+    │   │   ├── calculateAnalyticsChartPoints.kt
+    │   │   ├── calculateEmaAlpha.kt
+    │   │   ├── calculateEma.kt
+    │   │   ├── calculateRequiredHistoryDays.kt
+    │   │   ├── enrichWithCorridors.kt
+    │   │   ├── enrichWithEma.kt
+    │   │   ├── graphLayoutsModels
+    │   │   │   ├── getActivityGraphLayoutModel.kt
+    │   │   │   ├── getDecisionTimeGraphLayoutModel.kt
+    │   │   │   ├── getFullDensityGraphLayoutModel.kt
+    │   │   │   └── getPreviewDensityGraphLayoutModel.kt
+    │   │   ├── trimAnalyticPeriod.kt
+    │   │   └── yScale
+    │   │       ├── calculateActivityYScale.kt
+    │   │       ├── calculateDecisionTimeYScale.kt
+    │   │       ├── calculateFullDensityYScale.kt
+    │   │       ├── calculatePreviewDensityYScale.kt
+    │   │       └── model
+    │   │           ├── ActivityYScaleModel.kt
+    │   │           ├── DecisionTimeYScaleModel.kt
+    │   │           ├── FullDensityYScaleModel.kt
+    │   │           ├── PreviewDensityYScaleModel.kt
+    │   │           └── TimeMeasureUnit.kt
+    │   ├── model
+    │   │   ├── chartsAreas
+    │   │   │   ├── Area.kt
+    │   │   │   ├── DecisionTimeGraphLayoutModel.kt
+    │   │   │   ├── FullDensityGraphLayoutModel.kt
+    │   │   │   └── PreviewDensityGraphLayoutModel.kt
+    │   │   ├── data
+    │   │   │   ├── AnalyticsChartPoint.kt
+    │   │   │   ├── DayDensity.kt
+    │   │   │   ├── PreviewByLevelRequest.kt
+    │   │   │   ├── PreviewByLevelResponse.kt
+    │   │   │   ├── PreviewByModeRequest.kt
+    │   │   │   ├── PreviewByModeResponse.kt
+    │   │   │   └── StatisticsQueryContext.kt
+    │   │   └── EmaTarget.kt
+    │   └── tools
+    │       └── BuildEmptyChart.kt
     ├── data
     │   ├── local
     │   │   └── db
@@ -468,104 +586,6 @@ Intuition/app/src/main/java/com/capybara/intuition$ tree
         │   │       │   └── MarkdownDialog.kt
         │   │       ├── EmptyStatisticsScreen.kt
         │   │       ├── LevelSelector.kt
-        │   │       ├── newGraphSystem
-        │   │       │   ├── arts
-        │   │       │   │   ├── activity
-        │   │       │   │   │   ├── ActivityGraphic.kt
-        │   │       │   │   │   └── components
-        │   │       │   │   │       ├── activityGraphContentArea.kt
-        │   │       │   │   │       ├── activityGraphStartPointArea.kt
-        │   │       │   │   │       ├── activityGraphXAxisArea.kt
-        │   │       │   │   │       ├── activityGraphYAxisArea.kt
-        │   │       │   │   │       ├── activityGraphYTitleArea.kt
-        │   │       │   │   │       └── content
-        │   │       │   │   │           ├── drawActivityGraphActivityBars.kt
-        │   │       │   │   │           ├── drawActivityGraphActivityValues.kt
-        │   │       │   │   │           ├── drawActivityGraphHorizontalGrid.kt
-        │   │       │   │   │           └── drawActivityGraphVerticalGrid.kt
-        │   │       │   │   ├── decisionTime
-        │   │       │   │   │   ├── components
-        │   │       │   │   │   │   ├── content
-        │   │       │   │   │   │   │   ├── drawDecisionTimeGraphHorizontalGrid.kt
-        │   │       │   │   │   │   │   ├── drawDecisionTimeGraphLine.kt
-        │   │       │   │   │   │   │   └── drawDecisionTimeGraphVerticalGrid.kt
-        │   │       │   │   │   │   ├── drawDecisionTimeGraphContentArea.kt
-        │   │       │   │   │   │   ├── drawDecisionTimeGraphStartPointArea.kt
-        │   │       │   │   │   │   ├── drawDecisionTimeGraphXAxisArea.kt
-        │   │       │   │   │   │   ├── drawDecisionTimeGraphYAxisArea.kt
-        │   │       │   │   │   │   └── drawDecisionTimeGraphYTitleArea.kt
-        │   │       │   │   │   └── DecisionTimeGraphic.kt
-        │   │       │   │   ├── fullDensity
-        │   │       │   │   │   ├── components
-        │   │       │   │   │   │   ├── content
-        │   │       │   │   │   │   │   ├── drawDensityFullGraphBaselineCorridor.kt
-        │   │       │   │   │   │   │   ├── drawDensityFullGraphBaseline.kt
-        │   │       │   │   │   │   │   ├── drawDensityFullGraphHorizontalGrid.kt
-        │   │       │   │   │   │   │   ├── drawDensityFullGraphUserLine.kt
-        │   │       │   │   │   │   │   └── drawDensityFullGraphVerticalGrid.kt
-        │   │       │   │   │   │   ├── drawDensityFullGraphContentArea.kt
-        │   │       │   │   │   │   ├── drawDensityFullGraphStartPointArea.kt
-        │   │       │   │   │   │   ├── drawDensityFullGraphXAxisArea.kt
-        │   │       │   │   │   │   ├── drawDensityFullGraphYAxisArea.kt
-        │   │       │   │   │   │   ├── drawDensityFullGraphYTitleArea.kt
-        │   │       │   │   │   │   └── header
-        │   │       │   │   │   │       └── ChartHeader.kt
-        │   │       │   │   │   └── DensityFullGraphic.kt
-        │   │       │   │   └── preview
-        │   │       │   │       ├── components
-        │   │       │   │       │   ├── content
-        │   │       │   │       │   │   ├── drawPreviewGraphBaseline.kt
-        │   │       │   │       │   │   └── drawPreviewGraphUserLine.kt
-        │   │       │   │       │   ├── drawPreviewDensityGraphContentArea.kt
-        │   │       │   │       │   ├── drawPreviewDensityGraphTitleArea.kt
-        │   │       │   │       │   └── drawPreviewDensityGraphYAxisArea.kt
-        │   │       │   │       └── previewDensityGraphic.kt
-        │   │       │   ├── calculators
-        │   │       │   │   ├── applyDayDensities.kt
-        │   │       │   │   ├── buildChartPoints.kt
-        │   │       │   │   ├── buildChartPointsTimeDecision.kt
-        │   │       │   │   ├── buildSmoothPath.kt
-        │   │       │   │   ├── buildSmoothPathTimeDecision.kt
-        │   │       │   │   ├── calculateAnalyticsChartPoints.kt
-        │   │       │   │   ├── calculateEmaAlpha.kt
-        │   │       │   │   ├── calculateEma.kt
-        │   │       │   │   ├── calculateRequiredHistoryDays.kt
-        │   │       │   │   ├── enrichWithCorridors.kt
-        │   │       │   │   ├── enrichWithEma.kt
-        │   │       │   │   ├── graphLayoutsModels
-        │   │       │   │   │   ├── getActivityGraphLayoutModel.kt
-        │   │       │   │   │   ├── getDecisionTimeGraphLayoutModel.kt
-        │   │       │   │   │   ├── getFullDensityGraphLayoutModel.kt
-        │   │       │   │   │   └── getPreviewDensityGraphLayoutModel.kt
-        │   │       │   │   ├── trimAnalyticPeriod.kt
-        │   │       │   │   └── yScale
-        │   │       │   │       ├── calculateActivityYScale.kt
-        │   │       │   │       ├── calculateDecisionTimeYScale.kt
-        │   │       │   │       ├── calculateFullDensityYScale.kt
-        │   │       │   │       ├── calculatePreviewDensityYScale.kt
-        │   │       │   │       └── model
-        │   │       │   │           ├── ActivityYScaleModel.kt
-        │   │       │   │           ├── DecisionTimeYScaleModel.kt
-        │   │       │   │           ├── FullDensityYScaleModel.kt
-        │   │       │   │           ├── PreviewDensityYScaleModel.kt
-        │   │       │   │           └── TimeMeasureUnit.kt
-        │   │       │   ├── model
-        │   │       │   │   ├── chartsAreas
-        │   │       │   │   │   ├── Area.kt
-        │   │       │   │   │   ├── DecisionTimeGraphLayoutModel.kt
-        │   │       │   │   │   ├── FullDensityGraphLayoutModel.kt
-        │   │       │   │   │   └── PreviewDensityGraphLayoutModel.kt
-        │   │       │   │   ├── data
-        │   │       │   │   │   ├── AnalyticsChartPoint.kt
-        │   │       │   │   │   ├── DayDensity.kt
-        │   │       │   │   │   ├── PreviewByLevelRequest.kt
-        │   │       │   │   │   ├── PreviewByLevelResponse.kt
-        │   │       │   │   │   ├── PreviewByModeRequest.kt
-        │   │       │   │   │   ├── PreviewByModeResponse.kt
-        │   │       │   │   │   └── StatisticsQueryContext.kt
-        │   │       │   │   └── EmaTarget.kt
-        │   │       │   └── tools
-        │   │       │       └── BuildEmptyChart.kt
         │   │       └── StatisticsChipSelector.kt
         │   └── StatisticsScreen.kt
         └── viewmodel

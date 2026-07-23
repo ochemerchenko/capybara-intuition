@@ -1,7 +1,9 @@
 package com.capybara.intuition.game.presentation.ui
 
 
+import android.app.Activity
 import android.util.Log
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
@@ -14,10 +16,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.platform.LocalContext
+import com.capybara.intuition.app.ExitDialog
 import com.capybara.intuition.game.presentation.layout.calculateGameScreenLayout
 import com.capybara.intuition.game.presentation.ui.components.bottomPanel.BottomPanel
 import com.capybara.intuition.game.presentation.ui.components.gameGrid.GameGrid
@@ -57,6 +64,30 @@ fun GameScreen(
     val profile = session.profile
 
     val coroutineScope = rememberCoroutineScope()
+
+    // Start of BACK-dialog
+
+    var showExitDialog by rememberSaveable { mutableStateOf(false) }
+
+    val activity = LocalContext.current as? Activity
+
+    BackHandler {
+        showExitDialog = true
+    }
+
+    if (showExitDialog) {
+        ExitDialog(
+            onConfirm = {
+                activity?.finish()
+            },
+            onDismiss = {
+                showExitDialog = false
+            }
+        )
+    }
+
+
+    // End of BACK-dialog
 
     BoxWithConstraints(
         modifier = Modifier
