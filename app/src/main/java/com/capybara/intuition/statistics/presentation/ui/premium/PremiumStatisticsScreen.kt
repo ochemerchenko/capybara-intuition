@@ -24,7 +24,7 @@ import com.capybara.intuition.statistics.presentation.ui.premium.header.PremiumS
 import com.capybara.intuition.statistics.presentation.ui.premium.sections.PremiumDensityDetailSection
 import com.capybara.intuition.statistics.presentation.ui.premium.sections.PremiumStatisticsDensitySection
 import com.capybara.intuition.statistics.presentation.ui.shared.components.dialogs.MarkdownDialog
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.DayDensity
+import com.capybara.intuition.statistics.charts.model.data.DayDensity
 
 @Composable
 fun PremiumStatisticsScreen(

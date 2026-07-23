@@ -22,10 +22,10 @@ import com.capybara.intuition.app.presentation.theme.IntuitionTheme
 import com.capybara.intuition.statistics.presentation.model.SelectedChart
 import com.capybara.intuition.statistics.presentation.ui.premium.header.PremiumDensityDetailStatisticsHeader
 import com.capybara.intuition.statistics.presentation.ui.shared.components.dialogs.MarkdownDialog
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.arts.activity.ActivityGraphic
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.calculators.calculateAnalyticsChartPoints
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.arts.decisionTime.DecisionTimeGraphic
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.arts.fullDensity.DensityFullGraphic
+import com.capybara.intuition.statistics.charts.arts.activity.ActivityGraphic
+import com.capybara.intuition.statistics.charts.calculators.calculateAnalyticsChartPoints
+import com.capybara.intuition.statistics.charts.arts.decisionTime.DecisionTimeGraphic
+import com.capybara.intuition.statistics.charts.arts.fullDensity.DensityFullGraphic
 
 
 @Composable

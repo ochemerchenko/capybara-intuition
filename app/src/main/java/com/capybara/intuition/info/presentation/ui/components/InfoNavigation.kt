@@ -59,12 +59,9 @@ fun InfoNavigation(
                         Text(
                             text = stringResource(
                                 when (section) {
-                                    InfoSectionType.WELCOME -> R.string.info_welcome
                                     InfoSectionType.ABOUT -> R.string.info_about
                                     InfoSectionType.PRIVACY -> R.string.info_privacy
                                     InfoSectionType.TERMS -> R.string.info_terms
-                                    InfoSectionType.CONTACT -> R.string.info_contact
-                                    InfoSectionType.LICENSE -> R.string.info_license
                                 }
                             )
                         )

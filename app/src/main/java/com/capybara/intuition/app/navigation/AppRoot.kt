@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import com.capybara.intuition.app.bootstrap.BootstrapState
 import com.capybara.intuition.app.bootstrap.BootstrapStateRepository
-import com.capybara.intuition.app.installation.data.local.repository.ReleaseNotesRepository
+import com.capybara.intuition.app.bootstrap.installation.data.local.repository.ReleaseNotesRepository
 import com.capybara.intuition.app.navigation.ui.setup.InstallationErrorScreen
 import com.capybara.intuition.app.navigation.ui.setup.InstallationScreen
 import com.capybara.intuition.app.navigation.ui.setup.ReleaseNotesScreen
@@ -43,6 +43,8 @@ fun AppRoot(
             bootstrapState == BootstrapState.COMPLETED -> AppLaunchState.READY
             else -> AppLaunchState.INSTALLING
         }
+
+    //val launchState = AppLaunchState.ONBOARDING
 
     when (launchState) {
 

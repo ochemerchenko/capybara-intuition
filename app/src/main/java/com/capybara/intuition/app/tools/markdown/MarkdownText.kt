@@ -40,6 +40,8 @@ fun MarkdownText(
 
     val markdownH2BottomSpacing = 8.dp
 
+    val markdownH3BottomSpacing = 6.dp
+
     val markdownBulletBottomSpacing = 4.dp
 
     val markdownParagraphBottomSpacing = 8.dp
@@ -109,6 +111,23 @@ fun MarkdownText(
                     Spacer(
                         modifier = Modifier.height(
                             markdownH2BottomSpacing
+                        )
+                    )
+                }
+
+                // 🔹 H3
+
+                line.startsWith("### ") -> {
+
+                    Text(
+                        text = line.removePrefix("### "),
+                        style = MaterialTheme.typography.titleSmall,
+                        color = colors.textH3
+                    )
+
+                    Spacer(
+                        modifier = Modifier.height(
+                            markdownH3BottomSpacing
                         )
                     )
                 }

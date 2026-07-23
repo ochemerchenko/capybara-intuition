@@ -19,9 +19,9 @@ import com.capybara.intuition.statistics.presentation.model.SelectedChart
 import com.capybara.intuition.statistics.presentation.model.SessionFilter
 import com.capybara.intuition.statistics.presentation.ui.model.PivotMode
 import com.capybara.intuition.statistics.presentation.ui.model.StatisticsSelectionState
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.arts.preview.PreviewDensityGraphic
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.calculators.calculateAnalyticsChartPoints
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.DayDensity
+import com.capybara.intuition.statistics.charts.arts.preview.PreviewDensityGraphic
+import com.capybara.intuition.statistics.charts.calculators.calculateAnalyticsChartPoints
+import com.capybara.intuition.statistics.charts.model.data.DayDensity
 
 @Composable
 fun PremiumStatisticsDensitySection(

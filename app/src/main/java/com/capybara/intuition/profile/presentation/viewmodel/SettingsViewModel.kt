@@ -3,7 +3,7 @@ package com.capybara.intuition.profile.presentation.viewmodel
 import DatabaseRetentionRepository
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.capybara.intuition.app.db_cleaner.DatabaseRetentionPeriod
+import com.capybara.intuition.app.jobs.db_cleaner.DatabaseRetentionPeriod
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map

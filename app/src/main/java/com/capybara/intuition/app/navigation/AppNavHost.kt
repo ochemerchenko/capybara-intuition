@@ -8,6 +8,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.capybara.intuition.app.App
+import com.capybara.intuition.app.navigation.ui.setup.InstallationErrorScreen
+import com.capybara.intuition.app.navigation.ui.setup.InstallationScreen
+import com.capybara.intuition.app.navigation.ui.setup.ReleaseNotesScreen
 import com.capybara.intuition.game.presentation.routes.GameRoute
 import com.capybara.intuition.info.presentation.routes.InfoRoute
 import com.capybara.intuition.profile.presentation.routes.SettingsRoute

@@ -2,8 +2,7 @@ package com.capybara.intuition.statistics.data.local.db.dao
 
 import androidx.room.Dao
 import androidx.room.Query
-import com.capybara.intuition.game.domain.model.GameMode
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.DayDensity
+import com.capybara.intuition.statistics.charts.model.data.DayDensity
 
 
 @Dao

@@ -11,7 +11,7 @@ import com.capybara.intuition.app.bootstrap.gameModes.GameModeSeeder
 import com.capybara.intuition.app.bootstrap.masks.MaskSeeder
 import com.capybara.intuition.app.bootstrap.renderers.RendererSeeder
 import com.capybara.intuition.app.bootstrap.topology.TopologySeeder
-import com.capybara.intuition.app.installation.data.local.repository.InstallationRepository
+import com.capybara.intuition.app.bootstrap.installation.data.local.repository.InstallationRepository
 import com.capybara.intuition.app.license.data.repository.LicenseRepository
 import com.capybara.intuition.license.domain.LicenseType
 import kotlinx.coroutines.Dispatchers
@@ -120,7 +120,7 @@ class BootstrapLoader(
                 BootstrapState.GAME_MODES_READY
             )
 
-            delay(5000)
+            //delay(5000)
 
 
 

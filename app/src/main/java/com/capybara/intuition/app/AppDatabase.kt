@@ -26,8 +26,8 @@ import com.capybara.intuition.game.data.local.db.entity.topology.TopologyCellEnt
 import com.capybara.intuition.game.data.local.db.entity.topology.TopologyEntity
 import com.capybara.intuition.game.data.local.db.entity.topology.TopologyFamilyEntity
 import com.capybara.intuition.game.data.local.db.entity.topology.TopologyFamilyRelationEntity
-import com.capybara.intuition.app.installation.data.local.db.dao.InstallationDao
-import com.capybara.intuition.app.installation.data.local.db.entity.InstallationEntity
+import com.capybara.intuition.app.bootstrap.installation.data.local.db.dao.InstallationDao
+import com.capybara.intuition.app.bootstrap.installation.data.local.db.entity.InstallationEntity
 import com.capybara.intuition.profile.data.local.db.converter.ProfileTypeConverter
 import com.capybara.intuition.profile.data.local.db.dao.ProfileDao
 import com.capybara.intuition.profile.data.local.db.entity.ProfileEntity

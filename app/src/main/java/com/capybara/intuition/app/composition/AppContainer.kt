@@ -17,7 +17,7 @@ import com.capybara.intuition.app.DataStoreAdapter
 import com.capybara.intuition.app.billing.GooglePlayBillingManager
 import com.capybara.intuition.app.bootstrap.BootstrapLoader
 import com.capybara.intuition.app.composition.modules.SettingsModule
-import com.capybara.intuition.app.db_cleaner.DatabaseRetentionDataStore
+import com.capybara.intuition.app.jobs.db_cleaner.DatabaseRetentionDataStore
 import com.capybara.intuition.app.jobs.DatabaseCleanupManager
 import com.capybara.intuition.app.jobs.JobManager
 import kotlinx.coroutines.CoroutineScope

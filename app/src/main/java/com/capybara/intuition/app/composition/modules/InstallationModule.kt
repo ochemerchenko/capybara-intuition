@@ -5,10 +5,10 @@ import com.capybara.intuition.app.AppDatabase
 import com.capybara.intuition.app.DataStoreAdapter
 import com.capybara.intuition.app.bootstrap.BootstrapDataStore
 import com.capybara.intuition.app.bootstrap.BootstrapStateRepository
-import com.capybara.intuition.app.installation.data.local.repository.InstallationRepository
-import com.capybara.intuition.app.installation.data.local.repository.ReleaseNotesDataStore
-import com.capybara.intuition.app.installation.data.local.repository.ReleaseNotesRepository
-import com.capybara.intuition.app.installation.domain.installation.InstallationInitializer
+import com.capybara.intuition.app.bootstrap.installation.data.local.repository.InstallationRepository
+import com.capybara.intuition.app.bootstrap.installation.data.local.repository.ReleaseNotesDataStore
+import com.capybara.intuition.app.bootstrap.installation.data.local.repository.ReleaseNotesRepository
+import com.capybara.intuition.app.bootstrap.installation.domain.installation.InstallationInitializer
 
 class InstallationModule(
     database: AppDatabase,

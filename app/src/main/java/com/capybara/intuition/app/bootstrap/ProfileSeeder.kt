@@ -2,7 +2,7 @@ package com.capybara.intuition.app.bootstrap
 
 import android.content.Context
 import android.util.Log
-import com.capybara.intuition.app.installation.data.local.repository.InstallationRepository
+import com.capybara.intuition.app.bootstrap.installation.data.local.repository.InstallationRepository
 import com.capybara.intuition.license.capability.RuntimeCapabilities
 import com.capybara.intuition.profile.data.local.db.dao.ProfileDao
 import com.capybara.intuition.profile.data.local.db.entity.ProfileEntity

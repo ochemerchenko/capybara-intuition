@@ -12,11 +12,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.capybara.intuition.statistics.presentation.ui.free.header.FreeStatisticsHeader
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.arts.activity.ActivityGraphic
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.calculators.calculateAnalyticsChartPoints
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.arts.decisionTime.DecisionTimeGraphic
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.arts.fullDensity.DensityFullGraphic
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.DayDensity
+import com.capybara.intuition.statistics.charts.arts.activity.ActivityGraphic
+import com.capybara.intuition.statistics.charts.calculators.calculateAnalyticsChartPoints
+import com.capybara.intuition.statistics.charts.arts.decisionTime.DecisionTimeGraphic
+import com.capybara.intuition.statistics.charts.arts.fullDensity.DensityFullGraphic
+import com.capybara.intuition.statistics.charts.model.data.DayDensity
 
 
 @Composable

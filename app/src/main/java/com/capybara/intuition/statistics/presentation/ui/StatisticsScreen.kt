@@ -2,7 +2,6 @@ package com.capybara.intuition.statistics.presentation.ui
 
 
 import android.util.Log
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -19,11 +18,11 @@ import com.capybara.intuition.statistics.presentation.ui.free.FreeStatisticsScre
 import com.capybara.intuition.statistics.presentation.ui.model.StatisticsSelectionState
 import com.capybara.intuition.statistics.presentation.ui.premium.PremiumStatisticsScreen
 import com.capybara.intuition.statistics.presentation.ui.shared.components.EmptyStatisticsScreen
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.calculators.calculateRequiredHistoryDays
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.DayDensity
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.PreviewByLevelRequest
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.PreviewByModeRequest
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.StatisticsQueryContext
+import com.capybara.intuition.statistics.charts.calculators.calculateRequiredHistoryDays
+import com.capybara.intuition.statistics.charts.model.data.DayDensity
+import com.capybara.intuition.statistics.charts.model.data.PreviewByLevelRequest
+import com.capybara.intuition.statistics.charts.model.data.PreviewByModeRequest
+import com.capybara.intuition.statistics.charts.model.data.StatisticsQueryContext
 import com.capybara.intuition.statistics.presentation.viewmodel.StatisticsViewModel
 
 

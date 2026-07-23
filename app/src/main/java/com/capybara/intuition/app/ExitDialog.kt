@@ -17,7 +17,7 @@ fun ExitDialog(
 
         title = {
             Text(
-                stringResource(R.string.exit_application_quistion)
+                stringResource(R.string.exit_application_question)
             )
         },
 

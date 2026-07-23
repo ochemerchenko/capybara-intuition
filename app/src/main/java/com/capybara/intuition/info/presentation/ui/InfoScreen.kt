@@ -24,7 +24,7 @@ fun InfoScreen(
 
     val env = LocalAppLayoutEnvironment.current
     var selectedSection by remember {
-        mutableStateOf(InfoSectionType.WELCOME)
+        mutableStateOf(InfoSectionType.ABOUT)
     }
 
     Column(
@@ -47,11 +47,6 @@ fun InfoScreen(
 
         when (selectedSection) {
 
-            InfoSectionType.WELCOME -> InfoMarkdownSection(
-                modifier = Modifier,
-                asset = "welcome.md"
-            )
-
             InfoSectionType.ABOUT ->InfoMarkdownSection(
                 modifier = Modifier,
                 asset = "about.md"
@@ -66,16 +61,6 @@ fun InfoScreen(
             InfoSectionType.TERMS -> InfoMarkdownSection(
                 modifier = Modifier,
                 asset = "terms.md"
-            )
-
-            InfoSectionType.LICENSE -> InfoMarkdownSection(
-                modifier = Modifier,
-                asset = "license.md"
-            )
-
-            InfoSectionType.CONTACT -> InfoMarkdownSection(
-                modifier = Modifier,
-                asset = "contact.md"
             )
         }
 

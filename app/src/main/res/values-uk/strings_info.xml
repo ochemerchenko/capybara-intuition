@@ -2,7 +2,7 @@
 <resources>
 
     <string name="info_welcome">Знайомство</string>
-    <string name="info_about">Про додаток</string>
+    <string name="info_about">Про застосунок</string>
     <string name="info_privacy">Конфіденційнійсть</string>
     <string name="info_terms">Умови використання</string>
     <string name="info_license">Ліцензії</string>

@@ -4,11 +4,11 @@ import android.util.Log
 import com.capybara.intuition.game.data.mapper.GameModeMapper
 import com.capybara.intuition.game.domain.model.GameMode
 import com.capybara.intuition.statistics.data.local.db.dao.StatisticsDao
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.DayDensity
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.PreviewByLevelRequest
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.PreviewByLevelResponse
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.PreviewByModeRequest
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.PreviewByModeResponse
+import com.capybara.intuition.statistics.charts.model.data.DayDensity
+import com.capybara.intuition.statistics.charts.model.data.PreviewByLevelRequest
+import com.capybara.intuition.statistics.charts.model.data.PreviewByLevelResponse
+import com.capybara.intuition.statistics.charts.model.data.PreviewByModeRequest
+import com.capybara.intuition.statistics.charts.model.data.PreviewByModeResponse
 
 class StatisticsRepository(
 

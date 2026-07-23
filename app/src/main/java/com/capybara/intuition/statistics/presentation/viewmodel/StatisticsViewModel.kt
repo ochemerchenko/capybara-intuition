@@ -11,11 +11,11 @@ import com.capybara.intuition.license.domain.LicenseType
 import com.capybara.intuition.game.domain.model.GameMode
 import com.capybara.intuition.statistics.data.repository.StatisticsRepository
 import com.capybara.intuition.statistics.presentation.model.SessionFilter
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.DayDensity
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.PreviewByLevelRequest
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.PreviewByLevelResponse
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.PreviewByModeRequest
-import com.capybara.intuition.statistics.presentation.ui.shared.components.newGraphSystem.model.data.PreviewByModeResponse
+import com.capybara.intuition.statistics.charts.model.data.DayDensity
+import com.capybara.intuition.statistics.charts.model.data.PreviewByLevelRequest
+import com.capybara.intuition.statistics.charts.model.data.PreviewByLevelResponse
+import com.capybara.intuition.statistics.charts.model.data.PreviewByModeRequest
+import com.capybara.intuition.statistics.charts.model.data.PreviewByModeResponse
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collectLatest

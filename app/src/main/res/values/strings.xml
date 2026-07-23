@@ -4,8 +4,10 @@
 
     <string name="app_name">Capybara</string>
 
-    <string name="exit_application_quistion">Capybara</string>
+    <string name="exit_application_question">Capybara</string>
     <string name="exit_application_yes">Yes</string>
     <string name="exit_application_no">No</string>
+
+    <string name="installation_error_message">An error occurred while initializing the application. Please contact support.</string>
 
 </resources>

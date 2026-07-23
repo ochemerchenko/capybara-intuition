@@ -8,7 +8,7 @@ import com.capybara.intuition.game.data.local.db.entity.GameModeEntity
 import com.capybara.intuition.game.data.local.db.entity.NotebookEntity
 import com.capybara.intuition.game.data.local.db.entity.topology.TopologyEntity
 import com.capybara.intuition.game.data.local.db.entity.topology.TopologyFamilyEntity
-import com.capybara.intuition.app.installation.data.local.db.entity.InstallationEntity
+import com.capybara.intuition.app.bootstrap.installation.data.local.db.entity.InstallationEntity
 import com.capybara.intuition.profile.domain.model.ProfileType
 
 @Entity(
