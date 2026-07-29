@@ -6,17 +6,25 @@ data class BubblePhraseContext (
     val winCount: Int? = null,
     val loseCount: Int? = null,
     val streak: Int? = null,
+    val lastBrokenStreak: Int? = null,
+    val sessionSuccess: Int? = null,
+    val tailOneIn: Int? = null
 )
 
 fun String.render(
     context: BubblePhraseContext
 ): String {
+
     val values = mapOf(
         "profileName" to (context.profileName ?: ""),
         "roundResult" to (context.roundResult ?: ""),
         "winCount" to (context.winCount?.toString() ?: ""),
         "loseCount" to (context.loseCount?.toString() ?: ""),
-        "streak" to (context.streak?.toString() ?: "")
+        "streak" to (context.streak?.toString() ?: ""),
+        "lastBrokenStreak" to (context.lastBrokenStreak?.toString() ?: ""),
+
+        "sessionSuccess" to (context.sessionSuccess?.toString() ?: ""),
+        "tailOneIn" to (context.tailOneIn?.toString() ?: "")
     )
 
     return values.entries.fold(this) { text, (key, value) ->

@@ -18,7 +18,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.capybara.intuition.R
 import com.capybara.intuition.app.presentation.theme.IntuitionTheme
 import com.capybara.intuition.app.tools.markdown.MarkdownText
 import java.io.IOException
@@ -89,47 +91,10 @@ fun ReleaseNotesScreen(
                 )
             ) {
                 Text(
-                    text = "Завершити"
+                    text = stringResource(R.string.onboarding_button_continue)
                 )
             }
 
         }
     }
 }
-
-/*
-@Composable
-fun ReleaseNotesScreen (
-    onConfirm: () -> Unit
-){
-
-    val colors = IntuitionTheme.colors
-    val typography = IntuitionTheme.typography
-
-    val contentPadding = 24.dp
-    val contentSpacing = 16.dp
-
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(contentPadding),
-        verticalArrangement = Arrangement.spacedBy(contentSpacing)
-    ) {
-
-        Text(
-            text = "Онбордінг"
-        )
-
-        Button(
-            modifier = Modifier.fillMaxWidth(),
-            onClick = onConfirm
-        ) {
-            Text(
-                text = "Завершити"
-            )
-        }
-
-    }
-}
-
- */

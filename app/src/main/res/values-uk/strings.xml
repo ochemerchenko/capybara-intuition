@@ -9,4 +9,6 @@
 
     <string name="installation_error_message">Під час ініціалізації застосунку сталася помилка. Зверніться у службу підтримки.</string>
 
+    <string name="onboarding_button_continue">Продовжити</string>>
+
 </resources>

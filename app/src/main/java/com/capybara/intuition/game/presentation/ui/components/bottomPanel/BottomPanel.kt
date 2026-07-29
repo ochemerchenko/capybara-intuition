@@ -2,17 +2,24 @@ package com.capybara.intuition.game.presentation.ui.components.bottomPanel
 
 
 import android.util.Log
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.rememberTextMeasurer
+import androidx.compose.ui.unit.dp
+import com.capybara.intuition.app.presentation.theme.IntuitionTheme
 import com.capybara.intuition.game.domain.model.GameSession
 import com.capybara.intuition.game.domain.model.RoundResult
 import com.capybara.intuition.game.domain.round.GameRound
@@ -27,6 +34,8 @@ import com.capybara.intuition.game.presentation.ui.components.bottomPanel.geomet
 import com.capybara.intuition.game.presentation.ui.components.bottomPanel.indicators.Indicators
 import com.capybara.intuition.game.presentation.ui.components.bottomPanel.model.BottomPanelContext
 import com.capybara.intuition.game.presentation.ui.components.bottomPanel.model.BottomPanelSceneBounds
+import kotlin.math.floor
+import kotlin.math.pow
 
 
 val CAPYBARA_HEIGHT_FRACTION = 0.8f
@@ -37,9 +46,8 @@ fun BottomPanel(
     round: GameRound,
     modifier: Modifier
 ) {
-    Log.d("BubbleDebug", "BottomPanel called with modifier = ${modifier}")
-
     val context = LocalContext.current
+    val typography = IntuitionTheme.typography
 
     val capybaraEmotion = mapScoreAndEventToEmotion(
         session = session,
@@ -51,7 +59,40 @@ fun BottomPanel(
         session.profile.preferredMode
     )
 
-    val textStyle = MaterialTheme.typography.bodyMedium
+    val textStyle = typography.bodyMedium
+
+    val roundResult = round.result
+    val streak = maxOf(
+        session.winStreak,
+        session.loseStreak
+    )
+
+    val betSuccessProbability = 1.0 / session.profile.currentLevel
+
+    val roundCount = session.winCount + session.loseCount
+
+    val tailProbability = when (roundResult) {
+        RoundResult.WIN -> {
+            if (streak == roundCount) {
+                betSuccessProbability.pow(roundCount)
+            } else {
+                (1 - betSuccessProbability) * betSuccessProbability.pow(streak)
+            }
+        }
+
+        RoundResult.LOSE -> {
+            if (streak == roundCount) {
+                (1 - betSuccessProbability).pow(roundCount)
+            } else {
+                betSuccessProbability * (1 - betSuccessProbability).pow(streak)
+            }
+        }
+
+        else -> betSuccessProbability
+    }
+
+    val lastBrokenStreak = session.lastBrokenStreak
+
     val phraseContext = BubblePhraseContext(
         profileName = session.profile.name,
         roundResult = when (round.result) {
@@ -61,11 +102,20 @@ fun BottomPanel(
         },
         winCount = session.winCount,
         loseCount = session.loseCount,
-        streak = maxOf(
-            session.winStreak,
-            session.loseStreak
-        )
+        streak = streak,
+        lastBrokenStreak = lastBrokenStreak,
+        sessionSuccess = if (roundCount > 0) {
+            (100 * session.winCount / roundCount).toInt()
+        } else {
+            0
+        },
+        tailOneIn = if (tailProbability > 0.0) {
+            floor(1.0 / tailProbability).toInt()
+        } else {
+            1
+        }
     )
+
     val text = remember(
         capybaraEmotion,
         session.winCount,
@@ -93,34 +143,14 @@ fun BottomPanel(
         )
     }
 
-
-
-
-    Log.d("BubbleDebug", "bubbleContext created as $bubbleContext")
-    //Log.d("BubbleDebug", "at bubbleContext event = ${bubbleContext.event}")
-
-
-
-
-    Log.d("BubbleDebug", "bubbleContext created")
-
     BoxWithConstraints(
         modifier = modifier.fillMaxSize()
     ) {
-        Log.d("CapybaraActorDebug", "In BoxWithConstraints(\n" +
-                "        modifier = modifier.fillMaxSize()\n" +
-                "    ) {, this.maxHeight = ${this.maxHeight}")
-
         val sceneBounds = BottomPanelSceneBounds(
             width = this.maxWidth,
             height = this.maxHeight
         )
 
-
-
-
-
-        Log.d("CapybaraActorDebug", "Before CapybaraActor(, this.maxHeight = ${this.maxHeight}")
         CapybaraActor(
             spriteMetadata = capybaraSprite,
             modifier = Modifier
@@ -142,23 +172,19 @@ fun BottomPanel(
             sceneBounds,
         )
 
-
         val textMeasurer = rememberTextMeasurer()
         val localDensity = LocalDensity.current
+
         resolveBubbleOccupiedArea(
             bubbleContext = bubbleContext,
             textMeasurer = textMeasurer,
             density = localDensity,
         )
 
-
         Bubble(
-            bubbleContext = bubbleContext
+            bubbleContext = bubbleContext,
+            textMeasurer = textMeasurer
         )
-
-
-
-
 
     }
 }

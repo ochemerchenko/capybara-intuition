@@ -10,4 +10,6 @@
 
     <string name="installation_error_message">An error occurred while initializing the application. Please contact support.</string>
 
+    <string name="onboarding_button_continue">Continue</string>>
+
 </resources>

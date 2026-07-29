@@ -6,7 +6,37 @@ import kotlin.math.log2
 
 fun estimateSessionScore(
     session: GameSession
-): Int {
+): Double {
+
+    val currentStreak = maxOf(
+        session.winStreak,
+        session.loseStreak
+    )
+
+    // Порожня сесія
+    if (currentStreak == 0) {
+        return 0.0
+    }
+
+    val isWinStreak = session.winStreak >= session.loseStreak
+
+    val probability = calculateSingleStreakSessionProbability(
+        bets = currentStreak,
+        level = session.profile.currentLevel,
+        isWin = isWinStreak
+    )
+
+    return -log2(probability)
+}
+
+
+/*
+Потребує побудови адекватної моделі. Треба переосмислити.
+
+fun estimateSessionScore(
+    session: GameSession
+): //Int {
+        Double {
 
     var estimatedSessionProbability = 0.0
 
@@ -87,12 +117,17 @@ fun estimateSessionScore(
         estimatedSessionProbability = aggregatedSessionProbability
     }
 
-    if (estimatedSessionProbability <= 0.0) {
-        return Int.MAX_VALUE
-    }
+    //if (estimatedSessionProbability <= 0.0) {
+    //    return Int.MAX_VALUE
+    //}
 
-    return floor(
-        -log2(estimatedSessionProbability)
-    ).toInt()
+    return -log2(estimatedSessionProbability)
+
+    //floor(
+    //    -log2(estimatedSessionProbability)
+    //).toInt()
 }
 
+
+
+ */

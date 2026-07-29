@@ -3,6 +3,7 @@ package com.capybara.intuition.game.presentation.ui.components.bottomPanel.model
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -26,6 +27,8 @@ class BottomPanelContext (
 
     var occupiedWidthByText by mutableStateOf<Dp?>(null)
     var occupiedHeightByText by mutableStateOf<Dp?>(null)
+
+    var textLayoutResult: TextLayoutResult? = null
 
     companion object {
 
