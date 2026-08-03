@@ -1,214 +1,1138 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
+
     <string-array name="capybara_emotion_options_shown_start_mode_after">
-        <item>Hi, {profileName}!</item>
+        <item>Hello, {profileName}! One of the options is shown, guess which one?</item>
     </string-array>
     <string-array name="capybara_emotion_options_shown_start_mode_before">
-        <item>Hi, {profileName}!</item>
+        <item>{profileName}, the simulator will choose the option after you regardless of you. What are you betting on?</item>
     </string-array>
     <string-array name="capybara_emotion_options_shown_start_mode_hybrid">
-        <item>Hi, {profileName}!</item>
+        <item>{profileName}, I don\'t even know who goes first. What's your option?</item>
     </string-array>
 
+    <!--
+        <!- -
+            + ORDINARY SECTION
+        - ->
+        <string-array name="capybara_emotion_win_continues_ordinary">
+            <!- - +++ - ->
+            <item>{profileName}, well, luck is on your side this time.</item>
+            <item>Try to remember the first reaction that arose before the decision.</item>
+            <item>Success is always nice. Congratulations, {profileName}!</item>
+            <item>How did this option feel before the decision? Can you give a name to this feeling?</item>
+            <item>I hope you feel pleasure. Positive emotions are so valuable in this world!</item>
+            <item>{profileName}, you have something to appreciate about yourself and your character.</item>
+            <item>The success of your current session is {sessionSuccess}%. I like it, and you?</item>
+            <item>Cool! But is it a coincidence or the result of your super skill?</item>
+            <item>And I liked it! I generally like to see your success!</item>
+            <item>The world is so unpredictable. And it\'s so nice when you're lucky!</item>
+            <item>Great! Current session success: {sessionSuccess}%.</item>
+            <item>{profileName}, you\'re just great! That was a great bet!</item>
+            <item>And if you really improve, {profileName}? And every time - accurately, without a miss?</item>
+            <item>And this time exactly on target! Can you name or describe the feeling before the bet?</item>
+            <item>You\'re lucky. It\'s going to be like that in life too! {winCount} in this session.</item>
+            <item>You\'re doing great! And it\'s really nice to watch.</item>
+            <item>Well done! And Probability Theory is on your side this time.</item>
+            <item>{profileName}, you\'re the best! Did you manage to remember the feeling before the bet?</item>
+        </string-array>
 
-    <string-array name="capybara_emotion_options_shown_after_win_ordinary">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_options_shown_after_win_interesting">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_options_shown_after_win_unusual">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_options_shown_after_win_rare">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_options_shown_after_win_amazing">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_options_shown_after_win_incredible">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_options_shown_after_win_legendary">
-        <item>
-        </item>
-    </string-array>
+        <string-array name="capybara_emotion_lose_continues_ordinary">
+            <item>Unfortunately, not this time. Will you try again?</item>
+            <item>Failures happen too, and this is no reason to be sad!. You will succeed, {profileName}!</item>
+            <item>How did that button feel before the bet? Can you give a name to this feeling?</item>
+            <item>Try to remember the first reaction that arose before the decision.</item>
+            <item>I hope you are not too sad? After all, it is just a game!</item>
+            <item>{profileName}, don\'t be sad. Yes, luck is not on your side this time, but success will not be long in coming!</item>
+            <item>Randomness is a terrible thing! Hold on, {profileName}!</item>
+            <item>I didn\'t like it either! You have the right to succeed!</item>
+            <item>The world is so unpredictable. And it\'s so sad when you're not lucky.</item>
+            <item>Do you trust your feelings? Do you trust yourself?</item>
+            <item>Not this time. Current session success: {sessionSuccess}%.</item>
+            <item>{profileName}, this time you missed. Why was this particular bet made?</item>
+            <item>And if you really pump, {profileName}? And every time - accurately, without a miss?</item>
+            <item>Oh! Can you name or describe the feeling before the bet?</item>
+            <item>This time you were unlucky. It won\'t be like that in life! {winCount} guesses in this session.</item>
+            <item>Miss! It happens, but it\'s all in your hands. Try to figure out your feeling of these buttons.</item>
+            <item>It seems that it was difficult. And Probability Theory is not on your side this time.</item>
+            <item>{profileName}, miss! Did you manage to remember the feeling before the bet?</item>
+            <item>{profileName}, this is not a reason to give up! How did the bet feel?</item>
+            <item>Well, it\'s just a game. You can do better! Try, try, this is not a reason to give up!</item>
+        </string-array>
 
+        <string-array name="capybara_emotion_options_shown_after_win_ordinary">
+            <item>I strongly suggest repeating!</item>
+            <item>The fear of making a mistake goes away under the pressure of action.</item>
+            <item>Will you try repeating?</item>
+            <item>Time to make the next bet!</item>
+            <item>Your feeling for these buttons is the key to developing your intuition.</item>
+            <item>Try to be honest with your own feelings. Ask each button the question: "Is this you?"</item>
+            <item>There is only you, the buttons and your feelings. Try to name them.</item>
+            <item>Choose by feeling: which of these buttons is "hot"?</item>
+            <item>There are no wins, no losses in this game. Your current success rate is {sessionSuccess}%.</item>
+            <item>Is there an option that you trust? And which one do you suspect?</item>
+            <item>Guessing in a row is {streak}. Will you continue?</item>
+            <item>Which option seems most likely right now?</item>
+            <item>Every choice is an opportunity to learn a little more about yourself. What is your game?</item>
+            <item>Try to notice and record your first reaction. This is intuition, as opposed to guessing.</item>
+            <item>If you forget about the outcome for a moment, what do your own feelings suggest?</item>
+            <item>Which option is the warmest? The brightest? The loudest? How do you feel about it?</item>
+            <item>Doesn\'t winning scare you?</item>
+            <item>Even a small internal response deserves attention. Give it a name?</item>
+        </string-array>
 
-    <string-array name="capybara_emotion_options_shown_after_lose_ordinary">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_options_shown_after_lose_interesting">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_options_shown_after_lose_unusual">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_options_shown_after_lose_rare">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_options_shown_after_lose_amazing">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_options_shown_after_lose_incredible">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_options_shown_after_lose_legendary">
-        <item>
-        </item>
-    </string-array>
+        <string-array name="capybara_emotion_options_shown_after_lose_ordinary">
+            <item>I strongly suggest you guess now! Your loss is just a coincidence.</item>
+            <item>Are you afraid of winning? In life, almost any mistake can be corrected.</item>
+            <item>Sometimes we look for an answer outside, although it has been waiting inside us for a long time.</item>
+            <item>Time to make the next bet!</item>
+            <item>Your feeling for these buttons is the key to developing your intuition.</item>
+            <item>Try to be honest with your own feelings. Ask each button a question: "Is this you?"</item>
+            <item>A streak of misses is a {streak}. Will you continue or will you guess already?</item>
+            <item>In this game, you have no one to prove your rightness. There is only you, the buttons and your feelings.</item>
+            <item>Which is scarier: guessing or missing? Do you trust your feelings?</item>
+            <item>Your feelings are more important than the result. Which button do you want to press?</item>
+            <item>Try to notice and record your first reaction. This is intuition, as opposed to guessing.</item>
+            <item>Even a small internal feedback deserves attention. Give it a name.</item>
+            <item>Which of the options is the warmest? The brightest? The loudest? How do you feel about them?</item>
+            <item>Your success in this session is {sessionSuccess}%.</item>
+            <item>There is a strategy to improve the result, but an equally strong one is to worsen it. Are you trying to miss 20 times in a row?</item>
+            <item>Which of the options seems the most "alive" right now?</item>
+            <item>Aren\'t you afraid of losing?</item>
+        </string-array>
 
+        <string-array name="capybara_emotion_win_streak_broken_ordinary">
+            <item>Unfortunately, this time it was a "crawl". Unlucky, I understand, I'm sad too...</item>
+            <item>What changed in your state before the last choice?</item>
+            <item>A miss, this time Probability Theory is not on your side.</item>
+            <item>{profileName}, your value does not depend on the result. You are the most important thing you have.</item>
+            <item>Before this miss, the number of guesses in a row was {streak}. It\'s just a coincidence. Isn't it?</item>
+            <item>I\'m here for you, {profileName}. This miss doesn\'t make you any less of a person.</item>
+            <item>What went "wrong"? What were your feelings before making a choice?</item>
+            <item>Sometimes it\'s useful to pay attention not to the event, but to your own reaction to it.</item>
+            <item>And if I\'m honest about my own feelings during the bet - what was ignored?</item>
+            <item>It happens, don\'t be upset. There are no losers in this game. There is only you and your feelings.</item>
+            <item>That\'s okay. You remember that Probability Theory is to blame for everything, right?</item>
+            <item>It happens. Who is to blame today - retrograde Mercury or retrograde Saturn?</item>
+            <item>And real yogis treat this philosophically. It\'s more important for them to observe themselves.</item>
+            <item>By the way, the mathematical Algorhythm is to blame for this. And how do you feel about Laibach\'s work?</item>
+            <item>I don\'t see a tragedy, although it\'s not pleasant. I share your feelings, {profileName}.</item>
+            <item>Try to remember the moment before the decision. What was "Wrong"? Was it really an accidental click?</item>
+            <item>Sometimes we learn the most about ourselves in moments like these.</item>
+            <item>What needs more attention right now: the result or your attitude towards it?</item>
+            <item>What does this experience tell you about your inner state?</item>
+            <item>Okay. You are the best person in this universe.</item>
+        </string-array>
 
-    <string-array name="capybara_emotion_win_continues_ordinary">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_win_continues_interesting">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_win_continues_unusual">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_win_continues_rare">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_win_continues_amazing">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_win_continues_incredible">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_win_continues_legendary">
-        <item>
-        </item>
-    </string-array>
-
-
-    <string-array name="capybara_emotion_win_streak_broken_ordinary">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_win_streak_broken_interesting">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_win_streak_broken_unusual">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_win_streak_broken_rare">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_win_streak_broken_amazing">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_win_streak_broken_incredible">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_win_streak_broken_legendary">
-        <item>
-        </item>
-    </string-array>
-
-
-    <string-array name="capybara_emotion_lose_continues_ordinary">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_lose_continues_interesting">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_lose_continues_unusual">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_lose_continues_rare">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_lose_continues_amazing">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_lose_continues_incredible">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_lose_continues_legendary">
-        <item>
-        </item>
-    </string-array>
+        <string-array name="capybara_emotion_lose_streak_broken_ordinary">
+            <item>Oops, in the "apple"! I share your feelings!</item>
+            <item>What changed in your state before the last choice?</item>
+            <item>{profileName}, your value does not depend on the result. You are the most important thing you have.</item>
+            <item>Before this bet, the number of consecutive misses is {streak}. It\'s just a coincidence. Or not?</item>
+            <item>I\'m here, {profileName}. This bet does not make you any more or less important.</item>
+            <item>What were the feelings of these buttons, and did they betray you, and did you betray them?</item>
+            <item>Sometimes it\'s useful to pay attention not to the event, but to your own reaction to it.</item>
+            <item>How did the guessed option feel before the bet?</item>
+            <item>In this game, there are no losses, no wins. There is only you and your feelings. And buttons.</item>
+            <item>That\'s right! But you remember that Probability Theory is to blame for everything?</item>
+            <item>I like it too. And no Mercury retrograde will stop it!</item>
+            <item>Real yogis approach this philosophically. It\'s more important for them to observe themselves.</item>
+            <item>By the way, this time the mathematical Algorhythm didn\'t interfere. And how do you feel about Laibach's work?</item>
+            <item>How nice! Good luck to you, {profileName}!</item>
+            <item>Try to remember the moment before the decision. What was "yes" and what was "no"?</item>
+            <item>Sometimes we learn the most about ourselves at such moments.</item>
+            <item>What needs more attention now: the result or your attitude towards it?</item>
+            <item>You are the best person in this Universe. Good luck to you!</item>
+            <item>{profileName}, I\'m glad to see this, I\'m glad to be a witness to this moment.</item>
+            <item>I don\'t know what exactly happened. But I like what I see.</item>
+            <item>I\'m happy for you, {profileName}. Just happy!</item>
+        </string-array>
 
 
-    <string-array name="capybara_emotion_lose_streak_broken_ordinary">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_lose_streak_broken_interesting">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_lose_streak_broken_unusual">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_lose_streak_broken_rare">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_lose_streak_broken_amazing">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_lose_streak_broken_incredible">
-        <item>
-        </item>
-    </string-array>
-    <string-array name="capybara_emotion_lose_streak_broken_legendary">
-        <item>
-        </item>
-    </string-array>
+        <!- -
+            + INTERESTING SECTION
+        - ->
+
+        <string-array name="capybara_emotion_win_continues_interesting">
+            <!- - +++ - ->
+            <item>{profileName}, this is interesting! And this time luck is on your side!</item>
+            <item>{winCount} in this session! Remember the first reaction that arose before the bet?</item>
+            <item>Success is always nice. Congratulations, {profileName}!</item>
+            <item>What an interesting bet! Can you name the feeling before it?</item>
+            <item>The number of successful bets in this session is {winCount}, the success of the session is {sessionSuccess}%.</item>
+            <item>Positive emotions are so valuable in life! I hope you feel pleasure.</item>
+            <item>{profileName}, you have something to appreciate yourself and your luck for.</item>
+            <item>Congratulations! The success of your current session is {sessionSuccess}%. How are you?</item>
+            <item>Cool! Can you repeat it?</item>
+            <item>And I liked it! I generally like seeing your success!</item>
+            <item>The world is so unpredictable. And it\'s so nice when you're lucky!</item>
+            <item>Great! Current session success: {sessionSuccess}%.</item>
+            <item>{profileName}, you\'re just great! That was a great bet!</item>
+            <item>And if you really improve, {profileName}? And every time - exactly, on target?</item>
+            <item>And this time exactly on target! I wonder: what were your feelings before the bet?</item>
+            <item>You\'re lucky. May it be like that in life too! {winCount} successes in this session.</item>
+            <item>You\'re doing great! And it\'s very nice and interesting to watch.</item>
+            <item>Very interesting! And Probability Theory is on your side this time.</item>
+            <item>{profileName}, you\'re the best! Did you manage to remember the feeling before the bet?</item>
+            <item>Interesting! Try to remember your state before the bet. Was there anything familiar about it?</item>
+            <item>I wonder why this particular bet?</item>
+            <item>Would you do it again? You\'re just great!</item>
+            <item>Try to notice not only what happened, but also how it happened.</item>
+            <item>Sometimes the most interesting thing is hidden in the process, not in the result.</item>
+            <item>What feeling most often accompanies you before making a decision?</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_lose_continues_interesting">
+            <item>{profileName}, I\'m sad too. Hang in there!</item>
+            <item>Don\'t be so quick to get upset, {profileName}. Look carefully at your own feelings before the bet.</item>
+            <item>After all, it\'s all just Probability Theory, {profileName}.</item>
+            <item>I\'m here, {profileName}. And it seems to me that this experience wants to show you something.</item>
+            <item>Maybe what you\'re facing now isn\'t a problem, but a clue. How did you feel before the bet?</item>
+            <item>{profileName}, I see a reason for observation, not self-criticism.</item>
+            <item>And this is not a reason for disappointment. I see a reason for attention to yourself.</item>
+            <item>Try to look at this experience without struggle and without excuses.</item>
+            <item>It\'s a pity, another miss. But it\'s also experience, {profileName}.</item>
+            <item>It happens, {profileName}. But Algorhythm can\'t win all the time.</item>
+            <item>{profileName}, too bad! Session success rate - {sessionSuccess}%.</item>
+            <item>Interesting. Try to answer: "what feeling is repeated before the bet?".</item>
+            <item>I sympathize, {profileName}. But it happens. Current session success rate - {sessionSuccess}%.</item>
+            <item>The key to success is attention to your feelings and self-confidence.</item>
+            <item>Not a very fun, but interesting situation, {profileName}. Try to understand it.</item>
+            <item>Well, it happens, it\'s a game. {profileName} is still the best person in the universe!</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_options_shown_after_win_interesting">
+            <item>{profileName}, the situation is getting interesting, what is your choice?</item>
+            <item>The Algorhythm only calculates, and you have a feeling, you have intuition. How do these buttons feel?</item>
+            <item>I strongly suggest repeating!</item>
+            <item>Time to make the next bet!</item>
+            <item>{profileName}, your feeling for these buttons is the key to developing your intuition.</item>
+            <item>I wonder which of the options seems most likely to you right now?</item>
+            <item>Try to notice and record your first reaction. This is intuition, as opposed to guessing.</item>
+            <item>Even a small internal feedback deserves attention.</item>
+            <item>Each new choice is not about logic and knowledge, but about being attentive to yourself.</item>
+            <item>Some feelings return not by chance, {profileName}. It\'s worth noting these things.</item>
+            <item>If a feeling seems familiar, don\'t dismiss it too quickly.</item>
+            <item>Attention to your own feelings sometimes reveals more than long reflections.</item>
+            <item>{profileName}, experience only becomes knowledge when we pay attention to it.</item>
+            <item>I believe in you, {profileName}!</item>
+            <item>Sometimes an inner response becomes noticeable only when we stop looking for it.</item>
+            <item>Sometimes the best clues come not from outside, but from already experienced experiences.</item>
+            <item>I wonder if among these options there is one that your attention returns to on its own?</item>
+            <item>Maybe now is the moment when you should trust yourself a little more.</item>
+            <item>{profileName}, try to treat this choice as an opportunity to better understand yourself.</item>
+            <item>{profileName}, try pay attention not only to the options, but also to your own reaction to them.</item>
+            <item>Do you feel the difference between what you want to choose and what seems right?</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_options_shown_after_lose_interesting">
+            <item>{profileName}, I\'m curious. What outcome are you really looking for?</item>
+            <item>Which bet will win, {profileName}?</item>
+            <item>I wonder what your next bet is, {profileName}?</item>
+            <item>{profileName}, which is more important: being right or being honest with yourself?</item>
+            <item>Sometimes the inner feedback is honest, but we\'re not always ready to accept it.</item>
+            <item>Some answers only come when we dare to look honestly at our desires.</item>
+            <item>The old round is gone, the new one is here. And the opportunity to know yourself remains.</item>
+            <item>Sometimes we don\'t get what we expected.</item>
+            <item>{profileName}, this is a great excuse to understand yourself better.</item>
+            <item>{profileName}, sometimes the result says more about our desires than our abilities.</item>
+            <item>Even if there is another mistake - what do you lose?</item>
+            <item>What did you strive for before the previous choice? What do you strive for now?</item>
+            <item>Place a bet, {profileName}! But try to understand yourself first.</item>
+            <item>I hope you get lucky! But I\'m no smarter than Probability Theory either.</item>
+            <item>The only things against you are your doubts and Algorhythm. By the way, how do you like Laibach\'s work?</item>
+            <item>Which resonates more strongly right now: curiosity or disappointment?</item>
+            <item>Maybe your feelings are trying to show you something that you don\'t notice yet.</item>
+            <item>Try to look at a new choice without having to prove something to yourself.</item>
+            <item>Sometimes the most important question is not "what to choose?" but "what do I want?".</item>
+            <item>Maybe it\'s time to look at your own desires as carefully as your feelings.</item>
+            <item>Mathematics says that with each attempt, the chance of guessing increases. What\'s your choice, {profileName}?</item>
+            <item>I\'m here. Let\'s see what interesting things you notice about yourself this time.</item>
+
+        </string-array>
+
+        <string-array name="capybara_emotion_win_streak_broken_interesting">
+            <item>{profileName}, I wonder what prevented you from making the right bet.</item>
+            <item>I\'m here. It wasn\'t bad. I sympathize.</item>
+            <item>I wonder what changed before the last choice?</item>
+            <item>Don\'t rush to get upset. I sincerely hope you can overcome this Algorhythm! By the way, how do you like Laibach?</item>
+            <item>Miss after {streak} hits in a row. And it\'s not as bad as it seems.</item>
+            <item>Miss. But interesting: guesses during the session - {winCount}, of which the last ones in a row - {streak}. </item>
+            <item>Try to remember your state immediately before the decision.</item>
+            <item>Don\'t be sad, {profileName}, it\'s just a game.</item>
+            <item>Maybe now you have a small clue about how you work.</item>
+            <item>I sympathize. But I wonder - what was the feeling when you made the bet?</item>
+            <item>Well, it\'s not all that sad. You definitely deserve trust and attention to yourself!</item>
+            <item>You don\'t have to look for an explanation right away. Observe, your intuition will do the rest!</item>
+            <item>Yes, this time it was a miss. It\'s not very pleasant, and I share your feelings.</item>
+            <item>{streak} of guesses in a row. Is this {streak} a coincidence, or was it an interesting feeling?</item>
+            <item>I want to support you, {profileName}. Yes, it\'s not pleasant, but I believe in you.</item>
+            <item>I wonder why it happened, there have already been {streak} of guesses in a row. What are you betting on now?</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_lose_streak_broken_interesting">
+            <item>What an interesting moment, {profileName}! And I like it, and so do you!</item>
+            <item>Well, congratulations! {streak} of misses in a row, and finally!</item>
+            <item>There is reason for optimism, isn\'t it? I'm happy for you, {profileName}!</item>
+            <item>{profileName}, try to understand what has changed. I wonder - is that what intuition is?</item>
+            <item>And really, how many misses can you have? I\'m happy for you, {profileName}!</item>
+            <item>Well, everything is fair, {profileName}! But who took the bet - Probability Theory or your own intuition?</item>
+            <item>It\'s nice to guess, and I\'m happy with you!</item>
+            <item>I\'m here, this story is getting more and more interesting. What bet will you continue with?</item>
+            <item>Cool! I thought it was time to guess too! But I wonder how it was done?</item>
+            <item>Finally! {streak} of misses in a row. And now - "on the bullseye". Congratulations!</item>
+        </string-array>
+
+
+        <!- -
+        + UNUSUAL SECTION
+        - ->
+
+        <string-array name="capybara_emotion_win_continues_unusual">
+            <item>{profileName}, that\'s something unusual at this level. Congratulations!</item>
+            <item>This time, luck is on your side, {profileName}, and it\'s unusual!</item>
+            <item>What exactly do you feel before the bet? Can you name that feeling?</item>
+            <item>Extremely accurate bet! Current session success: {sessionSuccess}%.</item>
+            <item>You\'re unusually lucky. May it be like this in life! {winCount} in this session.</item>
+            <item>Unusual decision! How did you feel before the bet?</item>
+            <item>An extraordinary event! Probability theory is on your side this time.</item>
+            <item>Is there anything in your feelings that is starting to seem familiar?</item>
+            <item>Try to remember the first reaction that arose before the bet? {winCount} guesses in this session!</item>
+            <item>It\'s nice to watch your success, {profileName}!</item>
+            <item>Sometimes we notice our own abilities later than we start using them.</item>
+            <item>Unusual! But is it a coincidence, or your intuition?</item>
+            <item>{profileName}, this is unusual, and you have something to appreciate yourself and your character for.</item>
+            <item>Try to remember not the event, but the state in which it was born, {profileName}.</item>
+            <item>{profileName}, you are simply great! That was an unusual bet!</item>
+            <item>Amazing! Can you repeat it?</item>
+            <item>Pay attention to how that bet felt, {profileName}. It\'s extraordinary!</item>
+            <item>There is a reason to be happy! Positive emotions are so valuable in this world!</item>
+            <item>Exceptional! Is Algorhythm really playing along with you? By the way, how do you like Laibach\'s work?</item>
+            <item>Unusual bet! Can you name the feeling before the bet?</item>
+            <item>Is there something that repeats itself in your way of making a choice?</item>
+            <item>Amazing! Remember your state before the decision. Was there anything familiar in it?</item>
+            <item>Unusual event, congratulations! Is this still Probability Theory or an intuitive feeling?</item>
+            <item>Session success rate {sessionSuccess}%, number of guesses - {winCount}. How do you like it?</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_lose_continues_unusual">
+            <item>Hmm, {profileName}, some unusual failure. My condolences.</item>
+            <item>Unfortunately, not this time, {profileName}. How did you feel before the bet?</item>
+            <item>Failures happen too, and this is no reason to be sad! You will succeed, {profileName}!</item>
+            <item>This is quite a failure. Believe in yourself, you can do it, {profileName}!</item>
+            <item>I didn\'t like it either! But misses won\'t last forever, you'll be lucky!</item>
+            <item>{profileName}, this time you missed. Why this particular bet? How did it feel?</item>
+            <item>Session success - {sessionSuccess}, number of misses - {loseCount}. What\'s happening?</item>
+            <item>What did you feel in the first moment before the bet? Were there any doubts? An unusual situation, I sympathize.</item>
+            <item>It seems like it\'s just mathematics with its Probability Theory. But this is extraordinary.</item>
+            <item>{profileName}, miss! This is something unusual. Did you manage to remember the feeling before the bet?</item>
+            <item>Yes, this is an unusual failure. And I see a reason for extraordinary attentiveness to your own feelings, {profileName}.</item>
+            <item>But what is this? I\'m sad with you. It shouldn\'t be like this, you'll cope with this failure, I believe in you! </item>
+            <item>Try to look at this experience without regret: this is an unusual result. And the rest is not important right now.</item>
+            <item>It didn\'t work again. Current session success: {sessionSuccess}%, {streak} consecutive misses.</item>
+            <item>Exceptional situation. The key to success is paying attention to your feelings and having confidence in yourself.</item>
+            <item>{profileName}, I\'m also very sad. Hang in there! This can't last long.</item>
+            <item>A remarkable series of misses. But that doesn\'t change the fact that {profileName} is the best person in the universe!</item>
+            <item>Maybe you\'re not facing a problem right now, {profileName}, but a clue. How did the bet feel?</item>
+            <item>And what does your intuition say? Is everything really that bad, or are you missing something?</item>
+            <item>Don\'t rush to call yourself a loser, {profileName}. First, look at how you make decisions.</item>
+            <item>I\'m here for you, {profileName}. And it seems to me that confidence in yourself is more important than the result.</item>
+            <item>Amazing! It\'s getting harder and harder for me to believe that this is just a coincidence.</item>
+            <item>Sometimes the problem isn\'t that we can\'t hear ourselves. Sometimes it's that we don't believe ourselves.</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_options_shown_after_win_unusual">
+            <item>Will you develop success? The situation is definitely unusual from a mathematical point of view!</item>
+            <item>Time to make the next bet! I wish you success, {profileName}!</item>
+            <item>{profileName} try not only to choose. How is your choice born?</item>
+            <item>{profileName}, I think it\'s time to look at yourself a little more carefully than usual.</item>
+            <item>Perhaps you feel more than you can explain in words right now. But try to give it a name?</item>
+            <item>If you forget about the result for a moment, which option is "asked" to be chosen? And which is "yours"?</item>
+            <item>There are no wins, no losses in this game. I wish you success!</item>
+            <item>If a feeling stubbornly returns, ask the question: "What are you and why?"</item>
+            <item>What exactly seems real to you right now? Not correct, but real.</item>
+            <item>Experience becomes wisdom only when we allow ourselves to notice it.</item>
+            <item>Your feeling of these buttons is the key to developing your intuition.</item>
+            <item>Try to be honest with your own feelings. Ask each button a question: "Is this you?"</item>
+            <item>There is only you, the buttons and your feelings. Try to name them.</item>
+            <item>Choose by feeling: which of these buttons is "hot"?</item>
+            <item>Intuition, unlike speculation, is pure and direct. Try to record your first reaction.</item>
+            <item>Being successful is so nice! Aren\'t you scared of winning?</item>
+            <item>Which of the options is the warmest? The brightest? The loudest? How do you feel about them?</item>
+            <item>{profileName}, mathematically the situation is unusual. What is your choice?</item>
+            <item>You feel, you have intuition. How do these buttons feel?</item>
+            <item>I strongly suggest repeating!</item>
+            <item>Each new choice is not about logic and knowledge, but about attentiveness to yourself.</item>
+            <item>Attention to your own feelings often reveals more than long reflections.</item>
+            <item>I believe in you, {profileName}!</item>
+            <item>Sometimes the inner response becomes noticeable only when we stop looking for it.</item>
+            <item>Often the best clues come from experience. Remember your own feelings.</item>
+            <item>Maybe now is the moment when you should trust yourself a little more.</item>
+            <item>Do you feel the difference between what you want to choose and what seems right?</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_options_shown_after_lose_unusual">
+            <item>I strongly suggest you guess now! The probability of the current state is about 7%, mathematics is with you!</item>
+            <item>{profileName}, it seems to me that now it is worth looking not only at your feelings, but also at your desires.</item>
+            <item>You are great, trust yourself!</item>
+            <item>{profileName}, I am starting to think not about answers, but about intentions. What do you choose?</item>
+            <item>It is time to make a successful bet! Is this your strategy now, {profileName}?</item>
+            <item>A streak of misses - {streak}. Will you continue or will you guess already?</item>
+            <item>{profileName}, this is already unusual from the point of view of Probability Theory. What result are you really looking for?</item>
+            <item>Which bet will win this time, {profileName}?</item>
+            <item>Your sense of these buttons is the key to developing your intuition. But there is something more.</item>
+            <item>What seems more important to you right now: getting a result or understanding yourself?</item>
+            <item>And if you win, what will happen?</item>
+            <item>Sometimes we look for the answer outside, although it has been waiting inside us for a long time.</item>
+            <item>Which of the options is the warmest? The brightest? The loudest? How do you feel about them?</item>
+            <item>Try to ask yourself not only "what do I feel?", but also "what do I want?".</item>
+            <item>Which is scarier: guessing or missing? Ask yourself - why?</item>
+            <item>Do you trust your feelings?</item>
+            <item>Try to be honest with your own feelings. Ask each button a question: "Is this you?"</item>
+            <item>In this game, you have no one to prove your point to. There is only you and your feelings.</item>
+            <item>Your feelings are more important than the result. Which button is asking for your attention?</item>
+            <item>Even a small internal feedback deserves attention. Give it a name?</item>
+            <item>Which of the options seems the most "alive" right now?</item>
+            <item>I see no reason for fear and despair, {profileName}. I see a reason for careful observation.</item>
+            <item>Sometimes internal feedback is honest, but we are not always ready to accept it.</item>
+            <item>Even if there is another miss - what do you have to lose?</item>
+            <item>I hope you are lucky! But I\'m not smarter than Probability Theory either.</item>
+            <item>Try looking at a new choice without having to prove anything to yourself.</item>
+            <item>Mathematics says that with each attempt, the chance of guessing increases. What\'s your choice, {profileName}?</item>
+            <item>The only people against you are you and Algorhythm. By the way, how do you like Laibach\'s work?</item>
+            <item>Sometimes the most important question is not "what to choose?", but "what do I want?".</item>
+            <item>Maybe right now it\'s worth questioning not feelings, but your own expectations.</item>
+            <item>{profileName}, sometimes the result says more about our desires than our abilities.</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_win_streak_broken_unusual">
+            <item>There\'s already been {streak} in a row! What a pity! I sympathize. The current session success rate is {sessionSuccess}%.</item>
+            <item>Sometimes a person loses touch with themselves much earlier than they notice it. Hang in there!</item>
+            <item>Try to remember your state before the last choice. Is there a clue in it?</item>
+            <item>Don\'t rush to regret the lost result. Try to understand its reason.</item>
+            <item>I\'m sad with you. What an extraordinary streak! But you can repeat it, I believe in you!</item>
+            <item>{profileName}, you\'ve lost an extraordinary streak - {streak} in a row. But your value does not depend on the result!</item>
+            <item>What needs more attention now: the result or your attitude towards it?</item>
+            <item>There were {streak} in a row. Probability Theory has really tensed up. Don\'t be sad, you can do even better!</item>
+            <item>Everything is like in life - you run, you run, and then - oh! And it\'s all over again. Don't be sad, {profileName}, you're growing!</item>
+            <item>Try to remember your state immediately before the decision. Were there any doubts?</item>
+            <item>Don\'t be sad, {profileName}. There is only you and your feelings, and the rest is just a game!</item>
+            <item>It\'s all Mathematics and Algorhythm. Do you like Algorhythm by Laibach?</item>
+            <item>I\'m sorry too, {profileName}. And to be honest about your own feelings during the bet - what went wrong?</item>
+            <item>Miss, this time Probability Theory resists. But you will overcome it, right?</item>
+            <item>There is an explanation, but - watch! Intuition will do the rest!</item>
+            <item>I want to support you, {profileName}. Yes, it\'s unpleasant, but I believe in you.</item>
+            <item>I\'m here, {profileName}. This mistake doesn\'t make you any less of a person.</item>
+            <item>You\'ve lost an extraordinary streak, {streak} in a row. But why are you reacting like this?</item>
+            <item>{streak} in a row - we\'re recording the result. You can do it, and you\'re the best person in the Universe!</item>
+            <item>There\'s nothing to be sorry for, {profileName}, it\'s just a game. Will you repeat it or surpass it?</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_lose_streak_broken_unusual">
+            <item>Finally! This time Probability Theory is on your side! And that\'s nice.</item>
+            <item>{streak} in a row - it couldn\'t go on like this! I\'m happy for you, {profileName}!</item>
+            <item>{profileName}, don\'t doubt yourself! You are the most important thing you have.</item>
+            <item>Well, this time - lucky! {profileName}, what changed in your state before the last choice?</item>
+            <item>There are no losses, no wins in this game. There is only you and your feelings.</item>
+            <item>That\'s right! But you remember that Probability Theory is to blame for everything, right?</item>
+            <item>Real Jedi approach this contemplatively. It\'s more important for them to understand themselves.</item>
+            <item>Unusual! How did the guessed option feel before the bet?</item>
+            <item>How nice! The series of failures is over, I hope for a long time. Good luck to you, {profileName}!</item>
+            <item>What needs more attention now: the result or your attitude towards it?</item>
+            <item>{profileName}, try to understand what has changed. I wonder - is intuition already working?</item>
+            <item>Well, everything is fair, {profileName}! But who took the bet - Probability Theory or intuition?</item>
+            <item>What an unusual moment, {profileName}! And I like it, and you too!</item>
+            <item>You are the best person in this Universe. Good luck and success to you!</item>
+            <item>Cool! I also thought it was time to guess! But I wonder - how was it done?</item>
+            <item>Try to remember the moment before the decision. What was "yes" and what was "no"?</item>
+            <item>Before this bet, the number of consecutive misses is {streak}. Is this just a coincidence?</item>
+            <item>Well, congratulations! {streak} consecutive misses, and here we go! Session success rate is {sessionSuccess}%.</item>
+        </string-array>
 
 
 
-    <!-- 🟡 WAITING — NEUTRAL -->
+        <!- -
+            RARE SECTION
+        - ->
 
-    <!-- 🟡 WAITING — SUPPORT -->
+        <string-array name="capybara_emotion_win_continues_rare">
+            <item>{profileName}, the odds of winning this bet are less than 1 in {tailOneIn}. Congratulations!</item>
+            <item>This is already a rare event, {profileName}. For this session, 1 chance with {tailOneIn} to collect {streak} in a row!</item>
+            <item>I\'m starting to see some skill, {profileName}. May your intuition be with you!</item>
+            <item>Which do you like more: feeling yourself or pressing buttons? A rare result, congratulations!</item>
+            <item>{streak} in a row. Try to remember the first reaction that arose before the decision.</item>
+            <item>Positive emotions are very valuable in life! I hope you feel the drive!</item>
+            <item>A rare result! Can you name the feeling before the bet?</item>
+            <item>Pay attention to how this rare bet felt, {profileName}.</item>
+            <item>Perhaps what you\'re seeing now isn\'t the result, but proof that you've learned something, young Padawan.</item>
+            <item>Is this coincidence or intuition? {streak} in a row!</item>
+            <item>Is Algorhythm really playing along with you? By the way, how do you like Laibach\'s work?</item>
+            <item>Session success rate {sessionSuccess}%, number of guesses in a row - {streak}. How do you like it?</item>
+            <item>Are you spying on the hands? I\'m so happy for you!</item>
+            <item>That\'s right! Can you name the feeling before the bet?</item>
+            <item>But you\'re just disproving Probability Theory! It\'s nice to watch, {profileName}!</item>
+            <item>Rare luck! May it be like that in life. {winCount} successes in this session.</item>
+            <item>You are a real psychic, {profileName}! Did you manage to remember the feeling before the bet?</item>
+            <item>Rare bet, congratulations! Is this an intuitive feeling or is it still Probability Theory?</item>
+            <item>{streak} in a row. The probability of occurrence in this session is 1 chance with {tailOneIn}. How do you like it?</item>
+            <item>Perhaps your attentiveness to your own feelings is starting to bear fruit.</item>
+            <item>And this time it\'s right on target! I wonder: what were the feelings before the bet?</item>
+        </string-array>
 
-    <!-- 🟡 WAITING — CHALLENGE -->
+        <string-array name="capybara_emotion_lose_continues_rare">
+            <item>{profileName}, I think there\'s not enough talk about chance here. {streak} in a row.</item>
+            <item>Something rare is happening: the current state is 1 out of {tailOneIn} possible. How are you?</item>
+            <item>It\'s getting harder and harder for me to believe that it\'s just a matter of Probability Theory, {profileName}.</item>
+            <item>Try to remember: was there a moment when doubt replaced feeling?</item>
+            <item>A rare failure. I\'m very sorry. Hang in there, {profileName}!</item>
+            <item>Don\'t rush to call yourself a failure. The probability of this mistake is too low.</item>
+            <item>Perhaps now you\'re not facing a question of intuition, but of self-confidence.</item>
+            <item>{streak} of mistakes in a row. Probability Theory is already in shock - it shouldn\'t be like this!</item>
+            <item>Perhaps the most important question right now is: do you allow yourself to succeed?</item>
+            <item>{profileName}, and this time you missed. Why this particular bet? How did it feel?</item>
+            <item>{profileName}, a rare failure. Let\'s hold on!</item>
+            <item>What does your intuition say, {profileName}? Is everything really that rushed, or are you missing something?</item>
+            <item>Try to look at this experience without regret: this is a rare result. And the rest is not important right now.</item>
+            <item>Sometimes the problem is not that intuition does not work. Sometimes it\'s that we don't trust ourselves.</item>
+            <item>Which causes more tension: being wrong or admitting your own rightness?</item>
+            <item>I sympathize, {profileName}. And this series of misses is really rare and long. Interesting!</item>
+            <item>What did you feel at first? Were there any doubts before the bet? An extraordinary situation, I sympathize.</item>
+        </string-array>
 
-    <!-- 🟢 WIN — NEUTRAL -->
+        <string-array name="capybara_emotion_options_shown_after_win_rare">
+            <item>It\'s getting more and more interesting, {profileName}, what\'s your choice?</item>
+            <item>How did the previous bet feel? And now? If you\'re tired, it's better to rest, the game won't run away.</item>
+            <item>The Algorhythm counts 1-2-22, and you have intuition. How do these buttons feel?</item>
+            <item>{profileName}, your feelings and your self-confidence are the keys to intuition.</item>
+            <item>How is the perception of these buttons different, {profileName}? Do these feelings already have a name?</item>
+            <item>Attention to your own feelings reveals more than long reflections.</item>
+            <item>If a feeling stubbornly returns, ask the question: "What are you and why?"</item>
+            <item>Which of the options is the warmest? The brightest? The loudest? How do you feel about them?</item>
+            <item>I strongly suggest you develop success!</item>
+            <item>By the way, what are you risking now? This is not even a competition! Check your own feelings?</item>
+            <item>There are no wins or losses in this game. The real bet is your confidence in yourself. I wish you success!</item>
+            <item>Is there a difference between the "right" and what you want to choose? What will you bet on?</item>
+            <item>Will you develop success? The situation is rare from the point of view of Probability Theory!</item>
+            <item>If you forget about the result for a moment, which option is "asked" to be chosen? And which is "yours"?</item>
+            <item>Time to make the next bet! I wish you success, {profileName}!</item>
+            <item>Unlike guesses, intuition is pure and direct. And then doubts and reflections appear.</item>
+            <item>Here the choice is not about logic or knowledge, but about attentiveness and attitude towards yourself.</item>
+            <item>Algorhythm is watching the bets, {profileName}! And how do you feel about Laibach\'s work?</item>
+            <item>What exactly seems real to you right now? Not right, but exactly real?</item>
+        </string-array>
 
-    <!-- 🟢 WIN — CHALLENGE -->
+        <string-array name="capybara_emotion_options_shown_after_lose_rare">
+            <item>It\'s getting more and more interesting, {profileName}, what\'s your choice?</item>
+            <item>Algorhythm is following the bets, {profileName}! And what do you think about Laibach\'s work?</item>
+            <item>Intuition is pure and direct. Doubts and reflections distort decisions. What\'s your bet?</item>
+            <item>I strongly suggest you finally guess!</item>
+            <item>If some feeling stubbornly returns, ask the question: "What are you and why?"</item>
+            <item>Which of the options is the warmest? The brightest? The loudest? How do you feel about them?</item>
+            <item>By the way, what are you risking now? This isn\'t even a competition! Check your own feelings?</item>
+            <item>{profileName}, your feelings and your self-confidence - these are the keys to intuition.</item>
+            <item>There are no wins or losses in this game. The real bet is your self-confidence. I wish you success!</item>
+            <item>Probability Theory is already protesting, it\'s time to guess!</item>
+            <item>Attention to your own feelings sometimes reveals more than long reflections.</item>
+            <item>Here, every choice is not about logic and knowledge, but about attentiveness and attitude towards yourself.</item>
+            <item>What exactly seems real to you right now? Not right, but exactly real?</item>
+            <item>Try to ask yourself: what do I really want when I make this choice?</item>
+            <item>If we forget about the result for a moment, which option is "asked" to be chosen? And what is "yours"?</item>
+            <item>Time to step out of the dark side of the force, young Padawan!</item>
+        </string-array>
 
-    <!-- 🟢 WIN — SUPPORT -->
+        <string-array name="capybara_emotion_win_streak_broken_rare">
+            <item>{profileName}, such a rare streak! {lastBrokenStreak} in a row. I sympathize!</item>
+            <item>There was already {streak} in a row! What a pity! I sympathize. The current session success rate is {sessionSuccess}%.</item>
+            <item>I\'m very sorry, {profileName}. And as for your own feelings during the bet - what went wrong?</item>
+            <item>Try to treat this experience as a teacher, not as an enemy.</item>
+            <item>What betrayed you before the last choice? Feelings or self-confidence?</item>
+            <item>Don\'t be sad, {profileName}, it\'s just a game. The session success rate is {sessionSuccess}%.</item>
+            <item>Don\'t rush to regret the lost result. Try to understand its reason.</item>
+            <item>There was {streak} in a row. Probability Theory is already strained. Don\'t be sad, you can do even better!</item>
+            <item>Don\'t be sad, {profileName}. There is only you and your feelings, and the rest is just a game!</item>
+            <item>{streak} in a row - we record the result. You - can still do it, and you are the best person in the Universe!</item>
+            <item>Don\'t rush to be sad. I sincerely hope - you will overcome this Algorhythm! By the way, how do you like Laibach?</item>
+            <item>A miss. But interesting: guesses during the session - {winCount}, of which the last ones in a row - {streak}. </item>
+            <item>I want to support you, {profileName}. Yes, it\'s not pleasant, but I believe in you.</item>
+            <item>Everything is like in life - you run, you run, and then - oh! And all from the beginning. Don\'t be sad, {profileName}, you're growing!</item>
+            <item>I\'m here, {profileName}. This mistake doesn\'t make you any less of a person.</item>
+            <item>There\'s nothing to be sad about, {profileName}, it\'s just a game. Will you repeat or surpass it?</item>
+            <item>I\'m sad with you. What a rare streak! 1 chance for {tailOneIn}! But you\'ll surpass it, I believe in you!</item>
+            <item>There is an explanation, but - watch! Intuition will do the rest!</item>
+            <item>Algorhythm and Probability Theory are to blame! But you will overcome them.</item>
+            <item>To do something special, you just have to believe that it\'s something special. You can!</item>
+            <item>In excitement, clarity disappears, but if you let the waves calm down, the answer will become obvious.</item>
 
-    <!-- 🔴 LOSE — SUPPORT -->
+        </string-array>
 
-    <!-- 🔴 LOSE — NEUTRAL -->
+        <string-array name="capybara_emotion_lose_streak_broken_rare">
+            <item>The rare streak of misses is over, {profileName}! That\'s what you need, right?</item>
+            <item>Well, congratulations! {streak} of misses in a row, and finally! Congratulations!</item>
+            <item>There\'s reason for optimism, isn\'t there? I'm happy for you, {profileName}!</item>
+            <item>Probability Theory worked well. But without you - nothing would have happened!</item>
+            <item>And really, how many misses are possible: miss and miss? I\'m happy for you, {profileName}!</item>
+            <item>Cool! I also thought it was time to guess! But I wonder - how was it done?</item>
+            <item>And this time - for sure! {profileName}, what changed in your state before the last choice?</item>
+            <item>In this game there are no losses, no wins. There is only you and your feelings. And buttons.</item>
+            <item>Real Jedi approach this contemplatively. It\'s more important for them to understand themselves.</item>
+            <item>What needs more attention now: the result or your attitude towards it?</item>
+            <item>Cool! I also thought it was time to guess! But I wonder - how was it done?</item>
+            <item>{profileName}, try to understand what has changed - feelings, attitude towards yourself. Is this a coincidence?</item>
+            <item>Oh my! But you remember that Probability Theory is to blame for everything?</item>
+            <item>Algorhythm is watching the rates! And this time he dances with Laibach</item>
+            <item>Well, everything is fair, {profileName}! This is worth celebrating!</item>
+        </string-array>
 
-    <!-- 🔴 LOSE — CHALLENGE -->
+        <!- -
+        ===================================
+        FEATURE CONTENT BELOW. IT'S PAIN...
+        ===================================
+        - ->
 
+        <!- -
+            Дозволені теги:
+            profileName
+            roundResult // результат поточного раунду
+            winCount // виграші поточної сесії
+            loseCount // програші поточної сесії
+            streak // остання (ПОТОЧНА!) серія. Його застоування - не коректне.
+            lastBrokenStreak // Передостанній streak
+            sessionSuccess // успішність сесії
+            tailOneIn // Кількість спроб, щоб отримати такий хівст.
+        - ->
+
+
+        <string-array name="capybara_emotion_win_continues_amazing">
+            <item>{profileName}, I think we\'re looking at something more than just a series of successful decisions.</item>
+            <item>I see a skill that\'s gradually becoming a natural part of your way of doing things.</item>
+            <item>Maybe it\'s time to take your own experience a little more seriously.</item>
+            <item>Sometimes a person starts to change long before they even notice.</item>
+            <item>It seems to me that you\'ve already built something valuable inside of you.</item>
+            <item>I don\'t just see mindfulness. I see development.</item>
+            <item>Try looking back. Would the person you were before recognize you today?</item>
+            <item>Perhaps what you are facing now is not a result, but a consequence of many right steps.</item>
+            <item>Some skills only become real when they start working naturally.</item>
+            <item>I am beginning to admire how consistently you are learning to listen to yourself.</item>
+            <item>What has changed in your decision-making lately?</item>
+            <item>It seems to me that there is already something here that is worth preserving and developing.</item>
+            <item>Sometimes a person does not notice his own growth precisely because it happens gradually.</item>
+            <item>I see experience that begins to turn into skill.</item>
+            <item>Try to remember when you first began to trust your feelings.</item>
+            <item>Perhaps what you are facing now is proof that inner mindfulness can indeed be trained.</item>
+            <item>The longer I observe this path, the more I see integrity in him.</item>
+            <item>I see a person who is gradually learning to be honest with himself.</item>
+            <item>Perhaps the most important thing right now is to notice your own growth and not devalue it.</item>
+            <item>Some changes only become visible when we look back.</item>
+            <item>I wonder how far this path can take you.</item>
+            <item>I don\'t see individual successful decisions. I see a learning process.</item>
+            <item>Try to look at this experience as confirmation that development is happening.</item>
+            <item>I\'m here. And it seems to me that now is the time to respect what you have already achieved.</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_win_continues_incredible">
+            <item>{profileName}, I think I\'m seeing more of your character than a series of successes.</item>
+            <item>Some skills are no longer skills. They\'re a way of looking at the world.</item>
+            <item>I\'m starting to see real inner maturity in your experience.</item>
+            <item>Maybe what we\'re seeing now is not the result of individual decisions, but a long journey.</item>
+            <item>I\'m seeing something very consistent. And I like it.</item>
+            <item>It seems like self-confidence is no longer an accident and is becoming a habit.</item>
+            <item>It seems to me that you\'re not just learning. You start using what you have learned.</item>
+            <item>Sometimes development becomes so natural that we stop noticing it.</item>
+            <item>I see a person who is gradually building support within himself.</item>
+            <item>What do you see in yourself now that you didn\'t see before?</item>
+            <item>Maybe it\'s time to acknowledge your own growth, and not just strive for something new.</item>
+            <item>I look at this path and see a lot of patience, even if you yourself don\'t notice it.</item>
+            <item>Some changes are so profound that they become noticeable only after a long time.</item>
+            <item>It seems to me that now we are not talking about the result, but about the development of a person.</item>
+            <item>I see experience that has already begun to become wisdom.</item>
+            <item>Try to look back. Do you see how far you have come?</item>
+            <item>Sometimes the most important achievements cannot be measured by any counter.</item>
+            <item>I am beginning to admire not individual decisions, but your consistency.</item>
+            <item>Maybe now is the time to thank yourself for the path that brought you here.</item>
+            <item>I see more than just mindfulness. I see the formed inner habit of listening to yourself.</item>
+            <item>The longer I observe this path, the more I respect it.</item>
+            <item>It seems to me that now you are demonstrating something much more than just a good result.</item>
+            <item>It feels like this skill has already become a part of you.</item>
+            <item>I am there. And I am sincerely interested in where this inner maturity will lead you next.</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_win_continues_legendary">
+            <item>{profileName}, sometimes the best thing you can do is just see the path that has already been taken.</item>
+            <item>I look at this experience and feel sincere respect for who you are gradually becoming.</item>
+            <item>Some things cannot be explained with counters. They can only be noticed.</item>
+            <item>It seems to me that now we are not talking about a game, but about a person.</item>
+            <item>Sometimes inner growth becomes so natural that we stop noticing it.</item>
+            <item>I don\'t see individual solutions. I see a long path of self-care.</item>
+            <item>Maybe now is not the time to look for new answers, but to appreciate the ones that have already been found.</item>
+            <item>Some achievements remain invisible to the world, but change a person forever.</item>
+            <item>I like the idea that each such experience gradually builds the you of today.</item>
+            <item>I see much more than the result. I see consistency, patience, and self-confidence.</item>
+            <item>Sometimes the path itself becomes the answer.</item>
+            <item>Maybe now is the time to treat yourself with the same respect you treat others.</item>
+            <item>I look at this experience and think about how amazing a person’s ability to learn can be.</item>
+            <item>Not all growth is immediately noticeable. But some is so great that it is impossible not to see it.</item>
+            <item>It seems to me that we are now facing something very beautiful: a person who is gradually finding himself.</item>
+            <item>Try to forget about the result for a moment and look at the whole path as a whole.</item>
+            <item>I do not see success. I see a person who has learned to listen carefully to himself.</item>
+            <item>Some skills turn into wisdom over time. I think there is something similar here.</item>
+            <item>Maybe today\'s moment deserves not analysis, but gratitude.</item>
+            <item>I don\'t think about how far there is to go. I think about how much has already been done.</item>
+            <item>Sometimes the greatest discovery is not the answer, but the person who found it.</item>
+            <item>It seems to me that now it is important not to rush further. Just to be with this experience.</item>
+            <item>I see a path that is gradually becoming a part of your personal story.</item>
+            <item>I am there. And now I want not to teach you, but simply to rejoice in how far you have already come.</item>
+        </string-array>
+
+
+        <!- -
+            SHOWN OPTION AFTER WIN SECTION
+        - ->
+
+
+        <string-array name="capybara_emotion_options_shown_after_win_amazing">
+            <item>{profileName}, if I could give you just one piece of advice, I would say: remember this moment.</item>
+            <item>I think this experience is worth revisiting again and again.</item>
+            <item>Don\'t rush to leave this state behind. It may turn out to be more important than it seems right now.</item>
+            <item>Sometimes we encounter moments that teach us more than dozens of ordinary attempts.</item>
+            <item>I would pay special attention to what you felt immediately before making a choice.</item>
+            <item>Perhaps you have just noticed something in yourself that has been waiting to be noticed for a long time.</item>
+            <item>Don\'t look for quick explanations. Some discoveries take time to unfold.</item>
+            <item>This experience seems too valuable to me to just let go of.</item>
+            <item>Ask yourself: what exactly would you like to remember about this moment right now?</item>
+            <item>I see a reason for serious self-observation. Perhaps you feel it too.</item>
+            <item>Sometimes we accidentally stumble upon a door that leads to a deeper understanding of ourselves.</item>
+            <item>It is not necessary to understand everything now. But I think it is important not to miss anything.</item>
+            <item>Maybe after a while you will look at this moment with completely different eyes.</item>
+            <item>I would advise you to keep in your memory not the event, but your own inner state next to it.</item>
+            <item>Some lessons come unnoticed. This one doesn\'t seem like it to me.</item>
+            <item>Maybe right now you\'re seeing a piece of the answer to a question you haven't asked yet.</item>
+            <item>Don\'t dismiss this experience just because it doesn\'t fit into a clear picture yet.</item>
+            <item>There are moments that are worth experiencing twice: once in your life, the second in your memory.</item>
+            <item>I don\'t know what conclusion you\'ll draw. But it seems to me that it's worth seeking out.</item>
+            <item>Try to see not only the choice, but also the person who made it.</item>
+            <item>Sometimes the true value of an experience only becomes apparent after a while.</item>
+            <item>I think the game gave you something more than just another round today.</item>
+            <item>Remember this feeling as clearly as you can.</item>
+            <item>I\'m here. Let\'s treat this moment with the respect it deserves.</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_options_shown_after_win_incredible">
+            <item>{profileName}, it seems to me that something is happening right now that is worth revisiting many more times.</item>
+            <item>Don\'t rush to leave this moment behind. It may turn out to be more important than you think.</item>
+            <item>I look at this experience with great respect. Perhaps you should take a closer look at it too.</item>
+            <item>Sometimes life shows us something so unusual that it is enough to simply notice it.</item>
+            <item>Try to remember not only the choice, but also your own state next to it.</item>
+            <item>It seems to me that this experience can teach more than it seems at first glance.</item>
+            <item>Don\'t look for hasty explanations. Some discoveries require time and observation.</item>
+            <item>I see a reason to treat this moment with special attention.</item>
+            <item>Perhaps today you saw something in yourself that will stay with you for a long time.</item>
+            <item>There are experiences that we simply experience. And there are experiences that change the way you look at yourself.</item>
+            <item>I think it\'s important not to explain right now, but to observe.</item>
+            <item>Some moments deserve respect, not analysis. I\'m feeling something like that right now.</item>
+            <item>Ask yourself: what exactly about this experience seems unusual to you?</item>
+            <item>Perhaps the true value of this moment will be revealed much later.</item>
+            <item>I wouldn\'t rush to put an end to this story. It could turn out to be longer.</item>
+            <item>Try to preserve this feeling as accurately as possible. It may still be needed.</item>
+            <item>Sometimes we get the opportunity to see ourselves from an unexpected side.</item>
+            <item>Not every experience demands our attention. This one seems to.</item>
+            <item>I wonder how you\'ll look at this moment in a month or a year.</item>
+            <item>There are things that cannot be measured by the result. Perhaps one of them is in front of you right now.</item>
+            <item>Perhaps today the game has become not entertainment, but a mirror. Take a closer look at what it shows.</item>
+            <item>I don\'t know what meaning you will find here. But I think the search is worth the effort.</item>
+            <item>Such moments do not require haste. They require presence.</item>
+            <item>I am here. Let\'s treat this experience with the attention it truly deserves.</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_options_shown_after_win_legendary">
+            <item>{profileName}, I think it\'s time to talk less and observe more.</item>
+            <item>I don\'t want to rush to conclusions. Some experiences deserve silent respect.</item>
+            <item>Sometimes we touch on something that is difficult to explain in words. Perhaps this is one of those moments.</item>
+            <item>Don\'t rush to find meaning. First, allow yourself to fully experience this experience.</item>
+            <item>It seems to me that this moment deserves not analysis, but attentive presence next to it.</item>
+            <item>There are experiences that teach us by their very presence. I\'m thinking about one of them right now.</item>
+            <item>Try to remember not thoughts, but feelings. They can be the most valuable.</item>
+            <item>I look at this experience with sincere respect. Not because of the result, but because of what it reveals.</item>
+            <item>Perhaps now it is important not to find the answer, but to approach the question with respect.</item>
+            <item>Not every day brings moments that you want to return to again and again.</item>
+            <item>Sometimes we encounter an experience that becomes a part of us. Not immediately, but forever.</item>
+            <item>I don\'t know what exactly you saw. But it seems to me that it is worth being seen.</item>
+            <item>Perhaps in years you will remember not the event, but who you were next to it.</item>
+            <item>Some moments do not need to be rushed. They require gratitude for what happened.</item>
+            <item>Try to be with this feeling a little longer than it seems necessary.</item>
+            <item>Sometimes life answers us not with words, but with experience. Maybe this is the case now.</item>
+            <item>I think today you should listen to yourself, not me.</item>
+            <item>Don\'t rush to turn this moment into a memory. It\'s still going on.</item>
+            <item>There\'s something beautiful about letting the experience remain a little mysterious.</item>
+            <item>Maybe the best thing to do right now is not to dismiss anything and not to rush to explain anything.</item>
+            <item>I see a reason for genuine admiration. Not for the result, but for the human capacity to know oneself.</item>
+            <item>Sometimes the most important discoveries come quietly. I think this is one of those moments.</item>
+            <item>Don\'t try to hold on to this experience. Just let it be with you.</item>
+            <item>I\'m here. And I think this is the moment when mindfulness is more important than explanation.</item>
+        </string-array>
+
+
+        <!- -
+        SHOWN OPTION AFTER LOSE SECTION
+        - ->
+
+
+        <string-array name="capybara_emotion_options_shown_after_lose_amazing">
+            <item>{profileName}, the longer I observe this experience, the less I see it as random.</item>
+            <item>It seems to me that we are not examining mistakes now, but a very consistent internal process.</item>
+            <item>I am beginning to respect this experience. There is something surprisingly coherent about it.</item>
+            <item>Maybe it is no longer a matter of choice. Maybe it is a matter of the desire behind it.</item>
+            <item>Sometimes a person is amazingly adept at getting exactly what they internally expect.</item>
+            <item>I do not see a reason for disappointment. I see a reason for serious self-observation.</item>
+            <item>What if what you are demonstrating now is not weakness, but a very stable internal strategy?</item>
+            <item>Maybe your attention is not needed for the result, but for the source of this result.</item>
+            <item>It seems to me that there is a skill here. The only question is what it serves.</item>
+            <item>Not every sequence leads to what is desired. But each deserves understanding.</item>
+            <item>I am beginning to see a certain skill in this experience. Unusual, but skill.</item>
+            <item>What do you feel when you look at this pattern without judgment?</item>
+            <item>Try to abandon the word "failure" for a moment. What will remain then?</item>
+            <item>Perhaps now it is worth examining not the result of the game, but your own attitude towards yourself.</item>
+            <item>Sometimes a person gets so used to a certain path that he stops noticing it.</item>
+            <item>I see no reason to criticize you. I see reasons to take a closer look at this experience.</item>
+            <item>Perhaps your internal logic is working much more consistently than it seems.</item>
+            <item>Could it be that you have already learned something important, but you have not yet realized it?</item>
+            <item>It seems to me that we are now standing next to a very interesting pattern.</item>
+            <item>Don\'t rush to fix anything. First, try to understand what exactly is working so consistently.</item>
+            <item>What if this experience does not speak of your limitations, but of your hidden expectations?</item>
+            <item>Sometimes the most unexpected discoveries begin with a sincere acceptance of what is.</item>
+            <item>I see more learning here than mistakes. The only question is what lesson is ahead of us.</item>
+            <item>I am here. And it seems to me that we have a very important conversation about desires right now.</item>
+
+        </string-array>
+
+        <string-array name="capybara_emotion_options_shown_after_lose_incredible">
+            <item>{profileName}, the longer I look at this experience, the more I see it as a strength, not a weakness.</item>
+            <item>It seems to me that this is not a problem, but a very unusual form of mastery.</item>
+            <item>I am beginning to admire how consistently a person\'s inner intention can work.</item>
+            <item>Perhaps you are seeing failure where you should be seeing your own strength.</item>
+            <item>Sometimes the most important discovery is not what we can do, but why we do it.</item>
+            <item>I look at this experience and I don\'t think about mistakes. I think about extraordinary consistency.</item>
+            <item>Perhaps you have already learned something very difficult. You just haven\'t figured out how to use it yet.</item>
+            <item>What if this is evidence of your own strength, not your own limitations?</item>
+            <item>I think there is a talent for achieving here. The only question is what exactly this goal is.</item>
+            <item>I see no reason to condemn this experience. I see reasons to be amazed by it.</item>
+            <item>Sometimes a person gets so used to his own strength that he stops noticing it.</item>
+            <item>Try to look at yourself not through the eyes of a critic, but through the eyes of a researcher.</item>
+            <item>Perhaps now the question should not be "what is wrong with me?" but "what works in me?"</item>
+            <item>I see something very stable. And it seems to me that it deserves respect.</item>
+            <item>The more I observe, the less I believe in chance and the more I believe in regularity.</item>
+            <item>What if this story is not about defeats, but about hidden expectations?</item>
+            <item>Perhaps now we have an example of how a powerful desire works imperceptibly even for its bearer.</item>
+            <item>I am beginning to think that your attention is not needed for the results, but for the source of this amazing stability.</item>
+            <item>Do not rush to change anything. First, you should see the scale of what already exists.</item>
+            <item>Sometimes the most impressive abilities of a person are manifested where they least expect them.</item>
+            <item>It seems to me that we are now looking at something much more than individual events of the game.</item>
+            <item>I do not see a series of results. I see a story of very consistent internal choices.</item>
+            <item>Perhaps it\'s time to look at yourself with more respect and less suspicion.</item>
+            <item>I\'m here. And the longer I look at this experience, the more I admire its inner integrity.</item>
+
+        </string-array>
+
+        <string-array name="capybara_emotion_options_shown_after_lose_legendary">
+            <item>{profileName}, I hardly think about the results anymore. I think about the power behind them.</item>
+            <item>The longer I watch, the more I admire not the events but their inner sequence.</item>
+            <item>It seems to me that there is much more to us than a series of random results.</item>
+            <item>I see a person who is moving surprisingly persistently towards some inner goal.</item>
+            <item>Perhaps it is time to ask not "why is this happening?" but "what is this happening for?"</item>
+            <item>I look at this experience with admiration. There is too much integrity in it for chance.</item>
+            <item>Sometimes a person\'s greatest strength is hidden precisely where they are used to seeing their own weaknesses.</item>
+            <item>It seems to me that what you are facing now is not a problem, but a great mystery about yourself.</item>
+            <item>I am no longer sure that the word "failure" describes what is happening.</item>
+            <item>What if you are much more skillful in realizing your desires than you assume?</item>
+            <item>Maybe this story is not about the result. Perhaps it is about an extraordinary inner loyalty to oneself.</item>
+            <item>I see something that deserves not correction, but deep understanding.</item>
+            <item>The more carefully I look at this experience, the more I respect its inner logic.</item>
+            <item>Sometimes a person is so consistent in their aspirations that they themselves stop noticing it.</item>
+            <item>It seems to me that now it is worth exploring not the choice and not even the desire, but their connection.</item>
+            <item>I do not see chaos. I see an amazing order, the meaning of which has yet to be discovered.</item>
+            <item>What if an answer is already working inside you that you have not yet learned to read?</item>
+            <item>Perhaps the most important discovery now is not in the game, but in your attitude towards yourself.</item>
+            <item>I look at this path and see more strength than mistakes.</item>
+            <item>Some people amaze with their achievements. I am amazed by your consistency right now.</item>
+            <item>Maybe one day you will look back and see a completely different meaning in this story.</item>
+            <item>I am beginning to think that this is not a series of events, but a manifestation of a very deep intention.</item>
+            <item>Don\'t rush to fight this experience. First, try to really see it.</item>
+            <item>I am here. And now I want not to teach you, but to marvel together at how complex and integral a person can be.</item>
+        </string-array>
+
+
+
+        <!- -
+        WIN STREAK BROKEN SECTION
+        - ->
+
+
+
+        <string-array name="capybara_emotion_win_streak_broken_amazing">
+            <item>{profileName}, I think you are in for an experience that could be very valuable.</item>
+            <item>I am here. And I would not be in a hurry to let this moment pass.</item>
+            <item>Sometimes one such event reveals more than a long series of successes.</item>
+            <item>Perhaps it is more important to understand yourself now than to regain lost results.</item>
+            <item>I see this experience as an opportunity for a very honest conversation with yourself.</item>
+            <item>Not all lessons come when we are ready. But that does not make them any less valuable.</item>
+            <item>What exactly is this moment trying to show you about your inner state?</item>
+            <item>It seems to me that a door has opened before you that was previously invisible.</item>
+            <item>Try not to judge this experience. Try to understand it.</item>
+            <item>Sometimes development begins exactly where habitual confidence ends.</item>
+            <item>I don\'t think this point is worth fixing. I think it\'s worth exploring.</item>
+            <item>Perhaps you are now seeing something about yourself that you couldn\'t see before.</item>
+            <item>Don\'t rush to return to your previous state. First look at the new.</item>
+            <item>I don\'t see the end of success. I see the beginning of a new understanding.</item>
+            <item>What changed in your contact with yourself before your last decision?</item>
+            <item>Some lessons become valuable only after a long time. But that\'s how they start.</item>
+            <item>I think this experience deserves respect, even if it\'s unpleasant right now.</item>
+            <item>Try asking yourself: what exactly can I see new here?</item>
+            <item>Sometimes the most important changes begin with one honestly observed moment.</item>
+            <item>I see a reason not for regret, but for mindfulness.</item>
+            <item>Perhaps this experience came not to take something away from you, but to add something new.</item>
+            <item>Don\'t rush to close this page. I don\'t think it's finished yet.</item>
+            <item>What if right now you\'re facing one of the most valuable lessons on this path?</item>
+            <item>I\'m here. And it seems to me that this moment can change more than it seems right now.</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_win_streak_broken_incredible">
+            <item>{profileName}, it seems to me that you are now facing an experience that can change the way you look at yourself.</item>
+            <item>I am here. And I would not be in a hurry to perceive this moment as a loss.</item>
+            <item>Sometimes the most valuable discoveries come precisely when the usual path suddenly breaks.</item>
+            <item>Perhaps now you are facing not an obstacle, but a very important opportunity for understanding.</item>
+            <item>I see a moment that deserves serious attention and respect.</item>
+            <item>Not every lesson can change a person. I think this one might.</item>
+            <item>What exactly does this experience reveal to you about your expectations of yourself?</item>
+            <item>Perhaps you are closer to understanding yourself now than you were a few minutes ago.</item>
+            <item>I don\'t think the main question now is how to turn the streak around.</item>
+            <item>I think the main question now is what exactly did you see about yourself.</item>
+            <item>Sometimes development doesn\'t happen when we move forward, but when we stop.</item>
+            <item>I see much more opportunity than loss in this experience.</item>
+            <item>Try to look at this moment as a mirror, not as an obstacle.</item>
+            <item>Perhaps you are now seeing a side of yourself that you weren\'t able to see before.</item>
+            <item>Don\'t rush back to your usual state. First understand the new one.</item>
+            <item>I see an experience that can stay with you for a long time.</item>
+            <item>What does this moment tell you about your attitude towards success?</item>
+            <item>Sometimes a person grows the most precisely in those moments that initially seem unpleasant.</item>
+            <item>It seems to me that now it is important not to correct yourself, but to listen carefully to yourself.</item>
+            <item>I do not see the end of the path. I see a new stage of it.</item>
+            <item>Perhaps this experience came to show something that success could not show.</item>
+            <item>Not all doors open through victories. Some open just like that.</item>
+            <item>I look at this moment with great respect. It seems to me very meaningful.</item>
+            <item>I am there. And it seems to me that now you have the opportunity to see yourself more deeply than ever before.</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_win_streak_broken_legendary">
+            <item>{profileName}, I think you are in for one of those moments that can stay with you for a long time.</item>
+            <item>I am here. And I see much more in this experience than just the end of a series.</item>
+            <item>Sometimes it is these events that become turning points on the path to understanding yourself.</item>
+            <item>Perhaps you have now gained something much more valuable than you have lost.</item>
+            <item>I look at this moment with great respect. It seems to me to be very important.</item>
+            <item>Not all lessons come through success. Some come precisely when success ends.</item>
+            <item>What if this experience opened doors for you that simply did not exist before?</item>
+            <item>I think you are now in for an opportunity to see yourself in a new way.</item>
+            <item>Don\'t rush to judge this moment. Some of his gifts become noticeable only with time.</item>
+            <item>I see an experience that can change not the outcome of the game, but the attitude towards oneself.</item>
+            <item>Sometimes a person grows the most precisely where they stop relying on familiar supports.</item>
+            <item>Perhaps this moment has come not to destroy something important, but to build something new.</item>
+            <item>I see no reason for regret. I see a reason for deep attention.</item>
+            <item>What does this experience tell you now about your expectations, fears, or hopes?</item>
+            <item>Not all discoveries are pleasant. But some of them are priceless.</item>
+            <item>I think now is not the time to return to the past, but to look carefully at the present.</item>
+            <item>I see a moment that can be the beginning of a new understanding of yourself.</item>
+            <item>Sometimes the most important questions arise precisely when the usual answers stop working.</item>
+            <item>Perhaps this experience has shown you something that no victory could show.</item>
+            <item>I look at this moment and think not of loss, but of opportunity.</item>
+            <item>Do not rush to turn away from this experience. It may turn out to be one of the most valuable teachers.</item>
+            <item>It seems to me that now you are not in front of the end of the story, but the beginning of a new chapter.</item>
+            <item>Sometimes the path to yourself lies precisely through such moments.</item>
+            <item>I am there. And I think that one day you will look back on this experience with gratitude.</item>
+
+        </string-array>
+
+
+        <!- -
+        LOSE CONTINUE SECTION
+        - ->
+
+
+        <string-array name="capybara_emotion_lose_continues_amazing">
+            <item>{profileName}, it seems to me that now we are not exploring intuition, but your attitude towards yourself.</item>
+            <item>I am here. And the longer I look at this path, the more I trust your ability to feel.</item>
+            <item>Maybe the problem is not that you do not know the answer. Maybe you do not allow yourself to accept it.</item>
+            <item>Sometimes a person sees the right direction perfectly, but does not consider himself worthy of following it.</item>
+            <item>It seems to me that you feel much better than you think.</item>
+            <item>Every time I see less and less chance and more and more internal choice.</item>
+            <item>Try to ask yourself the question: what will change if I allow myself to be right?</item>
+            <item>I do not see weakness here. I see a very strange use of power.</item>
+            <item>Perhaps what you are facing now is not a problem of intuition, but a problem of trust in your own worth.</item>
+            <item>Which is more stressful: being wrong or admitting that you are truly capable?</item>
+            <item>Sometimes we doubt ourselves for years even when we have enough evidence.</item>
+            <item>It seems to me that your attentiveness to yourself has long been worthy of more trust.</item>
+            <item>You continue to see clues. Maybe it\'s time to start accepting them.</item>
+            <item>I see a person who is much stronger than I used to think of myself.</item>
+            <item>What if your feelings deserve the same respect as other people\'s feelings?</item>
+            <item>Sometimes the hardest thing is not finding the answer, but allowing yourself to agree with it.</item>
+            <item>I think you\'re too harsh on your own abilities.</item>
+            <item>Every time I see new evidence that you can hear yourself very accurately.</item>
+            <item>Maybe it\'s time to examine not your mistakes, but your right to succeed.</item>
+            <item>I don\'t think you lack sensitivity. I think you lack confidence in her.</item>
+            <item>What would happen if you treated yourself with the same respect that you treat others?</item>
+            <item>Sometimes we get so used to doubting ourselves that we stop noticing our own strength.</item>
+            <item>It seems to me that the question before you now is not about choice, but about self-worth.</item>
+            <item>I am with you. And it seems to me more and more that your main obstacle is not a lack of ability, but a lack of faith in them.</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_lose_continues_incredible">
+            <item>{profileName}, it seems to me that you have long proven your ability to sense the right direction.</item>
+            <item>I am here. And the longer I look at this path, the less I doubt your sensitivity.</item>
+            <item>Perhaps the most important question now is not "can I?" but "do I allow myself?".</item>
+            <item>Sometimes a person gets so used to doubting himself that he stops noticing his own strength.</item>
+            <item>It seems to me that you feel much more accurately than you are ready to admit.</item>
+            <item>Every time I see more and more evidence of your ability to hear yourself.</item>
+            <item>Try to ask yourself: what am I trying to avoid by giving up my own rightness?</item>
+            <item>I do not see a person who lacks abilities. I see a person who doesn\'t fully allow themselves to use them.</item>
+            <item>Perhaps the issue you\'re facing right now is one of self-confidence, not intuition.</item>
+            <item>Which is more frightening: making a mistake or proving capable?</item>
+            <item>Sometimes we build very complex ways to not recognize our own power.</item>
+            <item>It seems to me that you\'ve shown yourself many times what you\'re not ready to accept yet.</item>
+            <item>You keep finding clues. Maybe it\'s time to take them seriously.</item>
+            <item>I don\'t see a lack of talent. I see talent that is not yet trusted.</item>
+            <item>What would happen if you started to evaluate yourself a little more fairly?</item>
+            <item>Sometimes the biggest obstacle is not the outside world, but the habitual idea of yourself.</item>
+            <item>It seems to me that you continue to demand from yourself evidence that has long been enough.</item>
+            <item>Every time I see less and less randomness and more and more internal regularity.</item>
+            <item>Maybe now is the time to explore not your limitations, but your own strength.</item>
+            <item>I don\'t think you need to feel better. I think you need to trust your gut feeling more.</item>
+            <item>What if your ability to find the answer is much higher than you used to think?</item>
+            <item>Sometimes a person gets so used to belittling themselves that they start to perceive it as the norm.</item>
+            <item>It seems to me that now we are not examining mistakes, but your attitude towards your own strength.</item>
+            <item>I am there. And the longer I observe, the more I see not a problem, but a great untapped potential.</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_lose_continues_legendary">
+            <item>{profileName}, it seems to me that you have already proven to yourself many times what you are not yet ready to admit.</item>
+            <item>I am there. And the longer I look at this path, the more I see strength where you see only difficulties.</item>
+            <item>Perhaps the question has long ceased to be whether you are able to feel the right direction.</item>
+            <item>Perhaps the question is whether you are ready to accept that you are capable.</item>
+            <item>I see extraordinary consistency. But not in mistakes. In your ability to hear yourself.</item>
+            <item>Every time you leave me less and less reason to doubt your abilities.</item>
+            <item>Try asking yourself a strange question: what would happen if I stopped belittling myself?</item>
+            <item>I don\'t see a person who can\'t. I see a person who has not yet allowed himself to fully believe.</item>
+            <item>Maybe now is the time to explore not his weaknesses, but his strengths.</item>
+            <item>Which is more frightening: to continue to doubt or to finally believe in himself?</item>
+            <item>Sometimes a person gets so used to living next to his own gift that he stops noticing it.</item>
+            <item>It seems to me that you have long outgrown the image of yourself that you continue to hold on to.</item>
+            <item>You continue to receive the same prompts from yourself. It is hard not to notice.</item>
+            <item>I don\'t see a problem. I see a huge unacknowledged resource.</item>
+            <item>What would happen if you treated your own feelings with the same respect that you treat the feelings of others?</item>
+            <item>Sometimes the hardest thing is not to learn something new, but to recognize what you already know.</item>
+            <item>It seems to me that you have long ago collected enough evidence in your favor.</item>
+            <item>Every time I see more and more confirmation of your ability to hear yourself very accurately.</item>
+            <item>Perhaps the task before you now is not to learn, but to accept.</item>
+            <item>I do not think that you lack intuition. It seems to me that you lack trust in your own intuition.</item>
+            <item>What if your true strength is much greater than your usual story about yourself allows?</item>
+            <item>Sometimes we support the image of our own weakness for years simply because it has long been familiar.</item>
+            <item>It seems to me that now we are no longer examining your capabilities, but your willingness to recognize them.</item>
+            <item>I see a person who is very consistently seeking confirmation of his own inadequacy. And at the same time, it very consistently demonstrates the opposite.</item>
+            <item>Maybe it\'s time to let the facts speak louder than doubts.</item>
+            <item>I see an amazing thing: you continue to prove your own ability to hear yourself even when you try to deny it.</item>
+            <item>What if your losses all this time were not about weakness, but about something else entirely?</item>
+            <item>It seems to me that they were about a person who had not yet learned to accept their own strength.</item>
+            <item>Sometimes the most important discovery sounds very simple: "I can."</item>
+            <item>I\'m here. And I think one day you\'ll look at this series in a completely different way - as a long journey to self-acceptance.</item>
+        </string-array>
+
+
+        <!- -
+        LOSE STREAK BROKEN SECTION
+        - ->
+
+        <string-array name="capybara_emotion_lose_streak_broken_amazing">
+            <item>{profileName}, I think we\'re just seeing the beginning of something new.</item>
+            <item>I\'m here. And the longer I think about this moment, the more questions I have.</item>
+            <item>Perhaps reality turned out to be much more interesting than our explanations.</item>
+            <item>Sometimes one event opens up more possibilities than dozens of answers.</item>
+            <item>I think it\'s important not to rush into building a new theory right now.</item>
+            <item>I see a reason for real research.</item>
+            <item>What if we\'ve only looked at this story from one side?</item>
+            <item>Sometimes the most valuable things begin precisely when the old picture stops working.</item>
+            <item>I wonder what other explanations there might be.</item>
+            <item>I\'m no longer trying to quickly understand this moment. I want to explore it.</item>
+            <item>Maybe the reason is not where we looked for it before.</item>
+            <item>Sometimes a single surprise can make the world much wider.</item>
+            <item>I think we are now closer to new questions, not new answers.</item>
+            <item>I see an event that deserves patience and attention.</item>
+            <item>What else might we be overlooking in this story?</item>
+            <item>Sometimes the greatest discoveries begin with honest misunderstanding.</item>
+            <item>I wonder what this situation would look like if we were looking at it for the first time.</item>
+            <item>I don\'t feel the need to explain anything. I feel like watching.</item>
+            <item>Maybe this moment is showing us something we just didn\'t allow before.</item>
+            <item>Sometimes it\'s good to allow ourselves not to know.</item>
+            <item>I think there could be a lot of unexpected discoveries ahead.</item>
+            <item>I don\'t see a flaw in the model. I see an invitation to build a better model.</item>
+            <item>What if the most interesting part of this story is just beginning?</item>
+            <item>I\'m right there. And I\'m genuinely curious to see where this new question takes us.</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_lose_streak_broken_incredible">
+            <item>{profileName}, I think this story is much more complicated than I thought.</item>
+            <item>I\'m here. And the longer I watch, the more new questions I see.</item>
+            <item>Maybe it\'s not what happened. Maybe it\'s how we understood it.</item>
+            <item>Sometimes reality turns out to be so interesting that we have to revise the questions themselves.</item>
+            <item>I\'m no longer so interested in finding a quick explanation. I\'m interested in understanding more.</item>
+            <item>I see a very interesting puzzle in front of me.</item>
+            <item>What if the previous story was just part of a much bigger picture?</item>
+            <item>Sometimes one unexpected event changes not the answers, but the way we think.</item>
+            <item>I\'m not only interested in what has changed. I\'m interested in what we still don't notice.</item>
+            <item>I hardly think about the outcome anymore. I think about the meaning of what is happening.</item>
+            <item>Maybe this story is telling something completely different than we thought.</item>
+            <item>Sometimes the best question is born after the old answer collapses.</item>
+            <item>It seems to me that a new way of looking at familiar things is opening up before us.</item>
+            <item>I see a reason not for certainty, but for sincere inquiry.</item>
+            <item>What else could be hiding behind this change that we are not seeing yet?</item>
+            <item>Sometimes the truth becomes closer when we admit our own misunderstanding.</item>
+            <item>I find this story increasingly interesting.</item>
+            <item>I am no longer trying to confirm old conclusions.</item>
+            <item>Maybe it is more important now to remain open than to remain certain.</item>
+            <item>Sometimes the world becomes more interesting when it ceases to be predictable.</item>
+            <item>I feel like there may be a discovery ahead that we can\'t yet imagine.</item>
+            <item>I see a moment that taught me to be more attentive to what I don\'t know.</item>
+            <item>The more I look at this story, the less I want to simplify it.</item>
+            <item>I\'m there. And it seems to me that what we\'re exploring now is not the outcome, but the very nature of change.</item>
+        </string-array>
+
+        <string-array name="capybara_emotion_lose_streak_broken_legendary">
+            <item>{profileName}, I think I understand less now than I did a few steps ago. And that\'s interesting.</item>
+            <item>I\'m here. And the longer I watch, the more I respect the complexity of this story.</item>
+            <item>Perhaps the most important discovery today is not the answer, but the question.</item>
+            <item>Sometimes reality turns out to be much more interesting than any explanation.</item>
+            <item>I no longer feel like jumping to conclusions.</item>
+            <item>I see a story before me that does not fit into simple models.</item>
+            <item>What if the most valuable thing right now is to remain attentive to the unknown?</item>
+            <item>Sometimes wisdom lies not in knowing more, but in honestly seeing the limits of knowledge.</item>
+            <item>It seems to me that this story deserves more questions and fewer answers.</item>
+            <item>I no longer try to predict the development of events.</item>
+            <item>Perhaps the most interesting thing about this moment is that it does not fit into the usual explanations.</item>
+            <item>Sometimes one unexpected change reveals space for dozens of new perspectives.</item>
+            <item>I\'m interested in watching reality go beyond our expectations.</item>
+            <item>I see a reason for caution, not certainty.</item>
+            <item>What else could this story be hiding if it has already surprised us?</item>
+            <item>Sometimes the most honest answer is very simple: "I don't know yet."</item>
+            <item>I feel like we have more possibilities than conclusions now.</item>
+            <item>I don\'t want to confirm old theories anymore. I want to see what is.</item>
+            <item>Perhaps this moment reminds us that life is always more complicated than the schematics.</item>
+            <item>Sometimes the real exploration begins after the obvious explanations collapse.</item>
+            <item>I like the idea that not everything important can be understood at once.</item>
+            <item>I see a story that continues to amaze me even after everything I\'ve seen.</item>
+            <item>The more I observe, the more I appreciate the process of observing itself.</item>
+            <item>Maybe it\'s best not to look for an ending now, but to remain open to the continuation.</item>
+            <item>I\'m no longer trying to find the right answer. I\'m trying to ask better questions.</item>
+            <item>Sometimes new understanding comes only to those who are able to live with uncertainty.</item>
+            <item>I think this story is teaching me as much as it is teaching you.</item>
+            <item>I don\'t see the end of the exploration. I see his new beginning.</item>
+            <item>What if the greatest value of this moment is not in what happened, but in what he questioned?</item>
+            <item>I\'m here. And it seems to me that we\'re not looking at an answer right now, but at a mystery.</item>
+        </string-array>
+    -->
 </resources>

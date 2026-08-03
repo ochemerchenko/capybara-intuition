@@ -13,12 +13,14 @@
 .idea/deploymentTargetSelector.xml
 .idea/deviceManager.xml
 .idea/appInsightsSettings.xml
+.idea/shelf/
+.idea/httpRequests/
 
 # macOS
 .DS_Store
 
 # Build outputs
-/build/
+**/build/
 /captures/
 .externalNativeBuild/
 .cxx/
@@ -33,3 +35,6 @@ app/google-services.json
 
 # Release
 app/release/
+
+# Keys
+key.properties
