@@ -11,6 +11,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
@@ -27,8 +28,26 @@ fun MarkdownText(
     onLinkClick: (String) -> Unit = {}
 ) {
 
+    val uriHandler = LocalUriHandler.current
+
+    fun openExternalUri(uri: String) {
+        uriHandler.openUri(uri)
+    }
+
+    fun onMarkdownLinkClick(uri: String) {
+
+        if (uri.startsWith("app://")) {
+            onLinkClick(uri)
+        } else {
+            openExternalUri(uri)
+        }
+    }
+
     val colors = IntuitionTheme.colors
     val typography = IntuitionTheme.typography
+
+
+
 
     // =====================================================
     // MARKDOWN TEXT PRESENTATION SEMANTICS
@@ -148,7 +167,9 @@ fun MarkdownText(
 
                         MarkdownParagraph(
                             text = line.removePrefix("- "),
-                            onLinkClick = onLinkClick
+                            onLinkClick = { uri ->
+                                onMarkdownLinkClick(uri)
+                            }
                         )
                     }
 
@@ -185,7 +206,9 @@ fun MarkdownText(
 
                     MarkdownParagraph(
                         text = line,
-                        onLinkClick = onLinkClick
+                        onLinkClick = { uri ->
+                            onMarkdownLinkClick(uri)
+                        }
 
                     )
 
@@ -315,4 +338,7 @@ private fun MarkdownParagraph(
                 }
         }
     )
+
+
+
 }

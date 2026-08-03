@@ -52,7 +52,7 @@ Intuition є простим та зрозумілим інструментом �
 
 Якщо у вас виникли питання або пропозиції, будь ласка, звертайтеся за адресою:
 
-**E-mail:** <support@intuition.capybara-soft.com>
+**E-mail:** [support@capybara-soft.com](mailto:support@capybara-soft.com)
 
-**Веб-сайт:** https://intuition.capybara-soft.com
+**Веб-сайт:** [www.capybara-soft.com](https://www.capybara-soft.com)
 

@@ -38,3 +38,8 @@ app/release/
 
 # Keys
 key.properties
+
+app/Інфраструктура/
+
+# Logs
+*.log

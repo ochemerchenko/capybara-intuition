@@ -84,6 +84,6 @@ Installation ID використовується виключно для роз�
 
 Якщо у вас виникли питання щодо цієї Політики конфіденційності або обробки даних, будь ласка, зв'яжіться з автором.
 
-**E-mail:** <support@intuition.capybara-soft.com>
+**E-mail:** [support@capybara-soft.com](mailto:support@capybara-soft.com)
 
-**Веб-сайт:** https://intuition.capybara-soft.com
+**Веб-сайт:** [www.capybara-soft.com](https://www.capybara-soft.com)

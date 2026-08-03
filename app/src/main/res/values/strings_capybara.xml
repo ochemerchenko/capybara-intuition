@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
+    <!--
+        Дозволені теги:
+        profileName
+        roundResult // результат поточного раунду
+        winCount // виграші поточної сесії
+        loseCount // програші поточної сесії
+        streak // остання (ПОТОЧНА!) серія. Його застоування - не коректне.
+        lastBrokenStreak // Передостанній streak
+        sessionSuccess // успішність сесії
+        tailOneIn // Кількість спроб, щоб отримати такий хівст.
+    -->
+
 
     <string-array name="capybara_emotion_options_shown_start_mode_after">
         <item>Hello, {profileName}! One of the options is shown, guess which one?</item>
@@ -9,15 +21,14 @@
         <item>{profileName}, the simulator will choose the option after you regardless of you. What are you betting on?</item>
     </string-array>
     <string-array name="capybara_emotion_options_shown_start_mode_hybrid">
-        <item>{profileName}, I don\'t even know who goes first. What's your option?</item>
+        <item>{profileName}, I don\'t even know who goes first. What\'s your option?</item>
     </string-array>
 
-    <!--
-        <!- -
+
+        <!--
             + ORDINARY SECTION
-        - ->
+        -->
         <string-array name="capybara_emotion_win_continues_ordinary">
-            <!- - +++ - ->
             <item>{profileName}, well, luck is on your side this time.</item>
             <item>Try to remember the first reaction that arose before the decision.</item>
             <item>Success is always nice. Congratulations, {profileName}!</item>
@@ -27,7 +38,7 @@
             <item>The success of your current session is {sessionSuccess}%. I like it, and you?</item>
             <item>Cool! But is it a coincidence or the result of your super skill?</item>
             <item>And I liked it! I generally like to see your success!</item>
-            <item>The world is so unpredictable. And it\'s so nice when you're lucky!</item>
+            <item>The world is so unpredictable. And it\'s so nice when you\'re lucky!</item>
             <item>Great! Current session success: {sessionSuccess}%.</item>
             <item>{profileName}, you\'re just great! That was a great bet!</item>
             <item>And if you really improve, {profileName}? And every time - accurately, without a miss?</item>
@@ -47,7 +58,7 @@
             <item>{profileName}, don\'t be sad. Yes, luck is not on your side this time, but success will not be long in coming!</item>
             <item>Randomness is a terrible thing! Hold on, {profileName}!</item>
             <item>I didn\'t like it either! You have the right to succeed!</item>
-            <item>The world is so unpredictable. And it\'s so sad when you're not lucky.</item>
+            <item>The world is so unpredictable. And it\'s so sad when you\'re not lucky.</item>
             <item>Do you trust your feelings? Do you trust yourself?</item>
             <item>Not this time. Current session success: {sessionSuccess}%.</item>
             <item>{profileName}, this time you missed. Why was this particular bet made?</item>
@@ -103,11 +114,11 @@
         </string-array>
 
         <string-array name="capybara_emotion_win_streak_broken_ordinary">
-            <item>Unfortunately, this time it was a "crawl". Unlucky, I understand, I'm sad too...</item>
+            <item>Unfortunately, this time it was a "crawl". Unlucky, I understand, I\'m sad too...</item>
             <item>What changed in your state before the last choice?</item>
             <item>A miss, this time Probability Theory is not on your side.</item>
             <item>{profileName}, your value does not depend on the result. You are the most important thing you have.</item>
-            <item>Before this miss, the number of guesses in a row was {streak}. It\'s just a coincidence. Isn't it?</item>
+            <item>Before this miss, the number of guesses in a row was {streak}. It\'s just a coincidence. Isn\'t it?</item>
             <item>I\'m here for you, {profileName}. This miss doesn\'t make you any less of a person.</item>
             <item>What went "wrong"? What were your feelings before making a choice?</item>
             <item>Sometimes it\'s useful to pay attention not to the event, but to your own reaction to it.</item>
@@ -138,7 +149,7 @@
             <item>That\'s right! But you remember that Probability Theory is to blame for everything?</item>
             <item>I like it too. And no Mercury retrograde will stop it!</item>
             <item>Real yogis approach this philosophically. It\'s more important for them to observe themselves.</item>
-            <item>By the way, this time the mathematical Algorhythm didn\'t interfere. And how do you feel about Laibach's work?</item>
+            <item>By the way, this time the mathematical Algorhythm didn\'t interfere. And how do you feel about Laibach\'s work?</item>
             <item>How nice! Good luck to you, {profileName}!</item>
             <item>Try to remember the moment before the decision. What was "yes" and what was "no"?</item>
             <item>Sometimes we learn the most about ourselves at such moments.</item>
@@ -150,12 +161,10 @@
         </string-array>
 
 
-        <!- -
+        <!--
             + INTERESTING SECTION
-        - ->
-
+        -->
         <string-array name="capybara_emotion_win_continues_interesting">
-            <!- - +++ - ->
             <item>{profileName}, this is interesting! And this time luck is on your side!</item>
             <item>{winCount} in this session! Remember the first reaction that arose before the bet?</item>
             <item>Success is always nice. Congratulations, {profileName}!</item>
@@ -166,7 +175,7 @@
             <item>Congratulations! The success of your current session is {sessionSuccess}%. How are you?</item>
             <item>Cool! Can you repeat it?</item>
             <item>And I liked it! I generally like seeing your success!</item>
-            <item>The world is so unpredictable. And it\'s so nice when you're lucky!</item>
+            <item>The world is so unpredictable. And it\'s so nice when you\'re lucky!</item>
             <item>Great! Current session success: {sessionSuccess}%.</item>
             <item>{profileName}, you\'re just great! That was a great bet!</item>
             <item>And if you really improve, {profileName}? And every time - exactly, on target?</item>
@@ -274,7 +283,7 @@
         <string-array name="capybara_emotion_lose_streak_broken_interesting">
             <item>What an interesting moment, {profileName}! And I like it, and so do you!</item>
             <item>Well, congratulations! {streak} of misses in a row, and finally!</item>
-            <item>There is reason for optimism, isn\'t it? I'm happy for you, {profileName}!</item>
+            <item>There is reason for optimism, isn\'t it? I\'m happy for you, {profileName}!</item>
             <item>{profileName}, try to understand what has changed. I wonder - is that what intuition is?</item>
             <item>And really, how many misses can you have? I\'m happy for you, {profileName}!</item>
             <item>Well, everything is fair, {profileName}! But who took the bet - Probability Theory or your own intuition?</item>
@@ -285,10 +294,9 @@
         </string-array>
 
 
-        <!- -
+        <!--
         + UNUSUAL SECTION
-        - ->
-
+        -->
         <string-array name="capybara_emotion_win_continues_unusual">
             <item>{profileName}, that\'s something unusual at this level. Congratulations!</item>
             <item>This time, luck is on your side, {profileName}, and it\'s unusual!</item>
@@ -321,25 +329,25 @@
             <item>Unfortunately, not this time, {profileName}. How did you feel before the bet?</item>
             <item>Failures happen too, and this is no reason to be sad! You will succeed, {profileName}!</item>
             <item>This is quite a failure. Believe in yourself, you can do it, {profileName}!</item>
-            <item>I didn\'t like it either! But misses won\'t last forever, you'll be lucky!</item>
+            <item>I didn\'t like it either! But misses won\'t last forever, you\'ll be lucky!</item>
             <item>{profileName}, this time you missed. Why this particular bet? How did it feel?</item>
             <item>Session success - {sessionSuccess}, number of misses - {loseCount}. What\'s happening?</item>
             <item>What did you feel in the first moment before the bet? Were there any doubts? An unusual situation, I sympathize.</item>
             <item>It seems like it\'s just mathematics with its Probability Theory. But this is extraordinary.</item>
             <item>{profileName}, miss! This is something unusual. Did you manage to remember the feeling before the bet?</item>
             <item>Yes, this is an unusual failure. And I see a reason for extraordinary attentiveness to your own feelings, {profileName}.</item>
-            <item>But what is this? I\'m sad with you. It shouldn\'t be like this, you'll cope with this failure, I believe in you! </item>
+            <item>But what is this? I\'m sad with you. It shouldn\'t be like this, you\'ll cope with this failure, I believe in you! </item>
             <item>Try to look at this experience without regret: this is an unusual result. And the rest is not important right now.</item>
             <item>It didn\'t work again. Current session success: {sessionSuccess}%, {streak} consecutive misses.</item>
             <item>Exceptional situation. The key to success is paying attention to your feelings and having confidence in yourself.</item>
-            <item>{profileName}, I\'m also very sad. Hang in there! This can't last long.</item>
+            <item>{profileName}, I\'m also very sad. Hang in there! This can\'t last long.</item>
             <item>A remarkable series of misses. But that doesn\'t change the fact that {profileName} is the best person in the universe!</item>
             <item>Maybe you\'re not facing a problem right now, {profileName}, but a clue. How did the bet feel?</item>
             <item>And what does your intuition say? Is everything really that bad, or are you missing something?</item>
             <item>Don\'t rush to call yourself a loser, {profileName}. First, look at how you make decisions.</item>
             <item>I\'m here for you, {profileName}. And it seems to me that confidence in yourself is more important than the result.</item>
             <item>Amazing! It\'s getting harder and harder for me to believe that this is just a coincidence.</item>
-            <item>Sometimes the problem isn\'t that we can\'t hear ourselves. Sometimes it's that we don't believe ourselves.</item>
+            <item>Sometimes the problem isn\'t that we can\'t hear ourselves. Sometimes it\'s that we don\'t believe ourselves.</item>
         </string-array>
 
         <string-array name="capybara_emotion_options_shown_after_win_unusual">
@@ -415,7 +423,7 @@
             <item>{profileName}, you\'ve lost an extraordinary streak - {streak} in a row. But your value does not depend on the result!</item>
             <item>What needs more attention now: the result or your attitude towards it?</item>
             <item>There were {streak} in a row. Probability Theory has really tensed up. Don\'t be sad, you can do even better!</item>
-            <item>Everything is like in life - you run, you run, and then - oh! And it\'s all over again. Don't be sad, {profileName}, you're growing!</item>
+            <item>Everything is like in life - you run, you run, and then - oh! And it\'s all over again. Don\'t be sad, {profileName}, you\'re growing!</item>
             <item>Try to remember your state immediately before the decision. Were there any doubts?</item>
             <item>Don\'t be sad, {profileName}. There is only you and your feelings, and the rest is just a game!</item>
             <item>It\'s all Mathematics and Algorhythm. Do you like Algorhythm by Laibach?</item>
@@ -451,11 +459,9 @@
         </string-array>
 
 
-
-        <!- -
+        <!--
             RARE SECTION
-        - ->
-
+        -->
         <string-array name="capybara_emotion_win_continues_rare">
             <item>{profileName}, the odds of winning this bet are less than 1 in {tailOneIn}. Congratulations!</item>
             <item>This is already a rare event, {profileName}. For this session, 1 chance with {tailOneIn} to collect {streak} in a row!</item>
@@ -465,7 +471,7 @@
             <item>Positive emotions are very valuable in life! I hope you feel the drive!</item>
             <item>A rare result! Can you name the feeling before the bet?</item>
             <item>Pay attention to how this rare bet felt, {profileName}.</item>
-            <item>Perhaps what you\'re seeing now isn\'t the result, but proof that you've learned something, young Padawan.</item>
+            <item>Perhaps what you\'re seeing now isn\'t the result, but proof that you\'ve learned something, young Padawan.</item>
             <item>Is this coincidence or intuition? {streak} in a row!</item>
             <item>Is Algorhythm really playing along with you? By the way, how do you like Laibach\'s work?</item>
             <item>Session success rate {sessionSuccess}%, number of guesses in a row - {streak}. How do you like it?</item>
@@ -494,7 +500,7 @@
             <item>{profileName}, a rare failure. Let\'s hold on!</item>
             <item>What does your intuition say, {profileName}? Is everything really that rushed, or are you missing something?</item>
             <item>Try to look at this experience without regret: this is a rare result. And the rest is not important right now.</item>
-            <item>Sometimes the problem is not that intuition does not work. Sometimes it\'s that we don't trust ourselves.</item>
+            <item>Sometimes the problem is not that intuition does not work. Sometimes it\'s that we don\'t trust ourselves.</item>
             <item>Which causes more tension: being wrong or admitting your own rightness?</item>
             <item>I sympathize, {profileName}. And this series of misses is really rare and long. Interesting!</item>
             <item>What did you feel at first? Were there any doubts before the bet? An extraordinary situation, I sympathize.</item>
@@ -502,7 +508,7 @@
 
         <string-array name="capybara_emotion_options_shown_after_win_rare">
             <item>It\'s getting more and more interesting, {profileName}, what\'s your choice?</item>
-            <item>How did the previous bet feel? And now? If you\'re tired, it's better to rest, the game won't run away.</item>
+            <item>How did the previous bet feel? And now? If you\'re tired, it\'s better to rest, the game won\'t run away.</item>
             <item>The Algorhythm counts 1-2-22, and you have intuition. How do these buttons feel?</item>
             <item>{profileName}, your feelings and your self-confidence are the keys to intuition.</item>
             <item>How is the perception of these buttons different, {profileName}? Do these feelings already have a name?</item>
@@ -555,7 +561,7 @@
             <item>Don\'t rush to be sad. I sincerely hope - you will overcome this Algorhythm! By the way, how do you like Laibach?</item>
             <item>A miss. But interesting: guesses during the session - {winCount}, of which the last ones in a row - {streak}. </item>
             <item>I want to support you, {profileName}. Yes, it\'s not pleasant, but I believe in you.</item>
-            <item>Everything is like in life - you run, you run, and then - oh! And all from the beginning. Don\'t be sad, {profileName}, you're growing!</item>
+            <item>Everything is like in life - you run, you run, and then - oh! And all from the beginning. Don\'t be sad, {profileName}, you\'re growing!</item>
             <item>I\'m here, {profileName}. This mistake doesn\'t make you any less of a person.</item>
             <item>There\'s nothing to be sad about, {profileName}, it\'s just a game. Will you repeat or surpass it?</item>
             <item>I\'m sad with you. What a rare streak! 1 chance for {tailOneIn}! But you\'ll surpass it, I believe in you!</item>
@@ -569,7 +575,7 @@
         <string-array name="capybara_emotion_lose_streak_broken_rare">
             <item>The rare streak of misses is over, {profileName}! That\'s what you need, right?</item>
             <item>Well, congratulations! {streak} of misses in a row, and finally! Congratulations!</item>
-            <item>There\'s reason for optimism, isn\'t there? I'm happy for you, {profileName}!</item>
+            <item>There\'s reason for optimism, isn\'t there? I\'m happy for you, {profileName}!</item>
             <item>Probability Theory worked well. But without you - nothing would have happened!</item>
             <item>And really, how many misses are possible: miss and miss? I\'m happy for you, {profileName}!</item>
             <item>Cool! I also thought it was time to guess! But I wonder - how was it done?</item>
@@ -584,25 +590,11 @@
             <item>Well, everything is fair, {profileName}! This is worth celebrating!</item>
         </string-array>
 
-        <!- -
+        <!--
         ===================================
-        FEATURE CONTENT BELOW. IT'S PAIN...
+        FEATURE CONTENT BELOW. IT\'S PAIN...
         ===================================
-        - ->
-
-        <!- -
-            Дозволені теги:
-            profileName
-            roundResult // результат поточного раунду
-            winCount // виграші поточної сесії
-            loseCount // програші поточної сесії
-            streak // остання (ПОТОЧНА!) серія. Його застоування - не коректне.
-            lastBrokenStreak // Передостанній streak
-            sessionSuccess // успішність сесії
-            tailOneIn // Кількість спроб, щоб отримати такий хівст.
-        - ->
-
-
+        -->
         <string-array name="capybara_emotion_win_continues_amazing">
             <item>{profileName}, I think we\'re looking at something more than just a series of successful decisions.</item>
             <item>I see a skill that\'s gradually becoming a natural part of your way of doing things.</item>
@@ -685,11 +677,9 @@
         </string-array>
 
 
-        <!- -
+        <!--
             SHOWN OPTION AFTER WIN SECTION
-        - ->
-
-
+        -->
         <string-array name="capybara_emotion_options_shown_after_win_amazing">
             <item>{profileName}, if I could give you just one piece of advice, I would say: remember this moment.</item>
             <item>I think this experience is worth revisiting again and again.</item>
@@ -706,10 +696,10 @@
             <item>Maybe after a while you will look at this moment with completely different eyes.</item>
             <item>I would advise you to keep in your memory not the event, but your own inner state next to it.</item>
             <item>Some lessons come unnoticed. This one doesn\'t seem like it to me.</item>
-            <item>Maybe right now you\'re seeing a piece of the answer to a question you haven't asked yet.</item>
+            <item>Maybe right now you\'re seeing a piece of the answer to a question you haven\'t asked yet.</item>
             <item>Don\'t dismiss this experience just because it doesn\'t fit into a clear picture yet.</item>
             <item>There are moments that are worth experiencing twice: once in your life, the second in your memory.</item>
-            <item>I don\'t know what conclusion you\'ll draw. But it seems to me that it's worth seeking out.</item>
+            <item>I don\'t know what conclusion you\'ll draw. But it seems to me that it\'s worth seeking out.</item>
             <item>Try to see not only the choice, but also the person who made it.</item>
             <item>Sometimes the true value of an experience only becomes apparent after a while.</item>
             <item>I think the game gave you something more than just another round today.</item>
@@ -772,11 +762,9 @@
         </string-array>
 
 
-        <!- -
+        <!--
         SHOWN OPTION AFTER LOSE SECTION
-        - ->
-
-
+        -->
         <string-array name="capybara_emotion_options_shown_after_lose_amazing">
             <item>{profileName}, the longer I observe this experience, the less I see it as random.</item>
             <item>It seems to me that we are not examining mistakes now, but a very consistent internal process.</item>
@@ -861,13 +849,9 @@
         </string-array>
 
 
-
-        <!- -
+        <!--
         WIN STREAK BROKEN SECTION
-        - ->
-
-
-
+        -->
         <string-array name="capybara_emotion_win_streak_broken_amazing">
             <item>{profileName}, I think you are in for an experience that could be very valuable.</item>
             <item>I am here. And I would not be in a hurry to let this moment pass.</item>
@@ -890,7 +874,7 @@
             <item>Sometimes the most important changes begin with one honestly observed moment.</item>
             <item>I see a reason not for regret, but for mindfulness.</item>
             <item>Perhaps this experience came not to take something away from you, but to add something new.</item>
-            <item>Don\'t rush to close this page. I don\'t think it's finished yet.</item>
+            <item>Don\'t rush to close this page. I don\'t think it\'s finished yet.</item>
             <item>What if right now you\'re facing one of the most valuable lessons on this path?</item>
             <item>I\'m here. And it seems to me that this moment can change more than it seems right now.</item>
         </string-array>
@@ -951,11 +935,9 @@
         </string-array>
 
 
-        <!- -
+        <!--
         LOSE CONTINUE SECTION
-        - ->
-
-
+        -->
         <string-array name="capybara_emotion_lose_continues_amazing">
             <item>{profileName}, it seems to me that now we are not exploring intuition, but your attitude towards yourself.</item>
             <item>I am here. And the longer I look at this path, the more I trust your ability to feel.</item>
@@ -1044,10 +1026,9 @@
         </string-array>
 
 
-        <!- -
+        <!--
         LOSE STREAK BROKEN SECTION
-        - ->
-
+        -->
         <string-array name="capybara_emotion_lose_streak_broken_amazing">
             <item>{profileName}, I think we\'re just seeing the beginning of something new.</item>
             <item>I\'m here. And the longer I think about this moment, the more questions I have.</item>
@@ -1084,7 +1065,7 @@
             <item>I see a very interesting puzzle in front of me.</item>
             <item>What if the previous story was just part of a much bigger picture?</item>
             <item>Sometimes one unexpected event changes not the answers, but the way we think.</item>
-            <item>I\'m not only interested in what has changed. I\'m interested in what we still don't notice.</item>
+            <item>I\'m not only interested in what has changed. I\'m interested in what we still don\'t notice.</item>
             <item>I hardly think about the outcome anymore. I think about the meaning of what is happening.</item>
             <item>Maybe this story is telling something completely different than we thought.</item>
             <item>Sometimes the best question is born after the old answer collapses.</item>
@@ -1118,7 +1099,7 @@
             <item>I\'m interested in watching reality go beyond our expectations.</item>
             <item>I see a reason for caution, not certainty.</item>
             <item>What else could this story be hiding if it has already surprised us?</item>
-            <item>Sometimes the most honest answer is very simple: "I don't know yet."</item>
+            <item>Sometimes the most honest answer is very simple: "I don\'t know yet."</item>
             <item>I feel like we have more possibilities than conclusions now.</item>
             <item>I don\'t want to confirm old theories anymore. I want to see what is.</item>
             <item>Perhaps this moment reminds us that life is always more complicated than the schematics.</item>
@@ -1134,5 +1115,5 @@
             <item>What if the greatest value of this moment is not in what happened, but in what he questioned?</item>
             <item>I\'m here. And it seems to me that we\'re not looking at an answer right now, but at a mystery.</item>
         </string-array>
-    -->
+
 </resources>

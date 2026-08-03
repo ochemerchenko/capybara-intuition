@@ -107,6 +107,6 @@ Intuition є інструментом для тренування та досл�
 
 Якщо у вас виникли питання щодо цих Умов використання, будь ласка, звертайтеся за адресою:
 
-**E-mail:** <support@intuition.capybara-soft.com>
+**E-mail:** [support@capybara-soft.com](mailto:support@capybara-soft.com)
 
-**Веб-сайт:** https://intuition.capybara-soft.com
+**Веб-сайт:** [www.capybara-soft.com](https://www.capybara-soft.com)

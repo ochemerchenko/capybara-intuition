@@ -180,7 +180,6 @@ fun capybaraSprites(
         CapybaraEmotion.WIN_CONTINUES_INTERESTING ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_win_continues_interesting,
-                //drawableId = R.drawable.capybara_happy,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.78f,
                     yFraction = 0.17f
@@ -190,7 +189,6 @@ fun capybaraSprites(
         CapybaraEmotion.WIN_CONTINUES_UNUSUAL ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_win_continues_unusual,
-                //drawableId = R.drawable.capybara_happy,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.78f,
                     yFraction = 0.15f
@@ -200,7 +198,6 @@ fun capybaraSprites(
         CapybaraEmotion.WIN_CONTINUES_RARE ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_win_continues_rare,
-                //drawableId = R.drawable.capybara_happy,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.81f,
                     yFraction = 0.15f
@@ -210,7 +207,6 @@ fun capybaraSprites(
         CapybaraEmotion.WIN_CONTINUES_AMAZING ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_win_continues_amazing,
-                //drawableId = R.drawable.capybara_happy,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.78f,
                     yFraction = 0.16f
@@ -220,7 +216,6 @@ fun capybaraSprites(
         CapybaraEmotion.WIN_CONTINUES_INCREDIBLE ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_win_continues_incredible,
-                //drawableId = R.drawable.capybara_happy,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.79f,
                     yFraction = 0.16f
@@ -230,14 +225,12 @@ fun capybaraSprites(
         CapybaraEmotion.WIN_CONTINUES_LEGENDARY ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_win_continues_legendary,
-                //drawableId = R.drawable.capybara_happy,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.83f,
                     yFraction = 0.14f
                 ),
                 phrasesResId = R.array.capybara_emotion_win_continues_legendary
             )
-
 
 
         ////////////////////////////////////////////////
@@ -247,7 +240,6 @@ fun capybaraSprites(
         CapybaraEmotion.WIN_STREAK_BROKEN_ORDINARY ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_win_streak_broken_ordinary,
-                //drawableId = R.drawable.capybara_sad,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.81f,
                     yFraction = 0.16f
@@ -257,7 +249,6 @@ fun capybaraSprites(
         CapybaraEmotion.WIN_STREAK_BROKEN_INTERESTING ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_win_streak_broken_interesting,
-                //drawableId = R.drawable.capybara_sad,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.81f,
                     yFraction = 0.15f
@@ -267,7 +258,6 @@ fun capybaraSprites(
         CapybaraEmotion.WIN_STREAK_BROKEN_UNUSUAL ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_win_streak_broken_unusual,
-                //drawableId = R.drawable.capybara_sad,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.83f,
                     yFraction = 0.14f
@@ -277,7 +267,6 @@ fun capybaraSprites(
         CapybaraEmotion.WIN_STREAK_BROKEN_RARE ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_win_streak_broken_rare,
-                //drawableId = R.drawable.capybara_sad,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.69f,
                     yFraction = 0.07f
@@ -287,7 +276,6 @@ fun capybaraSprites(
         CapybaraEmotion.WIN_STREAK_BROKEN_AMAZING ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_win_streak_broken_amazing,
-                //drawableId = R.drawable.capybara_sad,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.78f,
                     yFraction = 0.13f
@@ -297,7 +285,6 @@ fun capybaraSprites(
         CapybaraEmotion.WIN_STREAK_BROKEN_INCREDIBLE ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_win_streak_broken_incredible,
-                //drawableId = R.drawable.capybara_sad,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.81f,
                     yFraction = 0.13f
@@ -307,7 +294,6 @@ fun capybaraSprites(
         CapybaraEmotion.WIN_STREAK_BROKEN_LEGENDARY ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_win_streak_broken_legendary,
-                //drawableId = R.drawable.capybara_sad,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.78f,
                     yFraction = 0.17f
@@ -316,14 +302,12 @@ fun capybaraSprites(
             )
 
 
-
         ////////////////////////////////////////////////
         //  LOSE_CONTINUE
         ////////////////////////////////////////////////
         CapybaraEmotion.LOSE_CONTINUES_ORDINARY ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_lose_continues_ordinary,
-                //drawableId = R.drawable.capybara_sad,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.81f,
                     yFraction = 0.13f
@@ -333,7 +317,6 @@ fun capybaraSprites(
         CapybaraEmotion.LOSE_CONTINUES_INTERESTING ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_lose_continues_interesting,
-                //drawableId = R.drawable.capybara_sad,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.81f,
                     yFraction = 0.15f
@@ -343,7 +326,6 @@ fun capybaraSprites(
         CapybaraEmotion.LOSE_CONTINUES_UNUSUAL ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_lose_continues_unusual,
-                //drawableId = R.drawable.capybara_sad,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.81f,
                     yFraction = 0.15f
@@ -353,7 +335,6 @@ fun capybaraSprites(
         CapybaraEmotion.LOSE_CONTINUES_RARE ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_lose_continues_rare,
-                //drawableId = R.drawable.capybara_sad,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.81f,
                     yFraction = 0.15f
@@ -363,7 +344,6 @@ fun capybaraSprites(
         CapybaraEmotion.LOSE_CONTINUES_AMAZING ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_lose_continues_amazing,
-                //drawableId = R.drawable.capybara_sad,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.78f,
                     yFraction = 0.16f
@@ -373,7 +353,6 @@ fun capybaraSprites(
         CapybaraEmotion.LOSE_CONTINUES_INCREDIBLE ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_lose_continues_incredible,
-                //drawableId = R.drawable.capybara_sad,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.78f,
                     yFraction = 0.17f
@@ -383,7 +362,6 @@ fun capybaraSprites(
         CapybaraEmotion.LOSE_CONTINUES_LEGENDARY ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_lose_continues_legendary,
-                //drawableId = R.drawable.capybara_sad,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.78f,
                     yFraction = 0.15f
@@ -398,7 +376,6 @@ fun capybaraSprites(
         CapybaraEmotion.LOSE_STREAK_BROKEN_ORDINARY ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_lose_streak_broken_ordinary,
-                //drawableId = R.drawable.capybara_happy,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.75f,
                     yFraction = 0.13f
@@ -408,7 +385,6 @@ fun capybaraSprites(
         CapybaraEmotion.LOSE_STREAK_BROKEN_INTERESTING ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_lose_streak_broken_interesting,
-                //drawableId = R.drawable.capybara_happy,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.78f,
                     yFraction = 0.13f
@@ -418,7 +394,6 @@ fun capybaraSprites(
         CapybaraEmotion.LOSE_STREAK_BROKEN_UNUSUAL ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_lose_streak_broken_unusual,
-                //drawableId = R.drawable.capybara_happy,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.81f,
                     yFraction = 0.13f
@@ -428,7 +403,6 @@ fun capybaraSprites(
         CapybaraEmotion.LOSE_STREAK_BROKEN_RARE ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_lose_streak_broken_rare,
-                //drawableId = R.drawable.capybara_happy,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.83f,
                     yFraction = 0.13f
@@ -438,7 +412,6 @@ fun capybaraSprites(
         CapybaraEmotion.LOSE_STREAK_BROKEN_AMAZING ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_lose_streak_broken_amazing,
-                //drawableId = R.drawable.capybara_happy,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.78f,
                     yFraction = 0.17f
@@ -448,7 +421,6 @@ fun capybaraSprites(
         CapybaraEmotion.LOSE_STREAK_BROKEN_INCREDIBLE ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_lose_streak_broken_incredible,
-                //drawableId = R.drawable.capybara_happy,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.89f,
                     yFraction = 0.09f
@@ -458,14 +430,12 @@ fun capybaraSprites(
         CapybaraEmotion.LOSE_STREAK_BROKEN_LEGENDARY ->
             CapybaraSpriteMetadata(
                 drawableId = R.drawable.capybara_emotion_lose_streak_broken_legendary,
-                //drawableId = R.drawable.capybara_happy,
                 speechAnchor = SpeechAnchor(
                     xFraction = 0.87f,
                     yFraction = 0.11f
                 ),
                 phrasesResId = R.array.capybara_emotion_lose_streak_broken_legendary
             )
-
     }
 
     return sprite

@@ -93,7 +93,7 @@ fun TesterToolsScreen (
 
         item {
 
-            ChangeLicenseTypeSection()
+            //ChangeLicenseTypeSection()
 
             Spacer(
                 Modifier.height(

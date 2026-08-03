@@ -1,24 +1,26 @@
+
 <resources>
 
-    <!-- Base application theme -->
-    <style
-        name="Base.Theme.Intuition"
-        parent="Theme.Material3.DayNight.NoActionBar">
 
-        <!-- System surfaces -->
-        <item name="android:windowBackground">
-            @color/capybara_background
-        </item>
 
-        <item name="android:navigationBarColor">
-            @color/capybara_background
-        </item>
+            <style
+                name="Base.Theme.Intuition"
+                parent="Theme.Material3.DayNight.NoActionBar">
 
-    </style>
 
-    <!-- App theme -->
-    <style
-        name="Theme.Intuition"
-        parent="Base.Theme.Intuition" />
+                <item name="android:windowBackground">
+                    @color/capybara_background
+                </item>
+
+                <item name="android:navigationBarColor">
+                    @color/capybara_background
+                </item>
+
+            </style>
+
+
+            <style
+                name="Theme.Intuition"
+                parent="Base.Theme.Intuition" />
 
 </resources>

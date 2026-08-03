@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-
+    <!--
+    Дозволені теги:
+    profileName
+    roundResult // результат поточного раунду
+    winCount // виграші поточної сесії
+    loseCount // програші поточної сесії
+    streak // остання (ПОТОЧНА!) серія. Його застоування - не коректне.
+    lastBrokenStreak // Передостанній streak
+    sessionSuccess // успішність сесії
+    tailOneIn // Кількість спроб, щоб отримати такий хівст.
+    -->
 
     <string-array name="capybara_emotion_options_shown_start_mode_after">
         <item>Привіт, {profileName}! Загадано один з варіантів, вгадай який?</item>
@@ -13,12 +23,11 @@
         <item>{profileName}, я навіть не знаю хто першим ходить. Який варіант твій?</item>
     </string-array>
 
+
     <!--
-    <!- -
         + ORDINARY SECTION
-    - ->
+    -->
     <string-array name="capybara_emotion_win_continues_ordinary">
-        <!- - +++ - ->
         <item>{profileName}, добре, цього разу удача на твоєму боці.</item>
         <item>Спробуй пригадати першу реакцію, яка виникла перед рішенням.</item>
         <item>Успіх - це завжди приємно. Вітаю, {profileName}!</item>
@@ -151,12 +160,10 @@
     </string-array>
 
 
-    <!- -
+    <!--
         + INTERESTING SECTION
-    - ->
-
+    -->
     <string-array name="capybara_emotion_win_continues_interesting">
-        <!- - +++ - ->
         <item>{profileName}, це вже цікаво! І цього разу удача на твоєму боці!</item>
         <item>{winCount} у цій сесії! Пригадай першу реакцію, яка виникла перед ставкою?</item>
         <item>Успіх - це завжди приємно. Вітаю, {profileName}!</item>
@@ -286,10 +293,9 @@
     </string-array>
 
 
-    <!- -
+    <!--
     + UNUSUAL SECTION
-    - ->
-
+    -->
     <string-array name="capybara_emotion_win_continues_unusual">
         <item>{profileName}, це вже щось незвичайне на цьому рівні. Вітаю!</item>
         <item>Цього разу удача на твоєму боці, {profileName}, і вона - незвичайна!</item>
@@ -453,10 +459,9 @@
 
 
 
-    <!- -
+    <!--
         RARE SECTION
-    - ->
-
+    -->
     <string-array name="capybara_emotion_win_continues_rare">
         <item>{profileName}, ймовірність виграшу ціє ставки менше, ніж 1 з {tailOneIn}. Вітаю!</item>
         <item>Це вже рідкісна подія, {profileName}. Для цієї сесії 1 шанс з {tailOneIn} зібрати {streak} поспіль!</item>
@@ -585,25 +590,11 @@
         <item>Ну, все по чесному, {profileName}! Це варто відсвяткувати!</item>
     </string-array>
 
-    <!- -
+    <!--
     ===================================
     FEATURE CONTENT BELOW. IT'S PAIN...
     ===================================
-    - ->
-
-    <!- -
-        Дозволені теги:
-        profileName
-        roundResult // результат поточного раунду
-        winCount // виграші поточної сесії
-        loseCount // програші поточної сесії
-        streak // остання (ПОТОЧНА!) серія. Його застоування - не коректне.
-        lastBrokenStreak // Передостанній streak
-        sessionSuccess // успішність сесії
-        tailOneIn // Кількість спроб, щоб отримати такий хівст.
-    - ->
-
-
+    -->
     <string-array name="capybara_emotion_win_continues_amazing">
         <item>{profileName}, мені здається, зараз ми дивимося на щось більше, ніж просто серію вдалих рішень.</item>
         <item>Я бачу навичку, яка поступово стає природною частиною твого способу діяти.</item>
@@ -686,11 +677,9 @@
     </string-array>
 
 
-    <!- -
+    <!--
         SHOWN OPTION AFTER WIN SECTION
-    - ->
-
-
+    -->
     <string-array name="capybara_emotion_options_shown_after_win_amazing">
         <item>{profileName}, якби я міг порадити лише одне, я б сказав: запам\'ятай цей момент.</item>
         <item>Мені здається, цей досвід заслуговує на те, щоб повернутися до нього ще не раз.</item>
@@ -773,11 +762,9 @@
     </string-array>
 
 
-    <!- -
+    <!--
     SHOWN OPTION AFTER LOSE SECTION
-    - ->
-
-
+    -->
     <string-array name="capybara_emotion_options_shown_after_lose_amazing">
         <item>{profileName}, чим довше я спостерігаю за цим досвідом, тим менше бачу в ньому випадковість.</item>
         <item>Мені здається, зараз ми досліджуємо не помилки, а дуже послідовний внутрішній процес.</item>
@@ -862,13 +849,9 @@
     </string-array>
 
 
-
-    <!- -
+    <!--
     WIN STREAK BROKEN SECTION
-    - ->
-
-
-
+    -->
     <string-array name="capybara_emotion_win_streak_broken_amazing">
         <item>{profileName}, мені здається, зараз перед тобою досвід, який може виявитися дуже цінним.</item>
         <item>Я поруч. І я б не поспішав проходити повз цей момент.</item>
@@ -952,11 +935,9 @@
     </string-array>
 
 
-    <!- -
+    <!--
     LOSE CONTINUE SECTION
-    - ->
-
-
+    -->
     <string-array name="capybara_emotion_lose_continues_amazing">
         <item>{profileName}, мені здається, зараз ми досліджуємо вже не інтуїцію, а твоє ставлення до самого себе.</item>
         <item>Я поруч. І що довше дивлюся на цей шлях, то більше довіряю твоїй здатності відчувати.</item>
@@ -1045,18 +1026,9 @@
     </string-array>
 
 
-    <!- -
+    <!--
     LOSE STREAK BROKEN SECTION
-    - ->
-
-
-
-
-
-
-
-
-
+    -->
     <string-array name="capybara_emotion_lose_streak_broken_amazing">
         <item>{profileName}, мені здається, що зараз ми бачимо лише початок чогось нового.</item>
         <item>Я поруч. І що довше думаю про цей момент, то більше запитань у мене з\'являється.</item>
@@ -1143,5 +1115,5 @@
         <item>Що, якщо найбільша цінність цього моменту — не в тому, що сталося, а в тому, що він поставив під сумнів?</item>
         <item>Я поруч. І мені здається, що зараз ми дивимося не на відповідь, а на таємницю.</item>
     </string-array>
-    -->
+
 </resources>

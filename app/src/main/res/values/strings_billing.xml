@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="billing_connection_setup">Connecting to Google Play...</string>
+    <string name="billing_connection_setup">Connecting to Google Play…</string>
 
     <string name="billing_purchase_failed">Unable to complete purchase</string>
     <string name="billing_purchase_again">Try again</string>
@@ -14,17 +14,17 @@
     <string name="billing_purchase_pending_title">Payment is expected.</string>
     <string name="billing_purchase_pending_state">Google Play has registered the purchase, but the payment has not yet been confirmed.</string>
     <string name="billing_purchase_pending_offer">After confirming the payment, the license will be activated automatically. If confirmation occurs after closing the application, the new features will become available the next time you open it.</string>
-    <string name="billing_purchase_pending_ok">Ok</string>
+    <string name="billing_purchase_pending_ok">OK</string>
 
     <string name="billing_purchase_success_title">Congratulations!</string>
     <string name="billing_purchase_success_text">The license has been successfully activated. New features are now available in the application.</string>
-    <string name="billing_purchase_success_ok">Ok</string>
+    <string name="billing_purchase_success_ok">OK</string>
 
     <string name="billing_unconfirmed_title">Purchase confirmation failed</string>
     <string name="billing_unconfirmed_result">Google Play was unable to unambiguously confirm the purchase result.</string>
     <string name="billing_unconfirmed_offer">If the payment was successful, the license will be automatically activated during the next synchronization.</string>
     <string name="billing_unconfirmed_alter_offer">Usually the problem is resolved automatically after re-launching the application or a little later. If the problem persists after re-checking, please contact support.</string>
     <string name="billing_unconfirmed_retry">Check again</string>
-    <string name="billing_unconfirmed_ok">Ok</string>
+    <string name="billing_unconfirmed_ok">OK</string>
 
 </resources>

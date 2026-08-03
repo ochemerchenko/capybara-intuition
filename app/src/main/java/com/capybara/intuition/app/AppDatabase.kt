@@ -52,7 +52,7 @@ import com.capybara.intuition.statistics.data.local.db.dao.StatisticsDao
         GameModeEntity::class,
 
     ],
-    version = 67,
+    version = 19,
     exportSchema = false
 )
 

@@ -10,3 +10,8 @@
 - **2** - календар, відображені дати відповідають початку тижня.
 - **3** - ваші показники, розраховуються як середнє значення по усіх добових спробах вибору. 
 
+## Контакти
+
+**E-mail:** [support@capybara-soft.com](mailto:support@capybara-soft.com)
+
+**Веб-сайт:** [www.capybara-soft.com](https://www.capybara-soft.com)
