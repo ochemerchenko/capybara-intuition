@@ -9,6 +9,7 @@ import com.android.billingclient.api.BillingResult
 import com.android.billingclient.api.PendingPurchasesParams
 import com.android.billingclient.api.Purchase
 import com.android.billingclient.api.PurchasesUpdatedListener
+import com.capybara.intuition.app.billing.model.BillingSynchronizationResult
 import com.capybara.intuition.app.billing.ui.model.BillingConnectionState
 import com.capybara.intuition.app.billing.ui.model.BillingState
 import com.capybara.intuition.app.license.data.repository.LicenseRepository
@@ -93,7 +94,8 @@ class GooglePlayBillingManager(
     private val connectionManager = BillingConnectionManager()
     private val purchaseProcessor = BillingPurchaseProcessor(
         licenseRepository,
-        _billingState
+        _billingState,
+        ::start
     )
     private val synchronizationProcessor = BillingSynchronizationProcessor(
         licenseRepository,
@@ -103,23 +105,28 @@ class GooglePlayBillingManager(
     // ============================================================
     // Connection
     // ============================================================
-    suspend fun start() {
+    suspend fun start(): BillingSynchronizationResult {
         Log.d("Billing", "[Manager] Billing initialization started")
-        billingMutex.withLock {
-            val result: BillingResult = connectionManager.connect(
+        return billingMutex.withLock {
+            val connectionResult: BillingResult = connectionManager.connect(
                 billingClient
             )
             Log.d(
                 "Billing",
-                "[Manager] Billing connection result: ${result.responseCode} (${result.debugMessage})"
+                "[Manager] Billing connection result: ${connectionResult.responseCode} (${connectionResult.debugMessage})"
             )
-            if ( result.responseCode == BillingClient.BillingResponseCode.OK ) {
+            if ( connectionResult.responseCode == BillingClient.BillingResponseCode.OK ) {
                 Log.d(
                     "Billing",
                     "[Manager] Starting purchase synchronization"
                 )
                 synchronizationProcessor.synchronize(
                     billingClient
+                )
+            } else {
+                BillingSynchronizationResult(
+                    connected = false,
+                    licenses = emptyMap()
                 )
             }
         }

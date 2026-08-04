@@ -11,6 +11,7 @@ import com.capybara.intuition.app.billing.handlers.handleAlreadyOwned
 import com.capybara.intuition.app.billing.handlers.handleGoogleError
 import com.capybara.intuition.app.billing.handlers.handleGoogleOk
 import com.capybara.intuition.app.billing.handlers.handleUserCanceled
+import com.capybara.intuition.app.billing.model.BillingSynchronizationResult
 import com.capybara.intuition.app.billing.purchase.createBillingFlowParams
 import com.capybara.intuition.app.billing.purchase.createQueryProductDetailsParams
 import com.capybara.intuition.app.billing.purchase.resolveLicenseType
@@ -25,7 +26,8 @@ import kotlinx.coroutines.launch
 
 class BillingPurchaseProcessor(
     private val licenseRepository: LicenseRepository,
-    private val _billingState: MutableStateFlow<BillingState>
+    private val _billingState: MutableStateFlow<BillingState>,
+    private val startSynchronization: suspend () -> BillingSynchronizationResult
 ) {
 
     fun startPurchase(
@@ -130,11 +132,15 @@ class BillingPurchaseProcessor(
 
                 BillingClient.BillingResponseCode.OK -> handleGoogleOk(purchases)
                 BillingClient.BillingResponseCode.USER_CANCELED -> handleUserCanceled()
-                BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED -> handleAlreadyOwned()
-                else ->
-                    handleGoogleError(
-                        billingResult
-                    )
+                BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED -> {
+                    scope.launch {
+                        _billingState.value = handleAlreadyOwned(startSynchronization)
+                    }
+                    return
+                }
+                else -> handleGoogleError(
+                    billingResult
+                )
             }
         Log.d(
             "Billing",

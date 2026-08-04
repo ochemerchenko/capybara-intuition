@@ -1,11 +1,13 @@
 package com.capybara.intuition.app.billing
 
+import android.util.Log
 import com.android.billingclient.api.AcknowledgePurchaseParams
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.Purchase
 import com.android.billingclient.api.QueryPurchasesParams
 import com.android.billingclient.api.acknowledgePurchase
 import com.android.billingclient.api.queryPurchasesAsync
+import com.capybara.intuition.app.billing.model.BillingSynchronizationResult
 import com.capybara.intuition.app.billing.purchase.resolveLicenseType
 import com.capybara.intuition.app.license.data.repository.LicenseRepository
 import com.capybara.intuition.app.license.data.repository.SynchronizationRepository
@@ -19,8 +21,11 @@ class BillingSynchronizationProcessor(
 
     suspend fun synchronize(
         billingClient: BillingClient
-    ) {
-
+    ): BillingSynchronizationResult {
+        Log.d(
+            "Billing",
+            "[Synchronization] Started"
+        )
         val params = QueryPurchasesParams.newBuilder()
             .setProductType(
                 BillingClient.ProductType.INAPP
@@ -28,7 +33,10 @@ class BillingSynchronizationProcessor(
             .build()
 
         val purchasesResult = billingClient.queryPurchasesAsync(params)
-
+        Log.d(
+            "Billing",
+            "[Synchronization] Google response=${purchasesResult.billingResult.responseCode}, purchases=${purchasesResult.purchasesList?.size ?: 0}"
+        )
         if (
             purchasesResult.billingResult.responseCode ==
             BillingClient.BillingResponseCode.OK
@@ -49,12 +57,24 @@ class BillingSynchronizationProcessor(
                 licenseRepository.setLastConfirmedLicense(
                     LicenseType.FREE
                 )
-
-                return
+                Log.d(
+                    "Billing",
+                    "[Synchronization] No purchases found"
+                )
+                return BillingSynchronizationResult(
+                    connected = true,
+                    licenses = mapOf(
+                        LicenseType.PREMIUM to false
+                    )
+                )
             }
 
-            for (licenseType in LicenseType.synchronizationOrder) {
 
+            for (licenseType in LicenseType.synchronizationOrder) {
+                Log.d(
+                    "Billing",
+                    "[Synchronization] Checking $licenseType"
+                )
                 val purchasesForLicense =
                     purchases.filter { purchase ->
                         resolveLicenseType(
@@ -77,7 +97,16 @@ class BillingSynchronizationProcessor(
                     licenseRepository.setLastConfirmedLicense(
                         licenseType
                     )
-                    return
+                    Log.d(
+                        "Billing",
+                        "[Synchronization] $licenseType already acknowledged"
+                    )
+                    return BillingSynchronizationResult(
+                        connected = true,
+                        licenses = mapOf(
+                            licenseType to true
+                        )
+                    )
                 }
 
                 if (
@@ -87,7 +116,10 @@ class BillingSynchronizationProcessor(
                     licenseRepository.setLicense(
                         licenseType
                     )
-
+                    Log.d(
+                        "Billing",
+                        "[Synchronization] Acknowledge required for $licenseType"
+                    )
                     val acknowledged = acknowledgeCurrentPurchase(
                         billingClient,
                         purchase
@@ -106,18 +138,37 @@ class BillingSynchronizationProcessor(
                                 .value
                         )
                     }
-                    return
+                    Log.d(
+                        "Billing",
+                        "[Synchronization] acknowledgeCurrentPurchase() -> $acknowledged"
+                    )
+                    Log.d(
+                        "Billing",
+                        "[Synchronization] Returning: $licenseType -> $acknowledged"
+                    )
+                    return BillingSynchronizationResult(
+                        connected = true,
+                        licenses = mapOf(
+                            licenseType to acknowledged
+                        )
+                    )
                 }
             }
 
         } else {
-
+            Log.d(
+                "Billing",
+                "[Synchronization] Google request failed: response=${purchasesResult.billingResult.responseCode}"
+            )
             val lastSynchronization = synchronizationRepository
                 .lastBillingSynchronization
                 .value
 
             if (lastSynchronization == null) {
-                return
+                return BillingSynchronizationResult(
+                    connected = false,
+                    licenses = emptyMap()
+                )
             }
 
             val synchronizationTimeout = 3 * 24 * 60 * 60 * 1000L
@@ -133,6 +184,14 @@ class BillingSynchronizationProcessor(
                 )
             }
         }
+        Log.d(
+            "Billing",
+            "[Synchronization] Finished without matching licenses"
+        )
+        return BillingSynchronizationResult(
+            connected = true,
+            licenses = emptyMap()
+        )
     }
 
     private suspend fun acknowledgeCurrentPurchase(
