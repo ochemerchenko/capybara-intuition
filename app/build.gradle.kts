@@ -19,7 +19,7 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace = "com.capybara.intuition"
-    compileSdk = 34
+    compileSdk = 35
 
     signingConfigs {
         create("release") {
@@ -35,9 +35,9 @@ android {
     defaultConfig {
         applicationId = "com.capybara.intuition"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
 
-        versionCode = 1
+        versionCode = 2
         versionName = "0.19"
     }
 

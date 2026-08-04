@@ -24,6 +24,7 @@ import android.app.Activity
 import android.util.Log
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -99,6 +100,7 @@ fun IntuitionApp() {
     Box(
         modifier = Modifier
             .fillMaxWidth()
+            .safeDrawingPadding()
             .padding(
                 start = 8.dp,
                 top = 0.dp,

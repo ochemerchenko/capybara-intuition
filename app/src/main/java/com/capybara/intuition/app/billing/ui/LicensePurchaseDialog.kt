@@ -1,6 +1,8 @@
 package com.capybara.intuition.app.billing.ui
 
 
+import android.app.Activity
+import android.util.Log
 import androidx.compose.material3.Card
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -30,7 +32,7 @@ fun LicensePurchaseDialog(
 ) {
     val app = LocalContext.current.applicationContext as App
     val container = app.appContainer
-    val activity = LocalContext.current as? FragmentActivity
+    val activity = LocalContext.current as Activity
 
     val billingManager = container.googlePlayBillingManager
 
@@ -50,16 +52,18 @@ fun LicensePurchaseDialog(
                 // OFFER
                 // =========================================
                 BillingUiState.Idle -> {
-
+                    Log.d("Billing", "Before call PurchaseOfferSection()")
                     PurchaseOfferSection(
                         licenseType = targetLicense,
                         onBuyClick = {
+                            Log.d("Billing", "Before called: onBuyClick()")
                             activity?.let {
                                 billingManager.startPurchase(
                                     it,
                                     targetLicense
                                 )
                             }
+                            Log.d("Billing", "CalledPurchaseOfferSection.onBuyClick")
                         }
                     )
                 }
