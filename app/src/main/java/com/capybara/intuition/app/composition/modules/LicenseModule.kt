@@ -1,14 +1,5 @@
 package com.capybara.intuition.app.composition.modules
 
-import com.capybara.intuition.app.BuildConfiguration
-import com.capybara.intuition.license.capability.RuntimeCapabilities
-import com.capybara.intuition.license.capability.configs.ProductionFreeCapabilities
-import com.capybara.intuition.license.capability.configs.ProductionPremiumCapabilities
-import com.capybara.intuition.license.capability.configs.TestFreeCapabilities
-import com.capybara.intuition.license.capability.configs.TestPremiumCapabilities
-import com.capybara.intuition.license.domain.CapabilityEnvironment
-import com.capybara.intuition.license.domain.LicenseType
-import com.capybara.intuition.app.AppDatabase
 import com.capybara.intuition.app.DataStoreAdapter
 import com.capybara.intuition.app.license.data.datastore.SynchronizationDataStore
 import com.capybara.intuition.app.license.data.repository.LicenseRepository
@@ -36,6 +27,9 @@ class LicenseModule(
         synchronizationDataStore = synchronizationDataStore
     )
 
+    val capabilities = licenseRepository.capabilities
+
+    /*
     val capabilities: RuntimeCapabilities
         get() =
             when (BuildConfiguration.environment) {
@@ -52,4 +46,6 @@ class LicenseModule(
                         LicenseType.PREMIUM -> ProductionPremiumCapabilities
                     }
             }
+
+     */
 }

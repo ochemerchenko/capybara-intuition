@@ -18,8 +18,15 @@ class BillingConnectionManager {
     suspend fun connect(
         billingClient: BillingClient
     ): BillingResult {
-        Log.d("Billing", "BillingConnectionManager.connect(...)")
+        Log.d(
+            "Billing",
+            "[Connection] Connect requested"
+        )
         if (billingClient.isReady) {
+            Log.d(
+                "Billing",
+                "[Connection] BillingClient already connected, State -> CONNECTED"
+            )
             connectionState = BillingConnectionState.CONNECTED
 
             return BillingResult.newBuilder()
@@ -31,17 +38,21 @@ class BillingConnectionManager {
         connectionState = BillingConnectionState.CONNECTING
 
         return suspendCancellableCoroutine { continuation ->
-
+            Log.d(
+                "Billing",
+                "[Connection] Starting Google Play connection"
+            )
             billingClient.startConnection(
                 object : BillingClientStateListener {
 
                     override fun onBillingSetupFinished(
                         billingResult: BillingResult
                     ) {
-
                         Log.d(
                             "Billing",
-                            "onBillingSetupFinished: ${billingResult.responseCode}, ${billingResult.debugMessage}"
+                            "[Connection] Setup finished: " +
+                                    "response=${billingResult.responseCode}, " +
+                                    "message='${billingResult.debugMessage}'"
                         )
 
                         connectionState =
@@ -49,7 +60,10 @@ class BillingConnectionManager {
                                 BillingConnectionState.CONNECTED
                             else
                                 BillingConnectionState.DISCONNECTED
-
+                        Log.d(
+                            "Billing",
+                            "[Connection] State -> $connectionState"
+                        )
                         if (continuation.isActive) {
                             continuation.resume(billingResult)
                         }
@@ -59,11 +73,13 @@ class BillingConnectionManager {
 
                         Log.d(
                             "Billing",
-                            "onBillingServiceDisconnected()"
+                            "[Connection] Google Play service disconnected"
                         )
-
-                        connectionState =
-                            BillingConnectionState.DISCONNECTED
+                        connectionState = BillingConnectionState.DISCONNECTED
+                        Log.d(
+                            "Billing",
+                            "[Connection] State -> DISCONNECTED"
+                        )
                     }
                 }
             )
@@ -73,11 +89,27 @@ class BillingConnectionManager {
     fun disconnect(
         billingClient: BillingClient
     ) {
+        Log.d(
+            "Billing",
+            "[Connection] Disconnect requested"
+        )
         if (!billingClient.isReady) {
+            Log.d(
+                "Billing",
+                "[Connection] Disconnect ignored (already disconnected)"
+            )
             connectionState = BillingConnectionState.DISCONNECTED
             return
         }
+        Log.d(
+            "Billing",
+            "[Connection] Connection closed"
+        )
         billingClient.endConnection()
+        Log.d(
+            "Billing",
+            "[Connection] State -> DISCONNECTED"
+        )
         connectionState = BillingConnectionState.DISCONNECTED
     }
 }

@@ -104,12 +104,20 @@ class GooglePlayBillingManager(
     // Connection
     // ============================================================
     suspend fun start() {
-        Log.d("Billing", "GooglePlayBillingManager.start()")
+        Log.d("Billing", "[Manager] Billing initialization started")
         billingMutex.withLock {
             val result: BillingResult = connectionManager.connect(
                 billingClient
             )
+            Log.d(
+                "Billing",
+                "[Manager] Billing connection result: ${result.responseCode} (${result.debugMessage})"
+            )
             if ( result.responseCode == BillingClient.BillingResponseCode.OK ) {
+                Log.d(
+                    "Billing",
+                    "[Manager] Starting purchase synchronization"
+                )
                 synchronizationProcessor.synchronize(
                     billingClient
                 )
@@ -122,6 +130,10 @@ class GooglePlayBillingManager(
         connectionManager.disconnect(
             billingClient
         )
+        Log.d(
+            "Billing",
+            "[Manager] Billing disconnected"
+        )
     }
 
 
@@ -132,7 +144,10 @@ class GooglePlayBillingManager(
         activity: Activity,
         licenseType: LicenseType
     ) {
-        Log.d("Billing", "GooglePlayBillingManager.startPurchase()")
+        Log.d(
+            "Billing",
+            "[Manager] Purchase requested: $licenseType"
+        )
         purchaseProcessor.startPurchase(
             billingClient,
             activity,
@@ -145,6 +160,12 @@ class GooglePlayBillingManager(
         billingResult: BillingResult,
         purchases: MutableList<Purchase>?
     ) {
+        Log.d(
+            "Billing",
+            "[Manager] onPurchasesUpdated(): " +
+                    "response=${billingResult.responseCode}, " +
+                    "purchases=${purchases?.size ?: 0}"
+        )
         scope.launch {
             billingMutex.withLock {
                 purchaseProcessor.onPurchasesUpdated(

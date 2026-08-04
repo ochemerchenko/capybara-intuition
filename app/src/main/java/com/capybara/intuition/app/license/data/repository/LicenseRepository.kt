@@ -1,7 +1,13 @@
 package com.capybara.intuition.app.license.data.repository
 
 import com.capybara.intuition.app.BuildConfiguration
+import com.capybara.intuition.license.capability.RuntimeCapabilities
+import com.capybara.intuition.license.capability.configs.ProductionFreeCapabilities
+import com.capybara.intuition.license.capability.configs.ProductionPremiumCapabilities
+import com.capybara.intuition.license.capability.configs.TestFreeCapabilities
+import com.capybara.intuition.license.capability.configs.TestPremiumCapabilities
 import com.capybara.intuition.license.data.datastore.LicenseDataStore
+import com.capybara.intuition.license.domain.CapabilityEnvironment
 import com.capybara.intuition.license.domain.LicenseType
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -29,6 +35,12 @@ class LicenseRepository(
         MutableStateFlow(LicenseType.FREE)
     val lastConfirmedLicense: StateFlow<LicenseType> =
         _lastConfirmedLicense.asStateFlow()
+
+    private val _capabilities = MutableStateFlow(
+        resolveCapabilities(LicenseType.FREE)
+    )
+
+    val capabilities: StateFlow<RuntimeCapabilities> = _capabilities.asStateFlow()
 
     init {
 
@@ -78,4 +90,22 @@ class LicenseRepository(
             license
         )
     }
+
+    private fun resolveCapabilities(
+        licenseType: LicenseType
+    ): RuntimeCapabilities =
+        when (BuildConfiguration.environment) {
+
+            CapabilityEnvironment.TEST ->
+                when (licenseType) {
+                    LicenseType.FREE -> TestFreeCapabilities
+                    LicenseType.PREMIUM -> TestPremiumCapabilities
+                }
+
+            CapabilityEnvironment.PRODUCTION ->
+                when (licenseType) {
+                    LicenseType.FREE -> ProductionFreeCapabilities
+                    LicenseType.PREMIUM -> ProductionPremiumCapabilities
+                }
+        }
 }

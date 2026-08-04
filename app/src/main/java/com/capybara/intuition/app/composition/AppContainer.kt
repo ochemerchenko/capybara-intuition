@@ -125,7 +125,7 @@ class AppContainer(
     val bootstrapLoader = BootstrapLoader(
         context = context,
         database = database,
-        capabilities = license.capabilities,
+        capabilities = license.capabilities.value,
         installationRepository = installation.installationRepository,
         licenseRepository = license.licenseRepository,
         bootstrapStateRepository = installation.bootstrapStateRepository
