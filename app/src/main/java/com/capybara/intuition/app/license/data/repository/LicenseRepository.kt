@@ -54,6 +54,8 @@ class LicenseRepository(
 
                     if (license != null) {
                         _currentLicense.value = license
+                        _capabilities.value =
+                            resolveCapabilities(license)
                     }
                 }
         }
