@@ -42,6 +42,7 @@ fun ReleaseNotesScreen(
     val contentSpacing = 16.dp
 
     val asset = "onboarding.md"
+    val build_info_asset = "build_info.md"
 
     val markdown = remember(asset, language) {
 
@@ -59,6 +60,14 @@ fun ReleaseNotesScreen(
                 .use { it.readText() }
         }
     }
+
+    val buildInfo = remember(build_info_asset) {
+        context.assets
+            .open("onboarding/$build_info_asset")
+            .bufferedReader()
+            .use { it.readText() }
+    }
+
 
     Box(
         modifier = modifier
@@ -80,6 +89,11 @@ fun ReleaseNotesScreen(
             MarkdownText(
                 markdown = markdown
             )
+
+            MarkdownText(
+                markdown = buildInfo
+            )
+
             Button(
                 modifier = Modifier.fillMaxWidth(),
                 onClick = onConfirm,

@@ -13,8 +13,11 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 
@@ -36,29 +39,41 @@ class LicenseRepository(
     val lastConfirmedLicense: StateFlow<LicenseType> =
         _lastConfirmedLicense.asStateFlow()
 
+
+    val capabilities: StateFlow<RuntimeCapabilities> = licenseDataStore
+        .observe(LicenseDataStore.LICENSE_KEY)
+        .map { license ->
+            resolveCapabilities(license ?: LicenseType.FREE)
+        }
+        .stateIn(
+            scope = scope,
+            started = SharingStarted.Eagerly, // або WhileSubscribed(5000)
+            initialValue = resolveCapabilities(LicenseType.FREE)
+        )
+    /*
     private val _capabilities = MutableStateFlow(
         resolveCapabilities(LicenseType.FREE)
     )
 
     val capabilities: StateFlow<RuntimeCapabilities> = _capabilities.asStateFlow()
 
+     */
+
     init {
 
+        /*
         scope.launch {
 
             licenseDataStore
-                .observe(
-                    LicenseDataStore.LICENSE_KEY
-                )
+                .observe( LicenseDataStore.LICENSE_KEY )
                 .collect { license ->
-
-                    if (license != null) {
-                        _currentLicense.value = license
-                        _capabilities.value =
-                            resolveCapabilities(license)
-                    }
+                    val activeLicense = license ?: LicenseType.FREE
+                    _currentLicense.value = activeLicense
+                    _capabilities.value = resolveCapabilities(activeLicense)
                 }
         }
+
+         */
 
         scope.launch {
 

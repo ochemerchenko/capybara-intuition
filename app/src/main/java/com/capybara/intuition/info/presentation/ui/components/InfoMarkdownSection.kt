@@ -1,8 +1,11 @@
 package com.capybara.intuition.info.presentation.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -28,6 +31,11 @@ fun InfoMarkdownSection(
     val colors = IntuitionTheme.colors
     val typography = IntuitionTheme.typography
 
+    val contentPadding = 24.dp
+    val contentSpacing = 16.dp
+
+    val build_info_asset = "build_info.md"
+
     val markdown = remember(asset, language) {
 
         try {
@@ -45,6 +53,13 @@ fun InfoMarkdownSection(
         }
     }
 
+    val buildInfo = remember(build_info_asset) {
+        context.assets
+            .open("onboarding/$build_info_asset")
+            .bufferedReader()
+            .use { it.readText() }
+    }
+
     Box(
         modifier = modifier
             .fillMaxSize()
@@ -56,8 +71,19 @@ fun InfoMarkdownSection(
                 shape = RoundedCornerShape(16.dp)
             )
     ) {
-        MarkdownText(
-            markdown = markdown
-        )
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(contentPadding),
+            verticalArrangement = Arrangement.spacedBy(contentSpacing)
+        ) {
+            MarkdownText(
+                markdown = markdown
+            )
+
+            MarkdownText(
+                markdown = buildInfo
+            )
+        }
     }
 }

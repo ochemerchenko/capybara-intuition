@@ -17,6 +17,11 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(keystorePropertiesFile.inputStream())
 }
 
+extra["appVersionCode"] = 8
+extra["appVersionName"] = "0.19"
+val appVersionCode: Int by extra
+val appVersionName: String by extra
+
 android {
     namespace = "com.capybara.intuition"
     compileSdk = 35
@@ -37,8 +42,10 @@ android {
         minSdk = 24
         targetSdk = 35
 
-        versionCode = 5
-        versionName = "0.19"
+        versionCode = appVersionCode
+        versionName = appVersionName
+
+
     }
 
     buildFeatures {
@@ -134,3 +141,7 @@ dependencies {
 
     implementation(libs.androidx.activity.compose)
 }
+
+apply(
+    from = "gradle/generate-build-info.gradle.kts"
+)

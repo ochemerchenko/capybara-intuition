@@ -7,6 +7,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import com.capybara.intuition.app.App
 import com.capybara.intuition.app.navigation.AppDestination
@@ -33,7 +34,7 @@ fun SettingsRoute(
 
 
     //val capabilities = container.license.capabilities
-    val capabilities by container.license.capabilities.collectAsState()
+    val capabilities by container.license.capabilities.collectAsStateWithLifecycle()
 
     SettingsScreen(
         profileViewModel = profileViewModel,
