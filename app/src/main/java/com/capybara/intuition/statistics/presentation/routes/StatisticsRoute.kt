@@ -1,8 +1,10 @@
 package com.capybara.intuition.statistics.presentation.routes
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.capybara.intuition.app.App
@@ -22,6 +24,9 @@ fun StatisticsRoute(
     val app = context.applicationContext as App
     val container = app.appContainer
 
+    val licenseType by container.license.currentLicense
+        .collectAsStateWithLifecycle()
+
     val statisticsViewModel: StatisticsViewModel = viewModel(
         factory = StatisticsViewModelFactory(
             container = container
@@ -31,6 +36,7 @@ fun StatisticsRoute(
     StatisticsScreen(
         statisticsViewModel = statisticsViewModel,
         profileViewModel = container.profile.profileViewModel,
+        licenseType = licenseType,
         onNavigateToInfo = {
             navController.navigate(
                 AppDestination.Info.route

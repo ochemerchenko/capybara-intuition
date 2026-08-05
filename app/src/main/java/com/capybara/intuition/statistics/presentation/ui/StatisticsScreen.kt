@@ -35,6 +35,7 @@ import com.capybara.intuition.statistics.presentation.viewmodel.StatisticsViewMo
 fun StatisticsScreen(
     statisticsViewModel: StatisticsViewModel,
     profileViewModel: ProfileViewModel,
+    licenseType: LicenseType,
     onNavigateToInfo: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -51,7 +52,6 @@ fun StatisticsScreen(
         return
     }
     val availableLevels = activeProfile.minLevel .. activeProfile.maxLevel
-    val licenseType = statisticsViewModel.licenseType
     val dailyDensitiesPerLevel by statisticsViewModel.dailyDensitiesPerLevel.collectAsState()
     val dailyDensitiesPerMode by statisticsViewModel.dailyDensitiesPerMode.collectAsState()
 

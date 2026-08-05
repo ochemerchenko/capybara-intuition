@@ -1,13 +1,9 @@
 package com.capybara.intuition.statistics.presentation.viewmodel
 
 import android.util.Log
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
+
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.capybara.intuition.app.license.data.repository.LicenseRepository
-import com.capybara.intuition.license.domain.LicenseType
 import com.capybara.intuition.game.domain.model.GameMode
 import com.capybara.intuition.statistics.data.repository.StatisticsRepository
 import com.capybara.intuition.statistics.presentation.model.SessionFilter
@@ -18,20 +14,18 @@ import com.capybara.intuition.statistics.charts.model.data.PreviewByModeRequest
 import com.capybara.intuition.statistics.charts.model.data.PreviewByModeResponse
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 class StatisticsViewModel(
 
     private val statisticsRepository: StatisticsRepository,
-    private val licenseRepository: LicenseRepository
+
 
 ) : ViewModel() {
 
     private val _dailyDensities = MutableStateFlow(
         emptyList<DayDensity>()
     )
-
 
     private val _dailyDensitiesPerLevel = MutableStateFlow<PreviewByLevelResponse?>(null)
     val dailyDensitiesPerLevel: StateFlow<PreviewByLevelResponse?> = _dailyDensitiesPerLevel
@@ -90,16 +84,6 @@ class StatisticsViewModel(
     }
 
 
-    var licenseType by mutableStateOf(
-        LicenseType.FREE
-    )
-        private set
-
-    init {
-        observeLicenseChanges()
-    }
-
-
     fun sessionFilterToGameMode (
         uiState: SessionFilter
     ): GameMode? {
@@ -111,14 +95,5 @@ class StatisticsViewModel(
         }
     }
 
-    private fun observeLicenseChanges() {
-        viewModelScope.launch {
-            licenseRepository
-                .currentLicense
-                .collectLatest {
-                    licenseType = it
-                }
-        }
 
-    }
 }

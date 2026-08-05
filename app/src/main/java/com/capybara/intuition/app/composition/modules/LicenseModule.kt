@@ -29,23 +29,8 @@ class LicenseModule(
 
     val capabilities = licenseRepository.capabilities
 
-    /*
-    val capabilities: RuntimeCapabilities
-        get() =
-            when (BuildConfiguration.environment) {
+    val currentLicense = licenseRepository.currentLicense
 
-                CapabilityEnvironment.TEST ->
-                    when (licenseRepository.currentLicense.value) {
-                        LicenseType.FREE -> TestFreeCapabilities
-                        LicenseType.PREMIUM -> TestPremiumCapabilities
-                    }
+    val lastConfirmedLicense = licenseRepository.lastConfirmedLicense
 
-                CapabilityEnvironment.PRODUCTION ->
-                    when (licenseRepository.currentLicense.value) {
-                        LicenseType.FREE -> ProductionFreeCapabilities
-                        LicenseType.PREMIUM -> ProductionPremiumCapabilities
-                    }
-            }
-
-     */
 }
