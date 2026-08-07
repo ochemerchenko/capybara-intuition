@@ -1,4 +1,4 @@
-package com.capybara.intuition.app.jobs
+package com.capybara.intuition.app.jobs.db_cleaner
 
 import DatabaseRetentionRepository
 import com.capybara.intuition.game.data.local.db.dao.SessionDao

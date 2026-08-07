@@ -8,23 +8,32 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.capybara.intuition.app.jobs.appUpdater.AppUpdateViewModel
+import com.capybara.intuition.app.jobs.appUpdater.model.UpdateUiStatus
+import com.capybara.intuition.app.jobs.appUpdater.ui.AppUpdateDialog
 import com.capybara.intuition.app.navigation.AppDestination
 import com.capybara.intuition.app.presentation.theme.IntuitionTheme
 
 @Composable
 fun TopNavigation(
-    navController: NavController
+    navController: NavController,
+    appUpdateViewModel: AppUpdateViewModel
 ) {
 
     // =====================================================
@@ -41,8 +50,7 @@ fun TopNavigation(
     val currentBackStackEntry by
     navController.currentBackStackEntryAsState()
 
-    val currentRoute =
-        currentBackStackEntry
+    val currentRoute = currentBackStackEntry
             ?.destination
             ?.route
 
@@ -50,6 +58,15 @@ fun TopNavigation(
     // UI
     // =====================================================
     val density = LocalDensity.current
+
+    val updateUiState by appUpdateViewModel
+        .appUpdateUiState
+        .collectAsStateWithLifecycle()
+
+    var showAppUpdateDialog by rememberSaveable {
+        mutableStateOf(false)
+    }
+
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -59,6 +76,18 @@ fun TopNavigation(
         horizontalArrangement = Arrangement.End,
         verticalAlignment = Alignment.CenterVertically
     ) {
+
+        if (updateUiState != UpdateUiStatus.NoUpdateAvailable) {
+
+            NavIcon(
+                icon = Icons.Default.Notifications,
+                selected = false,
+                onClick = {
+                    showAppUpdateDialog = true
+                }
+            )
+        }
+
 
         NavIcon(
             icon = Icons.Default.Info,
@@ -134,5 +163,17 @@ fun TopNavigation(
                 alpha = topNavigationDividerAlpha
             )
     )
+
+    if (showAppUpdateDialog) {
+
+        AppUpdateDialog(
+            updateUiStatus = updateUiState,
+            onDismiss = {
+                showAppUpdateDialog = false
+            },
+            onUpdate = appUpdateViewModel::onUpdate,
+            onRestart = appUpdateViewModel::onRestart
+        )
+    }
 }
 

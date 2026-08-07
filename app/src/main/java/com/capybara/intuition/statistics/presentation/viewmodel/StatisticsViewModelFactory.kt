@@ -20,8 +20,8 @@ class StatisticsViewModelFactory(
         ) {
             return StatisticsViewModel(
 
-                statisticsRepository = container.statistics.statisticsRepository,
-                licenseRepository = container.license.licenseRepository
+                statisticsRepository = container.statistics.statisticsRepository
+
 
             ) as T
         }

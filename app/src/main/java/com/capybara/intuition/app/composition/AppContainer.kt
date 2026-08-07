@@ -18,8 +18,10 @@ import com.capybara.intuition.app.billing.GooglePlayBillingManager
 import com.capybara.intuition.app.bootstrap.BootstrapLoader
 import com.capybara.intuition.app.composition.modules.SettingsModule
 import com.capybara.intuition.app.jobs.db_cleaner.DatabaseRetentionDataStore
-import com.capybara.intuition.app.jobs.DatabaseCleanupManager
+import com.capybara.intuition.app.jobs.db_cleaner.DatabaseCleanupManager
 import com.capybara.intuition.app.jobs.JobManager
+import com.capybara.intuition.app.jobs.appUpdater.AppUpdateManager
+import com.capybara.intuition.app.jobs.appUpdater.AppUpdateViewModel
 import kotlinx.coroutines.CoroutineScope
 
 
@@ -81,6 +83,13 @@ class AppContainer(
         databaseRetentionRepository = databaseRetentionRepository
     )
 
+    val appUpdateManager = AppUpdateManager(
+        context = context
+    )
+    val appUpdateViewModel = AppUpdateViewModel(
+        appUpdateManager
+    )
+
     val jobManager =
         JobManager(
             scope = appScope,
@@ -88,6 +97,7 @@ class AppContainer(
 
             // historicalExportManager = ...
             databaseCleanupManager = databaseCleanupManager,
+            appUpdateManager = appUpdateManager
         )
 
 

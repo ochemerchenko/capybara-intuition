@@ -39,55 +39,34 @@ fun BetButton(
     // GAMEPLAY STATE
     // =============================================
 
-    val isSelected =
-        round.selectedResource == resource
-
-    val isCorrect =
-        round.correctResource == resource
-
-    val isEnabled =
-        round.result == null
+    val isSelected = round.selectedResource == resource
+    val isCorrect = round.correctResource == resource
+    val isEnabled = round.result == null
 
     // =============================================
     // BET BUTTON PRESENTATION SEMANTICS
     // =============================================
 
     val activeBetButtonAlpha = 1f
-
     val inactiveBetButtonAlpha = 0.3f
-
     val betButtonResultIndicatorScaleFactor = 0.42f
-
     val betButtonBorderScaleFactor = 0.035f
-
     val betButtonShadowScaleFactor = 0.08f
-
     val betButtonBorderAlpha = 0.08f
-
     val betButtonResultSuccessSymbol = "✓"
-
     val betButtonResultFailureSymbol = "✕"
-
-    val betButtonResultIndicatorColor =
-        Color.White
-
-    val betButtonBorderColor =
-        Color.Black.copy(
-            alpha =
-                betButtonBorderAlpha
-        )
+    val betButtonResultIndicatorColor = Color.White
+    val betButtonBorderColor = Color.Black.copy(
+        alpha = betButtonBorderAlpha
+    )
 
     // =============================================
     // SHAPE
     // =============================================
-
-    val shape =
-        when (session.profile.maskId) {
-
-            MaskIds.CIRCLE -> CircleShape
-
-            else -> RectangleShape
-        }
+    val shape = when (session.profile.maskId) {
+        MaskIds.CIRCLE -> CircleShape
+        else -> RectangleShape
+    }
 
     // =============================================
     // STATE-DEPENDENT VISUALS
@@ -95,24 +74,18 @@ fun BetButton(
 
     val alpha by animateFloatAsState(
 
-        targetValue =
-            when {
+        targetValue = when {
 
-                isEnabled ->
-                    activeBetButtonAlpha
+            isEnabled -> activeBetButtonAlpha
+            isSelected -> activeBetButtonAlpha
+            isCorrect -> activeBetButtonAlpha
+            else -> inactiveBetButtonAlpha
 
-                isSelected ->
-                    activeBetButtonAlpha
-
-                isCorrect ->
-                    activeBetButtonAlpha
-
-                else ->
-                    inactiveBetButtonAlpha
-            },
-
+        },
         label = "betButtonAlphaAnimation"
     )
+
+    val showShadow = isEnabled || isSelected || isCorrect
 
     // =============================================
     // RENDERER
@@ -135,14 +108,9 @@ fun BetButton(
     // DERIVED BET BUTTON DIMENSIONS
     // =============================================
 
-    val betButtonResultIndicatorFontSize =
-        (size.value * betButtonResultIndicatorScaleFactor).sp
-
-    val betButtonBorderWidth =
-        size * betButtonBorderScaleFactor
-
-    val betButtonShadowElevation =
-        size * betButtonShadowScaleFactor
+    val betButtonResultIndicatorFontSize = (size.value * betButtonResultIndicatorScaleFactor).sp
+    val betButtonBorderWidth = size * betButtonBorderScaleFactor
+    val betButtonShadowElevation = size * betButtonShadowScaleFactor
 
     // =============================================
     // ROOT
@@ -150,56 +118,38 @@ fun BetButton(
 
     Box(
 
-        modifier = Modifier.Companion
-
+        modifier = Modifier
             .alpha(alpha)
-
             .clickable(
                 enabled = isEnabled
             ) {
-
                 onClick()
             }
     ) {
 
         Box(
-
-            modifier = Modifier.Companion
-
+            modifier = Modifier
                 .size(size)
-
                 .aspectRatio(1f)
-
-                .shadow(
-                    elevation =
-                        betButtonShadowElevation,
-
-                    shape =
-                        shape,
-
-                    clip =
-                        false
+                .then(
+                    if (showShadow) {
+                        Modifier.shadow(
+                            elevation = betButtonShadowElevation,
+                            shape = shape,
+                            clip = false
+                        )
+                    } else {
+                        Modifier
+                    }
                 )
-
                 .clip(shape)
-
-                .border(
-                    width =
-                        betButtonBorderWidth,
-
-                    color =
-                        betButtonBorderColor,
-
-                    shape =
-                        shape
-                )
         ) {
-
             renderer.Render(
                 maskId = session.profile.maskId,
                 resource = resource,
                 size = size
             )
+
 
             // =============================================
             // RESULT OVERLAY
@@ -215,24 +165,15 @@ fun BetButton(
                     }
 
                 Text(
-
-                    text =
-                        resultIndicatorSymbol,
-
-                    fontSize =
-                        betButtonResultIndicatorFontSize,
-
-                    fontWeight =
-                        FontWeight.Bold,
-
-                    color =
-                        betButtonResultIndicatorColor,
-
-                    modifier =
-                        Modifier.align(
-                            Alignment.Center
-                        )
+                    text = resultIndicatorSymbol,
+                    fontSize = betButtonResultIndicatorFontSize,
+                    fontWeight = FontWeight.Bold,
+                    color = betButtonResultIndicatorColor,
+                    modifier = Modifier.align(
+                        Alignment.Center
+                    )
                 )
+
             }
         }
     }

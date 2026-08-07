@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.Text
@@ -36,7 +37,10 @@ fun ThresholdHistorySection(
         ) {
 
             Row(
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                //modifier = Modifier.padding(
+                //    horizontal = 8.dp
+                //),
+                horizontalArrangement = Arrangement.Center
             ) {
 
                 FilterChip(

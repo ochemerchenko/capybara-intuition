@@ -4,6 +4,8 @@ import android.util.Log
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import com.capybara.intuition.app.billing.GooglePlayBillingManager
+import com.capybara.intuition.app.jobs.appUpdater.AppUpdateManager
+import com.capybara.intuition.app.jobs.db_cleaner.DatabaseCleanupManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -13,6 +15,7 @@ class JobManager(
     // private val historicalExportManager: HistoricalExportManager,
     // private val databaseCleanupManager: DatabaseCleanupManager,
     private val databaseCleanupManager: DatabaseCleanupManager,
+    private val appUpdateManager: AppUpdateManager
 ) : DefaultLifecycleObserver {
 
 
@@ -45,6 +48,10 @@ class JobManager(
 
         executeSafely("Database Cleanup") {
             databaseCleanupManager.cleanup()
+        }
+
+        executeSafely("Check available updates") {
+            appUpdateManager.synchronize()
         }
     }
 

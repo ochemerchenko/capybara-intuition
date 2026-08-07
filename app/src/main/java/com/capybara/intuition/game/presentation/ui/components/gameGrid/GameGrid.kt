@@ -71,8 +71,7 @@ fun GameGrid(
                 return@forEach
             }
 
-            val resource =
-                round.gameSet[occupancyIndex]
+            val resource = round.gameSet[occupancyIndex]
             Log.d("GRID", "gameSet=${round.gameSet.size}")
 
             val geometry =
@@ -91,6 +90,7 @@ fun GameGrid(
                     y = geometry.top
                 )
             ) {
+
                 BetButton(
                     resource = resource,
                     session = session,
@@ -100,6 +100,8 @@ fun GameGrid(
                         onUserSelected(resource)
                     }
                 )
+
+
             }
         }
     }

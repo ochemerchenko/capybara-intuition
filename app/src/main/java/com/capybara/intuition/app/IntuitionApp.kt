@@ -23,7 +23,6 @@ import com.capybara.intuition.app.presentation.theme.IntuitionTheme
 import android.app.Activity
 import android.util.Log
 import androidx.activity.compose.BackHandler
-import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
@@ -118,7 +117,8 @@ fun IntuitionApp() {
                 topBar = {
                     if (launchState == AppLaunchState.READY) {
                         TopNavigation(
-                            navController = navController
+                            navController = navController,
+                            appUpdateViewModel = appContainer.appUpdateViewModel
                         )
                     }
                 }

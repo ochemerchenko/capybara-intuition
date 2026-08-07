@@ -25,10 +25,10 @@ fun StatisticsChipSelector(
     // SELECTOR CHIP PRESENTATION SEMANTICS
     // =====================================================
 
-    val selectorChipOuterHorizontalPadding = 4.dp
+    //val selectorChipOuterHorizontalPadding = 4.dp
     val selectorChipHeight = 32.dp
     val selectorChipCornerRadius = 10.dp
-    val selectorChipInnerHorizontalPadding = 6.dp
+    //val selectorChipInnerHorizontalPadding = 6.dp
 
     val colors = IntuitionTheme.colors
     val typography = IntuitionTheme.typography
@@ -39,9 +39,6 @@ fun StatisticsChipSelector(
 
     Box(
         modifier = modifier
-            .padding(
-                horizontal = selectorChipOuterHorizontalPadding
-            )
             .height(
                 selectorChipHeight
             )
@@ -50,21 +47,15 @@ fun StatisticsChipSelector(
                     selectorChipCornerRadius
                 )
             )
-            //.background(
-            //    if (selected) {
-            //        colors.backgroundChipsActive
-            //    } else {
-            //        colors.backgroundChipsPassive
-            //    }
-            //)
             .clickable(
                 enabled = !selected
             ) {
                 onClick()
             }
-            .padding(
-                horizontal = selectorChipInnerHorizontalPadding
-            ),
+            //.padding(
+            //    horizontal = selectorChipInnerHorizontalPadding
+            //)
+            ,
         contentAlignment = Alignment.Center
     ) {
 
