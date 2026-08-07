@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_update_check_title">Checking for updates</string>
+    <string name="app_update_check_message">Please wait while we check Google Play for the latest version...</string>
+    <string name="app_update_available_title">Application update</string>
+    <string name="app_update_available_message">A new version of Intuition is available. Would you like to download and install it now?</string>
+    <string name="app_update_update_button">Update</string>
+    <string name="app_update_downloading_title">Downloading update...</string>
+    <string name="app_update_downloading_message">The update is currently downloading in the background. You can safely close this window and continue using the app.</string>
+    <string name="app_update_ready_title">Update ready</string>
+    <string name="app_update_ready_message">The update has been successfully downloaded. Restart the application to complete installation.</string>
+    <string name="app_update_restart_button">Restart</string>
+    <string name="app_update_failed_title">Update failed</string>
+    <string name="app_update_failed_message">Unable to start or complete the update. Please check your internet connection and try again.</string>
+    <string name="app_update_retry_button">Retry</string>
+    <string name="app_update_hidden_button">Hide</string>
+    <string name="app_update_dismiss_button">Dismiss</string>
+
+</resources>

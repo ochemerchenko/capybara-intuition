@@ -106,7 +106,7 @@ fun MarkdownText(
 
                     Text(
                         text = line.removePrefix("# "),
-                        style = MaterialTheme.typography.titleLarge,
+                        style = typography.h1,
                         color = colors.textH1
                     )
 
@@ -123,7 +123,7 @@ fun MarkdownText(
 
                     Text(
                         text = line.removePrefix("## "),
-                        style = MaterialTheme.typography.titleMedium,
+                        style = typography.h2,
                         color = colors.textH2
                     )
 
@@ -140,7 +140,7 @@ fun MarkdownText(
 
                     Text(
                         text = line.removePrefix("### "),
-                        style = MaterialTheme.typography.titleSmall,
+                        style = typography.h3,
                         color = colors.textH3
                     )
 
@@ -161,7 +161,7 @@ fun MarkdownText(
 
                         Text(
                             text = markdownBulletPrefix,
-                            style = MaterialTheme.typography.bodyMedium,
+                            style = typography.bodyMedium,
                             color = colors.activeElementText
                         )
 
@@ -320,7 +320,7 @@ private fun MarkdownParagraph(
 
     ClickableText(
         text = annotatedString,
-        style = MaterialTheme.typography.bodyMedium.copy(
+        style = typography.bodyMedium.copy(
             color = colors.textChipsActive
         ),
         onClick = { offset ->

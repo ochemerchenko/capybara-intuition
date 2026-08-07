@@ -49,7 +49,7 @@
     <string name="settings_free_human_setup_profile_set_player_name">Вкажіть ваше ім\'я</string>
     <string name="settings_free_human_setup_profile_player_name">Ім\'я</string>
     <string name="settings_free_human_setup_profile_correct">Коректно</string>
-    <string name="settings_free_human_setup_profile_incorrect">Очикую не менше 3 символів в імені</string>
+    <string name="settings_free_human_setup_profile_incorrect">Очікую не менше 3 символів в імені</string>
     <string name="settings_free_human_setup_profile_continue">Продовжити</string>
 
     <string name="settings_parent_access_recovery_section_title">Відновлення батьківського доступу</string>
@@ -63,7 +63,7 @@
     <string name="settings_premium_human_profile_setup_label">Для створення дитячих профайлів налаштуйте ваш профіль</string>
     <string name="settings_premium_human_profile_setup_name">Ваше ім\'я</string>
     <string name="settings_premium_human_profile_setup_correct">Коректно</string>
-    <string name="settings_premium_human_profile_setup_incorrect">Очикую не менше 3 символів в імені</string>
+    <string name="settings_premium_human_profile_setup_incorrect">Очікую не менше 3 символів в імені</string>
     <string name="settings_premium_human_profile_setup_rename">Optional profile rename</string>
     <string name="settings_premium_human_profile_setup_pin">PIN</string>
     <string name="settings_premium_human_profile_setup_pin_incorrect">PIN має містити 4 цифри</string>

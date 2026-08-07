@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_update_check_title">Перевірка оновлень</string>
+    <string name="app_update_check_message">Будь ласка, зачекайте, поки ми перевіримо Google Play на наявність останньої версії...</string>
+    <string name="app_update_available_title">Оновлення програми</string>
+    <string name="app_update_available_message">Доступна нова версія Intuition. Бажаєте завантажити та встановити її зараз?</string>
+    <string name="app_update_update_button">Оновити</string>
+    <string name="app_update_downloading_title">Завантаження оновлення...</string>
+    <string name="app_update_downloading_message">Оновлення зараз завантажується у фоновому режимі. Ви можете безпечно закрити це вікно та продовжити користуватися програмою.</string>
+    <string name="app_update_ready_title">Оновлення готове</string>
+    <string name="app_update_ready_message">Оновлення успішно завантажено. Перезапустіть програму, щоб завершити встановлення.</string>
+    <string name="app_update_restart_button">Перезапустити</string>
+    <string name="app_update_failed_title">Помилка оновлення</string>
+    <string name="app_update_failed_message">Не вдалося розпочати або завершити оновлення. Перевірте підключення до Інтернету та спробуйте ще раз.</string>
+    <string name="app_update_retry_button">Повторити спробу</string>
+    <string name="app_update_hidden_button">Приховати</string>
+    <string name="app_update_dismiss_button">Закрити</string>
+
+</resources>

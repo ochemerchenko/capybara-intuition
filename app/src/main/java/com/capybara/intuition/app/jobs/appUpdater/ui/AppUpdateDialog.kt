@@ -15,7 +15,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.capybara.intuition.R
 import com.capybara.intuition.app.jobs.appUpdater.model.UpdateUiStatus
 
 @Composable
@@ -41,39 +43,39 @@ fun AppUpdateDialog(
 
     when (updateUiStatus) {
         UpdateUiStatus.Checking -> {
-            title = "Checking for updates"
-            message = "Please wait while we check Google Play for the latest version..."
+            title = stringResource(R.string.app_update_check_title) // "Checking for updates"
+            message = stringResource(R.string.app_update_check_message) // "Please wait while we check Google Play for the latest version..."
             confirmButtonText = null
             confirmAction = {}
         }
 
         UpdateUiStatus.UpdateAvailable -> {
-            title = "Application update"
-            message = "A new version of Intuition is available. Would you like to download and install it now?"
-            confirmButtonText = "Update"
+            title = stringResource(R.string.app_update_available_title) // "Application update"
+            message = stringResource(R.string.app_update_available_message) // "A new version of Intuition is available. Would you like to download and install it now?"
+            confirmButtonText = stringResource(R.string.app_update_update_button) // "Update"
             confirmAction = {
                 activity?.let { onUpdate(it) }
             }
         }
 
         UpdateUiStatus.UpdateInProgress -> {
-            title = "Downloading update..."
-            message = "The update is currently downloading in the background. You can safely close this window and continue using the app."
+            title = stringResource(R.string.app_update_downloading_title) // "Downloading update..."
+            message = stringResource(R.string.app_update_downloading_message) // "The update is currently downloading in the background. You can safely close this window and continue using the app."
             confirmButtonText = null
             confirmAction = {}
         }
 
         UpdateUiStatus.UpdateDownloaded -> {
-            title = "Update ready"
-            message = "The update has been successfully downloaded. Restart the application to complete installation."
-            confirmButtonText = "Restart"
+            title = stringResource(R.string.app_update_ready_title) // "Update ready"
+            message = stringResource(R.string.app_update_ready_message) // "The update has been successfully downloaded. Restart the application to complete installation."
+            confirmButtonText = stringResource(R.string.app_update_restart_button) // "Restart"
             confirmAction = onRestart
         }
 
         UpdateUiStatus.RetryNeeded -> {
-            title = "Update failed"
-            message = "Unable to start or complete the update. Please check your internet connection and try again."
-            confirmButtonText = "Retry"
+            title = stringResource(R.string.app_update_failed_title) // "Update failed"
+            message = stringResource(R.string.app_update_failed_message) // "Unable to start or complete the update. Please check your internet connection and try again."
+            confirmButtonText = stringResource(R.string.app_update_retry_button) // "Retry"
             confirmAction = onRetry
         }
 
@@ -114,7 +116,12 @@ fun AppUpdateDialog(
         },
         dismissButton = {
             TextButton(onClick = onDismiss) {
-                Text(if (updateUiStatus == UpdateUiStatus.UpdateInProgress) "Hide" else "Dismiss")
+                Text(
+                    if (updateUiStatus == UpdateUiStatus.UpdateInProgress)
+                        stringResource(R.string.app_update_hidden_button) // "Hide"
+                    else
+                        stringResource(R.string.app_update_dismiss_button) // "Dismiss"
+                )
             }
         },
         confirmButton = {
