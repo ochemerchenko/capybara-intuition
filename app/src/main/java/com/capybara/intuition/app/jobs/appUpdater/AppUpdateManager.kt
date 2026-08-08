@@ -51,6 +51,23 @@ class AppUpdateManager (
     suspend fun synchronize() {
         // 1. Отримуємо свіжий стан від Google Play Services
         val updateInfo = checkUpdates()
+        if (updateInfo != null) {
+            Log.d(
+                TAG,
+                """
+    checkUpdates():
+      availability = ${updateInfo.updateAvailability()}
+      installStatus = ${updateInfo.installStatus()}
+      version = ${updateInfo.availableVersionCode()}
+      flexible = ${updateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)}
+      immediate = ${updateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)}
+    """.trimIndent()        )
+        } else {
+            Log.d(
+                TAG,
+                """updateInfo is null""")
+        }
+
 
         if (updateInfo == null) {
             _appUpdateProcessState.value = null
@@ -60,6 +77,7 @@ class AppUpdateManager (
         // 2. Аналізуємо повернений стан
         when (updateInfo.installStatus()) {
             InstallStatus.DOWNLOADED -> {
+                Log.d(TAG, "synchronize(): DOWNLOADED")
                 // Файл ВЖЕ завантажено раніше (поки додаток був закритий або в минулій сесії)
                 try {
                     // Пробуємо одразу перезапустити додаток для встановлення
@@ -76,6 +94,7 @@ class AppUpdateManager (
             InstallStatus.DOWNLOADING,
             InstallStatus.PENDING,
             InstallStatus.INSTALLING -> {
+                Log.d(TAG, "synchronize(): DOWNLOADING/PENDING/INSTALLING")
                 // Оновлення скачується ПРЯМО ЗАРАЗ у фоновому сервісі Google Play!
                 // Обов'язково підключаємо слухач, щоб спіймати момент переходу в DOWNLOADED
                 registerInstallStateListener()
@@ -83,6 +102,7 @@ class AppUpdateManager (
             }
 
             else -> {
+                Log.d(TAG, "synchronize(): OTHER")
                 // Для всіх інших випадків (UNKNOWN, FAILED, CANCELED або якщо завантаження ще не починалося)
                 _appUpdateProcessState.value = updateInfo
             }
@@ -90,21 +110,40 @@ class AppUpdateManager (
     }
 
     private suspend fun checkUpdates(): AppUpdateInfo? {
+        Log.d(TAG, "checkUpdates(): request")
         return try {
-            googleAppUpdateManager.appUpdateInfo.await()
+            val info = googleAppUpdateManager
+                .appUpdateInfo
+                .await()
+            Log.d(
+                TAG,
+                "checkUpdates(): success availability=${info.updateAvailability()} install=${info.installStatus()}"
+            )
+            info
         } catch (exception: Exception) {
-            Log.w(TAG, "Unable to check updates.", exception)
+            Log.e(TAG, "checkUpdates(): failed", exception)
             null
         }
     }
 
     private fun refreshUpdateInfo() {
-        googleAppUpdateManager.appUpdateInfo.addOnSuccessListener { info ->
-            _appUpdateProcessState.value = info
-        }
+        Log.d(TAG, "refreshUpdateInfo()")
+        googleAppUpdateManager.appUpdateInfo
+            .addOnSuccessListener { info ->
+                Log.d(
+                    TAG,
+                    "refreshUpdateInfo(): availability=${info.updateAvailability()} install=${info.installStatus()}"
+                )
+                _appUpdateProcessState.value = info
+            }
+            .addOnFailureListener {
+
+                Log.e(TAG, "refreshUpdateInfo(): failed", it)
+            }
     }
 
     fun registerInstallStateListener() {
+        Log.d(TAG, "registerInstallStateListener()")
         if (!isListenerRegistered) {
             googleAppUpdateManager.registerListener(installStateUpdatedListener)
             isListenerRegistered = true
@@ -112,13 +151,12 @@ class AppUpdateManager (
     }
 
     fun unregisterInstallStateListener() {
+        Log.d(TAG, "unregisterInstallStateListener()")
         if (isListenerRegistered) {
             googleAppUpdateManager.unregisterListener(installStateUpdatedListener)
             isListenerRegistered = false
         }
     }
-
-
 
 
     /**
@@ -130,6 +168,15 @@ class AppUpdateManager (
             Log.w(TAG, "Unable to get AppUpdateInfo to start update.")
             return
         }
+        Log.d(
+            TAG,
+            """
+    startUpdateByUser():
+      availability=${updateInfo.updateAvailability()}
+      install=${updateInfo.installStatus()}
+      flexible=${updateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)}
+    """.trimIndent()
+        )
 
         // 2. Перевіряємо, чи доступне оновлення саме через Flexible Flow
         if (updateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE &&
@@ -140,7 +187,7 @@ class AppUpdateManager (
 
             try {
                 val options = AppUpdateOptions.newBuilder(AppUpdateType.FLEXIBLE).build()
-
+                Log.d(TAG, "Launching Google Play Update Flow...")
                 // Запускаємо системний UI від Google Play
                 val resultCode = googleAppUpdateManager
                     .startUpdateFlow(updateInfo, activity, options)
@@ -161,6 +208,7 @@ class AppUpdateManager (
                         refreshUpdateInfo()
                     }
                 }
+                Log.d(TAG, "Google Play Update Flow returned result=$resultCode")
             } catch (e: Exception) {
                 Log.e(TAG, "Exception while starting update flow", e)
                 unregisterInstallStateListener()
@@ -171,18 +219,13 @@ class AppUpdateManager (
         }
     }
 
-
     suspend fun restartAfterUpdateByUser() {
+        Log.d(TAG, "restartAfterUpdateByUser()")
         try {
             googleAppUpdateManager.completeUpdate().await()
+            Log.d(TAG, "completeUpdate() accepted")
         } catch (e: Exception) {
             Log.e(TAG, "Failed to complete update and restart app", e)
         }
     }
-
-
-
-
-
-
 }

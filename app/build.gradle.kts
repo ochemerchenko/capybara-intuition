@@ -17,7 +17,7 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(keystorePropertiesFile.inputStream())
 }
 
-extra["appVersionCode"] = 12
+extra["appVersionCode"] = 13
 extra["appVersionName"] = "0.19"
 val appVersionCode: Int by extra
 val appVersionName: String by extra
@@ -50,8 +50,8 @@ android {
 
     buildFeatures {
         compose = true
-        viewBinding = true
-        dataBinding = true
+        viewBinding = false
+        dataBinding = false
         buildConfig = true
     }
 
@@ -88,6 +88,7 @@ dependencies {
     // --- Lifecycle ---
     implementation(libs.androidx.lifecycle.viewmodel)
     implementation(libs.androidx.lifecycle.livedata)
+    implementation(libs.androidx.lifecycle.process)
 
     // --- Navigation ---
     implementation(libs.androidx.navigation.fragment)

@@ -1,6 +1,7 @@
 package com.capybara.intuition.app.jobs.appUpdater
 
 import android.app.Activity
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.capybara.intuition.app.jobs.appUpdater.model.UpdateUiStatus
@@ -18,12 +19,22 @@ class AppUpdateViewModel(
     private val appUpdateManager: AppUpdateManager
 ) : ViewModel() {
 
+    val TAG = "AppUpdateManager"
+
     /**
      * Потік стану UI для TopNavigation та AppUpdateDialog
      */
     val appUpdateUiState: StateFlow<UpdateUiStatus> = appUpdateManager.appUpdateProcessState
         .map { updateInfo ->
-            mapToUpdateUiStatus(updateInfo)
+            val uiState = mapToUpdateUiStatus(updateInfo)
+            Log.d(
+                TAG,
+                "AppUpdateInfo -> UI: " +
+                        "availability=${updateInfo?.updateAvailability()}, " +
+                        "install=${updateInfo?.installStatus()}, " +
+                        "ui=$uiState"
+            )
+            uiState
         }
         .stateIn(
             scope = viewModelScope,
@@ -69,6 +80,7 @@ class AppUpdateViewModel(
      * Потрібно передати Activity (зазвичай через LocalContext.current as Activity в Composable).
      */
     fun onUpdate(activity: Activity) {
+        Log.d(TAG, "User pressed UPDATE")
         viewModelScope.launch {
             appUpdateManager.startUpdateByUser(activity)
         }
@@ -78,6 +90,7 @@ class AppUpdateViewModel(
      * Завершення оновлення та перезапуск додатка
      */
     fun onRestart() {
+        Log.d(TAG, "User pressed RESTART")
         viewModelScope.launch {
             appUpdateManager.restartAfterUpdateByUser()
         }

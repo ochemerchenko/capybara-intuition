@@ -13,6 +13,7 @@ import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -20,10 +21,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.capybara.intuition.R
 import com.capybara.intuition.app.jobs.appUpdater.AppUpdateViewModel
 import com.capybara.intuition.app.jobs.appUpdater.model.UpdateUiStatus
 import com.capybara.intuition.app.jobs.appUpdater.ui.AppUpdateDialog
@@ -63,6 +66,14 @@ fun TopNavigation(
         .appUpdateUiState
         .collectAsStateWithLifecycle()
 
+    LaunchedEffect(updateUiState) {
+
+        Log.d(
+            "TopNavigation",
+            "updateUiState = $updateUiState"
+        )
+    }
+
     var showAppUpdateDialog by rememberSaveable {
         mutableStateOf(false)
     }
@@ -78,11 +89,11 @@ fun TopNavigation(
     ) {
 
         if (updateUiState != UpdateUiStatus.NoUpdateAvailable) {
-
             NavIcon(
                 icon = Icons.Default.Notifications,
                 selected = false,
                 onClick = {
+                    Log.d("Bell", "Called: showAppUpdateDialog")
                     showAppUpdateDialog = true
                 }
             )

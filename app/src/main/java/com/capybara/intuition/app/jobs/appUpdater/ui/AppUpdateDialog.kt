@@ -1,10 +1,16 @@
 package com.capybara.intuition.app.jobs.appUpdater.ui
 
 import android.app.Activity
+import android.util.Log
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.LinearProgressIndicator
@@ -19,6 +25,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.capybara.intuition.R
 import com.capybara.intuition.app.jobs.appUpdater.model.UpdateUiStatus
+import com.capybara.intuition.app.presentation.theme.IntuitionTheme
 
 @Composable
 fun AppUpdateDialog(
@@ -28,7 +35,12 @@ fun AppUpdateDialog(
     onRestart: () -> Unit,
     onRetry: () -> Unit = {}
 ) {
+
+    Log.d("Bell", "Started: AppUpdateDialog")
+
     val context = LocalContext.current
+    val colors = IntuitionTheme.colors
+    val typography = IntuitionTheme.typography
 
     // Бепечне визначення Activity
     val activity = remember(context) {
@@ -85,9 +97,15 @@ fun AppUpdateDialog(
     }
 
     AlertDialog(
+        containerColor = colors.backgroundSection,
+        titleContentColor = colors.activeElementText,
+        textContentColor = colors.activeElementText,
         onDismissRequest = onDismiss,
         title = {
-            Text(title)
+            Text(
+                text = title,
+                style = typography.h2
+            )
         },
         text = {
             Column(
@@ -96,24 +114,84 @@ fun AppUpdateDialog(
             ) {
                 Text(
                     text = message,
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier
+                        .fillMaxWidth(),
+                    style = typography.bodyMedium
                 )
 
                 // Індикатор під час перевірки
                 if (updateUiStatus == UpdateUiStatus.Checking) {
                     Spacer(modifier = Modifier.height(16.dp))
-                    CircularProgressIndicator()
+                    CircularProgressIndicator(
+                        modifier = Modifier
+                            .width(32.dp)
+                            .height(32.dp),
+                        color = colors.activeElementText,
+                        strokeWidth = 3.dp
+                    )
                 }
 
                 // Прогрес-бар під час завантаження
                 if (updateUiStatus == UpdateUiStatus.UpdateInProgress) {
                     Spacer(modifier = Modifier.height(16.dp))
                     LinearProgressIndicator(
-                        modifier = Modifier.fillMaxWidth()
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(6.dp),
+                        color = colors.activeElementText,
+                        trackColor = colors.backgroundButton
                     )
                 }
             }
         },
+        dismissButton = null,
+        confirmButton = {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+
+                TextButton(
+                    onClick = onDismiss,
+                    modifier = Modifier
+                        .background(
+                          color = colors.backgroundButton,
+                          shape = RoundedCornerShape(12.dp)
+                        )
+                        .weight(1f)
+                ) {
+                    Text(
+                        text =
+                            if (updateUiStatus == UpdateUiStatus.UpdateInProgress)
+                                stringResource(R.string.app_update_hidden_button)
+                            else
+                                stringResource(R.string.app_update_dismiss_button),
+                        color = colors.activeElementText,
+                        style = typography.bodyMedium
+                    )
+                }
+
+                if (confirmButtonText != null) {
+                    TextButton(
+                        onClick = confirmAction,
+                        modifier = Modifier
+                            .background(
+                                color = colors.backgroundButton,
+                                shape = RoundedCornerShape(12.dp)
+                            )
+                            .weight(1f)
+
+                    ) {
+                        Text(
+                            text = confirmButtonText,
+                            color = colors.activeElementText,
+                            style = typography.bodyMedium
+                        )
+                    }
+                }
+            }
+        }
+        /*
         dismissButton = {
             TextButton(onClick = onDismiss) {
                 Text(
@@ -131,5 +209,7 @@ fun AppUpdateDialog(
                 }
             }
         }
+
+         */
     )
 }
