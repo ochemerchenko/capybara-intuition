@@ -75,7 +75,7 @@ androidx-datastore-preferences = { module = "androidx.datastore:datastore-prefer
 # --- Firebase ---
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
-firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+#firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
 
 
 # --- Application update ---

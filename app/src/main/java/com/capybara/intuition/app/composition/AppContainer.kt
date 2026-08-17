@@ -90,17 +90,6 @@ class AppContainer(
         appUpdateManager
     )
 
-    val jobManager =
-        JobManager(
-            scope = appScope,
-            billingManager = googlePlayBillingManager,
-
-            // historicalExportManager = ...
-            databaseCleanupManager = databaseCleanupManager,
-            appUpdateManager = appUpdateManager
-        )
-
-
     // =====================================================
     // MODULES
     // =====================================================
@@ -114,10 +103,9 @@ class AppContainer(
         database = database
     )
 
-    val settings =
-        SettingsModule(
-            databaseRetentionRepository = databaseRetentionRepository
-        )
+    val settings = SettingsModule(
+        databaseRetentionRepository = databaseRetentionRepository
+    )
 
     val gameplay = GameplayModule(
         database = database
@@ -128,6 +116,25 @@ class AppContainer(
     val tester = TesterModule(
         database = database
     )
+
+    val jobManager = JobManager(
+        scope = appScope,
+        billingManager = googlePlayBillingManager,
+        context = context,
+
+        installationDao = installation.installationDao,
+        sessionDao = gameplay.sessionDao,
+        gameRoundDao = gameplay.roundDao,
+
+        // historicalExportManager = ...
+        databaseCleanupManager = databaseCleanupManager,
+        appUpdateManager = appUpdateManager,
+
+        dataStoreAdapter = dataStoreAdapter
+    )
+
+
+
 
     // =====================================================
     // BOOTSTRAP

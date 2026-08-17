@@ -6,6 +6,8 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import com.capybara.intuition.game.data.local.db.entity.GameSessionEntity
+import java.time.LocalDate
+import java.time.ZoneOffset
 
 
 @Dao
@@ -126,4 +128,20 @@ interface SessionDao {
     suspend fun deleteSessionsStartedBefore(
         threshold: Long
     ): Int
+
+
+    @Query(
+        """
+    SELECT *
+    FROM sessions
+    WHERE startedAt >= :dayStart
+      AND startedAt < :dayEnd
+    ORDER BY startedAt ASC
+    """
+    )
+    suspend fun getSessionsForExport(
+        dayStart: Long,
+        dayEnd: Long
+    ): List<GameSessionEntity>
+
 }

@@ -1,11 +1,14 @@
 package com.capybara.intuition.profile.presentation.viewmodel
 
+import android.app.Application
+import android.content.Context
 import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.capybara.intuition.app.jobs.export.exportProfile
 import com.capybara.intuition.game.domain.model.GameMode
 import com.capybara.intuition.profile.data.repository.ProfileRepository
 import com.capybara.intuition.profile.domain.model.Profile
@@ -178,14 +181,25 @@ class ProfileViewModel(
 
 
     fun createChildProfile(
-        name: String
+        name: String,
+        context: Context,
     ) {
 
         viewModelScope.launch {
 
-            repository.createChildProfile(
+            val childProfileId = repository.createChildProfile(
                 name = name
             )
+            val childProfile = repository.getProfileById(
+                childProfileId
+            )
+
+            if (childProfile != null) {
+                exportProfile(
+                    childProfile,
+                    context = context
+                )
+            }
         }
     }
 

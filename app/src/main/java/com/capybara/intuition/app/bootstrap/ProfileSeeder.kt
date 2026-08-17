@@ -3,6 +3,7 @@ package com.capybara.intuition.app.bootstrap
 import android.content.Context
 import android.util.Log
 import com.capybara.intuition.app.bootstrap.installation.data.local.repository.InstallationRepository
+import com.capybara.intuition.app.jobs.export.exportProfile
 import com.capybara.intuition.license.capability.RuntimeCapabilities
 import com.capybara.intuition.profile.data.local.db.dao.ProfileDao
 import com.capybara.intuition.profile.data.local.db.entity.ProfileEntity
@@ -50,8 +51,7 @@ class ProfileSeeder(
 
         val now = System.currentTimeMillis()
 
-        val filteredSeeds = seedModels.filter {
-                seed ->
+        val filteredSeeds = seedModels.filter { seed ->
             val isTester = seed.type == "TESTER"
             if (
                 isTester &&
@@ -104,53 +104,54 @@ class ProfileSeeder(
             "BOOTSTRAP",
             "orientation=${configuration.orientation}, " +
                     "width=$width, height=$height " +
-            "configuration.orientation=$conf"
+                    "configuration.orientation=$conf"
         )
 
         val entities = filteredSeeds.map {
 
-                seed -> ProfileEntity(
+                seed ->
+            ProfileEntity(
 
-            // =====================================
-            // IDENTITY
-            // =====================================
-            id = 0,
-            name = seed.name,
-            type = ProfileType.valueOf(
-                seed.type
-            ),
-            installationId = installationId,
-            isSystemDefault = seed.isSystemDefault,
+                // =====================================
+                // IDENTITY
+                // =====================================
+                id = 0,
+                name = seed.name,
+                type = ProfileType.valueOf(
+                    seed.type
+                ),
+                installationId = installationId,
+                isSystemDefault = seed.isSystemDefault,
 
-            // =====================================
-            // SECURITY
-            // =====================================
-            pinHash = null,
+                // =====================================
+                // SECURITY
+                // =====================================
+                pinHash = null,
 
-            // =====================================
-            // GAMEPLAY IDENTITY
-            // =====================================
-            activeNotebookId = seed.activeNotebookId,
-            preferredMode = seed.preferredMode,
-            minLevel = seed.minLevel,
-            maxLevel = seed.maxLevel,
-            currentLevel = seed.currentLevel,
-            rendererId = seed.rendererId,
-            maskId = seed.maskId,
-            topologyFamilyId = defaultTopologyFamilyId,
-            maxTopologyWidth = maxTopologyWidth,
-            maxTopologyHeight = maxTopologyHeight,
+                // =====================================
+                // GAMEPLAY IDENTITY
+                // =====================================
+                activeNotebookId = seed.activeNotebookId,
+                preferredMode = seed.preferredMode,
+                minLevel = seed.minLevel,
+                maxLevel = seed.maxLevel,
+                currentLevel = seed.currentLevel,
+                rendererId = seed.rendererId,
+                maskId = seed.maskId,
+                topologyFamilyId = defaultTopologyFamilyId,
+                maxTopologyWidth = maxTopologyWidth,
+                maxTopologyHeight = maxTopologyHeight,
 
-            activeTopologyId = seed.activeTopologyId,
+                activeTopologyId = seed.activeTopologyId,
 
-            // =====================================
-            // LIFECYCLE
-            // =====================================
-            isDeleted = false,
-            active = seed.active,
-            createdAt = now,
-            lastUsedAt = now
-        )
+                // =====================================
+                // LIFECYCLE
+                // =====================================
+                isDeleted = false,
+                active = seed.active,
+                createdAt = now,
+                lastUsedAt = now
+            )
         }
         Log.d("BOOTSTRAP", "Profiles to insert = ${entities.size}")
         Log.d("BOOTSTRAP", entities.joinToString("\n"))
@@ -158,6 +159,14 @@ class ProfileSeeder(
             entities
         )
         Log.d("BOOTSTRAP", "Profiles inserted")
+
+        val humanProfileEntity = profileDao.getParentProfile()
+        if (humanProfileEntity != null) {
+            exportProfile(
+                context = context,
+                profileEntity = humanProfileEntity
+            )
+        }
     }
 }
 

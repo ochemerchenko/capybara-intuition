@@ -2,6 +2,7 @@ package com.capybara.intuition.profile.data.repository
 
 import android.util.Log
 import com.capybara.intuition.profile.data.local.db.dao.ProfileDao
+import com.capybara.intuition.profile.data.local.db.entity.ProfileEntity
 import com.capybara.intuition.profile.data.local.db.mapper.toEntity
 import com.capybara.intuition.profile.data.local.db.relation.toDomain
 import com.capybara.intuition.profile.domain.model.Profile
@@ -36,7 +37,11 @@ class ProfileRepository(
     }
 
 
-
+    suspend fun getProfileById(
+        profileId: Int
+    ): ProfileEntity? {
+        return profileDao.getProfileById(profileId)
+    }
 
 
 
@@ -84,16 +89,17 @@ class ProfileRepository(
     // =================================================
     suspend fun createChildProfile(
         name: String
-    ) {
+    ): Int {
 
         val now = System.currentTimeMillis()
 
-        profileDao.createChildProfile(
+        return profileDao.createChildProfile(
             name = name,
             type = ProfileType.CHILD,
             createdAt = now,
             lastUsedAt = now
         )
+
     }
 
 

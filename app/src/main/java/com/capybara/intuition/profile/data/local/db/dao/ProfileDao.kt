@@ -16,6 +16,17 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface ProfileDao {
 
+    // =====================================================
+    // INSERT
+    // =====================================================
+
+    @Insert(
+        onConflict = OnConflictStrategy.REPLACE
+    )
+    suspend fun insert(
+        profile: ProfileEntity
+    ): Long
+
     // =================================================
     // QUERIES
     // =================================================
@@ -56,10 +67,16 @@ interface ProfileDao {
     // =================================================
 
 
+    /*
     @Insert
     suspend fun createChildProfile(
         profile: ProfileEntity
     )
+
+
+     */
+
+
 
 
     // =================================================
@@ -92,6 +109,7 @@ interface ProfileDao {
         )
     }
 
+    /*
     @Query(
         """
     INSERT INTO profiles (
@@ -143,12 +161,30 @@ interface ProfileDao {
     LIMIT 1
     """
     )
+
+     */
+    @Transaction
     suspend fun createChildProfile(
         name: String,
         type: ProfileType,
         createdAt: Long,
         lastUsedAt: Long
-    )
+    ): Int {
+        val systemProfile = getSystemProfile() ?: throw IllegalStateException("System default profile not found")
+        val childProfile = systemProfile.copy(
+            id = 0,
+            name = name,
+            type = type,
+            isSystemDefault = false,
+            pinHash = null,
+            isDeleted = false,
+            active = false,
+            createdAt = createdAt,
+            lastUsedAt = lastUsedAt
+        )
+        return insert(childProfile).toInt()
+
+    }
 
     @Query(
         """
@@ -222,16 +258,7 @@ interface ProfileDao {
 
     // =============== START LEGACY =============
 
-    // =====================================================
-    // INSERT
-    // =====================================================
 
-    @Insert(
-        onConflict = OnConflictStrategy.REPLACE
-    )
-    suspend fun insert(
-        profile: ProfileEntity
-    )
 
     // =====================================================
     // COUNTS

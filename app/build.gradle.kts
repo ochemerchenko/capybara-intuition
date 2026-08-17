@@ -17,7 +17,7 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(keystorePropertiesFile.inputStream())
 }
 
-extra["appVersionCode"] = 13
+extra["appVersionCode"] = 15
 extra["appVersionName"] = "0.19"
 val appVersionCode: Int by extra
 val appVersionName: String by extra
@@ -138,7 +138,7 @@ dependencies {
     implementation(platform(libs.firebase.bom))
 
     implementation(libs.firebase.crashlytics)
-    implementation(libs.firebase.analytics)
+    //implementation(libs.firebase.analytics)
 
     implementation(libs.androidx.activity.compose)
 
@@ -149,6 +149,11 @@ dependencies {
 
     // --- Corutines ---
     implementation(libs.kotlinx.coroutines.play.services)
+
+    // --- Firebase Storage ---
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-storage")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1")
 }
 
 apply(

@@ -68,8 +68,7 @@ class BootstrapLoader(
             Log.d("BOOT", "NotebookResourceLinkSeeder")
             NotebookResourceLinkSeeder(
                 context = context,
-                notebookResourceLinkDao =
-                    database.notebookResourceLinkDao()
+                notebookResourceLinkDao = database.notebookResourceLinkDao()
             ).seedIfEmpty()
             bootstrapStateRepository.setState(
                 BootstrapState.NOTEBOOK_RESOURCE_LINKS_READY

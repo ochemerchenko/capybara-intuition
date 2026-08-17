@@ -171,13 +171,18 @@ fun SettingsScreen(
 
             if ( capabilities.supportsMultiProfileRuntime )
             {
-
+                val context = LocalContext.current
                 ChildProfileCreateSection(
                     profiles = profiles,
 
-                    onChildProfileCreate =
-                        profileViewModel
-                        ::createChildProfile
+                    //onChildProfileCreate = profileViewModel::createChildProfile
+
+                    onChildProfileCreate = { name ->
+                        profileViewModel.createChildProfile(
+                            name = name,
+                            context = context
+                        )
+                    }
                 )
             }
 
