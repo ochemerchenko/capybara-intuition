@@ -2,6 +2,6 @@
 
 Version: 0.19
 
-Version code: 15
+Version code: 19
 
-Build time: 2026-08-17 20:13:24
+Build time: 2026-08-18 15:10:30

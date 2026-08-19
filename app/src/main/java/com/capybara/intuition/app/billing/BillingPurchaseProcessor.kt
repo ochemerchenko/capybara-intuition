@@ -6,7 +6,7 @@ import com.android.billingclient.api.AcknowledgePurchaseParams
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.BillingResult
 import com.android.billingclient.api.Purchase
-import com.android.billingclient.api.acknowledgePurchase
+
 import com.capybara.intuition.app.billing.handlers.handleAlreadyOwned
 import com.capybara.intuition.app.billing.handlers.handleGoogleError
 import com.capybara.intuition.app.billing.handlers.handleGoogleOk
@@ -23,6 +23,9 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.suspendCancellableCoroutine
+
+import kotlin.coroutines.resume
 
 class BillingPurchaseProcessor(
     private val licenseRepository: LicenseRepository,
@@ -67,14 +70,14 @@ class BillingPurchaseProcessor(
                 "Billing",
                 "[Purchase] ProductDetails received: " +
                         "response=${billingResult.responseCode}, " +
-                        "count=${productDetailsList.size}"
+                        "count=${productDetailsList.productDetailsList.size}"
             )
 
             if (
                 billingResult.responseCode == BillingClient.BillingResponseCode.OK &&
-                productDetailsList.isNotEmpty()
+                productDetailsList.productDetailsList.isNotEmpty()
             ) {
-                val productDetails = productDetailsList.first()
+                val productDetails = productDetailsList.productDetailsList.first()
                 val billingFlowParams = createBillingFlowParams(
                     productDetails
                 )
@@ -264,9 +267,20 @@ class BillingPurchaseProcessor(
                 delay(delayMs)
             }
 
-            val billingResult = billingClient.acknowledgePurchase(
-                acknowledgePurchaseParams
-            )
+            //val billingResult = billingClient.acknowledgePurchase(
+            //    acknowledgePurchaseParams
+            //)
+
+            val billingResult = suspendCancellableCoroutine { continuation ->
+                billingClient.acknowledgePurchase(
+                    acknowledgePurchaseParams
+                ) { result ->
+                    continuation.resume(
+                        value =result
+                    )
+                }
+            }
+
             Log.d(
                 "Billing",
                 "[Acknowledge] Response=${billingResult.responseCode}"

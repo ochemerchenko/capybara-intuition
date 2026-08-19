@@ -43,3 +43,6 @@ app/Інфраструктура/
 
 # Logs
 *.log
+
+# Export files
+export/

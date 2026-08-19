@@ -1,108 +1,106 @@
 # About the app
 
-**Intuition** is a decision-making simulator under uncertainty.
+**Intuition** is a decision-making trainer for conditions of uncertainty.
 
-Its goal is not to test your knowledge, memory, or reaction speed, but to help you better understand your own intuition, decision-making style, and how these characteristics change over time.
+Its goal is to help you to understand better your intuition and track its changes over time.
+
+
+## How it works
+
+Look at the buttons and focus on what you're feeling. Try naming these feelings. Place your bet, then check the result.
+
+**If you feel tired, bored, or notice any other negative emotions, then stop!**
+
+Check your analytics, pause to reflect, or even close the app for now. After all, it's not the exercise bike. Pay attention to how you feel — the app will still be here when you get back.
+
+This is a great moment for meditation if you practice it. If not, try to collect the sensations connected to a specific button and naming that overall feeling.
+
+Your performance might stay flat, within a margin of error. And that itself is a result. Alternatively, you might start improving. Or you might begin to fall down. If so, is it possible you're sensing the outcome correctly, but misinterpreting it?
+
+This is a game where you can neither win nor lose. It's a tool for self-exploration that requires the right state of mind.
+
+Enjoy yourself and relax. Heavy 'thinking'—especially structured, analytical thought — is tiring. So let your intuition run free.
+
+
+## Analytics
+
+Your primary success metric is the ratio of successful betss to total bets per session.
+
+The Intuition analytical system provides a graphical representation of your progress over the last 30 days.
+
+The PREMIUM license unlocks complete navigation and all features of the analytical system.
+
 
 ## Glossary
+
 
 ### Profile
 
 A profile contains your game settings and all accumulated statistics.
 
-After the first launch of the app, a profile called **Player** is automatically created. You can rename it in the settings if you wish.
+After the first launch of the app, a profile named **Player** is created automatically. If you want, you can rename it in the settings.
 
-The free version has one main profile.
+In the free version, you have access to one profile designated as an adult profile. The PREMIUM license allows you to create additional profiles designated as child profiles.
 
-The **PREMIUM** license (and higher) allows you to create additional profiles. Statistics, progress, and settings are saved separately for each such profile.
+Adult profiles and data are protected from child accounts with a PIN code you set manually. If you ever forget it, don't worry! You can easily reset it by solving a quick math puzzle that a young child won't be able to solve
 
-### Game level
+Statistics, progress, and settings are saved and analyzed independently for each profile.
 
-The game level determines how many choices will be shown on the game screen.
-
-Intuition now allows you to independently choose the game level in the settings.
-
-The more buttons are offered for selection, the lower the probability of finding the correct answer by chance. For example, if 2 buttons are displayed, the probability of a random guess is **50%**, and if 12 - only **8.3%**.
-
-### Deal
-
-Dealing is the application's preparation of the set of buttons that you see on the game screen and determining one of them as the correct one.
-
-Determining the correct button always occurs regardless of whether you have already made your choice or are just about to make it. The deal algorithm is completely isolated from any information about your actions and cannot take into account your choice or change the outcome depending on it.
-
-### Bet
-
-A bet is your choice of one of the buttons on the game screen.
-
-Once a bet is made, it can no longer affect the deal or the determination of the correct button.
-
-To place a bet, simply tap on the button you think is correct.
-
-### Round
-
-A round is one hand, one bet, and the display of the result of their comparison.
-
-To start a new round, simply tap anywhere on the screen.
 
 ### Session
 
-A session is all the rounds you have played without leaving the game screen.
+A session covers everything that happens on the game screen from the time you open it to when you exit.
 
-Launching the app or returning to the game screen after going to any other screen always starts a new session.
+The application considers every game session to be an independent experiment.
+
+Opening the app or navigating back to the game screen always begins a new session.
+
+A session consists of rounds/bets. **Set the number of rounds in each session according to your intuition** — remember, every session is an independent experiment.
+
+
+### Round
+
+A round is a single bet, the result of comparing your bet with the system's choice.
+
+The first round of a session starts immediately after it is created.
+
+Once you've seen the results of a finished round, tap anywhere on the screen to start the next one.
+
+
+### Deal
+
+A deal is the app's selection of one of the available buttons as the 'correct' one.
+
+The correct button is always determined independently, whether you've already made your choice or are just about to.
+
+The deal algorithm is completely isolated from any information about your actions throughout your entire time using the app, and cannot take your choice into account or alter the result based on it.
+
+
+### Bet
+
+A bet is your selection of one of the buttons on the game screen. To make a bet, tap the button you believe is correct.
+
 
 ### Game Mode
+
 
 The FREE license supports only one game mode - **Bet After Deal**.
 
 The PREMIUM license unlocks two more modes: **Bet Before Deal** and **Hybrid Mode**.
 
-**Bet After Deal**. In this mode, the deal for each round is completed before you see the buttons on the game screen. So, when the choices are already displayed, the correct button is already determined by the app.
+**Betting after** the deal  — the outcome is generated before the buttons appear on your screen. So by the time you see the options, the correct button is already set.
 
-**Bet Before Deal**. In this mode, a set of buttons are first displayed. You place a bet, and only then does the app randomly determine the correct button. The algorithm works regardless of your choice and cannot take it into account when determining the correct button.
+**Betting before** the deal — you make your selection while the buttons are displayed, and only then does the app randomly choose which button is correct.
 
-**Hybrid mode**. In hybrid mode, the application randomly selects one of the two described modes for each new round. Therefore, during one session, you can play both rounds with a bet before the deal and rounds with a bet after the deal.
+**Hybrid** mode — the app randomly chooses between the two modes for every round. This means within a single session, you will encounter both 'betting after the deal' and 'betting before the deal' rounds.
 
-### Profile protection
 
-If you have purchased a PREMIUM license, you can create additional profiles.
+### Game level
 
-To prevent another user whom you have entrusted to play on your device from accessing your profile and influencing your statistics or settings without your permission, your profile is protected by a PIN code.
+The game level sets the number of options displayed on the screen. You can select your preferred level in Settings.
 
-You can return to the main profile from the additional one only after entering this PIN code.
+Higher levels lower the mathematical probability of making a correct guess. For instance, with 2 buttons displayed, your random guess probability is 50%, whereas with 12 buttons, it drops to just 8.3%.
 
-Don't worry if you forget it. The application will offer to solve a simple mathematical problem.
-
-If you need additional profiles for your own experiments or testing different strategies, feel free to create and use them.
-
-## Analytics
-
-The Intuition analytics system helps you track your progress using a set of graphs.
-
-You can open an explanation of each graph by clicking the help button next to it.
-
-The FREE license allows you to view graphs, but navigation between them is limited. The PREMIUM license unlocks full navigation and all the capabilities of the analytics system.
-
-When building graphs, the application considers each game session as a separate experiment.
-
-The main indicator is **session density** - the ratio of the number of successful rounds to the total number of rounds in the session.
-
-If you are interested in how individual graphs or analytics algorithms work, write to **support@intuition.capybara-soft.com**.
-
-## How it works
-
-Look at the buttons. Focus on how you feel them. Try to give names to these feelings. Make a bet. See what happens.
-
-If you feel tired - stop. After all, this is not an exercise bike.
-
-Observe your own feelings.
-
-This is an occasion for meditation, if you practice it, if not - try to collect in a pile the feelings that relate to a particular button, and give this set of feelings a name.
-
-Maybe your result will remain unchanged, within the limits of mathematical error. And this is already a result. Or maybe you will start to "grow". Adjust the number of rounds in the session, remember - each session is a separate experiment. Or maybe you will start to fall, fall catastrophically. And then, maybe you feel the result correctly, but do not interpret it correctly?
-
-This is a game in which it is impossible to win or lose. This is a simulator that cannot be approached without the appropriate mood.
-
-Enjoy. Relax. "Thinking", especially intense, logical-lexical, is tiring. So give free rein to your intuition.
 
 ## Project
 

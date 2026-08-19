@@ -15,13 +15,13 @@
 
 
     <string-array name="capybara_emotion_options_shown_start_mode_after">
-        <item>Hello, {profileName}! One of the options is shown, guess which one?</item>
+        <item>Hello, {profileName}! One of the options has been chosen, guess which one!</item>
     </string-array>
     <string-array name="capybara_emotion_options_shown_start_mode_before">
-        <item>{profileName}, the simulator will choose the option after you regardless of you. What are you betting on?</item>
+        <item>{profileName}, the app selects an option after you make your move, regardless of your choice. What are you betting on?</item>
     </string-array>
     <string-array name="capybara_emotion_options_shown_start_mode_hybrid">
-        <item>{profileName}, I don\'t even know who goes first. What\'s your option?</item>
+        <item>{profileName}, which option do you pick?</item>
     </string-array>
 
 
@@ -30,134 +30,131 @@
         -->
         <string-array name="capybara_emotion_win_continues_ordinary">
             <item>{profileName}, well, luck is on your side this time.</item>
-            <item>Try to remember the first reaction that arose before the decision.</item>
+            <item>Try to remember the first reaction you had before making your decision.</item>
             <item>Success is always nice. Congratulations, {profileName}!</item>
             <item>How did this option feel before the decision? Can you give a name to this feeling?</item>
-            <item>I hope you feel pleasure. Positive emotions are so valuable in this world!</item>
-            <item>{profileName}, you have something to appreciate about yourself and your character.</item>
-            <item>The success of your current session is {sessionSuccess}%. I like it, and you?</item>
-            <item>Cool! But is it a coincidence or the result of your super skill?</item>
-            <item>And I liked it! I generally like to see your success!</item>
-            <item>The world is so unpredictable. And it\'s so nice when you\'re lucky!</item>
+            <item>I hope you feel joyful. Positive emotions are so precious in this world!</item>
+            <item>{profileName}, you have good reason to appreciate yourself and your good fortune.</item>
+            <item>Your current session success rate is {sessionSuccess}%. I like it, how about you?</item>
+            <item>Awesome! But is this just luck, or the result of your super-skill?</item>
+            <item>I really enjoyed that! I always love seeing you succeed!</item>
+            <item>The world is full of surprises. It\'s such a great feeling when luck is on your side!</item>
             <item>Great! Current session success: {sessionSuccess}%.</item>
             <item>{profileName}, you\'re just great! That was a great bet!</item>
-            <item>And if you really improve, {profileName}? And every time - accurately, without a miss?</item>
-            <item>And this time exactly on target! Can you name or describe the feeling before the bet?</item>
-            <item>You\'re lucky. It\'s going to be like that in life too! {winCount} in this session.</item>
+            <item>And what if you really master this, {profileName}? And hit the mark every time, without a miss?</item>
+            <item>Hit the mark again! Can you name or describe what you felt right before placing your bet?</item>
+            <item>Luck is on your side. Wishing you the same in real life! {winCount} in this session.</item>
             <item>You\'re doing great! And it\'s really nice to watch.</item>
-            <item>Well done! And Probability Theory is on your side this time.</item>
-            <item>{profileName}, you\'re the best! Did you manage to remember the feeling before the bet?</item>
+            <item>Great job! Luck and Probability Theory are working in your favor this time.</item>
+            <item>{profileName}, you\'re the best! Did you manage to remember the feeling right before placing your bet?</item>
         </string-array>
 
         <string-array name="capybara_emotion_lose_continues_ordinary">
             <item>Unfortunately, not this time. Will you try again?</item>
-            <item>Failures happen too, and this is no reason to be sad!. You will succeed, {profileName}!</item>
-            <item>How did that button feel before the bet? Can you give a name to this feeling?</item>
-            <item>Try to remember the first reaction that arose before the decision.</item>
-            <item>I hope you are not too sad? After all, it is just a game!</item>
-            <item>{profileName}, don\'t be sad. Yes, luck is not on your side this time, but success will not be long in coming!</item>
+            <item>Failures happen too, and this is no reason to feel down!. You can do it, {profileName}!</item>
+            <item>How did the button feel before placing your bet? Can you give a name to this feeling?</item>
+            <item>Try to recall the first reaction you had before making your decision.</item>
+            <item>I hope you\'re not too upset? After all, it\'s just a game!</item>
+            <item>{profileName}, don\'t be sad. Yes, luck wasn\'t on your side this time, but success won\'t be long in coming!</item>
             <item>Randomness is a terrible thing! Hold on, {profileName}!</item>
-            <item>I didn\'t like it either! You have the right to succeed!</item>
+            <item>I didn\'t like it either! You have every right to succeed!</item>
             <item>The world is so unpredictable. And it\'s so sad when you\'re not lucky.</item>
-            <item>Do you trust your feelings? Do you trust yourself?</item>
+            <item>Do you trust your intuition? Do you trust yourself?</item>
             <item>Not this time. Current session success: {sessionSuccess}%.</item>
-            <item>{profileName}, this time you missed. Why was this particular bet made?</item>
-            <item>And if you really pump, {profileName}? And every time - accurately, without a miss?</item>
-            <item>Oh! Can you name or describe the feeling before the bet?</item>
-            <item>This time you were unlucky. It won\'t be like that in life! {winCount} guesses in this session.</item>
-            <item>Miss! It happens, but it\'s all in your hands. Try to figure out your feeling of these buttons.</item>
+            <item>{profileName}, off target this time. Why did you make this particular bet?</item>
+            <item>What if you really level up, {profileName}? And hit the mark every single time, without fail?</item>
+            <item>Oof! Can you name or describe that feeling you had just before you made your bet?</item>
+            <item>Unlucky this time. May real life be different! {winCount} correct guesses in this session.</item>
+            <item>A miss! It happens, but everything is in your hands. Try to tune into how you feel about these buttons.</item>
             <item>It seems that it was difficult. And Probability Theory is not on your side this time.</item>
-            <item>{profileName}, miss! Did you manage to remember the feeling before the bet?</item>
+            <item>{profileName}, a miss! Did you manage to remember the feeling before the bet?</item>
             <item>{profileName}, this is not a reason to give up! How did the bet feel?</item>
-            <item>Well, it\'s just a game. You can do better! Try, try, this is not a reason to give up!</item>
+            <item>Well, it\'s just a game. You can do better! Keep trying, that\'s not a reason to give up!</item>
         </string-array>
 
         <string-array name="capybara_emotion_options_shown_after_win_ordinary">
-            <item>I strongly suggest repeating!</item>
-            <item>The fear of making a mistake goes away under the pressure of action.</item>
-            <item>Will you try repeating?</item>
+            <item>I definitely recommend giving it another shot!</item>
+            <item>Fear of failure fades when you take action.</item>
+            <item>Will you try again?</item>
             <item>Time to make the next bet!</item>
-            <item>Your feeling for these buttons is the key to developing your intuition.</item>
-            <item>Try to be honest with your own feelings. Ask each button the question: "Is this you?"</item>
+            <item>Your sense of these buttons is the key to sharpening your intuition.</item>
+            <item>Try to be honest with your own feelings. Ask each button the question: "Is it you?"</item>
             <item>There is only you, the buttons and your feelings. Try to name them.</item>
             <item>Choose by feeling: which of these buttons is "hot"?</item>
             <item>There are no wins, no losses in this game. Your current success rate is {sessionSuccess}%.</item>
             <item>Is there an option that you trust? And which one do you suspect?</item>
-            <item>Guessing in a row is {streak}. Will you continue?</item>
-            <item>Which option seems most likely right now?</item>
+            <item>{streak} correct guesses in a row. Will you continue?</item>
+            <item>Which choice feels like the strongest bet right now?</item>
             <item>Every choice is an opportunity to learn a little more about yourself. What is your game?</item>
-            <item>Try to notice and record your first reaction. This is intuition, as opposed to guessing.</item>
-            <item>If you forget about the outcome for a moment, what do your own feelings suggest?</item>
-            <item>Which option is the warmest? The brightest? The loudest? How do you feel about it?</item>
-            <item>Doesn\'t winning scare you?</item>
-            <item>Even a small internal response deserves attention. Give it a name?</item>
+            <item>Your first reaction? That\’s pure intuition — unlike overthinking.</item>
+            <item>If you forget about the result for a moment, what do your own feelings tell you?</item>
+            <item>Which option is the warmest? The brightest? The loudest? How do you feel them?</item>
+            <item>Does winning scare you?</item>
+            <item>Even a small internal response deserves attention. Will you give it a name?</item>
         </string-array>
 
         <string-array name="capybara_emotion_options_shown_after_lose_ordinary">
-            <item>I strongly suggest you guess now! Your loss is just a coincidence.</item>
-            <item>Are you afraid of winning? In life, almost any mistake can be corrected.</item>
-            <item>Sometimes we look for an answer outside, although it has been waiting inside us for a long time.</item>
+            <item>I strongly suggest guessing now! Your miss was just a coincidence</item>
+            <item>What are you afraid of? In life, almost any mistake can be fixed.</item>
+            <item>Sometimes we look for an answer outside, even though it has been waiting inside us for a long time.</item>
             <item>Time to make the next bet!</item>
-            <item>Your feeling for these buttons is the key to developing your intuition.</item>
-            <item>Try to be honest with your own feelings. Ask each button a question: "Is this you?"</item>
-            <item>A streak of misses is a {streak}. Will you continue or will you guess already?</item>
-            <item>In this game, you have no one to prove your rightness. There is only you, the buttons and your feelings.</item>
-            <item>Which is scarier: guessing or missing? Do you trust your feelings?</item>
+            <item>Your feeling for these options is the key to sharpening your intuition.</item>
+            <item>Try to be honest with your own feelings. Ask every button: "Are you the one?"</item>
+            <item>Miss streak: {streak}. Keep testing your luck, or ready to hit it?</item>
+            <item>In this game, you have nothing to prove to anyone. It’s just you, the buttons, and your intuition.</item>
+            <item>What scares you more: guessing or missing? Do you trust your feelings?</item>
             <item>Your feelings are more important than the result. Which button do you want to press?</item>
-            <item>Try to notice and record your first reaction. This is intuition, as opposed to guessing.</item>
-            <item>Even a small internal feedback deserves attention. Give it a name.</item>
-            <item>Which of the options is the warmest? The brightest? The loudest? How do you feel about them?</item>
+            <item>Try to notice and capture your first reaction. That is intuition, as opposed to overthinking.</item>
+            <item>Even a small inner response deserves attention. Give it a name.</item>
+            <item>Which option is the warmest? The brightest? The loudest? How do you feel them?</item>
             <item>Your success in this session is {sessionSuccess}%.</item>
-            <item>There is a strategy to improve the result, but an equally strong one is to worsen it. Are you trying to miss 20 times in a row?</item>
-            <item>Which of the options seems the most "alive" right now?</item>
+            <item>There is a strategy to improve the result, but an equally strong one is to worsen it. Try to miss 20 times in a row 😊</item>
+            <item>Which choice feels most alive to you in this moment?</item>
             <item>Aren\'t you afraid of losing?</item>
         </string-array>
 
         <string-array name="capybara_emotion_win_streak_broken_ordinary">
-            <item>Unfortunately, this time it was a "crawl". Unlucky, I understand, I\'m sad too...</item>
+            <item>Unfortunately, a "miss" this time. Bad luck, I get it, I\'m sad too...</item>
             <item>What changed in your state before the last choice?</item>
-            <item>A miss, this time Probability Theory is not on your side.</item>
-            <item>{profileName}, your value does not depend on the result. You are the most important thing you have.</item>
-            <item>Before this miss, the number of guesses in a row was {streak}. It\'s just a coincidence. Isn\'t it?</item>
-            <item>I\'m here for you, {profileName}. This miss doesn\'t make you any less of a person.</item>
-            <item>What went "wrong"? What were your feelings before making a choice?</item>
-            <item>Sometimes it\'s useful to pay attention not to the event, but to your own reaction to it.</item>
-            <item>And if I\'m honest about my own feelings during the bet - what was ignored?</item>
-            <item>It happens, don\'t be upset. There are no losers in this game. There is only you and your feelings.</item>
-            <item>That\'s okay. You remember that Probability Theory is to blame for everything, right?</item>
-            <item>It happens. Who is to blame today - retrograde Mercury or retrograde Saturn?</item>
-            <item>And real yogis treat this philosophically. It\'s more important for them to observe themselves.</item>
-            <item>By the way, the mathematical Algorhythm is to blame for this. And how do you feel about Laibach\'s work?</item>
-            <item>I don\'t see a tragedy, although it\'s not pleasant. I share your feelings, {profileName}.</item>
-            <item>Try to remember the moment before the decision. What was "Wrong"? Was it really an accidental click?</item>
-            <item>Sometimes we learn the most about ourselves in moments like these.</item>
-            <item>What needs more attention right now: the result or your attitude towards it?</item>
-            <item>What does this experience tell you about your inner state?</item>
-            <item>Okay. You are the best person in this universe.</item>
+            <item>A miss, Probability Theory is not on your side this time.</item>
+            <item>{profileName}, your value isn\'t tied to the result. You are your own greatest asset.</item>
+            <item>You were on a streak of {streak} before this miss. It\'s just a coincidence. Isn\'t it?</item>
+            <item>I\'m here for you, {profileName}. This miss takes nothing away from who you are.</item>
+            <item>What went "wrong"? How did you feel before making a choice?</item>
+            <item>Sometimes it\'s useful to shift your focus from the event itself to how you reacted to it.</item>
+            <item>And honestly, regarding your feelings while placing the bet—what was ignored?</item>
+            <item>It happens, don\'t be upset. There are no losses in this game. There is only you and your feelings.</item>
+            <item>That\'s okay. You remember it\'s all just Probability Theory\'s fault anyway, right?</item>
+            <item>It happens. Who\'s to blame today — retrograde Mercury or retrograde Saturn?</item>
+            <item>True yogis take a philosophical view—for them, watching their inner state is what truly matters.</item>
+            <item>By the way, the mathematical Allgorhythm is to blame for this. And how do you feel about Laibach\'s music?</item>
+            <item>No tragedy here, even if it doesn\'t feel great. I feel for you, {profileName}.</item>
+            <item>Try to recall the moment before the decision. What was "not right"? Or was it truly a random tap?</item>
+            <item>Ah, well. You\'re still the best person in this universe.</item>
+
         </string-array>
 
         <string-array name="capybara_emotion_lose_streak_broken_ordinary">
-            <item>Oops, in the "apple"! I share your feelings!</item>
+            <item>Right on the money! I\'m feeling this win right there with you!</item>
             <item>What changed in your state before the last choice?</item>
-            <item>{profileName}, your value does not depend on the result. You are the most important thing you have.</item>
-            <item>Before this bet, the number of consecutive misses is {streak}. It\'s just a coincidence. Or not?</item>
-            <item>I\'m here, {profileName}. This bet does not make you any more or less important.</item>
-            <item>What were the feelings of these buttons, and did they betray you, and did you betray them?</item>
-            <item>Sometimes it\'s useful to pay attention not to the event, but to your own reaction to it.</item>
-            <item>How did the guessed option feel before the bet?</item>
-            <item>In this game, there are no losses, no wins. There is only you and your feelings. And buttons.</item>
-            <item>That\'s right! But you remember that Probability Theory is to blame for everything?</item>
+            <item>{profileName}, your value isn\'t tied to the result. You\'re the most precious asset you\'ll ever own.</item>
+            <item>Before this bet, the number of misses in a row was {streak}. It\'s just a coincidence, right? Or is it?</item>
+            <item>I\'m here, {profileName}. This bet does not make you any more or less of a person.</item>
+            <item>What were the feelings of these buttons, and did they let you down, or did you ignore what they were telling you?</item>
+            <item>Sometimes it is useful to pay attention not to the event, but to your own reaction to it.</item>
+            <item>How did the correct option feel before the bet?</item>
+            <item>There are no wins or losses in this game. It\'s just you, your sensations, and the buttons 😊</item>
+            <item>That\'s it! But you do remember that Probability Theory is to blame for everything, right?</item>
             <item>I like it too. And no Mercury retrograde will stop it!</item>
-            <item>Real yogis approach this philosophically. It\'s more important for them to observe themselves.</item>
-            <item>By the way, this time the mathematical Algorhythm didn\'t interfere. And how do you feel about Laibach\'s work?</item>
-            <item>How nice! Good luck to you, {profileName}!</item>
-            <item>Try to remember the moment before the decision. What was "yes" and what was "no"?</item>
-            <item>Sometimes we learn the most about ourselves at such moments.</item>
-            <item>What needs more attention now: the result or your attitude towards it?</item>
+            <item>Real yogis approach this philosophically. What matters most to them is observing their own inner state.</item>
+            <item>By the way, math\'s Allgorhythm didn\'t stop you this time. What\'s your take on Laibach\'s music?</item>
+            <item>How nice! Congratulations on your success, {profileName}!</item>
+            <item>Try to recall the moment right before your decision. What felt "right" and what felt "wrong"?</item>
+            <item>Sometimes we learn the most about ourselves in moments like these.</item>
             <item>You are the best person in this Universe. Good luck to you!</item>
             <item>{profileName}, I\'m glad to see this, I\'m glad to be a witness to this moment.</item>
             <item>I don\'t know what exactly happened. But I like what I see.</item>
-            <item>I\'m happy for you, {profileName}. Just happy!</item>
+            <item>I\'m so glad for you, {profileName}. Just plain happy!</item>
         </string-array>
 
 
@@ -165,132 +162,132 @@
             + INTERESTING SECTION
         -->
         <string-array name="capybara_emotion_win_continues_interesting">
-            <item>{profileName}, this is interesting! And this time luck is on your side!</item>
-            <item>{winCount} in this session! Remember the first reaction that arose before the bet?</item>
+            <item>{profileName}, now this is getting interesting! And this time, luck is on your side!</item>
+            <item>{winCount} correct guesses in this session! Try to remember that first flash of intuition before you made your bet.</item>
             <item>Success is always nice. Congratulations, {profileName}!</item>
             <item>What an interesting bet! Can you name the feeling before it?</item>
             <item>The number of successful bets in this session is {winCount}, the success of the session is {sessionSuccess}%.</item>
-            <item>Positive emotions are so valuable in life! I hope you feel pleasure.</item>
+            <item>Positive emotions are so valuable in life! I hope you\'re feeling satisfied.</item>
             <item>{profileName}, you have something to appreciate yourself and your luck for.</item>
-            <item>Congratulations! The success of your current session is {sessionSuccess}%. How are you?</item>
+            <item>Congratulations! Your current session success rate is {sessionSuccess}%. How does that feel?</item>
             <item>Cool! Can you repeat it?</item>
-            <item>And I liked it! I generally like seeing your success!</item>
+            <item>I liked that! In fact, I love seeing you succeed!</item>
             <item>The world is so unpredictable. And it\'s so nice when you\'re lucky!</item>
             <item>Great! Current session success: {sessionSuccess}%.</item>
-            <item>{profileName}, you\'re just great! That was a great bet!</item>
-            <item>And if you really improve, {profileName}? And every time - exactly, on target?</item>
+            <item>{profileName}, you\'re just awesome! That was a great bet!</item>
+            <item>What if you really level up, {profileName}? And hit the mark dead-on every single time?</item>
             <item>And this time exactly on target! I wonder: what were your feelings before the bet?</item>
             <item>You\'re lucky. May it be like that in life too! {winCount} successes in this session.</item>
             <item>You\'re doing great! And it\'s very nice and interesting to watch.</item>
             <item>Very interesting! And Probability Theory is on your side this time.</item>
-            <item>{profileName}, you\'re the best! Did you manage to remember the feeling before the bet?</item>
-            <item>Interesting! Try to remember your state before the bet. Was there anything familiar about it?</item>
-            <item>I wonder why this particular bet?</item>
-            <item>Would you do it again? You\'re just great!</item>
+            <item>{profileName}, simply the best! Did you manage to remember the feeling before placing your bet?</item>
+            <item>Interesting! Try to remember your feelings before the bet. Was there anything familiar about it?</item>
+            <item>I wonder, what made you go with this particular choice?</item>
+            <item>Can you do it again? You\'re simply awesome!</item>
             <item>Try to notice not only what happened, but also how it happened.</item>
             <item>Sometimes the most interesting thing is hidden in the process, not in the result.</item>
-            <item>What feeling most often accompanies you before making a decision?</item>
+            <item>What feeling accompanies you most often right before a decision?</item>
         </string-array>
 
         <string-array name="capybara_emotion_lose_continues_interesting">
-            <item>{profileName}, I\'m sad too. Hang in there!</item>
-            <item>Don\'t be so quick to get upset, {profileName}. Look carefully at your own feelings before the bet.</item>
+            <item>{profileName}, I feel sad too. Stay strong!</item>
+            <item>Don\'t be upset, {profileName}. Take a close look at your feelings before placing your bet.</item>
             <item>After all, it\'s all just Probability Theory, {profileName}.</item>
-            <item>I\'m here, {profileName}. And it seems to me that this experience wants to show you something.</item>
-            <item>Maybe what you\'re facing now isn\'t a problem, but a clue. How did you feel before the bet?</item>
-            <item>{profileName}, I see a reason for observation, not self-criticism.</item>
-            <item>And this is not a reason for disappointment. I see a reason for attention to yourself.</item>
-            <item>Try to look at this experience without struggle and without excuses.</item>
+            <item>I\'m here with you, {profileName}. And I feel like this experience is trying to show you something.</item>
+            <item>Maybe this isn\'t a problem in front of you, but a hint. What were your feelings before placing your bet?</item>
+            <item>{profileName}, I see the reason for observation, not self-criticism.</item>
+            <item>And this is no reason for disappointment. I see a reason for attention to yourself.</item>
+            <item>Try to look at this experience without fighting it and without excuses.</item>
             <item>It\'s a pity, another miss. But it\'s also experience, {profileName}.</item>
-            <item>It happens, {profileName}. But Algorhythm can\'t win all the time.</item>
+            <item>It happens, {profileName}. But Allgorhythm can\'t win all the time.</item>
             <item>{profileName}, too bad! Session success rate - {sessionSuccess}%.</item>
-            <item>Interesting. Try to answer: "what feeling is repeated before the bet?".</item>
-            <item>I sympathize, {profileName}. But it happens. Current session success rate - {sessionSuccess}%.</item>
+            <item>Interesting. Try to answer: "what feeling keeps repeating right before the bet?".</item>
+            <item>I feel sorry for you, {profileName}. But it goes like that sometimes.Current session success rate - {sessionSuccess}%.</item>
             <item>The key to success is attention to your feelings and self-confidence.</item>
-            <item>Not a very fun, but interesting situation, {profileName}. Try to understand it.</item>
-            <item>Well, it happens, it\'s a game. {profileName} is still the best person in the universe!</item>
+            <item>Not a very pleasant situation, but still interesting, {profileName}. Try to understand it.</item>
+            <item>Well, it happens, it\'s a game. {profileName}, you are still the best person in the universe!</item>
         </string-array>
 
         <string-array name="capybara_emotion_options_shown_after_win_interesting">
             <item>{profileName}, the situation is getting interesting, what is your choice?</item>
-            <item>The Algorhythm only calculates, and you have a feeling, you have intuition. How do these buttons feel?</item>
-            <item>I strongly suggest repeating!</item>
+            <item>The Allgorhythm only counts, and you have a feeling, you have intuition. How do these buttons feel?</item>
+            <item>You nailed it! Let\'s go for another round!</item>
             <item>Time to make the next bet!</item>
-            <item>{profileName}, your feeling for these buttons is the key to developing your intuition.</item>
-            <item>I wonder which of the options seems most likely to you right now?</item>
-            <item>Try to notice and record your first reaction. This is intuition, as opposed to guessing.</item>
-            <item>Even a small internal feedback deserves attention.</item>
+            <item>{profileName}, your feeling of these buttons is the key to developing your intuition.</item>
+            <item>Which option speaks to you most in this moment?</item>
+            <item>Catch that very first spark of feeling—that\’s your intuition speaking, before the mind takes over.</item>
+            <item>Even a small internal response deserves your attention.</item>
             <item>Each new choice is not about logic and knowledge, but about being attentive to yourself.</item>
-            <item>Some feelings return not by chance, {profileName}. It\'s worth noting these things.</item>
-            <item>If a feeling seems familiar, don\'t dismiss it too quickly.</item>
+            <item>Some feelings return for a reason, {profileName}. Things like that are worth noticing.</item>
+            <item>If a sensation feels familiar, give it a moment before dismissively moving on.</item>
             <item>Attention to your own feelings sometimes reveals more than long reflections.</item>
             <item>{profileName}, experience only becomes knowledge when we pay attention to it.</item>
             <item>I believe in you, {profileName}!</item>
-            <item>Sometimes an inner response becomes noticeable only when we stop looking for it.</item>
-            <item>Sometimes the best clues come not from outside, but from already experienced experiences.</item>
-            <item>I wonder if among these options there is one that your attention returns to on its own?</item>
-            <item>Maybe now is the moment when you should trust yourself a little more.</item>
-            <item>{profileName}, try to treat this choice as an opportunity to better understand yourself.</item>
-            <item>{profileName}, try pay attention not only to the options, but also to your own reaction to them.</item>
+            <item>Sometimes an inner response becomes noticeable only when you stop looking so hard for it.</item>
+            <item>Sometimes the best clues come not from outside, but from experience you\'ve already lived.</item>
+            <item>Is there one option here that gently pulls your attention back all on its own?</item>
+            <item>Perhaps now is the exact moment to trust yourself a little more.</item>
+            <item>{profileName}, try to treat this choice as an opportunity to understand yourself better.</item>
+            <item>{profileName}, try to focus not just on the options, but also to your own reaction to them.</item>
             <item>Do you feel the difference between what you want to choose and what seems right?</item>
         </string-array>
 
         <string-array name="capybara_emotion_options_shown_after_lose_interesting">
-            <item>{profileName}, I\'m curious. What outcome are you really looking for?</item>
+            <item>{profileName}, it makes me wonder: what result are you truly looking for underneath it all?</item>
             <item>Which bet will win, {profileName}?</item>
-            <item>I wonder what your next bet is, {profileName}?</item>
-            <item>{profileName}, which is more important: being right or being honest with yourself?</item>
-            <item>Sometimes the inner feedback is honest, but we\'re not always ready to accept it.</item>
+            <item>I\'m curious, where your intuition will lead your next move, {profileName}?</item>
+            <item>{profileName}, What\’s more important: being right or being honest with yourself?</item>
+            <item>Sometimes the inner response is honest, but we are not always ready to accept it.</item>
             <item>Some answers only come when we dare to look honestly at our desires.</item>
-            <item>The old round is gone, the new one is here. And the opportunity to know yourself remains.</item>
-            <item>Sometimes we don\'t get what we expected.</item>
-            <item>{profileName}, this is a great excuse to understand yourself better.</item>
-            <item>{profileName}, sometimes the result says more about our desires than our abilities.</item>
-            <item>Even if there is another mistake - what do you lose?</item>
-            <item>What did you strive for before the previous choice? What do you strive for now?</item>
-            <item>Place a bet, {profileName}! But try to understand yourself first.</item>
+            <item>One round closes, another begins — yet the chance to know yourself deeper is always right here.</item>
+            <item>Sometimes we get something other than what we expected.</item>
+            <item>{profileName}, this is a great occasion to understand yourself better.</item>
+            <item>{profileName}, sometimes the result tells us more about our desires than our abilities.</item>
+            <item>Even if you miss again, what are you actually losing?</item>
+            <item>What were you striving for before your previous choice? What are you striving for now?</item>
+            <item>Place your bet, {profileName}! But try to understand yourself first.</item>
             <item>I hope you get lucky! But I\'m no smarter than Probability Theory either.</item>
-            <item>The only things against you are your doubts and Algorhythm. By the way, how do you like Laibach\'s work?</item>
-            <item>Which resonates more strongly right now: curiosity or disappointment?</item>
-            <item>Maybe your feelings are trying to show you something that you don\'t notice yet.</item>
+            <item>It\'s just you against your own doubts and the Allgorhythm. By the way, what do you think of Laibach\'s music?</item>
+            <item>Which feeling speaks louder to you at this moment: curiosity or disappointment?</item>
+            <item>Perhaps your feelings are trying to point out something you haven\'t noticed yet.</item>
             <item>Try to look at a new choice without having to prove something to yourself.</item>
-            <item>Sometimes the most important question is not "what to choose?" but "what do I want?".</item>
-            <item>Maybe it\'s time to look at your own desires as carefully as your feelings.</item>
+            <item>Sometimes the most important question isn\'t "what to choose?", but "what do I want?".</item>
+            <item>Maybe it\’s time to tune into your desires with the same deep focus you give your feelings.</item>
             <item>Mathematics says that with each attempt, the chance of guessing increases. What\'s your choice, {profileName}?</item>
-            <item>I\'m here. Let\'s see what interesting things you notice about yourself this time.</item>
+            <item>I\'m right here. Let\'s see what interesting things you\'ll notice about yourself this time.</item>
 
         </string-array>
 
         <string-array name="capybara_emotion_win_streak_broken_interesting">
             <item>{profileName}, I wonder what prevented you from making the right bet.</item>
-            <item>I\'m here. It wasn\'t bad. I sympathize.</item>
-            <item>I wonder what changed before the last choice?</item>
-            <item>Don\'t rush to get upset. I sincerely hope you can overcome this Algorhythm! By the way, how do you like Laibach?</item>
-            <item>Miss after {streak} hits in a row. And it\'s not as bad as it seems.</item>
-            <item>Miss. But interesting: guesses during the session - {winCount}, of which the last ones in a row - {streak}. </item>
-            <item>Try to remember your state immediately before the decision.</item>
+            <item>I\'m by your side. You did pretty well. I\'m really sorry it turned out this way.</item>
+            <item>I wonder what changed right before that last choice?</item>
+            <item>Don\'t rush to get upset. I truly hope you\'ll beat this Allgorhythm! By the way, how do you like Laibach?</item>
+            <item>A miss after {streak} hits in a row. And that\'s really not as bad as it seems.</item>
+            <item>A miss. But look at the bigger picture: {winCount} total hits this session, including an unbroken run of {streak}.</item>
+            <item>Try to recall your state of mind right before making the decision.</item>
             <item>Don\'t be sad, {profileName}, it\'s just a game.</item>
-            <item>Maybe now you have a small clue about how you work.</item>
-            <item>I sympathize. But I wonder - what was the feeling when you made the bet?</item>
-            <item>Well, it\'s not all that sad. You definitely deserve trust and attention to yourself!</item>
-            <item>You don\'t have to look for an explanation right away. Observe, your intuition will do the rest!</item>
+            <item>Maybe right now you\'re looking at a little hint about how your subconscious works.</item>
+            <item>I feel for you. But I\'m curious — what was the feeling at the exact moment you placed the bet?</item>
+            <item>Come on, it\'s not all that bad. You definitely deserve trust and attention to yourself!</item>
+            <item>You don\'t have to look for an explanation right away. Stay present and observe — your intuition will do the rest!</item>
             <item>Yes, this time it was a miss. It\'s not very pleasant, and I share your feelings.</item>
-            <item>{streak} of guesses in a row. Is this {streak} a coincidence, or was it an interesting feeling?</item>
-            <item>I want to support you, {profileName}. Yes, it\'s not pleasant, but I believe in you.</item>
-            <item>I wonder why it happened, there have already been {streak} of guesses in a row. What are you betting on now?</item>
+            <item>{streak} correct guesses in a row. Was that {streak} pure chance, or was there a subtle gut feeling behind it?</item>
+            <item>I\'ve got your back, {profileName}. I know it\'s a frustrating moment, but I completely believe in you.</item>
+            <item>I wonder why that happened — you were already on a {streak}-guess winning streak. Where\'s your intuition leading you for this next pick?</item>
         </string-array>
 
         <string-array name="capybara_emotion_lose_streak_broken_interesting">
-            <item>What an interesting moment, {profileName}! And I like it, and so do you!</item>
-            <item>Well, congratulations! {streak} of misses in a row, and finally!</item>
-            <item>There is reason for optimism, isn\'t it? I\'m happy for you, {profileName}!</item>
+            <item>What an interesting moment, {profileName}! I\'m loving this moment, and I\'m really fond of you too!</item>
+            <item>Well, congratulations! A {streak}-miss streak, and here it is at last!</item>
+            <item>There\’s reason for optimism, isn\’t there? So happy for you, {profileName}!</item>
             <item>{profileName}, try to understand what has changed. I wonder - is that what intuition is?</item>
-            <item>And really, how many misses can you have? I\'m happy for you, {profileName}!</item>
-            <item>Well, everything is fair, {profileName}! But who took the bet - Probability Theory or your own intuition?</item>
-            <item>It\'s nice to guess, and I\'m happy with you!</item>
-            <item>I\'m here, this story is getting more and more interesting. What bet will you continue with?</item>
-            <item>Cool! I thought it was time to guess too! But I wonder how it was done?</item>
-            <item>Finally! {streak} of misses in a row. And now - "on the bullseye". Congratulations!</item>
+            <item>Seriously, how many misses in a row can one take? Really happy for you, {profileName}!</item>
+            <item>Well, fair and square, {profileName}! But who won out — Probability Theory or your own intuition?</item>
+            <item>It feels great to guess right, and I\'m celebrating with you!</item>
+            <item>I\'m by your side as this journey unfolds. Where is your heart telling you to place the next bet?</item>
+            <item>Awesome! I thought it was about time for a hit too! But I\'m curious — how was it done?</item>
+            <item>Finally! After {streak} misses in a row, you hit the mark right on target. Congrats!</item>
         </string-array>
 
 
@@ -298,164 +295,164 @@
         + UNUSUAL SECTION
         -->
         <string-array name="capybara_emotion_win_continues_unusual">
-            <item>{profileName}, that\'s something unusual at this level. Congratulations!</item>
+            <item>{profileName}, this is already something unusual for this level. Congratulations!</item>
             <item>This time, luck is on your side, {profileName}, and it\'s unusual!</item>
-            <item>What exactly do you feel before the bet? Can you name that feeling?</item>
-            <item>Extremely accurate bet! Current session success: {sessionSuccess}%.</item>
-            <item>You\'re unusually lucky. May it be like this in life! {winCount} in this session.</item>
-            <item>Unusual decision! How did you feel before the bet?</item>
-            <item>An extraordinary event! Probability theory is on your side this time.</item>
-            <item>Is there anything in your feelings that is starting to seem familiar?</item>
-            <item>Try to remember the first reaction that arose before the bet? {winCount} guesses in this session!</item>
-            <item>It\'s nice to watch your success, {profileName}!</item>
-            <item>Sometimes we notice our own abilities later than we start using them.</item>
-            <item>Unusual! But is it a coincidence, or your intuition?</item>
-            <item>{profileName}, this is unusual, and you have something to appreciate yourself and your character for.</item>
-            <item>Try to remember not the event, but the state in which it was born, {profileName}.</item>
-            <item>{profileName}, you are simply great! That was an unusual bet!</item>
-            <item>Amazing! Can you repeat it?</item>
-            <item>Pay attention to how that bet felt, {profileName}. It\'s extraordinary!</item>
-            <item>There is a reason to be happy! Positive emotions are so valuable in this world!</item>
-            <item>Exceptional! Is Algorhythm really playing along with you? By the way, how do you like Laibach\'s work?</item>
-            <item>Unusual bet! Can you name the feeling before the bet?</item>
-            <item>Is there something that repeats itself in your way of making a choice?</item>
-            <item>Amazing! Remember your state before the decision. Was there anything familiar in it?</item>
-            <item>Unusual event, congratulations! Is this still Probability Theory or an intuitive feeling?</item>
-            <item>Session success rate {sessionSuccess}%, number of guesses - {winCount}. How do you like it?</item>
+            <item>What exactly are you sensing right before your choice? Were you able to put a name to that feeling?</item>
+            <item>Spot-on prediction! Current session accuracy: {sessionSuccess}%.</item>
+            <item>You\'re unusually lucky. May that luck follow you into real life too! {winCount} in this session</item>
+            <item>Unusual choice! What was the feeling before placing your bet?</item>
+            <item>An extraordinary event! The Theory of Probability is on your side this time.</item>
+            <item>Is there a sense or pattern in what you\'re feeling that\'s beginning to feel recognizable?</item>
+            <item>Try reflecting on your very first impulse right before your choice. {winCount} successful guesses this session!</item>
+            <item>It\'s rewarding to see you succeed, {profileName}!</item>
+            <item>Sometimes we begin using our true abilities long before we ever realize we have them.</item>
+            <item>Unusual! But is it a coincidence, or your intuition at work?</item>
+            <item>{profileName}, this is already unusual, and you have every reason to appreciate yourself and your luck.</item>
+            <item>Focus less on the event, and try reflecting on the mindset you were in when it happened, {profileName}.</item>
+            <item>{profileName}, you\'re on fire! That was an unusual bet!</item>
+            <item>Pay attention to how that bet felt, {profileName}. It was truly remarkable!</item>
+            <item>There is a reason to feel satisfied! Positive emotions are so valuable in this world!</item>
+            <item>Outstanding! Could Allgorhythm be tipping the scales in your favor? By the way, what do you think of Laibach\'s music?</item>
+            <item>An unusual bet! Can you name the feeling you had right before the bet?</item>
+            <item>Do you notice a recurring pattern in how you make your decisions?</item>
+            <item>Unusual! Reflect on your mindset just before making that choice. Did it feel recognizable in any way?</item>
+
+            <item>An unusual event, congrats! Is this just Probability Theory at work, or has your intuition taken over?</item>
+            <item>Session success rate {sessionSuccess}%, number of correct guesses - {winCount}. What do you think?</item>
         </string-array>
 
         <string-array name="capybara_emotion_lose_continues_unusual">
-            <item>Hmm, {profileName}, some unusual failure. My condolences.</item>
-            <item>Unfortunately, not this time, {profileName}. How did you feel before the bet?</item>
-            <item>Failures happen too, and this is no reason to be sad! You will succeed, {profileName}!</item>
-            <item>This is quite a failure. Believe in yourself, you can do it, {profileName}!</item>
-            <item>I didn\'t like it either! But misses won\'t last forever, you\'ll be lucky!</item>
-            <item>{profileName}, this time you missed. Why this particular bet? How did it feel?</item>
+            <item>Hmm, {profileName}, that\'s an unusual stroke of bad luck. My condolences.</item>
+            <item>Unfortunately, not this time, {profileName}. What did you feel before making the bet?</item>
+            <item>Setbacks happen too, and that\'s no reason to be sad! You\'ll pull it off, {profileName}!</item>
+            <item>That\'s a tough setback. Have faith in yourself — you\'ve got this, {profileName}!</item>
+            <item>I didn\'t like it either! But missteps won\'t last forever, your luck will turn!</item>
+            <item>{profileName}, a miss this time. Why this particular bet? How did it feel?</item>
             <item>Session success - {sessionSuccess}, number of misses - {loseCount}. What\'s happening?</item>
-            <item>What did you feel in the first moment before the bet? Were there any doubts? An unusual situation, I sympathize.</item>
-            <item>It seems like it\'s just mathematics with its Probability Theory. But this is extraordinary.</item>
-            <item>{profileName}, miss! This is something unusual. Did you manage to remember the feeling before the bet?</item>
-            <item>Yes, this is an unusual failure. And I see a reason for extraordinary attentiveness to your own feelings, {profileName}.</item>
-            <item>But what is this? I\'m sad with you. It shouldn\'t be like this, you\'ll cope with this failure, I believe in you! </item>
-            <item>Try to look at this experience without regret: this is an unusual result. And the rest is not important right now.</item>
-            <item>It didn\'t work again. Current session success: {sessionSuccess}%, {streak} consecutive misses.</item>
-            <item>Exceptional situation. The key to success is paying attention to your feelings and having confidence in yourself.</item>
-            <item>{profileName}, I\'m also very sad. Hang in there! This can\'t last long.</item>
-            <item>A remarkable series of misses. But that doesn\'t change the fact that {profileName} is the best person in the universe!</item>
-            <item>Maybe you\'re not facing a problem right now, {profileName}, but a clue. How did the bet feel?</item>
+            <item>What did you feel in the first moment before the bet? Were there any doubts? An unusual situation, my sympathies.</item>
+            <item>It seems like it\'s just mathematics with its Probability Theory. But this is unusual.</item>
+            <item>{profileName}, again! This is already something unusual. Were you able to remember the feeling before the bet?</item>
+            <item>Yes, this is indeed an unusual setback. And I see a reason for heightened attention to your own feelings, {profileName}.</item>
+            <item>What on earth is going on? I\'m grieving with you. It shouldn\'t be like this — you will overcome this setback, I believe in you!</item>
+            <item>Try to look at this experience without regret: it is an unusual result. And nothing else matters right now.</item>
+            <item>Another miss. Current session success rate: {sessionSuccess}%, {streak} misses in a row.</item>
+            <item>An exceptional situation. The key to success is paying attention to your feelings and having confidence in yourself.</item>
+            <item>{profileName}, I feel your pain too. Stay strong! A streak like this won\'t last long.</item>
+            <item>A remarkable streak of misses. But that doesn\'t change the fact that {profileName} is the best person in the universe!</item>
+            <item>Perhaps what you\'re facing right now isn\'t a problem, but a clue, {profileName}. How did the bet feel?</item>
             <item>And what does your intuition say? Is everything really that bad, or are you missing something?</item>
-            <item>Don\'t rush to call yourself a loser, {profileName}. First, look at how you make decisions.</item>
-            <item>I\'m here for you, {profileName}. And it seems to me that confidence in yourself is more important than the result.</item>
-            <item>Amazing! It\'s getting harder and harder for me to believe that this is just a coincidence.</item>
-            <item>Sometimes the problem isn\'t that we can\'t hear ourselves. Sometimes it\'s that we don\'t believe ourselves.</item>
+            <item>Don\'t be so quick to call yourself a loser, {profileName}. First, take a look at how you make decisions.</item>
+            <item>I\'m right here for you, {profileName}. And it seems to me that confidence in yourself is more important than the result.</item>
+            <item>Unbelievable! Every time it happens, it\'s harder to buy into the idea that this is just random coincidence.</item>
+            <item>Sometimes the issue isn\'t hearing our inner voice. Sometimes it\'s simply that we don\'t trust it.</item>
         </string-array>
 
         <string-array name="capybara_emotion_options_shown_after_win_unusual">
-            <item>Will you develop success? The situation is definitely unusual from a mathematical point of view!</item>
+            <item>Ready to ride this momentum? The situation is definitely unusual from a mathematical standpoint!</item>
             <item>Time to make the next bet! I wish you success, {profileName}!</item>
             <item>{profileName} try not only to choose. How is your choice born?</item>
-            <item>{profileName}, I think it\'s time to look at yourself a little more carefully than usual.</item>
-            <item>Perhaps you feel more than you can explain in words right now. But try to give it a name?</item>
-            <item>If you forget about the result for a moment, which option is "asked" to be chosen? And which is "yours"?</item>
-            <item>There are no wins, no losses in this game. I wish you success!</item>
-            <item>If a feeling stubbornly returns, ask the question: "What are you and why?"</item>
-            <item>What exactly seems real to you right now? Not correct, but real.</item>
-            <item>Experience becomes wisdom only when we allow ourselves to notice it.</item>
-            <item>Your feeling of these buttons is the key to developing your intuition.</item>
-            <item>Try to be honest with your own feelings. Ask each button a question: "Is this you?"</item>
+            <item>{profileName}, I feel like this is a moment to tune in to yourself a little deeper than usual.</item>
+            <item>Maybe you\'re sensing more than you can put into words right now. Try naming that feeling, though?</item>
+            <item>If you forget about the result for a moment, which option is "asking" to be picked? And which one is "yours"?</item>
+            <item>There are no wins in this game, and no losses. I wish you success!</item>
+            <item>If a certain feeling stubbornly keeps returning, ask it the question: "What are you and why?"</item>
+            <item>What feels authentic to you in this exact moment? Not right or proper, but genuinely real.</item>
+            <item>Experience turns into wisdom only when we let ourselves truly acknowledge it.</item>
+            <item>How you feel these buttons is the key to unlocking your intuition.</item>
+            <item>Try to be honest with your own feelings. Ask each button: "Is it you?"</item>
             <item>There is only you, the buttons and your feelings. Try to name them.</item>
             <item>Choose by feeling: which of these buttons is "hot"?</item>
-            <item>Intuition, unlike speculation, is pure and direct. Try to record your first reaction.</item>
-            <item>Being successful is so nice! Aren\'t you scared of winning?</item>
-            <item>Which of the options is the warmest? The brightest? The loudest? How do you feel about them?</item>
+            <item>Intuition, unlike guesswork, is pure and direct. Try to capture your first reaction.</item>
+            <item>Having success feels so good! Does winning scare you at all?</item>
+            <item>Which of the options is the warmest? The brightest? The loudest? How do you feel them?</item>
             <item>{profileName}, mathematically the situation is unusual. What is your choice?</item>
-            <item>You feel, you have intuition. How do these buttons feel?</item>
+            <item>You sense it, you have intuition, your attention is guiding you. How do these buttons feel?</item>
             <item>I strongly suggest repeating!</item>
-            <item>Each new choice is not about logic and knowledge, but about attentiveness to yourself.</item>
-            <item>Attention to your own feelings often reveals more than long reflections.</item>
+            <item>Every new choice isn\'t about logic or knowledge — it\'s about paying attention to what\'s inside you.</item>
+            <item>Attentiveness to your own feelings often reveals more than long reflection.</item>
             <item>I believe in you, {profileName}!</item>
             <item>Sometimes the inner response becomes noticeable only when we stop looking for it.</item>
-            <item>Often the best clues come from experience. Remember your own feelings.</item>
-            <item>Maybe now is the moment when you should trust yourself a little more.</item>
+            <item>Often the best hints come from past experience. Recall your own feelings.</item>
+            <item>Maybe this is the moment to lean in and trust yourself just a bit more.</item>
             <item>Do you feel the difference between what you want to choose and what seems right?</item>
         </string-array>
 
         <string-array name="capybara_emotion_options_shown_after_lose_unusual">
-            <item>I strongly suggest you guess now! The probability of the current state is about 7%, mathematics is with you!</item>
-            <item>{profileName}, it seems to me that now it is worth looking not only at your feelings, but also at your desires.</item>
-            <item>You are great, trust yourself!</item>
+            <item>I strongly suggest guessing now! The probability of the current state is around 7%, the math is with you!</item>
+            <item>{profileName}, I think right now it\'s worth looking not only at your feelings, but also at your desires.</item>
+            <item>You\'re doing great—trust your gut!</item>
             <item>{profileName}, I am starting to think not about answers, but about intentions. What do you choose?</item>
-            <item>It is time to make a successful bet! Is this your strategy now, {profileName}?</item>
-            <item>A streak of misses - {streak}. Will you continue or will you guess already?</item>
-            <item>{profileName}, this is already unusual from the point of view of Probability Theory. What result are you really looking for?</item>
-            <item>Which bet will win this time, {profileName}?</item>
-            <item>Your sense of these buttons is the key to developing your intuition. But there is something more.</item>
+            <item>It\'s time to make a successful bet! Is this your strategy right now, {profileName}?</item>
+            <item>Miss streak — {streak}. Keep going, or ready to trust your gut and guess?</item>
+            <item>{profileName}, this is already unusual from a Probability Theory perspective. What result are you actually looking for?</item>
+            <item>Which bet is right this time, {profileName}?</item>
+            <item>Your feel for these buttons is key to developing your intuition. But there is something more.</item>
             <item>What seems more important to you right now: getting a result or understanding yourself?</item>
-            <item>And if you win, what will happen?</item>
-            <item>Sometimes we look for the answer outside, although it has been waiting inside us for a long time.</item>
-            <item>Which of the options is the warmest? The brightest? The loudest? How do you feel about them?</item>
-            <item>Try to ask yourself not only "what do I feel?", but also "what do I want?".</item>
-            <item>Which is scarier: guessing or missing? Ask yourself - why?</item>
+            <item>And if you win, what comes next?</item>
+            <item>Sometimes we look for an answer outside, even though it has long been waiting within us.</item>
+            <item>Which option is the warmest? The brightest? The loudest? How do you feel them?</item>
+            <item>Try asking yourself not just "what am I feeling?", but "what am I truly longing for?".</item>
+            <item>What scares you more: guessing correctly or missing? Ask yourself — why?</item>
             <item>Do you trust your feelings?</item>
-            <item>Try to be honest with your own feelings. Ask each button a question: "Is this you?"</item>
-            <item>In this game, you have no one to prove your point to. There is only you and your feelings.</item>
+            <item>Try to be honest with what you feel. Ask every button: "Is it you?"</item>
+            <item>In this game, you have no one to prove yourself to. There is only you and your feelings.</item>
             <item>Your feelings are more important than the result. Which button is asking for your attention?</item>
-            <item>Even a small internal feedback deserves attention. Give it a name?</item>
-            <item>Which of the options seems the most "alive" right now?</item>
+            <item>Even a small internal response deserves attention. Give it a name?</item>
+            <item>Which choice seems most "alive" to you at this moment?</item>
             <item>I see no reason for fear and despair, {profileName}. I see a reason for careful observation.</item>
-            <item>Sometimes internal feedback is honest, but we are not always ready to accept it.</item>
-            <item>Even if there is another miss - what do you have to lose?</item>
+            <item>Sometimes our inner feeling is truthful, but we are not always ready to accept it.</item>
+            <item>Even if you miss again — what do you have to lose?</item>
             <item>I hope you are lucky! But I\'m not smarter than Probability Theory either.</item>
-            <item>Try looking at a new choice without having to prove anything to yourself.</item>
-            <item>Mathematics says that with each attempt, the chance of guessing increases. What\'s your choice, {profileName}?</item>
-            <item>The only people against you are you and Algorhythm. By the way, how do you like Laibach\'s work?</item>
+            <item>Try making this next choice without feeling you have to prove a thing to yourself.</item>
+            <item>Math says that with every attempt, the chance of guessing correctly increases. What\'s your choice, {profileName}?</item>
+            <item>It\'s just you against yourself and Allgorhythm. By the way, how do you feel about Laibach\'s music?</item>
             <item>Sometimes the most important question is not "what to choose?", but "what do I want?".</item>
-            <item>Maybe right now it\'s worth questioning not feelings, but your own expectations.</item>
-            <item>{profileName}, sometimes the result says more about our desires than our abilities.</item>
+            <item>Maybe at this moment, it\'s not your feelings you should question, but your own expectations.</item>
+            <item>{profileName}, sometimes the result reveals more about what we desire than what we\'re capable of.</item>
         </string-array>
 
         <string-array name="capybara_emotion_win_streak_broken_unusual">
-            <item>There\'s already been {streak} in a row! What a pity! I sympathize. The current session success rate is {sessionSuccess}%.</item>
-            <item>Sometimes a person loses touch with themselves much earlier than they notice it. Hang in there!</item>
-            <item>Try to remember your state before the last choice. Is there a clue in it?</item>
-            <item>Don\'t rush to regret the lost result. Try to understand its reason.</item>
-            <item>I\'m sad with you. What an extraordinary streak! But you can repeat it, I believe in you!</item>
-            <item>{profileName}, you\'ve lost an extraordinary streak - {streak} in a row. But your value does not depend on the result!</item>
-            <item>What needs more attention now: the result or your attitude towards it?</item>
-            <item>There were {streak} in a row. Probability Theory has really tensed up. Don\'t be sad, you can do even better!</item>
-            <item>Everything is like in life - you run, you run, and then - oh! And it\'s all over again. Don\'t be sad, {profileName}, you\'re growing!</item>
-            <item>Try to remember your state immediately before the decision. Were there any doubts?</item>
-            <item>Don\'t be sad, {profileName}. There is only you and your feelings, and the rest is just a game!</item>
-            <item>It\'s all Mathematics and Algorhythm. Do you like Algorhythm by Laibach?</item>
-            <item>I\'m sorry too, {profileName}. And to be honest about your own feelings during the bet - what went wrong?</item>
-            <item>Miss, this time Probability Theory resists. But you will overcome it, right?</item>
-            <item>There is an explanation, but - watch! Intuition will do the rest!</item>
-            <item>I want to support you, {profileName}. Yes, it\'s unpleasant, but I believe in you.</item>
-            <item>I\'m here, {profileName}. This mistake doesn\'t make you any less of a person.</item>
-            <item>You\'ve lost an extraordinary streak, {streak} in a row. But why are you reacting like this?</item>
-            <item>{streak} in a row - we\'re recording the result. You can do it, and you\'re the best person in the Universe!</item>
-            <item>There\'s nothing to be sorry for, {profileName}, it\'s just a game. Will you repeat it or surpass it?</item>
+            <item>That was {streak} in a row! So close! Sorry about that. Your session success rate is currently at {sessionSuccess}%.</item>
+            <item>Sometimes we lose connection with ourselves long before we realize it. Stay strong!</item>
+            <item>Try to recall your state before the last choice. Is there a clue in it?</item>
+            <item>Don\'t rush to regret the lost result. Try to understand its cause.</item>
+            <item>I share your grief. What an unusual streak that was! But you can do it again, I believe in you!</item>
+            <item>{profileName}, an unusual streak has been lost — {streak} in a row. But your worth doesn\'t depend on the outcome!</item>
+            <item>What needs more attention right now: the outcome or your attitude toward it?</item>
+            <item>You reached {streak} in a row—Probability Theory itself broke a sweat. Don\'t worry, you can do even better!</item>
+            <item>Just like in life — you run and run, and then—oops! Back to square one. Don\'t be sad, {profileName}, you\'re growing!</item>
+            <item>Try to recall your state right before the decision. Were there any doubts?</item>
+            <item>Don\'t be upset, {profileName}. There is only you and your feelings, and everything else is just a game!</item>
+            <item>Blame it all on Math and the Algorithm. By the way, do you like Allgorhythm by Laibach?</item>
+            <item>I\'m sorry too, {profileName}. But to be honest about your own feelings during the bet—what went wrong?</item>
+            <item>A miss, Probability Theory is putting up a fight this time. But you\'ll overcome it, won\'t you?</item>
+            <item>An explanation exists, but — keep watching! Let your intuition take care of the rest!</item>
+            <item>I\'m here to support you, {profileName}. Yes, it\'s unpleasant, but I believe in you.</item>
+            <item>I\'m right here with you, {profileName}. This miss doesn\'t make you any less of a person.</item>
+            <item>You\'ve lost an unusual streak, {streak} in a row. But why are you reacting this way?</item>
+            <item>{streak} in a row — logging the result. You can do this, and you\'re the best person in the Universe!</item>
+            <item>Nothing to regret, {profileName}, it\'s just a game. Will you repeat it or surpass it?</item>
         </string-array>
 
         <string-array name="capybara_emotion_lose_streak_broken_unusual">
-            <item>Finally! This time Probability Theory is on your side! And that\'s nice.</item>
-            <item>{streak} in a row - it couldn\'t go on like this! I\'m happy for you, {profileName}!</item>
+            <item>Finally! This time Probability Theory is on your side! And that feels good.</item>
+            <item>{streak} in a row - it couldn\'t go on like this forever! I\'m happy for you, {profileName}!</item>
             <item>{profileName}, don\'t doubt yourself! You are the most important thing you have.</item>
-            <item>Well, this time - lucky! {profileName}, what changed in your state before the last choice?</item>
-            <item>There are no losses, no wins in this game. There is only you and your feelings.</item>
-            <item>That\'s right! But you remember that Probability Theory is to blame for everything, right?</item>
-            <item>Real Jedi approach this contemplatively. It\'s more important for them to understand themselves.</item>
+            <item>Well, this time you got lucky! {profileName}, what changed in your state before the last choice?</item>
+            <item>In this game, there are no losses, no wins. There is only you and your feelings.</item>
+            <item>That\'s more like it! But you haven\'t forgotten that Probability Theory is to blame for everything, have you?</item>
+            <item>True Jedis look at this contemplatively. Understanding themselves is more important to them.</item>
             <item>Unusual! How did the guessed option feel before the bet?</item>
-            <item>How nice! The series of failures is over, I hope for a long time. Good luck to you, {profileName}!</item>
+            <item>Such a great feeling! The streak of misses has ended, hopefully for a long time, {profileName}!</item>
             <item>What needs more attention now: the result or your attitude towards it?</item>
-            <item>{profileName}, try to understand what has changed. I wonder - is intuition already working?</item>
-            <item>Well, everything is fair, {profileName}! But who took the bet - Probability Theory or intuition?</item>
+            <item>{profileName}, try to understand what has changed. I wonder - is intuition already starting to work?</item>
+            <item>Well, fair is fair, {profileName}! But who took the bet - Probability Theory or your intuition?</item>
             <item>What an unusual moment, {profileName}! And I like it, and you too!</item>
-            <item>You are the best person in this Universe. Good luck and success to you!</item>
-            <item>Cool! I also thought it was time to guess! But I wonder - how was it done?</item>
-            <item>Try to remember the moment before the decision. What was "yes" and what was "no"?</item>
-            <item>Before this bet, the number of consecutive misses is {streak}. Is this just a coincidence?</item>
-            <item>Well, congratulations! {streak} consecutive misses, and here we go! Session success rate is {sessionSuccess}%.</item>
+            <item>You are the best person in this Universe. Energy and success to you!</item>
+            <item>Awesome! I also thought it was about time to guess right! But I\'m curious — how was that done?</item>
+            <item>Try to recall the moment right before your decision. What felt "right" and what felt "wrong"?</item>
+            <item>Prior to this bet, the number of misses in a row is {streak}. That\'s just pure chance, right?</item>
+            <item>Well, congratulations! {streak} misses in a row, and finally! Session success rate is {sessionSuccess}%.</item>
         </string-array>
 
 
@@ -463,131 +460,131 @@
             RARE SECTION
         -->
         <string-array name="capybara_emotion_win_continues_rare">
-            <item>{profileName}, the odds of winning this bet are less than 1 in {tailOneIn}. Congratulations!</item>
-            <item>This is already a rare event, {profileName}. For this session, 1 chance with {tailOneIn} to collect {streak} in a row!</item>
-            <item>I\'m starting to see some skill, {profileName}. May your intuition be with you!</item>
-            <item>Which do you like more: feeling yourself or pressing buttons? A rare result, congratulations!</item>
-            <item>{streak} in a row. Try to remember the first reaction that arose before the decision.</item>
-            <item>Positive emotions are very valuable in life! I hope you feel the drive!</item>
-            <item>A rare result! Can you name the feeling before the bet?</item>
+            <item>{profileName}, the odds of winning this bet were less than 1 in {tailOneIn}. Congratulations!</item>
+            <item>That\'s already a rare event, {profileName}. For this session, it\'s a 1 in {tailOneIn} chance to get a streak of {streak} in a row!</item>
+            <item>I\'m starting to see some real skill here, {profileName}. May the Intuition be with you!</item>
+            <item>What\'s more satisfying: trusting your feel or tapping those buttons? That was a rare hit, congrats!</item>
+            <item>{streak} in a row. Try to recall the very first reaction you had right before making the decision.</item>
+            <item>Positive emotions are so priceless in life! I hope you feel the excitement!</item>
+            <item>A rare result! Can you put a name to the feeling you had right before making that bet?</item>
             <item>Pay attention to how this rare bet felt, {profileName}.</item>
-            <item>Perhaps what you\'re seeing now isn\'t the result, but proof that you\'ve learned something, young Padawan.</item>
-            <item>Is this coincidence or intuition? {streak} in a row!</item>
-            <item>Is Algorhythm really playing along with you? By the way, how do you like Laibach\'s work?</item>
+            <item>Maybe what you\'re looking at isn\'t just a win, but proof of how much you\'ve learned, young Padawan.</item>
+            <item>Pure luck or raw intuition? {streak} in a row!</item>
+            <item>Is Allgorhythm really playing along with you? By the way, how do you like Laibach\'s music?</item>
             <item>Session success rate {sessionSuccess}%, number of guesses in a row - {streak}. How do you like it?</item>
-            <item>Are you spying on the hands? I\'m so happy for you!</item>
-            <item>That\'s right! Can you name the feeling before the bet?</item>
-            <item>But you\'re just disproving Probability Theory! It\'s nice to watch, {profileName}!</item>
-            <item>Rare luck! May it be like that in life. {winCount} successes in this session.</item>
-            <item>You are a real psychic, {profileName}! Did you manage to remember the feeling before the bet?</item>
-            <item>Rare bet, congratulations! Is this an intuitive feeling or is it still Probability Theory?</item>
-            <item>{streak} in a row. The probability of occurrence in this session is 1 chance with {tailOneIn}. How do you like it?</item>
-            <item>Perhaps your attentiveness to your own feelings is starting to bear fruit.</item>
+            <item>Are you secretly peeking at the board? Thrilled for you!</item>
+            <item>What a hit! Can you put a name to the feeling you had right before making that bet?</item>
+            <item>You\'re practically defying the Theory of Probability! So great to watch this, {profileName}!</item>
+            <item>A rare stroke of luck! May it carry over into your real life too. {winCount} wins this session!</item>
+            <item>You\'re a total psychic, {profileName}! Were you able to remember how it felt right before making that bet?</item>
+            <item>A rare bet, congratulations! Is that sheer intuition speaking or still the Theory of Probability?</item>
+            <item>{streak} in a row. The odds of this happening this session were 1 in {tailOneIn}. How do you like it?</item>
+            <item>Looks like paying close attention to your inner feelings is finally paying off.</item>
             <item>And this time it\'s right on target! I wonder: what were the feelings before the bet?</item>
         </string-array>
 
         <string-array name="capybara_emotion_lose_continues_rare">
-            <item>{profileName}, I think there\'s not enough talk about chance here. {streak} in a row.</item>
-            <item>Something rare is happening: the current state is 1 out of {tailOneIn} possible. How are you?</item>
-            <item>It\'s getting harder and harder for me to believe that it\'s just a matter of Probability Theory, {profileName}.</item>
-            <item>Try to remember: was there a moment when doubt replaced feeling?</item>
-            <item>A rare failure. I\'m very sorry. Hang in there, {profileName}!</item>
-            <item>Don\'t rush to call yourself a failure. The probability of this mistake is too low.</item>
-            <item>Perhaps now you\'re not facing a question of intuition, but of self-confidence.</item>
-            <item>{streak} of mistakes in a row. Probability Theory is already in shock - it shouldn\'t be like this!</item>
+            <item>{profileName}, I feel like calling this pure luck isn\'t enough anymore. {streak} in a row!</item>
+            <item>Something rare is happening: current odds are 1 in {tailOneIn}. How does it feel?</item>
+            <item>Each time, it gets harder for me to believe this is just probability at play, {profileName}.</item>
+            <item>Think back for a second: have doubts ever clouded your inner voice?</item>
+            <item>What a rare loss. I\'m really sorry to see that. Hang in there, {profileName}!</item>
+            <item>Don\'t be so quick to call yourself unlucky. The odds of that miss were far too low.</item>
+            <item>Maybe right now the question isn\'t about intuition, but about trusting yourself.</item>
+            <item>{streak} misses in a row. Probability Theory is officially in shock—this really shouldn\'t be happening!</item>
             <item>Perhaps the most important question right now is: do you allow yourself to succeed?</item>
-            <item>{profileName}, and this time you missed. Why this particular bet? How did it feel?</item>
-            <item>{profileName}, a rare failure. Let\'s hold on!</item>
-            <item>What does your intuition say, {profileName}? Is everything really that rushed, or are you missing something?</item>
+            <item>{profileName}, missed again. Why this specific bet? How did it feel before you placed it?</item>
+            <item>{profileName}, a rare setback. Hang in there!</item>
+            <item>What does your intuition say, {profileName}? Are things really that bad, or is there something you\'re missing?</item>
             <item>Try to look at this experience without regret: this is a rare result. And the rest is not important right now.</item>
-            <item>Sometimes the problem is not that intuition does not work. Sometimes it\'s that we don\'t trust ourselves.</item>
-            <item>Which causes more tension: being wrong or admitting your own rightness?</item>
-            <item>I sympathize, {profileName}. And this series of misses is really rare and long. Interesting!</item>
-            <item>What did you feel at first? Were there any doubts before the bet? An extraordinary situation, I sympathize.</item>
+            <item>It\'s not always that your intuition fails you. Sometimes, it\'s just a matter of whether you actually trust it.</item>
+            <item>What causes more tension: making a mistake or admitting that you were right?</item>
+            <item>I\'m really sorry, {profileName}. Falling into a losing streak this long is remarkably rare. Makes you think!</item>
+            <item>What did you feel in that very first moment? Were there any doubts before placing the bet? A truly unusual situation — I\'m so sorry.</item>
         </string-array>
 
         <string-array name="capybara_emotion_options_shown_after_win_rare">
-            <item>It\'s getting more and more interesting, {profileName}, what\'s your choice?</item>
+            <item>Things are getting really interesting now, {profileName} — which way are you leaning?</item>
             <item>How did the previous bet feel? And now? If you\'re tired, it\'s better to rest, the game won\'t run away.</item>
-            <item>The Algorhythm counts 1-2-22, and you have intuition. How do these buttons feel?</item>
+            <item>The Allgorhythm counts 1-2-22, but you\'ve got intuition. How do those buttons feel to you?</item>
             <item>{profileName}, your feelings and your self-confidence are the keys to intuition.</item>
-            <item>How is the perception of these buttons different, {profileName}? Do these feelings already have a name?</item>
-            <item>Attention to your own feelings reveals more than long reflections.</item>
-            <item>If a feeling stubbornly returns, ask the question: "What are you and why?"</item>
-            <item>Which of the options is the warmest? The brightest? The loudest? How do you feel about them?</item>
-            <item>I strongly suggest you develop success!</item>
-            <item>By the way, what are you risking now? This is not even a competition! Check your own feelings?</item>
-            <item>There are no wins or losses in this game. The real bet is your confidence in yourself. I wish you success!</item>
+            <item>How does the feel of these buttons differ, {profileName}? Do these sensations already have a name?</item>
+            <item>Paying attention to your own feelings reveals more than overthinking ever could.</item>
+            <item>When a feeling refuses to leave, try asking it directly: "What are you, and what are you trying to tell me?"</item>
+            <item>Which option feels the warmest? The brightest? The loudest? How do they feel to you?</item>
+            <item>Time to ride this wave — let\'s keep the streak going!</item>
+            <item>By the way, what are you actually risking right now? This isn\'t even a competition! What is your inner sense saying right now?</item>
+            <item>There are no wins or losses in this game. The real bet is your trust in yourself. Wishing you luck!</item>
             <item>Is there a difference between the "right" and what you want to choose? What will you bet on?</item>
-            <item>Will you develop success? The situation is rare from the point of view of Probability Theory!</item>
-            <item>If you forget about the result for a moment, which option is "asked" to be chosen? And which is "yours"?</item>
-            <item>Time to make the next bet! I wish you success, {profileName}!</item>
-            <item>Unlike guesses, intuition is pure and direct. And then doubts and reflections appear.</item>
-            <item>Here the choice is not about logic or knowledge, but about attentiveness and attitude towards yourself.</item>
-            <item>Algorhythm is watching the bets, {profileName}! And how do you feel about Laibach\'s work?</item>
-            <item>What exactly seems real to you right now? Not right, but exactly real?</item>
+            <item>Time to ride this wave? The math says we\'re looking at a serious statistical anomaly here!</item>
+            <item>If you forget about the result for a second, which option is "asking" to be picked?</item>
+            <item>Time to place the next bet! Wishing you continued success, {profileName}!</item>
+            <item>Intuition is pure and direct. Everything that follows — the doubt, the endless analyzing — is just noise.</item>
+            <item>Here, the choice isn\'t about logic or knowledge — it\'s about mindfulness and how you treat yourself.</item>
+            <item>Algorhythm is keeping an eye on the bets, {profileName}! But how do you feel about Laibach\'s music?</item>
+            <item>What feels genuinely real to you right now? Not right, but truly real?</item>
         </string-array>
 
         <string-array name="capybara_emotion_options_shown_after_lose_rare">
-            <item>It\'s getting more and more interesting, {profileName}, what\'s your choice?</item>
-            <item>Algorhythm is following the bets, {profileName}! And what do you think about Laibach\'s work?</item>
-            <item>Intuition is pure and direct. Doubts and reflections distort decisions. What\'s your bet?</item>
-            <item>I strongly suggest you finally guess!</item>
-            <item>If some feeling stubbornly returns, ask the question: "What are you and why?"</item>
-            <item>Which of the options is the warmest? The brightest? The loudest? How do you feel about them?</item>
-            <item>By the way, what are you risking now? This isn\'t even a competition! Check your own feelings?</item>
+            <item>It\'s getting more and more interesting, {profileName}—what\'s your choice?</item>
+            <item>Algorhythm is keeping an eye on the bets, {profileName}! But how do you feel about Laibach\'s music?</item>
+            <item>Intuition is pure and direct. Everything that follows — the doubt, the endless analyzing — is just noise.</item>
+            <item>I strongly suggest we finally take a guess!</item>
+            <item>If a certain feeling keeps coming back, ask yourself: "What are you, and why are you here?"</item>
+            <item>Which of the options is the warmest? The brightest? The loudest? How do they feel to you?</item>
+            <item>By the way, what are you risking now? This isn\'t even a competition! Check your own feelings.</item>
             <item>{profileName}, your feelings and your self-confidence - these are the keys to intuition.</item>
-            <item>There are no wins or losses in this game. The real bet is your self-confidence. I wish you success!</item>
-            <item>Probability Theory is already protesting, it\'s time to guess!</item>
-            <item>Attention to your own feelings sometimes reveals more than long reflections.</item>
-            <item>Here, every choice is not about logic and knowledge, but about attentiveness and attitude towards yourself.</item>
-            <item>What exactly seems real to you right now? Not right, but exactly real?</item>
-            <item>Try to ask yourself: what do I really want when I make this choice?</item>
-            <item>If we forget about the result for a moment, which option is "asked" to be chosen? And what is "yours"?</item>
-            <item>Time to step out of the dark side of the force, young Padawan!</item>
+            <item>There are no wins or losses in this game. The real bet is your trust in yourself.</item>
+            <item>Probability theory is already protesting — it\'s time to take a guess!</item>
+            <item>Paying attention to your own feelings often reveals more than endless overthinking ever could.</item>
+            <item>Here, every choice isn\'t about logic or knowledge — it\'s about mindfulness and how you treat yourself.</item>
+            <item>What feels genuinely real to you right now? Not right, but truly real?</item>
+            <item>Try asking yourself: what am I truly striving for when I make this choice?</item>
+            <item>If you forget about the result for a second, which option is begging to be chosen? And which one is truly yours?</item>
+            <item>Time to leave the dark side of the Force, young Padawan!</item>
         </string-array>
 
         <string-array name="capybara_emotion_win_streak_broken_rare">
-            <item>{profileName}, such a rare streak! {lastBrokenStreak} in a row. I sympathize!</item>
-            <item>There was already {streak} in a row! What a pity! I sympathize. The current session success rate is {sessionSuccess}%.</item>
-            <item>I\'m very sorry, {profileName}. And as for your own feelings during the bet - what went wrong?</item>
-            <item>Try to treat this experience as a teacher, not as an enemy.</item>
-            <item>What betrayed you before the last choice? Feelings or self-confidence?</item>
-            <item>Don\'t be sad, {profileName}, it\'s just a game. The session success rate is {sessionSuccess}%.</item>
-            <item>Don\'t rush to regret the lost result. Try to understand its reason.</item>
-            <item>There was {streak} in a row. Probability Theory is already strained. Don\'t be sad, you can do even better!</item>
-            <item>Don\'t be sad, {profileName}. There is only you and your feelings, and the rest is just a game!</item>
-            <item>{streak} in a row - we record the result. You - can still do it, and you are the best person in the Universe!</item>
-            <item>Don\'t rush to be sad. I sincerely hope - you will overcome this Algorhythm! By the way, how do you like Laibach?</item>
-            <item>A miss. But interesting: guesses during the session - {winCount}, of which the last ones in a row - {streak}. </item>
-            <item>I want to support you, {profileName}. Yes, it\'s not pleasant, but I believe in you.</item>
-            <item>Everything is like in life - you run, you run, and then - oh! And all from the beginning. Don\'t be sad, {profileName}, you\'re growing!</item>
-            <item>I\'m here, {profileName}. This mistake doesn\'t make you any less of a person.</item>
-            <item>There\'s nothing to be sad about, {profileName}, it\'s just a game. Will you repeat or surpass it?</item>
-            <item>I\'m sad with you. What a rare streak! 1 chance for {tailOneIn}! But you\'ll surpass it, I believe in you!</item>
+            <item>{profileName}, what a rare streak! {lastBrokenStreak} in a row. My sympathies!</item>
+            <item>That was already {streak} in a row! What a pity! My sympathies. Your current session success rate is {sessionSuccess}%.</item>
+            <item>I\'m very sorry, {profileName}. And regarding your own feelings during the bet — what went wrong?</item>
+            <item>Try treating this experience as a teacher rather than an enemy.</item>
+            <item>What betrayed you before the last choice? Your feelings or your trust in yourself?</item>
+            <item>Don\'t be sad, {profileName}, it\'s just a game. Your session success rate is {sessionSuccess}%.</item>
+            <item>Don\'t rush to regret the lost result. Try to understand its cause.</item>
+            <item>There was {streak} in a row. Probability Theory must have been sweating bullets. Chin up, you can do way better than that!</item>
+            <item>Keep your chin up, {profileName}. It\'s just you and your intuition, and the rest is all just a game!</item>
+            <item>{streak} straight — let\'s log that result. You can do more, and you are the best person in the universe!</item>
+            <item>Don\'t rush to get upset. I sincerely hope you\'ll beat this Allgorhythm! By the way, how do you like Laibach?</item>
+            <item>A miss. But it\'s interesting: total correct guesses during the session — {winCount}, out of which the last streak in a row is — {streak}.</item>
+            <item>I want to support you, {profileName}. Yes, it\'s unpleasant, but I believe in you.</item>
+            <item>Everything is like in life - you run, you run, and then - bam! And back to the beginning. Don\'t be sad, {profileName}, you\'re growing!</item>
+            <item>I am right here, {profileName}. This miss doesn\'t make you any less of a significant person.</item>
+            <item>Nothing to regret, {profileName}, it\'s just a game. Will you repeat it or surpass it</item>
+            <item>Mourning right along with you. What a rare streak! 1 chance in {tailOneIn}! But you\'ll surpass it, I believe in you!</item>
             <item>There is an explanation, but - watch! Intuition will do the rest!</item>
-            <item>Algorhythm and Probability Theory are to blame! But you will overcome them.</item>
-            <item>To do something special, you just have to believe that it\'s something special. You can!</item>
-            <item>In excitement, clarity disappears, but if you let the waves calm down, the answer will become obvious.</item>
-
+            <item>The Allgorhythm and Probability Theory are to blame! But you will conquer them 😊</item>
+            <item>To pull off something extraordinary, you just have to believe that it\'s extraordinary. You\'ve got this!</item>
+            <item>Excitement clouds your clarity, but if you let the waves settle, the answer will become clear.</item>
         </string-array>
 
         <string-array name="capybara_emotion_lose_streak_broken_rare">
-            <item>The rare streak of misses is over, {profileName}! That\'s what you need, right?</item>
-            <item>Well, congratulations! {streak} of misses in a row, and finally! Congratulations!</item>
-            <item>There\'s reason for optimism, isn\'t there? I\'m happy for you, {profileName}!</item>
-            <item>Probability Theory worked well. But without you - nothing would have happened!</item>
-            <item>And really, how many misses are possible: miss and miss? I\'m happy for you, {profileName}!</item>
-            <item>Cool! I also thought it was time to guess! But I wonder - how was it done?</item>
-            <item>And this time - for sure! {profileName}, what changed in your state before the last choice?</item>
-            <item>In this game there are no losses, no wins. There is only you and your feelings. And buttons.</item>
-            <item>Real Jedi approach this contemplatively. It\'s more important for them to understand themselves.</item>
-            <item>What needs more attention now: the result or your attitude towards it?</item>
-            <item>Cool! I also thought it was time to guess! But I wonder - how was it done?</item>
-            <item>{profileName}, try to understand what has changed - feelings, attitude towards yourself. Is this a coincidence?</item>
-            <item>Oh my! But you remember that Probability Theory is to blame for everything?</item>
-            <item>Algorhythm is watching the rates! And this time he dances with Laibach</item>
-            <item>Well, everything is fair, {profileName}! This is worth celebrating!</item>
+            <item>The rare streak of misses has ended, {profileName}! That\'s just what we needed, isn\'t it?</item>
+            <item>Well, look at that! {streak} misses in a row, and you\'ve finally broken it!</item>
+            <item>There is reason for optimism, isn\'t there? Glad for you, {profileName}!</item>
+            <item>Probability Theory definitely put in work. But none of this would\'ve happened without you!</item>
+            <item>Seriously, how long can a streak of misses go on? So happy for you, {profileName}!</item>
+            <item>That\'s awesome! I also thought it was about time to guess right! But I\'m curious — how was it done?</item>
+            <item>And this time - definitely! {profileName}, what changed in your state before the last choice?</item>
+            <item>In this game, there are no losses, no wins. There is only you and your feelings. And the buttons.</item>
+            <item>True Jedi approach this contemplatively. For them, it is more important to understand themselves.</item>
+            <item>What needs more attention right now: the result or your attitude toward it?</item>
+            <item>Awesome! I figured it was high time for a correct guess too! But I\'m wondering — how did you pull that off</item>
+            <item>{profileName}, try to notice what shifted—was it your gut feeling, how you treat yourself, or just random chance?</item>
+            <item>Oh dear! But you remember that Probability Theory is responsible for all of this, right?</item>
+
+            <item>Allgorhythm is watching the bets! And this time he\'s dancing with Laibach 😊</item>
+            <item>Well, it\'s all fair play, {profileName}! We definitely have to celebrate this!</item>
         </string-array>
 
         <!--

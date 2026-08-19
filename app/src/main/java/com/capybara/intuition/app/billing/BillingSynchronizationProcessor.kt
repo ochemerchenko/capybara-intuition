@@ -5,14 +5,17 @@ import com.android.billingclient.api.AcknowledgePurchaseParams
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.Purchase
 import com.android.billingclient.api.QueryPurchasesParams
-import com.android.billingclient.api.acknowledgePurchase
-import com.android.billingclient.api.queryPurchasesAsync
+//import com.android.billingclient.api.acknowledgePurchase
+//import com.android.billingclient.api.queryPurchasesAsync
 import com.capybara.intuition.app.billing.model.BillingSynchronizationResult
 import com.capybara.intuition.app.billing.purchase.resolveLicenseType
 import com.capybara.intuition.app.license.data.repository.LicenseRepository
 import com.capybara.intuition.app.license.data.repository.SynchronizationRepository
 import com.capybara.intuition.license.domain.LicenseType
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlin.coroutines.resume
+
 
 class BillingSynchronizationProcessor(
     private val licenseRepository: LicenseRepository,
@@ -32,13 +35,25 @@ class BillingSynchronizationProcessor(
             )
             .build()
 
-        val purchasesResult = billingClient.queryPurchasesAsync(params)
+        //val purchasesResult = billingClient.queryPurchasesAsync(params)
+        val (billingResult, purchasesList) = suspendCancellableCoroutine { continuation ->
+            billingClient.queryPurchasesAsync(params) { result, purchases ->
+                if (continuation.isActive) {
+                    continuation.resume(Pair(result, purchases))
+                }
+            }
+        }
+
+
+
         Log.d(
             "Billing",
-            "[Synchronization] Google response=${purchasesResult.billingResult.responseCode}, purchases=${purchasesResult.purchasesList?.size ?: 0}"
+            "[Synchronization] Google response=${billingResult.responseCode}, purchases=${purchasesList.size}"
         )
+
+
         if (
-            purchasesResult.billingResult.responseCode ==
+            billingResult.responseCode ==
             BillingClient.BillingResponseCode.OK
         ) {
 
@@ -46,7 +61,7 @@ class BillingSynchronizationProcessor(
                 System.currentTimeMillis()
             )
 
-            val purchases = purchasesResult.purchasesList ?: emptyList()
+            val purchases = purchasesList ?: emptyList()
 
             if (purchases.isEmpty()) {
 
@@ -158,7 +173,7 @@ class BillingSynchronizationProcessor(
         } else {
             Log.d(
                 "Billing",
-                "[Synchronization] Google request failed: response=${purchasesResult.billingResult.responseCode}"
+                "[Synchronization] Google request failed: response=${billingResult.responseCode}"
             )
             val lastSynchronization = synchronizationRepository
                 .lastBillingSynchronization
@@ -218,10 +233,19 @@ class BillingSynchronizationProcessor(
                 delay(delayMs)
             }
 
-            val billingResult =
+            //val billingResult = billingClient.acknowledgePurchase(
+            //    params
+            //)
+
+            val billingResult = suspendCancellableCoroutine { continuation ->
                 billingClient.acknowledgePurchase(
                     params
-                )
+                ) { result ->
+                    continuation.resume(
+                        value =result
+                    )
+                }
+            }
 
             when (billingResult.responseCode) {
 

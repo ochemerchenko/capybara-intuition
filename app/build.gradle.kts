@@ -17,14 +17,14 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(keystorePropertiesFile.inputStream())
 }
 
-extra["appVersionCode"] = 15
+extra["appVersionCode"] = 19
 extra["appVersionName"] = "0.19"
 val appVersionCode: Int by extra
 val appVersionName: String by extra
 
 android {
     namespace = "com.capybara.intuition"
-    compileSdk = 35
+    compileSdk = 36
 
     signingConfigs {
         create("release") {
@@ -40,7 +40,7 @@ android {
     defaultConfig {
         applicationId = "com.capybara.intuition"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
 
         versionCode = appVersionCode
         versionName = appVersionName
@@ -131,7 +131,8 @@ dependencies {
     implementation(libs.androidx.datastore.preferences)
 
     // --- Google Billing System ---
-    implementation("com.android.billingclient:billing-ktx:7.1.1")
+    // implementation("com.android.billingclient:billing-ktx:7.1.1")
+    implementation("com.android.billingclient:billing-ktx:8.0.0")
 
 
     // --- Google Firebase ---
@@ -154,6 +155,13 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-storage")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.1")
+}
+
+configurations.all {
+    exclude(
+        group = "com.google.android.gms",
+        module = "play-services-ads-identifier"
+    )
 }
 
 apply(
