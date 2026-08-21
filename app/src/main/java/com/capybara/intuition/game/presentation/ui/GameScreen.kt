@@ -91,6 +91,7 @@ fun GameScreen(
 
     BoxWithConstraints(
         modifier = Modifier
+            /*
             .clickable(
                 enabled = round.result != null,
                 indication = null,
@@ -105,6 +106,8 @@ fun GameScreen(
                         .onMainButtonClicked()
                 }
             }
+
+             */
     ) {
         val width = this.maxWidth
         val this_max_height = this.maxHeight
@@ -139,14 +142,14 @@ fun GameScreen(
                 }
         ) {
 
-            val gameGridParams =
-                calculateGameGridParams(
-                    session = session,
-                    availableWidth = width,
-                    availableHeight = layout.gameGridHeight
-                )
+            val gameGridParams = calculateGameGridParams(
+                session = session,
+                availableWidth = width,
+                availableHeight = layout.gameGridHeight
+            )
 
             Log.d("CapybaraActorDebug", "In GameScreen before call GameGrid, layout = $layout")
+
 
             GameGrid(
                 session = session,
@@ -170,6 +173,11 @@ fun GameScreen(
                             .onUserSelected(
                                 resource
                             )
+                    }
+                },
+                onNextRound = {
+                    coroutineScope.launch {
+                        gameViewModel.onMainButtonClicked()
                     }
                 }
             )
@@ -197,12 +205,46 @@ fun GameScreen(
                     round = round,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(
-                            layout.bottomPanelHeight
-
-                        )
+                        .height(layout.bottomPanelHeight),
+                    onNewSession = {
+                        gameViewModel.startSession()
+                    }
                 )
             }
+
+            /*
+            GameGrid(
+                session = session,
+                round = round,
+                gameGridParams = gameGridParams,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(
+                        layout.gameGridHeight
+                    )
+                    .onGloballyPositioned {
+                        Log.d(
+                            "CapybaraActorDebug",
+                            "GameGrid in GameGrid.modifier: size=${it.size}"
+                        )
+                    }
+                ,
+                onUserSelected = { resource ->
+                    coroutineScope.launch {
+                        gameViewModel
+                            .onUserSelected(
+                                resource
+                            )
+                    }
+                },
+                onNextRound = {
+                    coroutineScope.launch {
+                        gameViewModel.onMainButtonClicked()
+                    }
+                }
+            )
+            */
+
 
 
         }

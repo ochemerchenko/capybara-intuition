@@ -4,8 +4,8 @@
 
 
     <!-- 🔹 Modes -->
-    <string name="game_mode_before">Bet before draw</string>
-    <string name="game_mode_after">Bet after draw</string>
+    <string name="game_mode_before">Session success</string>
+    <string name="game_mode_after">Session success</string>
 
 
 </resources>

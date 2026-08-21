@@ -44,6 +44,7 @@ val CAPYBARA_HEIGHT_FRACTION = 0.8f
 fun BottomPanel(
     session: GameSession,
     round: GameRound,
+    onNewSession: () -> Unit,
     modifier: Modifier
 ) {
     val context = LocalContext.current
@@ -162,6 +163,7 @@ fun BottomPanel(
         Indicators(
             session = session,
             round = round,
+            onNewSession = onNewSession,
             modifier = Modifier
                 .align(Alignment.BottomEnd),
             bubbleContext = bubbleContext

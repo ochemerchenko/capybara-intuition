@@ -51,14 +51,12 @@ fun IntuitionApp() {
         mutableStateOf(false)
     }
 
-    val bootstrapState by
-    appContainer.installation.bootstrapStateRepository.state
+    val bootstrapState by appContainer.installation.bootstrapStateRepository.state
         .collectAsState(
             initial = BootstrapState.NOT_STARTED
         )
 
-    val releaseNotesVersionRead by
-    appContainer.installation.releaseNotesRepository
+    val releaseNotesVersionRead by appContainer.installation.releaseNotesRepository
         .releaseNotesVersionRead
         .collectAsState(
             initial = 0
@@ -121,12 +119,19 @@ fun IntuitionApp() {
                             appUpdateViewModel = appContainer.appUpdateViewModel
                         )
                     }
-                }
-            ) { paddingValues ->
-                DisposableEffect(Unit) {
+                },
+                //bottomBar = {
+                //    if (launchState == AppLaunchState.READY) {
+                //        TopNavigation(
+                //            navController = navController,
+                //            appUpdateViewModel = appContainer.appUpdateViewModel
+                //        )
+                //    }
+                //}
+            ) {
+                paddingValues -> DisposableEffect(Unit) {
                     Log.d("BackTest", "IntuitionApp BackHandler ENTER")
-
-                    onDispose {
+                        onDispose {
                         Log.d("BackTest", "IntuitionApp BackHandler EXIT")
                     }
                 }
@@ -135,6 +140,7 @@ fun IntuitionApp() {
                     Log.d("BackTest", "Global BackHandler")
                     showExitDialog = true
                 }
+
                 AppRoot(
                     navController = navController,
                     //launchState = launchState,

@@ -12,7 +12,7 @@ import com.capybara.intuition.app.bootstrap.BootstrapState
 import com.capybara.intuition.app.bootstrap.BootstrapStateRepository
 import com.capybara.intuition.app.bootstrap.installation.data.local.repository.ReleaseNotesRepository
 import com.capybara.intuition.app.navigation.ui.setup.InstallationErrorScreen
-import com.capybara.intuition.app.navigation.ui.setup.InstallationScreen
+import com.capybara.intuition.app.navigation.ui.setup.WaitingScreen
 import com.capybara.intuition.app.navigation.ui.setup.ReleaseNotesScreen
 import kotlinx.coroutines.launch
 
@@ -27,13 +27,11 @@ fun AppRoot(
 
     val scope = rememberCoroutineScope()
 
-    val bootstrapState by
-    bootstrapStateRepository.state.collectAsState(
+    val bootstrapState by bootstrapStateRepository.state.collectAsState(
         initial = BootstrapState.NOT_STARTED
     )
 
-    val releaseNotesVersionRead by
-    releaseNotesRepository.releaseNotesVersionRead
+    val releaseNotesVersionRead by releaseNotesRepository.releaseNotesVersionRead
         .collectAsState(
             initial = 0
         )
@@ -53,7 +51,7 @@ fun AppRoot(
 
     when (launchState) {
 
-        AppLaunchState.INSTALLING -> InstallationScreen()
+        AppLaunchState.INSTALLING -> WaitingScreen()
 
         AppLaunchState.ONBOARDING -> ReleaseNotesScreen(
             onConfirm = {

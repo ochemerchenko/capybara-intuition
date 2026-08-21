@@ -1,12 +1,16 @@
 package com.capybara.intuition.game.presentation.ui.components.bottomPanel.indicators
 
 
+import android.util.Log
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -17,9 +21,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInParent
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.capybara.intuition.R
@@ -37,6 +43,7 @@ import kotlinx.coroutines.launch
 fun Indicators(
     session: GameSession,
     round: GameRound,
+    onNewSession: () -> Unit,
     modifier: Modifier = Modifier,
     bubbleContext: BottomPanelContext
 ) {
@@ -75,6 +82,20 @@ fun Indicators(
     var displayedLoseCount by remember {
         mutableIntStateOf(session.loseCount)
     }
+
+    LaunchedEffect(session.id) {
+        displayedWinCount = session.winCount
+        displayedLoseCount = session.loseCount
+    }
+
+    var sessionLen = displayedWinCount + displayedLoseCount
+
+    var sessionSuccess =
+        if (sessionLen > 0) {
+            ": ${(100 * displayedWinCount / sessionLen)}%"
+        } else {
+            ": \uD83E\uDD37"
+        }
 
     // =====================================================
     // WIN ANIMATION STATE
@@ -234,87 +255,131 @@ fun Indicators(
         }
     }
 
+
     // =====================================================
     // UI
     // =====================================================
     val density = LocalDensity.current
-    Column(
-        modifier=modifier
-            .onGloballyPositioned { coordinates ->
-
-                val position = coordinates.positionInParent()
-                val size = coordinates.size
-                with(density) {
-
-                    val left = position.x.toDp()
-                    val top = position.y.toDp()
-                    val width = size.width.toDp()
-                    val height = size.height.toDp()
-                    val rect = SceneRect(
-                        left = left,
-                        top = top,
-                        right = left + width,
-                        bottom = top + height
-                    )
-                    bubbleContext.indicatorsRect = rect
-                }
-            },
-        horizontalAlignment = Alignment.End
+    Row(
+        modifier = modifier,
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Row {
 
-            AnimatedIndicatorText(
-                "\uD83C\uDF4F", // 🍏 Green Apple
-                glowColor = colors.capybaraWinGlow,
-                scale = winScale.value,
-                blur = winBlur.value,
-                alpha = winAlpha.value
-            )
+        Column(
+            modifier = modifier
+                .onGloballyPositioned { coordinates ->
 
-            Spacer(Modifier.width(4.dp))
+                    val position = coordinates.positionInParent()
+                    val size = coordinates.size
+                    with(density) {
 
-            Text(
-                displayedWinCount.toString(), // 🍏 Green Apple
-                color = colors.winCount,
-                style = typography.bodyMedium
-            )
+                        val left = position.x.toDp()
+                        val top = position.y.toDp()
+                        val width = size.width.toDp()
+                        val height = size.height.toDp()
+                        val rect = SceneRect(
+                            left = left,
+                            top = top,
+                            right = left + width,
+                            bottom = top + height
+                        )
+                        bubbleContext.indicatorsRect = rect
+                    }
+                },
+            horizontalAlignment = Alignment.End
+        ) {
 
-            Text(
-                text = " : ",
-                style = MaterialTheme.typography.bodyMedium,
-                color = colors.activeElementText
-            )
+            Row {
 
-            Text(
-                text = displayedLoseCount.toString(), // 💩
-                color = colors.loseCount,
-                style = typography.bodyMedium
-            )
+                AnimatedIndicatorText(
+                    "\uD83C\uDF4F", // 🍏 Green Apple
+                    glowColor = colors.capybaraWinGlow,
+                    scale = winScale.value,
+                    blur = winBlur.value,
+                    alpha = winAlpha.value
+                )
 
-            Spacer(Modifier.width(4.dp))
+                Spacer(Modifier.width(4.dp))
 
-            AnimatedIndicatorText(
-                text = "\uD83D\uDCA9",
-                glowColor = colors.capybaraLoseGlow,
-                scale = loseScale.value,
-                blur = loseBlur.value,
-                alpha = loseAlpha.value
-            )
+                Text(
+                    displayedWinCount.toString(), // 🍏 Green Apple
+                    color = colors.winCount,
+                    style = typography.bodyMedium
+                )
+
+                Text(
+                    text = " : ",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = colors.activeElementText
+                )
+
+                Text(
+                    text = displayedLoseCount.toString(), // 💩
+                    color = colors.loseCount,
+                    style = typography.bodyMedium
+                )
+
+                Spacer(Modifier.width(4.dp))
+
+                AnimatedIndicatorText(
+                    text = "\uD83D\uDCA9",
+                    glowColor = colors.capybaraLoseGlow,
+                    scale = loseScale.value,
+                    blur = loseBlur.value,
+                    alpha = loseAlpha.value
+                )
+            }
+
+            Row {
+                Text(
+                    text = stringResource(
+                        if (round.roundType == RoundType.AFTER) {
+                            R.string.game_mode_after
+                        } else {
+                            R.string.game_mode_before
+                        }
+                    ),
+                    style = typography.bodyMedium,
+                    color = colors.capybaraTerracotta
+                )
+
+                Spacer(Modifier.width(4.dp))
+
+                Text(
+                    text = sessionSuccess,
+                    color = colors.loseCount,
+                    style = typography.bodyMedium
+                )
+            }
 
         }
-        Text(
-            text = stringResource(
-                if (round.roundType == RoundType.AFTER) {
-                    R.string.game_mode_after
-                } else {
-                    R.string.game_mode_before
-                }
-            ),
-            style = MaterialTheme.typography.bodyMedium,
-            color = colors.capybaraTerracotta
-        )
 
+        Spacer(Modifier.width(4.dp))
 
+        val restartIcon =
+            if (sessionLen > 1) {
+                R.drawable.session_restart_active
+            } else {
+                R.drawable.session_restart_passive
+            }
+
+        IconButton(
+            onClick = {
+                Log.d("SESSION_RESET", "IconButton clicked")
+                onNewSession()
+            },
+            enabled = sessionLen > 1,
+            modifier = Modifier.size(48.dp)
+        ) {
+            Icon(
+                painter = painterResource(
+                    id = restartIcon
+                ),
+                contentDescription = null,
+                modifier = Modifier.size(32.dp),
+                tint = Color.Unspecified
+            )
+        }
     }
 }
 

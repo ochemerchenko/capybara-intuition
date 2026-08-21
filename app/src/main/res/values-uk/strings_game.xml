@@ -3,7 +3,7 @@
 
 
     <!-- 🔹 Modes -->
-    <string name="game_mode_before">Що обере тренажер?</string>
-    <string name="game_mode_after">Яку фішку загадано?</string>
+    <string name="game_mode_before">Успішність</string>
+    <string name="game_mode_after">Успішність</string>
 
 </resources>

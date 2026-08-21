@@ -21,7 +21,7 @@ import com.capybara.intuition.R
 import com.capybara.intuition.app.presentation.theme.IntuitionTheme
 
 @Composable
-fun InstallationScreen() {
+fun WaitingScreen() {
 
     val colors = IntuitionTheme.colors
 

@@ -1,10 +1,7 @@
 package com.capybara.intuition.app.navigation
 
 
-import android.util.Log
-import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
@@ -12,9 +9,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.capybara.intuition.app.App
 import com.capybara.intuition.app.BuildConfiguration
-import com.capybara.intuition.app.navigation.ui.setup.InstallationErrorScreen
-import com.capybara.intuition.app.navigation.ui.setup.InstallationScreen
-import com.capybara.intuition.app.navigation.ui.setup.ReleaseNotesScreen
 import com.capybara.intuition.game.presentation.routes.GameRoute
 import com.capybara.intuition.info.presentation.routes.InfoRoute
 import com.capybara.intuition.license.domain.CapabilityEnvironment
