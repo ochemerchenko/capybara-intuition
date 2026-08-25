@@ -5,7 +5,6 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.text.TextMeasurer
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.drawText
 import androidx.compose.ui.unit.sp
 import com.capybara.intuition.app.presentation.theme.colors.IntuitionColors
@@ -70,9 +69,8 @@ fun DrawScope.activityGraphXAxisArea (
 
         val textLayout = textMeasurer.measure(
             text = label,
-            style = TextStyle(
-                color = colors.chartAxisLabel,
-                fontSize = 12.sp
+            style = typography.chartAxisLabel.copy(
+                color = colors.chartAxisLabel
             )
         )
 

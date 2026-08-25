@@ -4,18 +4,17 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.capybara.intuition.R
 import com.capybara.intuition.app.jobs.db_cleaner.DatabaseRetentionPeriod
 import com.capybara.intuition.app.presentation.theme.IntuitionTheme
 import com.capybara.intuition.game.domain.model.GameMode
+import com.capybara.intuition.license.capability.RuntimeCapabilities
 import com.capybara.intuition.profile.domain.model.Profile
 import com.capybara.intuition.profile.domain.model.ProfileType
-import com.capybara.intuition.profile.presentation.ui.sections.LevelSettingsSection
-import com.capybara.intuition.profile.presentation.ui.sections.ProfileList
-import com.capybara.intuition.profile.presentation.ui.sections.ThresholdHistorySection
+import com.capybara.intuition.profile.presentation.ui.sections.RetentionPeriodSection
+import com.capybara.intuition.profile.presentation.ui.sections.common.CommonProfileSettingsSection
 
 
 @Composable
@@ -27,14 +26,14 @@ fun PremiumHumanProfileSetupSection(
     onIncreaseLevel: () -> Unit,
     onModeSelected: (GameMode) -> Unit,
     retentionPeriod: DatabaseRetentionPeriod,
-    onRetentionPeriodChanged: (DatabaseRetentionPeriod) -> Unit
+    onRetentionPeriodChanged: (DatabaseRetentionPeriod) -> Unit,
+    capabilities: RuntimeCapabilities
 ) {
 
     // =====================================================
     // PREMIUM HUMAN PROFILE SETUP SECTION SEMANTICS
     // =====================================================
     val premiumHumanProfileSetupSectionContentSpacing = 12.dp
-    val premiumHumanProfileValidValueColor = Color(0xFF2E7D32)
 
     // =====================================================
     // ACTIVE PROFILE
@@ -70,25 +69,14 @@ fun PremiumHumanProfileSetupSection(
             color = colors.textH1
         )
 
-        ModeSettingsSection(
+        CommonProfileSettingsSection(
             profile = activeProfile,
-            onModeSelected = onModeSelected
-        )
-
-        LevelSettingsSection(
-            profile = activeProfile,
-            onDecreaseLevel = onDecreaseLevel,
-            onIncreaseLevel = onIncreaseLevel
-        )
-
-        ThresholdHistorySection(
-            retentionPeriod = retentionPeriod,
-            onRetentionPeriodChanged = onRetentionPeriodChanged
-        )
-
-        ProfileList(
             profiles = profiles,
+            capabilities = capabilities,
+            onDecreaseLevel = onDecreaseLevel,
+            onIncreaseLevel = onIncreaseLevel,
             onProfileSelected = onProfileSelected,
+            onModeSelected = onModeSelected
         )
 
         if (shouldShowProfileSetup) {
@@ -103,6 +91,12 @@ fun PremiumHumanProfileSetupSection(
                 }
             )
         }
-    }
 
+        if (isHumanProfile) {
+            RetentionPeriodSection(
+                retentionPeriod = retentionPeriod,
+                onRetentionPeriodChanged = onRetentionPeriodChanged
+            )
+        }
+    }
 }

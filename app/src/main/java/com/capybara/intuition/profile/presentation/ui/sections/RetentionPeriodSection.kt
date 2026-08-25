@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.Text
@@ -18,7 +17,7 @@ import com.capybara.intuition.app.presentation.theme.IntuitionTheme
 import com.capybara.intuition.profile.presentation.ui.components.SettingsSection
 
 @Composable
-fun ThresholdHistorySection(
+fun RetentionPeriodSection(
     retentionPeriod: DatabaseRetentionPeriod,
     onRetentionPeriodChanged: (DatabaseRetentionPeriod) -> Unit
 ) {

@@ -2,11 +2,11 @@ package com.capybara.intuition.profile.presentation.ui.sections.free
 
 import androidx.compose.runtime.Composable
 import com.capybara.intuition.app.jobs.db_cleaner.DatabaseRetentionPeriod
+import com.capybara.intuition.license.capability.RuntimeCapabilities
 import com.capybara.intuition.profile.domain.model.Profile
 import com.capybara.intuition.profile.domain.model.ProfileType
-import com.capybara.intuition.profile.presentation.ui.sections.LevelSettingsSection
-import com.capybara.intuition.profile.presentation.ui.sections.ProfileList
-import com.capybara.intuition.profile.presentation.ui.sections.ThresholdHistorySection
+import com.capybara.intuition.profile.presentation.ui.sections.RetentionPeriodSection
+import com.capybara.intuition.profile.presentation.ui.sections.common.CommonProfileSettingsSection
 
 @Composable
 fun FreeHumanProfileSetupSection(
@@ -17,7 +17,8 @@ fun FreeHumanProfileSetupSection(
     onIncreaseLevel: () -> Unit,
     onLearnMoreClick: () -> Unit,
     retentionPeriod: DatabaseRetentionPeriod,
-    onRetentionPeriodChanged: (DatabaseRetentionPeriod) -> Unit
+    onRetentionPeriodChanged: (DatabaseRetentionPeriod) -> Unit,
+    capabilities: RuntimeCapabilities
 ) {
 
     // =====================================================
@@ -44,22 +45,13 @@ fun FreeHumanProfileSetupSection(
     // UI
     // =====================================================
 
-
-
-    LevelSettingsSection(
+    CommonProfileSettingsSection(
         profile = activeProfile,
-        onDecreaseLevel = onDecreaseLevel,
-        onIncreaseLevel = onIncreaseLevel
-    )
-
-    ThresholdHistorySection(
-        retentionPeriod = retentionPeriod,
-        onRetentionPeriodChanged = onRetentionPeriodChanged
-    )
-
-    ProfileList(
         profiles = profiles,
-        onProfileSelected = onProfileSelected,
+        capabilities = capabilities,
+        onDecreaseLevel = onDecreaseLevel,
+        onIncreaseLevel = onIncreaseLevel,
+        onProfileSelected = onProfileSelected
     )
 
     if (shouldShowProfileSetup) {
@@ -73,5 +65,12 @@ fun FreeHumanProfileSetupSection(
     ModeRestrictedSection(
         onLearnMoreClick = onLearnMoreClick
     )
+
+    if (isHumanProfile) {
+        RetentionPeriodSection(
+            retentionPeriod = retentionPeriod,
+            onRetentionPeriodChanged = onRetentionPeriodChanged
+        )
+    }
 
 }

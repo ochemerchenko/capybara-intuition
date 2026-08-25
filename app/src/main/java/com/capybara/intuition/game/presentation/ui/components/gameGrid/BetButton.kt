@@ -16,11 +16,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.sp
+import com.capybara.intuition.app.presentation.theme.IntuitionTheme
 import com.capybara.intuition.game.domain.model.GameSession
 import com.capybara.intuition.game.domain.model.Resource
 import com.capybara.intuition.game.domain.renderer.rendererResolver
@@ -52,13 +52,10 @@ fun BetButton(
     val betButtonResultIndicatorScaleFactor = 0.42f
     val betButtonBorderScaleFactor = 0.035f
     val betButtonShadowScaleFactor = 0.08f
-    val betButtonBorderAlpha = 0.08f
     val betButtonResultSuccessSymbol = "✓"
     val betButtonResultFailureSymbol = "✕"
-    val betButtonResultIndicatorColor = Color.White
-    val betButtonBorderColor = Color.Black.copy(
-        alpha = betButtonBorderAlpha
-    )
+
+    val colors = IntuitionTheme.colors
 
     // =============================================
     // SHAPE
@@ -168,7 +165,7 @@ fun BetButton(
                     text = resultIndicatorSymbol,
                     fontSize = betButtonResultIndicatorFontSize,
                     fontWeight = FontWeight.Bold,
-                    color = betButtonResultIndicatorColor,
+                    color = colors.betButtonResultIndicator,
                     modifier = Modifier.align(
                         Alignment.Center
                     )

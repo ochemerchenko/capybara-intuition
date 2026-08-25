@@ -34,9 +34,7 @@ fun FreeStatisticsScreen (
 )  {
 
     val statisticsSelectorSpacing = 12.dp
-    val densityDetailChartHorizontalPadding = 8.dp
     val scrollState = rememberScrollState()
-    val statisticsActivityTitleHorizontalPadding = 16.dp
     val statisticsActivityBottomSpacing = 24.dp
 
 

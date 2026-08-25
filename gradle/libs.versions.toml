@@ -1,7 +1,7 @@
 [versions]
 
 # --- Core toolchain ---
-agp = "8.7.3"
+agp = "9.3.1"
 kotlin = "2.1.21"
 ksp = "2.1.21-2.0.2"
 
@@ -40,6 +40,9 @@ activity = "1.9.2"
 
 # --- Corutines ---
 coroutines = "1.10.2"
+
+# --- Testing ---
+junit = "4.13.1"
 
 [libraries]
 
@@ -86,6 +89,9 @@ play-app-update-ktx = { group = "com.google.android.play", name = "app-update-kt
 kotlinx-coroutines-play-services = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "coroutines" }
 
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity" }
+
+# --- Testing ---
+junit = { group = "junit", name = "junit", version.ref = "junit" }
 
 
 [plugins]

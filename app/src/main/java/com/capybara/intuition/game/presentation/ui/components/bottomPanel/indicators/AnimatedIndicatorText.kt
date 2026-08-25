@@ -1,7 +1,6 @@
 package com.capybara.intuition.game.presentation.ui.components.bottomPanel.indicators
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -22,12 +21,13 @@ fun AnimatedIndicatorText(
 ) {
 
     val colors = IntuitionTheme.colors
+    val typography = IntuitionTheme.typography
 
     Box {
 
         Text(
             text = text,
-            style = MaterialTheme.typography.bodyMedium,
+            style = typography.bodyMedium,
             color = glowColor.copy(
                 alpha = alpha * 0.5f
             ),
@@ -41,7 +41,7 @@ fun AnimatedIndicatorText(
 
         Text(
             text = text,
-            style = MaterialTheme.typography.bodyMedium,
+            style = typography.bodyMedium,
             color = colors.capybaraTerracotta,
             modifier = Modifier.graphicsLayer {
                 scaleX = scale

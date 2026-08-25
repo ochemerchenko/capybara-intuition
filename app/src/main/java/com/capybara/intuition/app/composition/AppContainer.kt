@@ -16,6 +16,7 @@ import com.capybara.intuition.app.AppDatabase
 import com.capybara.intuition.app.DataStoreAdapter
 import com.capybara.intuition.app.billing.GooglePlayBillingManager
 import com.capybara.intuition.app.bootstrap.BootstrapLoader
+import com.capybara.intuition.app.composition.modules.AchievementsModule
 import com.capybara.intuition.app.composition.modules.SettingsModule
 import com.capybara.intuition.app.jobs.db_cleaner.DatabaseRetentionDataStore
 import com.capybara.intuition.app.jobs.db_cleaner.DatabaseCleanupManager
@@ -110,9 +111,15 @@ class AppContainer(
     val gameplay = GameplayModule(
         database = database
     )
+
     val statistics = StatisticsModule(
         database = database
     )
+
+    val achievements = AchievementsModule(
+        database = database
+    )
+
     val tester = TesterModule(
         database = database
     )

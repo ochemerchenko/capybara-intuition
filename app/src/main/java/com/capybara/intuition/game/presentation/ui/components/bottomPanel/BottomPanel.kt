@@ -96,11 +96,6 @@ fun BottomPanel(
 
     val phraseContext = BubblePhraseContext(
         profileName = session.profile.name,
-        roundResult = when (round.result) {
-            RoundResult.WIN -> "виграв"
-            RoundResult.LOSE -> "програв"
-            else -> "починаємо"
-        },
         winCount = session.winCount,
         loseCount = session.loseCount,
         streak = streak,

@@ -1,0 +1,70 @@
+package com.capybara.intuition.achievements.presentation.ui.components
+
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.capybara.intuition.achievements.presentation.viewmodel.AchievementsViewModel
+import com.capybara.intuition.app.presentation.theme.IntuitionTheme
+
+@Composable
+fun Regularity (
+    viewModel: AchievementsViewModel,
+    modifier: Modifier
+) {
+
+    val colors = IntuitionTheme.colors
+    val typography = IntuitionTheme.typography
+
+    val regularities by viewModel.records.collectAsStateWithLifecycle()
+
+    Column(
+        modifier = Modifier
+    ) {
+        Text(
+            text = "Регулярність",
+            style = typography.h2,
+            color = colors.textH2
+        )
+
+        if (regularities.isEmpty()) {
+            Text(
+                text = "Але ж ви ще не грали...",
+                style = typography.bodyMedium,
+                color = colors.activeElementText
+            )
+        } else {
+            regularities.forEach { achievement ->
+
+                val style = if (achievement.new) {
+                    typography.bodyMediumBold
+                } else {
+                    typography.bodyMedium
+                }
+
+                Row {
+                    Text(
+                        text = achievement.name,
+                        style = style,
+                        color = colors.activeElementText,
+                    )
+
+                    Spacer(
+                        Modifier.weight(1f)
+                    )
+
+                    Text(
+                        text = achievement.value.toString(),
+                        style = style,
+                        color = colors.textH2,
+                    )
+                }
+            }
+        }
+    }
+
+}

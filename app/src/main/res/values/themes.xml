@@ -1,26 +1,13 @@
-
 <resources>
-
-
 
             <style
                 name="Base.Theme.Intuition"
                 parent="Theme.Material3.DayNight.NoActionBar">
-
-
-                <item name="android:windowBackground">
-                    @color/capybara_background
-                </item>
-
-                <item name="android:navigationBarColor">
-                    @color/capybara_background
-                </item>
-
+                <item name="android:windowBackground">#F7F1EC</item>
+                <item name="android:navigationBarColor">#F7F1EC</item>
             </style>
-
 
             <style
                 name="Theme.Intuition"
                 parent="Base.Theme.Intuition" />
-
 </resources>

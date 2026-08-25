@@ -3,7 +3,6 @@ package com.capybara.intuition.statistics.charts.arts.decisionTime.components
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.text.TextMeasurer
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.drawText
 import androidx.compose.ui.unit.sp
 import com.capybara.intuition.app.presentation.theme.colors.IntuitionColors
@@ -55,9 +54,8 @@ fun DrawScope.drawDecisionTimeGraphXAxisArea (
 
         val textLayout = textMeasurer.measure(
             text = label,
-            style = TextStyle(
-                color = colors.chartAxisLabel,
-                fontSize = 12.sp
+            style = typography.chartAxisLabel.copy(
+                color = colors.chartAxisLabel
             )
         )
 

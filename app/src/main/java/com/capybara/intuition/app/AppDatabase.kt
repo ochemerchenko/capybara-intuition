@@ -3,6 +3,10 @@ package com.capybara.intuition.app
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
+import com.capybara.intuition.achievements.data.local.db.dao.AchievementsDao
+import com.capybara.intuition.achievements.data.local.db.entity.AchievementCategoryEntity
+import com.capybara.intuition.achievements.data.local.db.entity.AchievementEntity
+import com.capybara.intuition.achievements.data.local.db.entity.ProfileAchievementEntity
 import com.capybara.intuition.game.data.local.db.dao.GameModeDao
 import com.capybara.intuition.game.data.local.db.dao.GameRoundDao
 import com.capybara.intuition.game.data.local.db.dao.MaskDao
@@ -50,9 +54,12 @@ import com.capybara.intuition.statistics.data.local.db.dao.StatisticsDao
         TopologyFamilyRelationEntity::class,
         ObservedGameCardEntity::class,
         GameModeEntity::class,
+        AchievementCategoryEntity::class,
+        AchievementEntity::class,
+        ProfileAchievementEntity::class
 
     ],
-    version = 19,
+    version = 21,
     exportSchema = false
 )
 
@@ -82,5 +89,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun topologyDao(): TopologyDao
     abstract fun topologyFamilyDao(): TopologyFamilyDao
     abstract fun gameModeDao(): GameModeDao
+
+    abstract fun achievementsDao(): AchievementsDao
 
 }

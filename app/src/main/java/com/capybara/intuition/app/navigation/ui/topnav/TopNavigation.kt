@@ -5,12 +5,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.BarChart
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Notifications
-import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -90,8 +84,9 @@ fun TopNavigation(
 
         if (updateUiState != UpdateUiStatus.NoUpdateAvailable) {
             NavIcon(
-                icon = Icons.Default.Notifications,
+                painter = painterResource(id = R.drawable.notification_bell),
                 selected = false,
+                useOriginalColors = true,
                 onClick = {
                     Log.d("Bell", "Called: showAppUpdateDialog")
                     showAppUpdateDialog = true
@@ -99,71 +94,111 @@ fun TopNavigation(
             )
         }
 
-
+        // =============================================
+        // GAME
+        // =============================================
+        val isGameSelected = currentRoute == AppDestination.Game.route
         NavIcon(
-            icon = Icons.Default.Info,
-            selected = currentRoute == AppDestination.Info.route,
+            painter = painterResource(
+                id = if (isGameSelected)
+                    R.drawable.active_play
+                else
+                    R.drawable.passive_play
+            ),
+            selected = isGameSelected,
+            useOriginalColors = true,
             onClick = {
-                Log.d(
-                    "NAV",
-                    "Navigate to Statistics, controller=${navController.hashCode()}, currentRoute=$currentRoute"
-                )
-                navController.navigate(
-                    AppDestination.Info.route
-                ) {
+                navController.navigate(AppDestination.Game.route) {
                     launchSingleTop = true
                 }
             }
         )
 
+        // =============================================
+        // ACHIEVEMENTS
+        // =============================================
+        /*
+        val isAchievementsSelected = currentRoute == AppDestination.Achievements.route
         NavIcon(
-            icon = Icons.Default.PlayArrow,
-            selected = currentRoute == AppDestination.Game.route,
+            painter = painterResource(
+                id = if (isAchievementsSelected)
+                    R.drawable.active_cup
+                else
+                    R.drawable.passive_cup
+            ),
+            selected = isAchievementsSelected,
+            useOriginalColors = true,
             onClick = {
-                Log.d(
-                    "NAV",
-                    "Navigate to Statistics, controller=${navController.hashCode()}, currentRoute=$currentRoute"
-                )
-                navController.navigate(
-                    AppDestination.Game.route
-                ) {
+                navController.navigate(AppDestination.Achievements.route) {
                     launchSingleTop = true
                 }
             }
         )
 
+         */
+
+        // =============================================
+        // STATISTICS
+        // =============================================
+        val isStatisticsSelected = currentRoute == AppDestination.Statistics.route
         NavIcon(
-            icon = Icons.Default.BarChart,
-            selected = currentRoute == AppDestination.Statistics.route,
+            painter = painterResource(
+                id = if (isStatisticsSelected)
+                    R.drawable.active_stats
+                else
+                    R.drawable.passive_stats
+            ),
+            selected = isStatisticsSelected,
+            useOriginalColors = true,
             onClick = {
-                Log.d(
-                    "NAV",
-                    "Navigate to Statistics, controller=${navController.hashCode()}, currentRoute=$currentRoute"
-                )
-                navController.navigate(
-                    AppDestination.Statistics.route
-                ) {
+                navController.navigate(AppDestination.Statistics.route) {
                     launchSingleTop = true
                 }
             }
         )
 
+        // =============================================
+        // SETTINGS
+        // =============================================
+        val isSettingsSelected = currentRoute == AppDestination.Settings.route
         NavIcon(
-            icon = Icons.Default.Settings,
-            selected = currentRoute == AppDestination.Settings.route,
+            painter = painterResource(
+                id = if (isSettingsSelected)
+                    R.drawable.active_settings
+                else
+                    R.drawable.passive_settings
+            ),
+            selected = isSettingsSelected,
+            useOriginalColors = true,
             onClick = {
-                Log.d(
-                    "NAV",
-                    "Navigate to Statistics, controller=${navController.hashCode()}, currentRoute=$currentRoute"
-                )
-                navController.navigate(
-                    AppDestination.Settings.route
-                ) {
+                navController.navigate(AppDestination.Settings.route) {
                     launchSingleTop = true
                 }
             }
         )
+
+        // =============================================
+        // INFO
+        // =============================================
+        val isInfoSelected = currentRoute == AppDestination.Info.route
+        NavIcon(
+            painter = painterResource(
+                id = if (isInfoSelected)
+                    R.drawable.active_info
+                else
+                    R.drawable.passive_info
+            ),
+            selected = isInfoSelected,
+            useOriginalColors = true,
+            onClick = {
+                navController.navigate(AppDestination.Info.route) {
+                    launchSingleTop = true
+                }
+            }
+        )
+
     }
+
 
     HorizontalDivider(
         thickness = topNavigationDividerThickness,

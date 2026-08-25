@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -46,9 +45,9 @@ fun FreeStatisticsHeader(
             text = stringResource(
                 R.string.statistics_title
             ),
-            modifier = Modifier.padding(start = 8.dp),
-            style = MaterialTheme.typography.titleLarge,
-            color = IntuitionTheme.colors.textPrimary
+            modifier = Modifier.padding(start = 0.dp),
+            style = IntuitionTheme.typography.h1,
+            color = IntuitionTheme.colors.textH1
         )
 
         Spacer(

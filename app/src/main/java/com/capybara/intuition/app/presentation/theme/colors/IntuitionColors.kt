@@ -146,6 +146,13 @@ data class IntuitionColors(
     val labelColor: Color = Color(0xFF6A5A53),
 
 
+    ////////////////////
+    // NAVIGATION
+    ////////////////////
+    val activeNavIcon: Color = Color(0xFF6F3A25),
+    val passiveNavIcon: Color = Color(0xFF6F3A25),
+
+
 
 
 
@@ -224,6 +231,10 @@ data class IntuitionColors(
 
     val textPrimary: Color = Color(0xFF4E403A),
     val textSecondary: Color = Color(0xFF7A6A63),
+
+    val activityValue: Color = Color(0xFF592713),
+
+    val betButtonResultIndicator: Color = Color(0xFFF7ECE3),
 
 
 

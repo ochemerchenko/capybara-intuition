@@ -153,7 +153,8 @@ fun SettingsScreen(
                     onIncreaseLevel = profileViewModel ::increaseLevel,
                     onModeSelected = profileViewModel ::updatePreferredMode,
                     retentionPeriod = retentionPeriod,
-                    onRetentionPeriodChanged = settingsViewModel::setRetentionPeriod
+                    onRetentionPeriodChanged = settingsViewModel::setRetentionPeriod,
+                    capabilities = capabilities
                 )
             }
             else {
@@ -165,7 +166,8 @@ fun SettingsScreen(
                     onIncreaseLevel = profileViewModel ::increaseLevel,
                     onLearnMoreClick = onLearnMoreClick,
                     retentionPeriod = retentionPeriod,
-                    onRetentionPeriodChanged = settingsViewModel::setRetentionPeriod
+                    onRetentionPeriodChanged = settingsViewModel::setRetentionPeriod,
+                    capabilities = capabilities
                 )
             }
 
@@ -186,7 +188,7 @@ fun SettingsScreen(
                 )
             }
 
-            if ( activeProfile.type == ProfileType.CHILD &&profileViewModel.isWaitingForParentPin ) {
+            if ( activeProfile.type == ProfileType.CHILD && profileViewModel.isWaitingForParentPin ) {
                 ReturnToParentByPinSection(
                     onConfirmPinClicked = { enteredPin ->
                         profileViewModel

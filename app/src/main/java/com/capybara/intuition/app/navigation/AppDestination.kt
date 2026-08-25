@@ -7,6 +7,7 @@ sealed class AppDestination(
     data object Statistics : AppDestination("statistics")
     data object Settings : AppDestination("settings")
     data object Info : AppDestination("info")
+    data object Achievements : AppDestination("achievements")
     data object TesterTools : AppDestination("tools")
 
 }

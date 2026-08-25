@@ -7,6 +7,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.capybara.intuition.achievements.presentation.routes.AchievementsRoute
 import com.capybara.intuition.app.App
 import com.capybara.intuition.app.BuildConfiguration
 import com.capybara.intuition.game.presentation.routes.GameRoute
@@ -54,6 +55,12 @@ fun AppNavHost(
 
         composable(AppDestination.Info.route) {
             InfoRoute(
+                modifier = modifier
+            )
+        }
+
+        composable(AppDestination.Achievements.route) {
+            AchievementsRoute(
                 modifier = modifier
             )
         }
