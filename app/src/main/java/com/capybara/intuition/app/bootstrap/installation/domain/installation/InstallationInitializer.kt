@@ -5,6 +5,7 @@ import android.os.Build
 import com.capybara.intuition.app.bootstrap.installation.data.local.db.entity.InstallationEntity
 import com.capybara.intuition.app.bootstrap.installation.data.local.repository.InstallationRepository
 import com.capybara.intuition.BuildConfig
+import com.capybara.intuition.app.jobs.export.exportInstallation
 import java.util.Locale
 import java.util.TimeZone
 import java.util.UUID
@@ -86,6 +87,11 @@ class InstallationInitializer(
             // =====================================================
             firstSuccessfulExportAt = null
 
+        )
+
+        exportInstallation(
+            context = context,
+            installation = installation
         )
 
         installationRepository.insertInstallation(

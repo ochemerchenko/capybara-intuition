@@ -107,9 +107,7 @@ class ProfileSeeder(
                     "configuration.orientation=$conf"
         )
 
-        val entities = filteredSeeds.map {
-
-                seed ->
+        val entities = filteredSeeds.map { seed ->
             ProfileEntity(
 
                 // =====================================

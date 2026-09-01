@@ -1,9 +1,9 @@
 [versions]
 
 # --- Core toolchain ---
-agp = "9.3.1"
-kotlin = "2.1.21"
-ksp = "2.1.21-2.0.2"
+agp = "9.3.2"
+kotlin = "2.4.10"
+ksp = "2.3.11"
 
 # --- Android ---
 coreKtx = "1.13.1"
@@ -11,13 +11,13 @@ appcompat = "1.7.0"
 material = "1.12.0"
 
 # --- Lifecycle ---
-lifecycle = "2.8.4"
+lifecycle = "2.11.0"
 
 # --- Navigation ---
-navigation = "2.8.0"
+navigation = "2.9.8"
 
 # --- Room ---
-room = "2.7.2"
+room = "2.8.4"
 
 # --- Compose ---
 composeBom = "2024.09.00"
@@ -26,23 +26,28 @@ composeBom = "2024.09.00"
 richtext = "0.20.0"
 
 # --- Datastore ---
-datastore = "1.1.7"
+datastore = "1.2.1"
 
 # --- Firebase ---
-firebaseBom = "34.3.0"
+firebaseBom = "34.18.0"
 googleServices = "4.4.3"
 firebaseCrashlyticsPlugin = "3.0.6"
 
 # --- Application update ---
 playAppUpdate = "2.1.0"
 
-activity = "1.9.2"
+activity = "1.13.0"
 
 # --- Corutines ---
-coroutines = "1.10.2"
+coroutines = "1.11.0"
 
 # --- Testing ---
-junit = "4.13.1"
+junit = "4.13.2"
+
+# --- Tools ---
+desugar = "2.1.5"
+gson = "2.14.0"
+billing = "9.1.0"
 
 [libraries]
 
@@ -59,6 +64,7 @@ androidx-lifecycle-process = { group = "androidx.lifecycle", name = "lifecycle-p
 # --- Navigation ---
 androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
 androidx-navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
 
 # --- Room ---
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
@@ -67,6 +73,11 @@ room-compiler = { group = "androidx.room", name = "room-compiler", version.ref =
 
 # --- Compose ---
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+ui = { group = "androidx.compose.ui", name = "ui" }
+foundation = { group = "androidx.compose.foundation", name = "foundation" }
+material3 = { group = "androidx.compose.material3", name = "material3" }
+ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
 
 # --- Markdown ---
 richtext-commonmark = { group = "com.halilibo.compose-richtext", name = "richtext-commonmark", version.ref = "richtext" }
@@ -79,7 +90,8 @@ androidx-datastore-preferences = { module = "androidx.datastore:datastore-prefer
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
 #firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
-
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
+firebase-storage = { group = "com.google.firebase", name = "firebase-storage" }
 
 # --- Application update ---
 play-app-update = { group = "com.google.android.play", name = "app-update", version.ref = "playAppUpdate" }
@@ -93,6 +105,10 @@ androidx-activity-compose = { group = "androidx.activity", name = "activity-comp
 # --- Testing ---
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 
+# --- Tools ---
+desugar-jdk-libs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugar" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+billing-ktx = { group = "com.android.billingclient", name = "billing-ktx", version.ref = "billing" }
 
 [plugins]
 
@@ -104,4 +120,3 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 # --- Firebase ---
 google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlyticsPlugin" }
-

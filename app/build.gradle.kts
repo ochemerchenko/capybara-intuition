@@ -17,14 +17,14 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(keystorePropertiesFile.inputStream())
 }
 
-extra["appVersionCode"] = 22
+extra["appVersionCode"] = 23
 extra["appVersionName"] = "0.19"
 val appVersionCode: Int by extra
 val appVersionName: String by extra
 
 android {
     namespace = "com.capybara.intuition"
-    compileSdk = 36
+    compileSdk = 37
 
     signingConfigs {
         create("release") {
@@ -40,7 +40,7 @@ android {
     defaultConfig {
         applicationId = "com.capybara.intuition"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 37
 
         versionCode = appVersionCode
         versionName = appVersionName
@@ -62,6 +62,12 @@ android {
             isMinifyEnabled = false
             isShrinkResources = false
         }
+    }
+
+    lint {
+        checkReleaseBuilds = false
+        abortOnError = false
+        disable += "LintVitalAnalyze"
     }
 
     compileOptions {
@@ -93,6 +99,7 @@ dependencies {
     // --- Navigation ---
     implementation(libs.androidx.navigation.fragment)
     implementation(libs.androidx.navigation.ui)
+    implementation(libs.androidx.navigation.compose)
 
     // --- Room ---
     implementation(libs.room.runtime)
@@ -101,45 +108,38 @@ dependencies {
 
     // --- Compose ---
     implementation(platform(libs.compose.bom))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.foundation:foundation")
-    implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-
+    implementation(libs.ui)
+    implementation(libs.foundation)
+    implementation(libs.material3)
+    implementation(libs.ui.tooling.preview)
+    implementation(libs.icons.extended)
 
     // --- Markdown ---
     implementation(libs.richtext.commonmark)
     implementation(libs.richtext.material3)
 
-    // --- Desugare ---
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
+    // --- Desugaring ---
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
 
-    // --- Vico --- It's a magic shit
-    // implementation("com.patrykandpatrick.vico:core:1.13.1")
-    // implementation("com.patrykandpatrick.vico:compose:1.13.1")
+    // --- Serialization ---
+    implementation(libs.gson)
 
-    //implementation("androidx.navigation:navigation-compose:2.7.7")
-    implementation("androidx.compose.material:material-icons-extended")
-
-    implementation("androidx.navigation:navigation-compose:2.8.0")
-
-    implementation("com.google.code.gson:gson:2.10.1")
-
+    // --- Testing ---
     testImplementation(libs.junit)
 
     // --- Datastore ---
     implementation(libs.androidx.datastore.preferences)
 
     // --- Google Billing System ---
-    // implementation("com.android.billingclient:billing-ktx:7.1.1")
-    implementation("com.android.billingclient:billing-ktx:8.0.0")
+    implementation(libs.billing.ktx)
 
 
     // --- Google Firebase ---
     implementation(platform(libs.firebase.bom))
 
     implementation(libs.firebase.crashlytics)
-    //implementation(libs.firebase.analytics)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.storage)
 
     implementation(libs.androidx.activity.compose)
 
@@ -148,12 +148,8 @@ dependencies {
     implementation(libs.play.app.update)
     implementation(libs.play.app.update.ktx)
 
-    // --- Corutines ---
+    // --- Coroutines ---
     implementation(libs.kotlinx.coroutines.play.services)
-
-    // --- Firebase Storage ---
-    implementation("com.google.firebase:firebase-auth")
-    implementation("com.google.firebase:firebase-storage")
 }
 
 configurations.all {

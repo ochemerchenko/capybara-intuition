@@ -11,10 +11,16 @@ suspend fun archivateExport (
     context: Context,
     installationId: String,
     exportType: String,
-    objectKey: String,
+    objectKey: String? = null,
     data: JsonObject
 ){
-    val fileName = "${installationId}_${exportType}_${objectKey}"
+
+    val fileName =
+        if (objectKey != null) {
+            "${installationId}_${exportType}_${objectKey}"
+        } else {
+            "${installationId}_${exportType}"
+        }
 
     val exportDirectory = File(
         context.filesDir,

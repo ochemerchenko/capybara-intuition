@@ -46,3 +46,7 @@ app/Інфраструктура/
 
 # Export files
 export/
+
+# Testing and debug
+closed testing emails/
+pg_sql/
