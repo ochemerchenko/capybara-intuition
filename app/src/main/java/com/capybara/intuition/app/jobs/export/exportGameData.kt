@@ -33,7 +33,7 @@ suspend fun exportGameData (
             .toLocalDate()
     )
 
-    val today = LocalDate.now()
+    val today = LocalDate.now(ZoneOffset.UTC)
 
     val startExportPeriod = lastConfirmedExportDate.plusDays(1)
     val endExportPeriod = today.minusDays(1)

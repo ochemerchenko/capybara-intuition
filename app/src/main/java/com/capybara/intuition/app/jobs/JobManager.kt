@@ -10,7 +10,9 @@ import com.capybara.intuition.app.bootstrap.installation.data.local.db.dao.Insta
 import com.capybara.intuition.app.jobs.appUpdater.AppUpdateManager
 import com.capybara.intuition.app.jobs.db_cleaner.DatabaseCleanupManager
 import com.capybara.intuition.app.jobs.export.exportGameData
+import com.capybara.intuition.app.jobs.export.exportNavigation
 import com.capybara.intuition.app.jobs.export.uploadExport
+import com.capybara.intuition.app.navigation.telemetry.data.repository.TelemetryRepository
 import com.capybara.intuition.game.data.local.db.dao.GameRoundDao
 import com.capybara.intuition.game.data.local.db.dao.SessionDao
 import kotlinx.coroutines.CoroutineScope
@@ -26,9 +28,8 @@ class JobManager(
     private val installationDao: InstallationDao,
     private val sessionDao: SessionDao,
     private val gameRoundDao: GameRoundDao,
+    private val telemetryRepository: TelemetryRepository,
 
-    // private val historicalExportManager: HistoricalExportManager,
-    // private val databaseCleanupManager: DatabaseCleanupManager,
     private val databaseCleanupManager: DatabaseCleanupManager,
     private val appUpdateManager: AppUpdateManager,
     private val dataStoreAdapter: DataStoreAdapter
@@ -45,8 +46,6 @@ class JobManager(
 
     override fun onStop(owner: LifecycleOwner) {
         billingManager.stop()
-        // historicalExportManager.stop()
-        // databaseCleanupManager.stop()
     }
 
     suspend fun synchronize() {
@@ -85,23 +84,20 @@ class JobManager(
                 dataStoreAdapter = dataStoreAdapter
             )
         }
-        executeSafely("Game data export upload") {
-            uploadExport(
-                context = context,
 
+        executeSafely("Navigation data local export") {
+            exportNavigation(
+                context = context,
+                installationDao = installationDao,
+                telemetryRepository = telemetryRepository
             )
         }
 
-
-
-
-        // executeSafely("Historical Export") {
-        //     historicalExportManager.synchronize()
-        // }
-
-        // executeSafely("Database Cleanup") {
-        //     databaseCleanupManager.cleanup()
-        // }
+        executeSafely("Game data export upload") {
+            uploadExport(
+                context = context,
+            )
+        }
 
         executeSafely("Database Cleanup") {
             databaseCleanupManager.cleanup()

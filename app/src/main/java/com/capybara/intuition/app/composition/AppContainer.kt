@@ -18,6 +18,7 @@ import com.capybara.intuition.app.billing.GooglePlayBillingManager
 import com.capybara.intuition.app.bootstrap.BootstrapLoader
 import com.capybara.intuition.app.composition.modules.AchievementsModule
 import com.capybara.intuition.app.composition.modules.SettingsModule
+import com.capybara.intuition.app.composition.modules.TelemetryModule
 import com.capybara.intuition.app.jobs.db_cleaner.DatabaseRetentionDataStore
 import com.capybara.intuition.app.jobs.db_cleaner.DatabaseCleanupManager
 import com.capybara.intuition.app.jobs.JobManager
@@ -124,6 +125,10 @@ class AppContainer(
         database = database
     )
 
+    val telemetry = TelemetryModule(
+        database = database
+    )
+
     val jobManager = JobManager(
         scope = appScope,
         billingManager = googlePlayBillingManager,
@@ -132,8 +137,8 @@ class AppContainer(
         installationDao = installation.installationDao,
         sessionDao = gameplay.sessionDao,
         gameRoundDao = gameplay.roundDao,
+        telemetryRepository = telemetry.telemetryRepository,
 
-        // historicalExportManager = ...
         databaseCleanupManager = databaseCleanupManager,
         appUpdateManager = appUpdateManager,
 
@@ -157,6 +162,3 @@ class AppContainer(
 
 
 }
-
-
-

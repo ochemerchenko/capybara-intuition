@@ -32,6 +32,9 @@ import com.capybara.intuition.game.data.local.db.entity.topology.TopologyFamilyE
 import com.capybara.intuition.game.data.local.db.entity.topology.TopologyFamilyRelationEntity
 import com.capybara.intuition.app.bootstrap.installation.data.local.db.dao.InstallationDao
 import com.capybara.intuition.app.bootstrap.installation.data.local.db.entity.InstallationEntity
+import com.capybara.intuition.app.navigation.telemetry.data.local.db.converter.AppScreenConverter
+import com.capybara.intuition.app.navigation.telemetry.data.local.db.dao.TelemetryDao
+import com.capybara.intuition.app.navigation.telemetry.data.local.db.entity.ScreenTransitionEntity
 import com.capybara.intuition.profile.data.local.db.converter.ProfileTypeConverter
 import com.capybara.intuition.profile.data.local.db.dao.ProfileDao
 import com.capybara.intuition.profile.data.local.db.entity.ProfileEntity
@@ -56,15 +59,17 @@ import com.capybara.intuition.statistics.data.local.db.dao.StatisticsDao
         GameModeEntity::class,
         AchievementCategoryEntity::class,
         AchievementEntity::class,
-        ProfileAchievementEntity::class
+        ProfileAchievementEntity::class,
+        ScreenTransitionEntity::class
 
     ],
-    version = 21,
+    version = 22,
     exportSchema = false
 )
 
 @TypeConverters(
-    ProfileTypeConverter::class
+    ProfileTypeConverter::class,
+    AppScreenConverter::class
 )
 
 abstract class AppDatabase : RoomDatabase() {
@@ -91,5 +96,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun gameModeDao(): GameModeDao
 
     abstract fun achievementsDao(): AchievementsDao
+
+    abstract fun telemetryDao(): TelemetryDao
 
 }
