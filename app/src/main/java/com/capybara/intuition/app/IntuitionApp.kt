@@ -13,9 +13,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
 import com.capybara.intuition.app.navigation.ui.topnav.TopNavigation
-import com.capybara.intuition.app.presentation.layout.LocalAppLayoutEnvironment
-import com.capybara.intuition.app.presentation.layout.rememberAppLayoutEnvironment
-import com.capybara.intuition.app.presentation.theme.IntuitionTheme
+import com.capybara.intuition.core.layout.LocalAppLayoutEnvironment
+import com.capybara.intuition.core.layout.rememberAppLayoutEnvironment
+import com.capybara.intuition.core.theme.IntuitionTheme
+import com.capybara.intuition.core.ui.ExitDialog
 
 
 
@@ -32,9 +33,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
-import com.capybara.intuition.app.bootstrap.BootstrapState
-import com.capybara.intuition.app.navigation.AppLaunchState
-import com.capybara.intuition.app.navigation.AppRoot
+import com.capybara.intuition.services.bootstrap.model.BootstrapState
 
 @Composable
 fun IntuitionApp() {

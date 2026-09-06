@@ -17,7 +17,7 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(keystorePropertiesFile.inputStream())
 }
 
-extra["appVersionCode"] = 23
+extra["appVersionCode"] = 25
 extra["appVersionName"] = "0.19"
 val appVersionCode: Int by extra
 val appVersionName: String by extra

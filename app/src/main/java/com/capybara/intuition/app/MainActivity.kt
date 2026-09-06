@@ -5,9 +5,7 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.compose.setContent
-import androidx.fragment.app.FragmentActivity
-import com.capybara.intuition.app.presentation.theme.IntuitionTheme
-import com.capybara.intuition.app.IntuitionApp
+import com.capybara.intuition.core.theme.IntuitionTheme
 
 class MainActivity : ComponentActivity() {
 

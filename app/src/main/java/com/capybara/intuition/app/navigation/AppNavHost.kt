@@ -12,16 +12,16 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.NavHostController
-import com.capybara.intuition.achievements.presentation.routes.AchievementsRoute
+import com.capybara.intuition.features.achievements.presentation.routes.AchievementsRoute
 import com.capybara.intuition.app.App
 import com.capybara.intuition.app.BuildConfiguration
-import com.capybara.intuition.app.navigation.telemetry.model.AppScreen
-import com.capybara.intuition.game.presentation.routes.GameRoute
-import com.capybara.intuition.info.presentation.routes.InfoRoute
-import com.capybara.intuition.license.domain.CapabilityEnvironment
-import com.capybara.intuition.profile.presentation.routes.SettingsRoute
-import com.capybara.intuition.profile.tester.presentation.routes.TesterToolsRoute
-import com.capybara.intuition.statistics.presentation.routes.StatisticsRoute
+import com.capybara.intuition.services.telemetry.model.AppScreen
+import com.capybara.intuition.features.game.presentation.routes.GameRoute
+import com.capybara.intuition.features.info.presentation.routes.InfoRoute
+import com.capybara.intuition.services.license.domain.CapabilityEnvironment
+import com.capybara.intuition.features.profile.presentation.routes.SettingsRoute
+import com.capybara.intuition.features.profile.tester.presentation.routes.TesterToolsRoute
+import com.capybara.intuition.features.statistics.presentation.routes.StatisticsRoute
 
 @Composable
 fun AppNavHost(

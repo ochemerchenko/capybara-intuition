@@ -1,0 +1,32 @@
+package com.capybara.intuition.features.profile.tester.components.generator.ver2.tools.calculators
+
+import com.capybara.intuition.features.profile.tester.components.generator.ver2.TimeLineDay
+import com.capybara.intuition.features.profile.tester.components.generator.ver2.tools.math.randomValues
+import kotlin.math.roundToInt
+import kotlin.random.Random
+
+fun calculateMotivationBoost(
+    timeLines: MutableList<TimeLineDay>,
+    period: Int,
+    boostDensity: Double,
+    motivationBoostRange: ClosedFloatingPointRange<Double>
+): MutableList<TimeLineDay> {
+
+    val eventAmount = (period * boostDensity).roundToInt()
+
+    val randomEventDays = randomValues(
+        0 until timeLines.size,
+        eventAmount
+    )
+
+    randomEventDays.forEach { index ->
+        timeLines[index] = timeLines[index].copy(
+            motivationBoost = Random.nextDouble(
+                motivationBoostRange.start,
+                motivationBoostRange.endInclusive
+            )
+        )
+    }
+
+    return timeLines
+}

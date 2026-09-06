@@ -13,7 +13,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
-import com.capybara.intuition.app.presentation.theme.IntuitionTheme
+import com.capybara.intuition.core.theme.IntuitionTheme
 
 @Composable
 fun NavIcon(

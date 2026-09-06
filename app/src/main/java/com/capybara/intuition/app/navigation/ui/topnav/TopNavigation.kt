@@ -21,11 +21,11 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.capybara.intuition.R
-import com.capybara.intuition.app.jobs.appUpdater.AppUpdateViewModel
-import com.capybara.intuition.app.jobs.appUpdater.model.UpdateUiStatus
-import com.capybara.intuition.app.jobs.appUpdater.ui.AppUpdateDialog
+import com.capybara.intuition.services.updater.presentation.AppUpdateViewModel
+import com.capybara.intuition.services.updater.model.UpdateUiStatus
+import com.capybara.intuition.services.updater.ui.AppUpdateDialog
 import com.capybara.intuition.app.navigation.AppDestination
-import com.capybara.intuition.app.presentation.theme.IntuitionTheme
+import com.capybara.intuition.core.theme.IntuitionTheme
 
 @Composable
 fun TopNavigation(

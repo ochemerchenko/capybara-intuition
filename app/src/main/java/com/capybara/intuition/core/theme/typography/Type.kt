@@ -1,0 +1,34 @@
+package com.capybara.intuition.core.theme.typography
+
+import androidx.compose.material3.Typography
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+import com.capybara.intuition.R
+
+val InterFontFamily = FontFamily(
+
+    Font(
+        R.font.inter_regular,
+        weight = FontWeight.Normal
+    ),
+
+    Font(
+        R.font.inter_medium,
+        weight = FontWeight.Medium
+    ),
+
+    Font(
+        R.font.inter_bold,
+        weight = FontWeight.SemiBold
+    ),
+
+    Font(
+        R.font.inter_semibolditalic,
+        weight = FontWeight.SemiBold,
+        style = FontStyle.Italic
+    )
+)

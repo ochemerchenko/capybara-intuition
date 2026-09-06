@@ -2,7 +2,6 @@ package com.capybara.intuition.app
 
 import android.app.Application
 import androidx.lifecycle.ProcessLifecycleOwner
-import com.capybara.intuition.app.composition.AppContainer
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
