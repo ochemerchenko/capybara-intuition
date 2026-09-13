@@ -22,6 +22,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.capybara.intuition.R
 import com.capybara.intuition.core.theme.IntuitionTheme
+import com.capybara.intuition.core.tools.markdown.MarkdownAssetLoader
 import com.capybara.intuition.core.tools.markdown.MarkdownText
 import java.io.IOException
 
@@ -33,8 +34,6 @@ fun ReleaseNotesScreen(
 ) {
 
     val context = LocalContext.current
-    val language = context.resources.configuration.locales[0].language
-
     val colors = IntuitionTheme.colors
     val typography = IntuitionTheme.typography
 
@@ -44,28 +43,23 @@ fun ReleaseNotesScreen(
     val asset = "onboarding.md"
     val build_info_asset = "build_info.md"
 
-    val markdown = remember(asset, language) {
-
-        try {
-            context.assets
-                .open("onboarding/$language/$asset")
-                .bufferedReader()
-                .use { it.readText() }
-
-        } catch (e: IOException) {
-
-            context.assets
-                .open("onboarding/en/$asset")
-                .bufferedReader()
-                .use { it.readText() }
-        }
+    val markdown = remember(asset) {
+        MarkdownAssetLoader.load(
+            context = context,
+            directory = "onboarding",
+            fileName = asset
+        )
     }
 
     val buildInfo = remember(build_info_asset) {
-        context.assets
-            .open("onboarding/$build_info_asset")
-            .bufferedReader()
-            .use { it.readText() }
+        try {
+            context.assets
+                .open("onboarding/$build_info_asset")
+                .bufferedReader()
+                .use { it.readText() }
+        } catch (e: IOException) {
+            ""
+        }
     }
 
 

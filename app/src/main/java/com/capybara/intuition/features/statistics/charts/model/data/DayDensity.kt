@@ -23,6 +23,10 @@ data class DayDensity(
      * Середній час прийняття рішення
      * по всіх раундах цього дня (секунди).
      */
-    val averageDecisionTime: Double
+    val averageDecisionTime: Double,
+
+    val physical: Int? = null,
+    val happiness: Int? = null,
+    val confidence: Int? = null
 
 )

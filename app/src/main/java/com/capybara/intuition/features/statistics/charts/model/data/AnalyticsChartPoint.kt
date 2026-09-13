@@ -16,6 +16,14 @@ data class AnalyticsChartPoint(
     val userLineEma: Double,
     val upperCorridorLineEma: Double,
     val lowerCorridorLineEma: Double,
-    val averageDayDecisionTimeEma: Double
+    val averageDayDecisionTimeEma: Double,
+
+    val physical: Double,
+    val happiness: Double,
+    val confidence: Double,
+
+    val physicalEma: Double = 0.5,
+    val happinessEma: Double = 0.5,
+    val confidenceEma: Double = 0.5
 
 )

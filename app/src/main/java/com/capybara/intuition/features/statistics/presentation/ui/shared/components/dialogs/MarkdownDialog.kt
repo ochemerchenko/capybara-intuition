@@ -25,8 +25,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.capybara.intuition.R
 import com.capybara.intuition.core.theme.IntuitionTheme
+import com.capybara.intuition.core.tools.markdown.MarkdownAssetLoader
 import com.capybara.intuition.core.tools.markdown.MarkdownText
-import com.capybara.intuition.features.statistics.presentation.content.MarkdownLoader
 
 
 @Composable
@@ -54,11 +54,12 @@ fun MarkdownDialog(
 
     val context = LocalContext.current
 
-    val markdown = remember {
-
-        MarkdownLoader.load(
+    val markdown = remember(baseName) {
+        MarkdownAssetLoader.load(
             context = context,
-            baseName = baseName
+            directory = "help",
+            fileName = "$baseName.md",
+            fallbackLanguage = "en"
         )
     }
 

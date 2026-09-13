@@ -22,7 +22,7 @@ import com.capybara.intuition.core.styles.IntuitionOutlinedTextFieldStyle
 import com.capybara.intuition.core.theme.IntuitionTheme
 import com.capybara.intuition.features.profile.domain.model.recovery.ChallengeTask
 import com.capybara.intuition.features.profile.presentation.ui.components.SettingsSection
-import com.capybara.intuition.features.profile.tester.model.RecoveryError
+import com.capybara.intuition.features.profile.domain.model.recovery.RecoveryError
 
 @Composable
 fun ParentAccessRecoverySection(

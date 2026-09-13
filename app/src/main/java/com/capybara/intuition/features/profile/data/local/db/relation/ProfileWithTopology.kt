@@ -62,7 +62,11 @@ fun ProfileWithTopology.toDomain(): Profile {
         isDeleted = profile.isDeleted,
         active = profile.active,
         createdAt = profile.createdAt,
-        lastUsedAt = profile.lastUsedAt
+        lastUsedAt = profile.lastUsedAt,
+        noiseCorridorVisibility = profile.noiseCorridorVisibility,
+        physicalStateVisibility = profile.physicalStateVisibility,
+        happinessVisibility = profile.happinessVisibility,
+        selfConfidenceVisibility = profile.selfConfidenceVisibility
     )
     Log.d("PROFILES", "ProfileWithTopology: toDomain(): profile = $profile")
     return profile

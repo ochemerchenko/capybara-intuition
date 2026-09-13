@@ -11,16 +11,20 @@ interface StatisticsDao {
     @Query(
         """
         SELECT
-            DATE(startedAt / 1000, 'unixepoch') AS day,
+            session_stats.day AS day,
             1.0 * AVG(sessionDensity) AS dayDensity,
             SUM(sessionRounds) AS dayRoundCount,
             COUNT(sessionId) AS daySessionCount,
-            SUM(sessionRoundsTime) / SUM(sessionRounds) AS averageDecisionTime
+            SUM(sessionRoundsTime) / SUM(sessionRounds) AS averageDecisionTime,
+            MAX(wr.physical) AS physical,
+            MAX(wr.happiness) AS happiness,
+            MAX(wr.confidence) AS confidence
         FROM (
 
             SELECT
                   s.id                          AS sessionId
                 , s.startedAt                   AS startedAt
+                , DATE(s.startedAt / 1000, 'unixepoch') AS day
                 , 1.0 * SUM( rr.result ) / COUNT(rr.id)                AS sessionDensity
                 , COUNT(rr.id)                  AS sessionRounds
                 , SUM(rr.finishedAt - rr.startedAt) AS sessionRoundsTime
@@ -41,8 +45,11 @@ interface StatisticsDao {
             HAVING COUNT(rr.id) > :noiseLevel
 
         ) AS session_stats
-        GROUP BY day
-        ORDER BY day ASC
+        LEFT JOIN wellbeing_records wr
+            ON DATE(wr.timestamp / 1000, 'unixepoch') = session_stats.day
+            AND wr.profileId = :profileId
+        GROUP BY session_stats.day
+        ORDER BY session_stats.day ASC
         """
     )
     suspend fun getDayDensities(

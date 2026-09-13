@@ -28,6 +28,17 @@ fun FreeStatisticsScreen (
     dateFrom: Long,
     dateNow: Long,
     analyticalGraph: List<DayDensity>,
+
+    noiseCorridorVisibility: Boolean,
+    physicalStateVisibility: Boolean,
+    happinessVisibility: Boolean,
+    selfConfidenceVisibility: Boolean,
+
+    onToggleNoiseCorridor: () -> Unit,
+    onTogglePhysicalState: () -> Unit,
+    onToggleHappiness: () -> Unit,
+    onToggleSelfConfidence: () -> Unit,
+
     onLevelSelected: (Int) -> Unit,
     onHelpLinkClick: (String) -> Unit = {},
     modifier: Modifier = Modifier
@@ -75,6 +86,14 @@ fun FreeStatisticsScreen (
         // =========================================
         DensityFullGraphic (
             chartsData = chartsData,
+            noiseCorridorVisibility = noiseCorridorVisibility,
+            physicalStateVisibility = physicalStateVisibility,
+            happinessVisibility = happinessVisibility,
+            selfConfidenceVisibility = selfConfidenceVisibility,
+            onToggleNoiseCorridor = onToggleNoiseCorridor,
+            onTogglePhysicalState = onTogglePhysicalState,
+            onToggleHappiness = onToggleHappiness,
+            onToggleSelfConfidence = onToggleSelfConfidence,
             onHelpLinkClick = onHelpLinkClick
         )
 

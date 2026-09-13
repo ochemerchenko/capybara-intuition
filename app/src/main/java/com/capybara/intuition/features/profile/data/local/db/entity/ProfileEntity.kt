@@ -192,5 +192,10 @@ data class ProfileEntity(
     /**
      * Last profile usage timestamp.
      */
-    val lastUsedAt: Long
+    val lastUsedAt: Long,
+
+    val noiseCorridorVisibility: Boolean = true,
+    val physicalStateVisibility: Boolean = false,
+    val happinessVisibility: Boolean = false,
+    val selfConfidenceVisibility: Boolean = false
 )

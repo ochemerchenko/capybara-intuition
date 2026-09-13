@@ -29,11 +29,10 @@ fun DrawScope.drawDensityFullGraphUserLine(
 
     val path = buildSmoothPath(points)
 
-
     drawPath(
         path = path,
         color = colors.chartUserLine,
-        style = Stroke(width = 6f)
+        style = Stroke(width = 8f)
     )
 }
 

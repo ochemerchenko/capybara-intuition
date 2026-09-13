@@ -16,7 +16,7 @@ import com.capybara.intuition.features.profile.domain.model.ProfileType
 import com.capybara.intuition.features.profile.domain.model.recovery.ChallengeTask
 import com.capybara.intuition.features.profile.domain.recovery.RecoveryChallengeGenerator
 import com.capybara.intuition.features.profile.domain.security.PinHasher
-import com.capybara.intuition.features.profile.tester.model.RecoveryError
+import com.capybara.intuition.features.profile.domain.model.recovery.RecoveryError
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -413,6 +413,42 @@ class ProfileViewModel(
             recoveryChallenge = null
 
             recoveryErrorMessage = null
+        }
+    }
+
+    fun toggleNoiseCorridorVisibility() {
+        val activeProfile = profiles.value.firstOrNull { it.active } ?: return
+        viewModelScope.launch {
+            repository.updateProfile(
+                activeProfile.copy(noiseCorridorVisibility = !activeProfile.noiseCorridorVisibility)
+            )
+        }
+    }
+
+    fun togglePhysicalStateVisibility() {
+        val activeProfile = profiles.value.firstOrNull { it.active } ?: return
+        viewModelScope.launch {
+            repository.updateProfile(
+                activeProfile.copy(physicalStateVisibility = !activeProfile.physicalStateVisibility)
+            )
+        }
+    }
+
+    fun toggleHappinessVisibility() {
+        val activeProfile = profiles.value.firstOrNull { it.active } ?: return
+        viewModelScope.launch {
+            repository.updateProfile(
+                activeProfile.copy(happinessVisibility = !activeProfile.happinessVisibility)
+            )
+        }
+    }
+
+    fun toggleSelfConfidenceVisibility() {
+        val activeProfile = profiles.value.firstOrNull { it.active } ?: return
+        viewModelScope.launch {
+            repository.updateProfile(
+                activeProfile.copy(selfConfidenceVisibility = !activeProfile.selfConfidenceVisibility)
+            )
         }
     }
 }

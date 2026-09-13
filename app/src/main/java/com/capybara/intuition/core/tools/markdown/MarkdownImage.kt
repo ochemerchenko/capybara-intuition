@@ -27,6 +27,20 @@ fun MarkdownImage(
             )
         }
 
+        "self_test_questionnary_uk" -> {
+            SelfTestQuestionnaryImage(
+                resId = com.capybara.intuition.R.drawable.self_test_questionnary_uk,
+                modifier = modifier
+            )
+        }
+
+        "self_test_questionnary_en" -> {
+            SelfTestQuestionnaryImage(
+                resId = com.capybara.intuition.R.drawable.self_test_questionnary_en,
+                modifier = modifier
+            )
+        }
+
         /*
         "density_preview" -> {
             DensityPreviewLegendImage(

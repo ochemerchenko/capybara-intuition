@@ -36,6 +36,16 @@ fun PremiumStatisticsScreen(
     analyticalGraphsPerLevel: LinkedHashMap<SessionFilter, List<DayDensity>>,
     analyticalGraphsPerMode: LinkedHashMap<Int, List<DayDensity>>?,
 
+    noiseCorridorVisibility: Boolean,
+    physicalStateVisibility: Boolean,
+    happinessVisibility: Boolean,
+    selfConfidenceVisibility: Boolean,
+
+    onToggleNoiseCorridor: () -> Unit,
+    onTogglePhysicalState: () -> Unit,
+    onToggleHappiness: () -> Unit,
+    onToggleSelfConfidence: () -> Unit,
+
     availableLevels: IntRange,
     selectionState: StatisticsSelectionState,
     onSelectionStateChanged: (
@@ -118,6 +128,14 @@ fun PremiumStatisticsScreen(
                 dateNow = dateNow,
                 analyticPeriod = analyticPeriod,
                 emaModelingPeriod = emaModelingPeriod,
+                noiseCorridorVisibility = noiseCorridorVisibility,
+                physicalStateVisibility = physicalStateVisibility,
+                happinessVisibility = happinessVisibility,
+                selfConfidenceVisibility = selfConfidenceVisibility,
+                onToggleNoiseCorridor = onToggleNoiseCorridor,
+                onTogglePhysicalState = onTogglePhysicalState,
+                onToggleHappiness = onToggleHappiness,
+                onToggleSelfConfidence = onToggleSelfConfidence,
                 onHelpLinkClick = onHelpLinkClick,
                 onBack = {
                     selectedChart = null

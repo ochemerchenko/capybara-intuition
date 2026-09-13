@@ -4,5 +4,8 @@ enum class EmaTarget {
     USER_LINE,
     UPPER_CORRIDOR,
     LOWER_CORRIDOR,
-    DECISION_TIME
+    DECISION_TIME,
+    PHYSICAL,
+    HAPPINESS,
+    CONFIDENCE
 }

@@ -35,6 +35,17 @@ fun PremiumDensityDetailSection(
     dateNow: Long,
     analyticPeriod: Int,
     emaModelingPeriod: Int,
+    
+    noiseCorridorVisibility: Boolean,
+    physicalStateVisibility: Boolean,
+    happinessVisibility: Boolean,
+    selfConfidenceVisibility: Boolean,
+    
+    onToggleNoiseCorridor: () -> Unit,
+    onTogglePhysicalState: () -> Unit,
+    onToggleHappiness: () -> Unit,
+    onToggleSelfConfidence: () -> Unit,
+    
     modifier: Modifier = Modifier,
     onBack: () -> Unit,
     onHelpLinkClick: (String) -> Unit = {},
@@ -128,6 +139,14 @@ fun PremiumDensityDetailSection(
 
             DensityFullGraphic (
                 chartsData = chartsData,
+                noiseCorridorVisibility = noiseCorridorVisibility,
+                physicalStateVisibility = physicalStateVisibility,
+                happinessVisibility = happinessVisibility,
+                selfConfidenceVisibility = selfConfidenceVisibility,
+                onToggleNoiseCorridor = onToggleNoiseCorridor,
+                onTogglePhysicalState = onTogglePhysicalState,
+                onToggleHappiness = onToggleHappiness,
+                onToggleSelfConfidence = onToggleSelfConfidence,
                 onHelpLinkClick = onHelpLinkClick
             )
 

@@ -148,7 +148,12 @@ class ProfileSeeder(
                 isDeleted = false,
                 active = seed.active,
                 createdAt = now,
-                lastUsedAt = now
+                lastUsedAt = now,
+
+                noiseCorridorVisibility = true,
+                physicalStateVisibility = false,
+                happinessVisibility = false,
+                selfConfidenceVisibility = false
             )
         }
         Log.d("BOOTSTRAP", "Profiles to insert = ${entities.size}")

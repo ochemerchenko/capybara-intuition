@@ -20,7 +20,6 @@ import kotlinx.coroutines.launch
 @Composable
 fun AppRoot(
     navController: NavHostController,
-    //launchState: AppLaunchState,
     bootstrapStateRepository: BootstrapStateRepository,
     releaseNotesRepository: ReleaseNotesRepository,
     modifier: Modifier = Modifier,
@@ -64,6 +63,7 @@ fun AppRoot(
 
         AppLaunchState.READY -> {
             Log.d("ROOT", "Creating AppNavHost")
+            
             AppNavHost(
                 navController = navController,
                 modifier = modifier,

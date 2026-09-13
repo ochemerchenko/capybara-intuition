@@ -73,7 +73,23 @@ fun calculateAnalyticsChartPoints(
         emaModelingPeriod = emaModelingPeriod
     )
 
+    analyticsChartPoints = enrichWithEma(
+        chartPoints = analyticsChartPoints,
+        target = EmaTarget.PHYSICAL,
+        emaModelingPeriod = emaModelingPeriod
+    )
 
+    analyticsChartPoints = enrichWithEma(
+        chartPoints = analyticsChartPoints,
+        target = EmaTarget.HAPPINESS,
+        emaModelingPeriod = emaModelingPeriod
+    )
+
+    analyticsChartPoints = enrichWithEma(
+        chartPoints = analyticsChartPoints,
+        target = EmaTarget.CONFIDENCE,
+        emaModelingPeriod = emaModelingPeriod
+    )
 
 
     analyticsChartPoints.forEachIndexed { index, point ->

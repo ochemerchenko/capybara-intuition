@@ -16,6 +16,7 @@ import com.capybara.intuition.core.ui.WaitingScreen
 import com.capybara.intuition.features.game.presentation.ui.GameScreen
 import com.capybara.intuition.features.game.presentation.viewmodel.GameViewModel
 import com.capybara.intuition.features.game.presentation.viewmodel.GameViewModelFactory
+import com.capybara.intuition.features.wellbeing.ui.WellbeingDialog
 
 
 
@@ -42,13 +43,28 @@ fun GameRoute(
 
     val session = state.session
     val currentRound = state.currentRound
+    
+    // =====================================================
+    // WELLBEING INTEGRATION
+    // =====================================================
+    val wellbeingViewModel = container.wellbeing.wellbeingViewModel
+    val showWellbeingDialog by wellbeingViewModel.showDialog.collectAsState()
+
+    // Перевіряємо статус самопочуття лише один раз при створенні нової сесії (коли з'являється її ID)
+    LaunchedEffect(session?.id) {
+        val sessionId = session?.id
+        if (sessionId != null && sessionId != 0L) {
+            wellbeingViewModel.checkStatus(session.profile.id)
+        }
+    }
+
     Log.d("BOOT", "GameRoute: state.session = $session, currentRound = $currentRound")
     Log.d(
         "BOOT",
         "GameRoute recomposed: session=${state.session != null}, round=${state.currentRound != null}"
     )
     if (
-        state.session == null || state.currentRound == null
+        session == null || currentRound == null
     ) {
         Box(
             modifier = Modifier.fillMaxSize(),
@@ -65,4 +81,11 @@ fun GameRoute(
         modifier = modifier,
         gameViewModel = gameViewModel
     )
+
+    if (showWellbeingDialog) {
+        WellbeingDialog(
+            profile = session.profile,
+            viewModel = wellbeingViewModel
+        )
+    }
 }

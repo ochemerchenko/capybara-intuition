@@ -4,8 +4,16 @@ import com.capybara.intuition.core.data.DataStoreAdapter
 import java.time.LocalDate
 
 class ExportDataStore(
-    private val dataStore: DataStoreAdapter
+    private val dataStore: DataStoreAdapter,
+    private val keySuffix: String = ""
 ) {
+
+    private val storageKey: String
+        get() = if (keySuffix.isEmpty()) {
+            LAST_CONFIRMED_EXPORT_DATE
+        } else {
+            "${LAST_CONFIRMED_EXPORT_DATE}_$keySuffix"
+        }
 
     companion object {
         const val LAST_CONFIRMED_EXPORT_DATE =
@@ -16,7 +24,7 @@ class ExportDataStore(
         defaultDate: LocalDate
     ): LocalDate {
         val date = dataStore
-            .get(LAST_CONFIRMED_EXPORT_DATE)
+            .get(storageKey)
             ?.let(LocalDate::parse)
 
         if (date != null) {
@@ -26,7 +34,7 @@ class ExportDataStore(
         val initialDate = defaultDate.minusDays(1)
 
         dataStore.edit(
-            key = LAST_CONFIRMED_EXPORT_DATE,
+            key = storageKey,
             value = initialDate.toString()
         )
 
@@ -37,7 +45,7 @@ class ExportDataStore(
         date: LocalDate
     ) {
         dataStore.edit(
-            key = LAST_CONFIRMED_EXPORT_DATE,
+            key = storageKey,
             value = date.toString()
         )
     }

@@ -66,5 +66,35 @@ fun enrichWithEma(
             }
 
         }
+
+        EmaTarget.PHYSICAL -> {
+            val emaValues = calculateEma(
+                values = chartPoints.map { it.physical },
+                period = emaModelingPeriod
+            )
+            chartPoints.mapIndexed { index, point ->
+                point.copy(physicalEma = emaValues[index])
+            }
+        }
+
+        EmaTarget.HAPPINESS -> {
+            val emaValues = calculateEma(
+                values = chartPoints.map { it.happiness },
+                period = emaModelingPeriod
+            )
+            chartPoints.mapIndexed { index, point ->
+                point.copy(happinessEma = emaValues[index])
+            }
+        }
+
+        EmaTarget.CONFIDENCE -> {
+            val emaValues = calculateEma(
+                values = chartPoints.map { it.confidence },
+                period = emaModelingPeriod
+            )
+            chartPoints.mapIndexed { index, point ->
+                point.copy(confidenceEma = emaValues[index])
+            }
+        }
     }
 }

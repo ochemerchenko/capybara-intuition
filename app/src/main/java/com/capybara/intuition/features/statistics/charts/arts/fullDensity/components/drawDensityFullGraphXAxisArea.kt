@@ -52,6 +52,10 @@ fun DrawScope.drawDensityFullGraphXAxisArea(
             strokeWidth = 2f
         )
 
+        // If today is the start of the week, we don't draw the label 
+        // to prevent it from being cut off at the edge.
+        if (index == chartsData.lastIndex) return@forEachIndexed
+
         val label = point.day.format(formatter)
 
         val textLayout = textMeasurer.measure(

@@ -209,6 +209,16 @@ fun StatisticsScreen(
                     dateFrom = from,
                     dateNow = now,
 
+                    noiseCorridorVisibility = activeProfile.noiseCorridorVisibility,
+                    physicalStateVisibility = activeProfile.physicalStateVisibility,
+                    happinessVisibility = activeProfile.happinessVisibility,
+                    selfConfidenceVisibility = activeProfile.selfConfidenceVisibility,
+
+                    onToggleNoiseCorridor = profileViewModel::toggleNoiseCorridorVisibility,
+                    onTogglePhysicalState = profileViewModel::togglePhysicalStateVisibility,
+                    onToggleHappiness = profileViewModel::toggleHappinessVisibility,
+                    onToggleSelfConfidence = profileViewModel::toggleSelfConfidenceVisibility,
+
                     analyticalGraphsPerLevel = analyticalGraphsPerLevel,
                     analyticalGraphsPerMode = dailyDensitiesPerMode?.datasets,
                     onHelpLinkClick = {
@@ -254,6 +264,17 @@ fun StatisticsScreen(
                     dateFrom = from,
                     dateNow = now,
                     analyticalGraph = dailyDensities,
+
+                    noiseCorridorVisibility = activeProfile.noiseCorridorVisibility,
+                    physicalStateVisibility = activeProfile.physicalStateVisibility,
+                    happinessVisibility = activeProfile.happinessVisibility,
+                    selfConfidenceVisibility = activeProfile.selfConfidenceVisibility,
+
+                    onToggleNoiseCorridor = profileViewModel::toggleNoiseCorridorVisibility,
+                    onTogglePhysicalState = profileViewModel::togglePhysicalStateVisibility,
+                    onToggleHappiness = profileViewModel::toggleHappinessVisibility,
+                    onToggleSelfConfidence = profileViewModel::toggleSelfConfidenceVisibility,
+
                     onLevelSelected = { level ->
                         selectionState =
                             selectionState.copy(
@@ -270,7 +291,3 @@ fun StatisticsScreen(
         }
     }
 }
-
-
-
-

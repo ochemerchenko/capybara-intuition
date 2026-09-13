@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wellbeing_dialog_hello">Hello, %s!</string>
+    <string name="wellbeing_dialog_title">How are you feeling today?</string>
+    <string name="wellbeing_physical_label">Physical state</string>
+    <string name="wellbeing_happiness_label">Happiness</string>
+    <string name="wellbeing_confidence_label">Self-confidence</string>
+    <string name="wellbeing_button_save">Save</string>
+    <string name="wellbeing_button_skip">Skip</string>
+</resources>

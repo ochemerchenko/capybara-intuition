@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wellbeing_dialog_hello">Привіт, %s!</string>
+    <string name="wellbeing_dialog_title">Як ти почуваєшся сьогодні?</string>
+    <string name="wellbeing_physical_label">Фізичний стан</string>
+    <string name="wellbeing_happiness_label">Настрій</string>
+    <string name="wellbeing_confidence_label">Впевненість у собі</string>
+    <string name="wellbeing_button_save">Зберегти</string>
+    <string name="wellbeing_button_skip">Пізніше</string>
+</resources>

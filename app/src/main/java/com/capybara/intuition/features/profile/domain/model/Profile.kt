@@ -90,5 +90,10 @@ data class Profile(
 
     val createdAt: Long,
 
-    val lastUsedAt: Long
+    val lastUsedAt: Long,
+
+    val noiseCorridorVisibility: Boolean,
+    val physicalStateVisibility: Boolean,
+    val happinessVisibility: Boolean,
+    val selfConfidenceVisibility: Boolean
 )

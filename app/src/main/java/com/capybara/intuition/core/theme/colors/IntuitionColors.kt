@@ -278,6 +278,11 @@ data class IntuitionColors(
     val capybaraWinGlow: Color = Color(0xFF8FAE7A),
     val capybaraLoseGlow: Color = Color(0xFFC67A68),
 
-
+    ////////////////////
+    // WELLBEING COLORS
+    ////////////////////
+    val wellbeingPhysical: Color = Color(0xFFB06A4F),
+    val wellbeingHappiness: Color = Color(0xFFD4AF37),
+    val wellbeingConfidence: Color = Color(0xFF4682B4),
 
     )

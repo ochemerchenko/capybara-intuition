@@ -23,7 +23,12 @@ fun applyDayDensities(
             point.copy(
                 userLine = density.dayDensity,
                 averageDayDecisionTime = density.averageDecisionTime,
-                sessionCount = density.daySessionCount.toDouble()
+                sessionCount = density.daySessionCount.toDouble(),
+                // Якщо даних про самопочуття немає для цього ігрового дня, 
+                // залишаємо базове значення 0.5, яке було встановлене в buildEmptyChart
+                physical = density.physical?.let { it.toDouble() / 100.0 } ?: point.physical,
+                happiness = density.happiness?.let { it.toDouble() / 100.0 } ?: point.happiness,
+                confidence = density.confidence?.let { it.toDouble() / 100.0 } ?: point.confidence
             )
         }
     }

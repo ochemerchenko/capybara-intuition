@@ -20,7 +20,7 @@ import com.capybara.intuition.features.game.presentation.routes.GameRoute
 import com.capybara.intuition.features.info.presentation.routes.InfoRoute
 import com.capybara.intuition.services.license.domain.CapabilityEnvironment
 import com.capybara.intuition.features.profile.presentation.routes.SettingsRoute
-import com.capybara.intuition.features.profile.tester.presentation.routes.TesterToolsRoute
+import com.capybara.intuition.features.tester.presentation.routes.TesterToolsRoute
 import com.capybara.intuition.features.statistics.presentation.routes.StatisticsRoute
 
 @Composable

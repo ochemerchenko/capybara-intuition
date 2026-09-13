@@ -16,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.capybara.intuition.core.theme.IntuitionTheme
+import com.capybara.intuition.core.tools.markdown.MarkdownAssetLoader
 import com.capybara.intuition.core.tools.markdown.MarkdownText
 import java.io.IOException
 
@@ -26,8 +27,6 @@ fun InfoMarkdownSection(
 ) {
 
     val context = LocalContext.current
-    val language = context.resources.configuration.locales[0].language
-
     val colors = IntuitionTheme.colors
     val typography = IntuitionTheme.typography
 
@@ -36,28 +35,23 @@ fun InfoMarkdownSection(
 
     val build_info_asset = "build_info.md"
 
-    val markdown = remember(asset, language) {
-
-        try {
-            context.assets
-                .open("info/$language/$asset")
-                .bufferedReader()
-                .use { it.readText() }
-
-        } catch (e: IOException) {
-
-            context.assets
-                .open("info/en/$asset")
-                .bufferedReader()
-                .use { it.readText() }
-        }
+    val markdown = remember(asset) {
+        MarkdownAssetLoader.load(
+            context = context,
+            directory = "info",
+            fileName = asset
+        )
     }
 
     val buildInfo = remember(build_info_asset) {
-        context.assets
-            .open("onboarding/$build_info_asset")
-            .bufferedReader()
-            .use { it.readText() }
+        try {
+            context.assets
+                .open("onboarding/$build_info_asset")
+                .bufferedReader()
+                .use { it.readText() }
+        } catch (e: IOException) {
+            ""
+        }
     }
 
     Box(

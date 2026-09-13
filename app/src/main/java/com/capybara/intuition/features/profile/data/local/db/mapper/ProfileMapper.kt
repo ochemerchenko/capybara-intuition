@@ -42,5 +42,9 @@ fun Profile.toEntity(
         createdAt = createdAt,
         lastUsedAt = lastUsedAt,
 
+        noiseCorridorVisibility = noiseCorridorVisibility,
+        physicalStateVisibility = physicalStateVisibility,
+        happinessVisibility = happinessVisibility,
+        selfConfidenceVisibility = selfConfidenceVisibility
     )
 }

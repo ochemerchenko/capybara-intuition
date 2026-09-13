@@ -11,10 +11,12 @@ import com.capybara.intuition.services.updater.data.AppUpdateManager
 import com.capybara.intuition.services.database.domain.DatabaseCleanupManager
 import com.capybara.intuition.services.sync.domain.exportGameData
 import com.capybara.intuition.services.sync.domain.exportNavigation
+import com.capybara.intuition.services.sync.domain.exportWellBeing
 import com.capybara.intuition.services.sync.domain.uploadExport
 import com.capybara.intuition.services.telemetry.data.repository.TelemetryRepository
 import com.capybara.intuition.features.game.data.local.db.dao.GameRoundDao
 import com.capybara.intuition.features.game.data.local.db.dao.SessionDao
+import com.capybara.intuition.features.wellbeing.data.local.db.dao.WellbeingDao
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import com.google.firebase.auth.FirebaseAuth
@@ -28,6 +30,7 @@ class JobManager(
     private val installationDao: InstallationDao,
     private val sessionDao: SessionDao,
     private val gameRoundDao: GameRoundDao,
+    private val wellbeingDao: WellbeingDao,
     private val telemetryRepository: TelemetryRepository,
 
     private val databaseCleanupManager: DatabaseCleanupManager,
@@ -90,6 +93,15 @@ class JobManager(
                 context = context,
                 installationDao = installationDao,
                 telemetryRepository = telemetryRepository
+            )
+        }
+
+        executeSafely("Wellbeing data local export") {
+            exportWellBeing(
+                context = context,
+                installationDao = installationDao,
+                wellbeingDao = wellbeingDao,
+                dataStoreAdapter = dataStoreAdapter
             )
         }
 

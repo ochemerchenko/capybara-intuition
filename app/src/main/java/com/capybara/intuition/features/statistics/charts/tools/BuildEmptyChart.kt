@@ -42,7 +42,10 @@ fun buildEmptyChart(
                 upperCorridorLineEma = 0.0,
                 lowerCorridorLineEma = 0.0,
                 averageDayDecisionTimeEma = 0.0,
-                sessionCount = 0.0
+                sessionCount = 0.0,
+                physical = 0.5,
+                happiness = 0.5,
+                confidence = 0.5
             )
         )
 

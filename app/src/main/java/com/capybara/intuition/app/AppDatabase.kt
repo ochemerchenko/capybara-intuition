@@ -30,6 +30,8 @@ import com.capybara.intuition.features.game.data.local.db.entity.topology.Topolo
 import com.capybara.intuition.features.game.data.local.db.entity.topology.TopologyEntity
 import com.capybara.intuition.features.game.data.local.db.entity.topology.TopologyFamilyEntity
 import com.capybara.intuition.features.game.data.local.db.entity.topology.TopologyFamilyRelationEntity
+import com.capybara.intuition.features.wellbeing.data.local.db.dao.WellbeingDao
+import com.capybara.intuition.features.wellbeing.data.local.db.entity.WellbeingRecordEntity
 import com.capybara.intuition.services.installation.data.local.db.dao.InstallationDao
 import com.capybara.intuition.services.installation.data.local.db.entity.InstallationEntity
 import com.capybara.intuition.services.telemetry.data.local.db.converter.AppScreenConverter
@@ -60,10 +62,11 @@ import com.capybara.intuition.features.statistics.data.local.db.dao.StatisticsDa
         AchievementCategoryEntity::class,
         AchievementEntity::class,
         ProfileAchievementEntity::class,
-        ScreenTransitionEntity::class
+        ScreenTransitionEntity::class,
+        WellbeingRecordEntity::class
 
     ],
-    version = 22,
+    version = 24,
     exportSchema = false
 )
 
@@ -98,5 +101,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun achievementsDao(): AchievementsDao
 
     abstract fun telemetryDao(): TelemetryDao
+
+    abstract fun wellbeingDao(): WellbeingDao
 
 }
