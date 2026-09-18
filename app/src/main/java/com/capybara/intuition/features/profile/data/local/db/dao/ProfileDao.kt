@@ -33,22 +33,13 @@ interface ProfileDao {
 
     @Query(
         """
-        SELECT *
-        FROM profiles
-        WHERE type != 'SYSTEM'
-        """
-    )
-    fun getVisibleProfiles(): Flow<List<ProfileEntity>>
-
-    @Query(
-        """
     SELECT *
     FROM profiles
     WHERE type = 'SYSTEM'
     LIMIT 1
     """
     )
-    suspend fun getSystemProfile(): ProfileEntity
+    suspend fun getSystemProfile(): ProfileEntity?
 
     @Query(
         """
@@ -63,24 +54,7 @@ interface ProfileDao {
 
 
     // =================================================
-    // CREATE
-    // =================================================
-
-
-    /*
-    @Insert
-    suspend fun createChildProfile(
-        profile: ProfileEntity
-    )
-
-
-     */
-
-
-
-
-    // =================================================
-    // UPDATE SINGLE
+    // UPDATE
     // =================================================
 
     @Update
@@ -109,60 +83,6 @@ interface ProfileDao {
         )
     }
 
-    /*
-    @Query(
-        """
-    INSERT INTO profiles (
-        name,
-        type,
-        installationId,
-        isSystemDefault,
-        pinHash,
-        activeNotebookId,
-        preferredMode,
-        minLevel,
-        maxLevel,
-        currentLevel,
-        rendererId,
-        maskId,
-        topologyFamilyId,
-        maxTopologyWidth,
-        maxTopologyHeight,
-        activeTopologyId,
-        isDeleted,
-        active,
-        createdAt,
-        lastUsedAt
-    )
-
-    SELECT
-        :name,
-        :type,
-        installationId,
-        0,
-        NULL,
-        activeNotebookId,
-        preferredMode,
-        minLevel,
-        maxLevel,
-        currentLevel,
-        rendererId,
-        maskId,
-        topologyFamilyId,
-        maxTopologyWidth,
-        maxTopologyHeight,
-        activeTopologyId,
-        0,
-        0,
-        :createdAt,
-        :lastUsedAt
-    FROM profiles
-    WHERE isSystemDefault = 1
-    LIMIT 1
-    """
-    )
-
-     */
     @Transaction
     suspend fun createChildProfile(
         name: String,
@@ -183,7 +103,6 @@ interface ProfileDao {
             lastUsedAt = lastUsedAt
         )
         return insert(childProfile).toInt()
-
     }
 
     @Query(
@@ -202,11 +121,9 @@ interface ProfileDao {
     @Query(
         """
     UPDATE profiles
-
     SET
         name = :name,
         pinHash = :pinHash
-
     WHERE type = :type
     AND isDeleted = 0
     """
@@ -256,10 +173,6 @@ interface ProfileDao {
     suspend fun getTesterSnapshot(): TesterProfileSnapshot?
 
 
-    // =============== START LEGACY =============
-
-
-
     // =====================================================
     // COUNTS
     // =====================================================
@@ -271,39 +184,6 @@ interface ProfileDao {
         """
     )
     suspend fun countProfiles(): Int
-
-    // =====================================================
-    // ACTIVE PROFILE
-    // =====================================================
-
-    @Query(
-        """
-        SELECT *
-        FROM profiles
-        WHERE active = 1
-        LIMIT 1
-        """
-    )
-    suspend fun getActiveProfile(): ProfileEntity?
-
-    @Query(
-        """
-        UPDATE profiles
-        SET active = 0
-        """
-    )
-    suspend fun clearActiveProfiles()
-
-    @Query(
-        """
-        UPDATE profiles
-        SET active = 1
-        WHERE id = :profileId
-        """
-    )
-    suspend fun setProfileActive(
-        profileId: Int
-    )
 
 
     @Query(
@@ -341,7 +221,6 @@ interface ProfileDao {
     // GENERAL
     // =====================================================
 
-
     @Transaction
     @Query(
         """
@@ -367,11 +246,6 @@ interface ProfileDao {
         profileId: Int
     ): ProfileEntity?
 
-    @Update
-    suspend fun update(
-        profile: ProfileEntity
-    )
-
     @Query(
         """
     SELECT *
@@ -386,5 +260,4 @@ interface ProfileDao {
     suspend fun insertAll(
         profiles: List<ProfileEntity>
     )
-    // =============== END LEGACY =============
 }

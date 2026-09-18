@@ -17,17 +17,4 @@ class GameSessionRepository (
             session.toEntity ()
         )
     }
-
-    suspend fun finish (
-        session: GameSession,
-        finishedAt: Long
-    ) {
-        dao.update(
-            session
-                .toEntity ()
-                .copy (
-                    finishedAt = finishedAt
-                )
-        )
-    }
 }

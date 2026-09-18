@@ -14,30 +14,10 @@ interface NotebookDao {
     @Insert(
         onConflict = OnConflictStrategy.REPLACE
     )
-    suspend fun insert(
-        notebook: NotebookEntity
-    )
-
-    @Insert(
-        onConflict = OnConflictStrategy.REPLACE
-    )
     suspend fun insertAll(
         notebooks: List<NotebookEntity>
     )
 
-    /*
-    @Query(
-        """
-        SELECT * FROM notebooks
-        WHERE name = :name
-        """
-    )
-    suspend fun getByName(
-        name: String
-    ): NotebookEntity?
-
-
-     */
     @Query(
         """
         SELECT * FROM notebooks
@@ -56,10 +36,4 @@ interface NotebookDao {
         id: Short
     ): NotebookWithResources?
 
-    @Query(
-        """
-        DELETE FROM notebooks
-        """
-    )
-    suspend fun deleteAll()
 }

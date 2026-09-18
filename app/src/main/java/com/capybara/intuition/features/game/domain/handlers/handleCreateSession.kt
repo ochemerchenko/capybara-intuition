@@ -7,7 +7,6 @@ import com.capybara.intuition.features.game.domain.model.GameSession
 import com.capybara.intuition.features.game.domain.model.Resource
 import com.capybara.intuition.features.profile.domain.model.Profile
 import java.util.Objects.toString
-import java.util.UUID
 
 suspend fun handleCreateSession(
     profile: Profile,

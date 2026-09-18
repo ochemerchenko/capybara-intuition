@@ -12,43 +12,9 @@ interface NotebookResourceLinkDao {
     @Insert(
         onConflict = OnConflictStrategy.REPLACE
     )
-    suspend fun insert(
-        link: NotebookResourceLinkEntity
-    )
-
-    @Insert(
-        onConflict = OnConflictStrategy.REPLACE
-    )
     suspend fun insertAll(
         links: List<NotebookResourceLinkEntity>
     )
-
-    @Query(
-        """
-        SELECT * FROM notebook_resource_links
-        WHERE notebookId = :notebookId
-        """
-    )
-    suspend fun getByNotebookName(
-        notebookId: Short
-    ): List<NotebookResourceLinkEntity>
-
-    @Query(
-        """
-        SELECT * FROM notebook_resource_links
-        WHERE resourceId = :resourceId
-        """
-    )
-    suspend fun getByResourceName(
-        resourceId: Short
-    ): List<NotebookResourceLinkEntity>
-
-    @Query(
-        """
-        DELETE FROM notebook_resource_links
-        """
-    )
-    suspend fun deleteAll()
 
     @Query("""
     SELECT COUNT(*)

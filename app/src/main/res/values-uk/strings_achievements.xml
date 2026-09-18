@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="achievements_title">Досягнення</string>
+    <string name="achievements_description">Тут відображуються ваші особисті рекорди та результати. Грайте, досліджуйте свою інтуїцію та відкривайте нові досягнення.</string>
+
+    <string name="achievements_regularity_subtitle">Регулярність</string>
+    <string name="achievements_regularity_no_data">Але ж ви ще не грали...</string>
+
+    <string name="achievements_level_activity_subtitle">Активність за рівнями</string>
+    <string name="achievements_level_activity_level_label">Рівень %1$d</string>
+    <string name="achievements_level_activity_max_sessions">Макс. сесій за день</string>
+    <string name="achievements_level_activity_max_rounds">Макс. раундів за сесію</string>
+    <string name="achievements_records_subtitle">Рекорди</string>
+    <string name="achievements_records_max_correct">Найбільше вгадувань</string>
+    <string name="achievements_records_max_misses">Найбільше промахів</string>
+    <string name="achievements_records_max_win_streak">Найдовша серія вгадувань</string>
+    <string name="achievements_records_max_lose_streak">Найдовша серія промахів</string>
+    <string name="achievements_regularity_last_active_days">В ігрі протягом останніх днів</string>
+    <string name="achievements_regularity_days_with_app">Усього днів з додатком</string>
+    <string name="achievements_regularity_total_active_days">Активних днів</string>
+    <string name="achievements_regularity_max_streak">Найдовша серія, днів</string>
+    <string name="achievements_regularity_max_break">Найдовша перерва, днів</string>
+</resources>

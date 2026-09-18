@@ -1,6 +1,5 @@
 package com.capybara.intuition.services.installation.data.repository
 
-import androidx.datastore.preferences.core.intPreferencesKey
 import com.capybara.intuition.core.data.DataStoreAdapter
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

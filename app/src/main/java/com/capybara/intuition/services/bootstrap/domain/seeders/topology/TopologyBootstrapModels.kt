@@ -1,6 +1,5 @@
 package com.capybara.intuition.services.bootstrap.domain.seeders.topology
 
-import com.capybara.intuition.services.bootstrap.domain.seeders.topology.TopologyStyleProjection
 
 data class BootstrapTopology(
 

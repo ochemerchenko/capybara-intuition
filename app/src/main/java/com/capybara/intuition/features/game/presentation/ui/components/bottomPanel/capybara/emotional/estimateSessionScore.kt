@@ -1,7 +1,6 @@
 package com.capybara.intuition.features.game.presentation.ui.components.bottomPanel.capybara.emotional
 
 import com.capybara.intuition.features.game.domain.model.GameSession
-import kotlin.math.floor
 import kotlin.math.log2
 
 fun estimateSessionScore(

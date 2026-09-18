@@ -4,9 +4,6 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.capybara.intuition.features.achievements.data.local.db.dao.AchievementsDao
-import com.capybara.intuition.features.achievements.data.local.db.entity.AchievementCategoryEntity
-import com.capybara.intuition.features.achievements.data.local.db.entity.AchievementEntity
-import com.capybara.intuition.features.achievements.data.local.db.entity.ProfileAchievementEntity
 import com.capybara.intuition.features.game.data.local.db.dao.GameModeDao
 import com.capybara.intuition.features.game.data.local.db.dao.GameRoundDao
 import com.capybara.intuition.features.game.data.local.db.dao.MaskDao
@@ -59,14 +56,10 @@ import com.capybara.intuition.features.statistics.data.local.db.dao.StatisticsDa
         TopologyFamilyRelationEntity::class,
         ObservedGameCardEntity::class,
         GameModeEntity::class,
-        AchievementCategoryEntity::class,
-        AchievementEntity::class,
-        ProfileAchievementEntity::class,
         ScreenTransitionEntity::class,
         WellbeingRecordEntity::class
-
     ],
-    version = 24,
+    version = 26,
     exportSchema = false
 )
 

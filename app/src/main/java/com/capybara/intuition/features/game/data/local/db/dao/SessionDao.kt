@@ -6,9 +6,6 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import com.capybara.intuition.features.game.data.local.db.entity.GameSessionEntity
-import java.time.LocalDate
-import java.time.ZoneOffset
-
 
 @Dao
 interface SessionDao {
@@ -44,32 +41,6 @@ interface SessionDao {
         id: String
     ): GameSessionEntity?
 
-    @Query(
-        """
-        SELECT *
-        FROM sessions
-        ORDER BY startedAt DESC
-        """
-    )
-    suspend fun getAll():
-            List<GameSessionEntity>
-
-
-    // =====================================================
-    // FINISH
-    // =====================================================
-
-    @Query(
-        """
-        UPDATE sessions
-        SET finishedAt = :finishedAt
-        WHERE id = :sessionId
-        """
-    )
-    suspend fun updateFinishedAt(
-        sessionId: String,
-        finishedAt: Long
-    )
 
     // =====================================================
     // STATS
@@ -85,7 +56,7 @@ interface SessionDao {
             Int
 
     // =====================================================
-    // DEBUG
+    // DEBUG / MAINTENANCE
     // =====================================================
 
     @Query(

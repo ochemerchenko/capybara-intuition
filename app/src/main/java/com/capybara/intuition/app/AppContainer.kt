@@ -4,7 +4,6 @@ import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.capybara.intuition.app.AppDatabase
 import com.capybara.intuition.app.jobs.JobManager
 import com.capybara.intuition.core.data.DataStoreAdapter
 import com.capybara.intuition.features.achievements.di.AchievementsModule
@@ -111,7 +110,8 @@ class AppContainer(
     )
 
     val achievements = AchievementsModule(
-        database = database
+        database = database,
+        installationRepository = installation.installationRepository
     )
 
     /**

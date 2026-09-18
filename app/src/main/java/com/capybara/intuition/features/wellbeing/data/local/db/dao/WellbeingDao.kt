@@ -21,9 +21,6 @@ interface WellbeingDao {
     @Query("SELECT * FROM wellbeing_records WHERE profileId = :profileId ORDER BY timestamp DESC LIMIT 1")
     suspend fun getLatestRecord(profileId: Int): WellbeingRecordEntity?
 
-    @Query("SELECT * FROM wellbeing_records WHERE profileId = :profileId ORDER BY timestamp DESC")
-    suspend fun getAllRecordsForProfile(profileId: Int): List<WellbeingRecordEntity>
-
     @Query("SELECT * FROM wellbeing_records WHERE timestamp >= :dayStart AND timestamp < :dayEnd")
     suspend fun getRecordsForExport(dayStart: Long, dayEnd: Long): List<WellbeingRecordEntity>
 

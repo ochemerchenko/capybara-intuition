@@ -53,12 +53,10 @@ fun PreviewDensityGraphic(
         modifier = modifier
             .fillMaxWidth()
             .aspectRatio(graphAspectRatio)
-            .clip(RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(24.dp)) // Updated to 24.dp to match Settings
             .background(colors.chartBackground)
         .padding(8.dp)
     ) {
-
-        val maxWidth = this.maxWidth
 
         val layoutModel = remember(
             constraints.maxWidth,

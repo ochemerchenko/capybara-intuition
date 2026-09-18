@@ -6,7 +6,6 @@ import com.capybara.intuition.app.AppDatabase
 import com.capybara.intuition.features.game.data.local.db.dao.GameRoundDao
 import com.capybara.intuition.features.game.data.local.db.entity.ObservedGameCardEntity
 import com.capybara.intuition.features.game.data.local.db.entity.ObservedRoundEntity
-import com.capybara.intuition.features.game.data.mapper.GameModeMapper
 import com.capybara.intuition.features.game.data.mapper.RoundResultMapper
 import com.capybara.intuition.features.game.data.mapper.RoundTypeMapper
 import com.capybara.intuition.features.game.domain.round.GameRound

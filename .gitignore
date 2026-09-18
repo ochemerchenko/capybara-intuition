@@ -15,6 +15,7 @@
 .idea/appInsightsSettings.xml
 .idea/shelf/
 .idea/httpRequests/
+.idea/dbnavigator.xml
 
 # macOS
 .DS_Store

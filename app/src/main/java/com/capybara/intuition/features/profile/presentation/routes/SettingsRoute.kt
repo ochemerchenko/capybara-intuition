@@ -1,6 +1,5 @@
 package com.capybara.intuition.features.profile.presentation.routes
 
-import android.util.Log
 import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState

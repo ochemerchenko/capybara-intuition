@@ -10,7 +10,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.window.Dialog
-import androidx.fragment.app.FragmentActivity
 import com.capybara.intuition.R
 import com.capybara.intuition.app.App
 import com.capybara.intuition.services.billing.ui.components.PurchaseLoadingSection

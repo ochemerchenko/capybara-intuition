@@ -183,21 +183,6 @@ class GameViewModel(
         }
     }
 
-    /*
-    private fun persistSession(
-        session: GameSession
-    ) {
-        viewModelScope.launch(
-            Dispatchers.IO
-        ) {
-            val sessionId = sessionRepository.insert(
-                session
-            )
-        }
-    }
-
-     */
-
     private fun persistRound(
         round: GameRound
     ) {

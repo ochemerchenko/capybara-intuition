@@ -117,7 +117,7 @@ fun TopNavigation(
         // =============================================
         // ACHIEVEMENTS
         // =============================================
-        /*
+
         val isAchievementsSelected = currentRoute == AppDestination.Achievements.route
         NavIcon(
             painter = painterResource(
@@ -135,7 +135,7 @@ fun TopNavigation(
             }
         )
 
-         */
+
 
         // =============================================
         // STATISTICS

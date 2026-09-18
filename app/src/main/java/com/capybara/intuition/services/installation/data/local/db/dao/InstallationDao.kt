@@ -4,7 +4,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import androidx.room.Update
 import com.capybara.intuition.services.installation.data.local.db.entity.InstallationEntity
 
 @Dao
@@ -18,15 +17,6 @@ interface InstallationDao {
         onConflict = OnConflictStrategy.REPLACE
     )
     suspend fun insert(
-        installation: InstallationEntity
-    )
-
-    // =========================================================
-    // UPDATE
-    // =========================================================
-
-    @Update
-    suspend fun update(
         installation: InstallationEntity
     )
 
@@ -50,8 +40,6 @@ interface InstallationDao {
         """
     )
     suspend fun countInstallations(): Int
-
-
 
 
     // =========================================================

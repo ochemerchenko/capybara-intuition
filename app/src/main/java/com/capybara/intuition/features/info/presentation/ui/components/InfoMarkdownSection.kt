@@ -1,23 +1,19 @@
 package com.capybara.intuition.features.info.presentation.ui.components
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import com.capybara.intuition.core.theme.IntuitionTheme
 import com.capybara.intuition.core.tools.markdown.MarkdownAssetLoader
 import com.capybara.intuition.core.tools.markdown.MarkdownText
+import com.capybara.intuition.features.profile.presentation.ui.components.SettingsSection
 import java.io.IOException
 
 @Composable
@@ -25,12 +21,7 @@ fun InfoMarkdownSection(
     modifier: Modifier = Modifier,
     asset: String,
 ) {
-
     val context = LocalContext.current
-    val colors = IntuitionTheme.colors
-    val typography = IntuitionTheme.typography
-
-    val contentPadding = 24.dp
     val contentSpacing = 16.dp
 
     val build_info_asset = "build_info.md"
@@ -54,21 +45,17 @@ fun InfoMarkdownSection(
         }
     }
 
-    Box(
-        modifier = modifier
-            .fillMaxSize()
-            .verticalScroll(
-                rememberScrollState()
-            )
-            .background(
-                color = colors.backgroundSection,
-                shape = RoundedCornerShape(16.dp)
-            )
+    val scrollState = rememberScrollState()
+
+    // Використовуємо SettingsSection для уніфікації вигляду.
+    // Оскільки заголовок вже є в Navigation або самому Markdown, тут можемо передати порожній.
+    SettingsSection(
+        title = "" 
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(contentPadding),
+                .verticalScroll(scrollState),
             verticalArrangement = Arrangement.spacedBy(contentSpacing)
         ) {
             MarkdownText(

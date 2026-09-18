@@ -9,7 +9,6 @@ import com.capybara.intuition.features.game.data.local.db.relation.TopologyWithC
 import com.capybara.intuition.features.game.data.local.db.relation.toDomain
 import com.capybara.intuition.features.game.data.mapper.GameModeMapper
 import com.capybara.intuition.features.game.data.mapper.topology.toDomain
-import com.capybara.intuition.features.game.domain.model.GameMode
 import com.capybara.intuition.features.profile.data.local.db.entity.ProfileEntity
 import com.capybara.intuition.features.profile.domain.model.Profile
 

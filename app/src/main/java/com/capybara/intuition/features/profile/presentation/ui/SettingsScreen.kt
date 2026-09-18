@@ -35,7 +35,6 @@ import com.capybara.intuition.core.layout.LocalAppLayoutEnvironment
 import com.capybara.intuition.features.profile.domain.model.ProfileType
 import com.capybara.intuition.features.profile.presentation.ui.sections.premium.ChildProfileCreateSection
 import com.capybara.intuition.features.profile.presentation.ui.sections.free.FreeHumanProfileSetupSection
-import com.capybara.intuition.features.profile.presentation.ui.sections.LevelSettingsSection
 import com.capybara.intuition.features.profile.presentation.ui.sections.premium.ModeSettingsSection
 import com.capybara.intuition.features.profile.presentation.ui.sections.premium.ParentAccessRecoverySection
 import com.capybara.intuition.features.profile.presentation.ui.sections.premium.PremiumHumanProfileSetupSection

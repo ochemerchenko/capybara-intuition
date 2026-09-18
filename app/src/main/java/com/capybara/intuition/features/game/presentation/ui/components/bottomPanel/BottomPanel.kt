@@ -1,7 +1,6 @@
 package com.capybara.intuition.features.game.presentation.ui.components.bottomPanel
 
 
-import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints

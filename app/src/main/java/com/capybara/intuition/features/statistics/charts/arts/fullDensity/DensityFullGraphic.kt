@@ -7,15 +7,12 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoGraph
 import androidx.compose.material.icons.filled.Face
@@ -33,6 +30,7 @@ import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.unit.dp
 import com.capybara.intuition.R
 import com.capybara.intuition.core.theme.IntuitionTheme
+import com.capybara.intuition.features.profile.presentation.ui.components.SettingsSection
 import com.capybara.intuition.features.statistics.charts.arts.fullDensity.components.drawDensityFullGraphContentArea
 import com.capybara.intuition.features.statistics.charts.arts.fullDensity.components.drawDensityFullGraphStartPointArea
 import com.capybara.intuition.features.statistics.charts.arts.fullDensity.components.drawDensityFullGraphXAxisArea
@@ -65,31 +63,28 @@ fun DensityFullGraphic(
     val typography = IntuitionTheme.typography
     val yTitle = stringResource(R.string.statistics_density_axis_title)
 
-    Column(modifier = Modifier.fillMaxWidth()) {
-        ChartHeader(
-            title = stringResource(R.string.statistics_density_full_graph_title),
-            helpBaseName = "statistics_full_chart_legend",
-            onHelpLinkClick = onHelpLinkClick
-        )
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .aspectRatio(graphAspectRatio)
-                .clip(RoundedCornerShape(16.dp))
-                .background(colors.chartBackground),
+    // Уніфікація з Settings: використовуємо SettingsSection як контейнер
+    SettingsSection(
+        titleContent = {
+            ChartHeader(
+                title = stringResource(R.string.statistics_density_full_graph_title),
+                helpBaseName = "statistics_full_chart_legend",
+                onHelpLinkClick = onHelpLinkClick
+            )
+        },
+        modifier = modifier
+    ) {
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            Column(
-                modifier = Modifier.fillMaxSize()
+            // Графік
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .aspectRatio(graphAspectRatio)
             ) {
-                // Графік забирає весь вільний простір, окрім місця для кнопок
-                Canvas(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(1f)
-                ) {
+                Canvas(modifier = Modifier.fillMaxSize()) {
                     val fullGraphLayoutModel = getFullDensityGraphLayoutModel(
                         canvasWidth = size.width,
                         canvasHeight = size.height
@@ -140,49 +135,42 @@ fun DensityFullGraphic(
                         typography = typography
                     )
                 }
+            }
 
-                // Кнопки притиснуті до низу всередині того ж самого бекграунду
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(
-                            top = 12.dp,
-                            bottom = 12.dp,
-                            start = 36.dp,
-                            end = 36.dp
-                        ),
-                    horizontalArrangement = Arrangement.SpaceEvenly,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    ChartControlStatButton(
-                        icon = Icons.Default.AutoGraph,
-                        baseColor = colors.chartUncertaintyCorridor,
-                        isSelected = noiseCorridorVisibility,
-                        onClick = onToggleNoiseCorridor,
-                    )
-                    ChartControlStatButton(
-                        icon = Icons.Default.Favorite,
-                        baseColor = colors.wellbeingPhysical,
-                        isSelected = physicalStateVisibility,
-                        onClick = onTogglePhysicalState,
-                    )
-                    ChartControlStatButton(
-                        icon = Icons.Default.Face,
-                        baseColor = colors.wellbeingHappiness,
-                        isSelected = happinessVisibility,
-                        onClick = onToggleHappiness,
-                    )
-                    ChartControlStatButton(
-                        icon = Icons.Default.Psychology,
-                        baseColor = colors.wellbeingConfidence,
-                        isSelected = selfConfidenceVisibility,
-                        onClick = onToggleSelfConfidence,
-                    )
-                }
+            // Кнопки керування
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp),
+                horizontalArrangement = Arrangement.SpaceEvenly,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                ChartControlStatButton(
+                    icon = Icons.Default.AutoGraph,
+                    baseColor = colors.chartUncertaintyCorridor,
+                    isSelected = noiseCorridorVisibility,
+                    onClick = onToggleNoiseCorridor,
+                )
+                ChartControlStatButton(
+                    icon = Icons.Default.Favorite,
+                    baseColor = colors.wellbeingPhysical,
+                    isSelected = physicalStateVisibility,
+                    onClick = onTogglePhysicalState,
+                )
+                ChartControlStatButton(
+                    icon = Icons.Default.Face,
+                    baseColor = colors.wellbeingHappiness,
+                    isSelected = happinessVisibility,
+                    onClick = onToggleHappiness,
+                )
+                ChartControlStatButton(
+                    icon = Icons.Default.Psychology,
+                    baseColor = colors.wellbeingConfidence,
+                    isSelected = selfConfidenceVisibility,
+                    onClick = onToggleSelfConfidence,
+                )
             }
         }
-
-        Spacer(modifier = Modifier.height(16.dp))
     }
 }
 

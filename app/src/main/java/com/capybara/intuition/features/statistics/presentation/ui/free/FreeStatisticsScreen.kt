@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
@@ -63,11 +62,11 @@ fun FreeStatisticsScreen (
         )
     }
 
+    // Прибрали падінг (8.dp), оскільки StatisticsScreen тепер надає уніфікований корінь з 16.dp.
     Column (
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(scrollState)
-            .padding(8.dp)
     ) {
         FreeStatisticsHeader(
             selectedLevel = selectedLevel,

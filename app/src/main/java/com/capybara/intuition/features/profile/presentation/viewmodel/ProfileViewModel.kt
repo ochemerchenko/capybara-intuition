@@ -1,6 +1,5 @@
 package com.capybara.intuition.features.profile.presentation.viewmodel
 
-import android.app.Application
 import android.content.Context
 import android.util.Log
 import androidx.compose.runtime.getValue
@@ -35,7 +34,6 @@ class ProfileViewModel(
         )
 
     val profiles: StateFlow<List<Profile>> = _profiles.asStateFlow()
-    val profilesStr = toString(profiles)
     init {
         viewModelScope.launch {
             repository
@@ -44,10 +42,6 @@ class ProfileViewModel(
                     _profiles.value = it
                 }
         }
-        Log.d(
-            "PROFILES",
-            "ProfileViewModel: at init() profiles = $profilesStr"
-        )
     }
 
 

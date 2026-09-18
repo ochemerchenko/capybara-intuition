@@ -6,7 +6,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.text.TextMeasurer
 import androidx.compose.ui.text.drawText
-import androidx.compose.ui.unit.sp
 import com.capybara.intuition.core.theme.colors.IntuitionColors
 import com.capybara.intuition.core.theme.typography.IntuitionTypography
 import com.capybara.intuition.features.statistics.charts.calculators.yScale.model.DecisionTimeYScaleModel

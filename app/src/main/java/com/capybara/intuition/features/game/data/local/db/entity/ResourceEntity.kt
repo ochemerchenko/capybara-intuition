@@ -1,7 +1,6 @@
 package com.capybara.intuition.features.game.data.local.db.entity
 
 import androidx.room.Entity
-import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 import com.capybara.intuition.features.game.domain.resource.ResourceType
 

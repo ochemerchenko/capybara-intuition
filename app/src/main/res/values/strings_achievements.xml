@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="achievements_title">Achievements</string>
+    <string name="achievements_description">Your personal records and results are shown here. Play, explore your intuition, and unlock new achievements.</string>
+    <string name="achievements_regularity_subtitle">Regularity</string>
+    <string name="achievements_regularity_no_data">But you haven’t played yet…</string>
+
+    <string name="achievements_level_activity_subtitle">Level activity</string>
+    <string name="achievements_level_activity_level_label">Level %1$d</string>
+    <string name="achievements_level_activity_max_sessions">Max sessions per day</string>
+    <string name="achievements_level_activity_max_rounds">Max rounds per session</string>
+    <string name="achievements_records_subtitle">Records</string>
+    <string name="achievements_records_max_correct">Max correct guesses</string>
+    <string name="achievements_records_max_misses">Max misses</string>
+    <string name="achievements_records_max_win_streak">Longest correct streak</string>
+    <string name="achievements_records_max_lose_streak">Longest miss streak</string>
+    <string name="achievements_regularity_last_active_days">In game for the last days</string>
+    <string name="achievements_regularity_days_with_app">Total days with app</string>
+    <string name="achievements_regularity_total_active_days">Active days</string>
+    <string name="achievements_regularity_max_streak">Longest streak, days</string>
+    <string name="achievements_regularity_max_break">Longest break, days</string>
+</resources>

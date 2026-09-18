@@ -2,6 +2,7 @@ package com.capybara.intuition.features.tester.components.generator.engine
 
 import com.capybara.intuition.features.tester.components.generator.model.TimeLineDay
 import java.time.LocalDate
+import java.time.ZoneOffset
 
 fun generateTimeline (
     periodDays: Int,
@@ -9,7 +10,7 @@ fun generateTimeline (
     selfConfidence: Double
 ): MutableList<TimeLineDay> {
 
-    val today = LocalDate.now()
+    val today = LocalDate.now(ZoneOffset.UTC)
     val startDate = today.minusDays((periodDays - 1).toLong())
 
     return MutableList(periodDays) { index ->

@@ -103,7 +103,7 @@ fun PremiumDensityDetailSection(
 
     Surface(
         modifier = modifier.fillMaxSize(),
-        shape = RoundedCornerShape(28.dp),
+        shape = RoundedCornerShape(24.dp), // Updated from 28.dp to match Settings
         color = IntuitionTheme.colors.backgroundSection
     ) {
         Column (

@@ -32,14 +32,4 @@ class InstallationRepository(
             installation
         )
     }
-
-
-    // =========================================================
-    // MAINTENANCE
-    // =========================================================
-
-    suspend fun deleteAll() {
-
-        dao.deleteAll()
-    }
 }

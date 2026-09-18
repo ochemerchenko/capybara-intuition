@@ -1,7 +1,7 @@
 package com.capybara.intuition.features.achievements.data.repository
 
 import com.capybara.intuition.features.achievements.data.local.db.dao.AchievementsDao
-import com.capybara.intuition.features.achievements.domain.model.Achievement
+import com.capybara.intuition.features.achievements.domain.model.LevelMetric
 import com.capybara.intuition.app.AppDatabase
 import kotlinx.coroutines.flow.Flow
 
@@ -11,26 +11,44 @@ class AchievementsRepository (
     private val database: AppDatabase
 ){
 
-    fun getRecords(): Flow<List<Achievement>> {
-        return dao.getRecords()
+    fun getLastActiveDays(today: String): Flow<Long> {
+        return dao.getLastActiveDays(today)
     }
 
-    fun getRegularities(): Flow<List<Achievement>> {
-        return dao.getRegularities()
+    fun getTotalActiveDays(today: String): Flow<Long> {
+        return dao.getTotalActiveDays(today)
     }
 
-
-    fun getSkills(): Flow<List<Achievement>> {
-        return dao.getSkills()
+    fun getMaxSessionsPerDayPerLevel(today: String): Flow<List<LevelMetric>> {
+        return dao.getMaxSessionsPerDayPerLevel(today)
     }
 
-
-    fun getMilestones(): Flow<List<Achievement>> {
-        return dao.getMilestones()
+    fun getMaxRoundsPerSessionPerLevel(today: String): Flow<List<LevelMetric>> {
+        return dao.getMaxRoundsPerSessionPerLevel(today)
     }
 
-    suspend fun markAllAsSeen() {
-        dao.markAllAsSeen()
+    fun getMaxCorrectPerSessionPerLevel(today: String): Flow<List<LevelMetric>> {
+        return dao.getMaxCorrectPerSessionPerLevel(today)
+    }
+
+    fun getMaxMissesPerSessionPerLevel(today: String): Flow<List<LevelMetric>> {
+        return dao.getMaxMissesPerSessionPerLevel(today)
+    }
+
+    fun getMaxWinStreakPerSessionPerLevel(today: String): Flow<List<LevelMetric>> {
+        return dao.getMaxWinStreakPerSessionPerLevel(today)
+    }
+
+    fun getMaxLoseStreakPerSessionPerLevel(today: String): Flow<List<LevelMetric>> {
+        return dao.getMaxLoseStreakPerSessionPerLevel(today)
+    }
+
+    fun getMaxStreak(today: String): Flow<Long> {
+        return dao.getMaxStreak(today)
+    }
+
+    fun getMaxBreak(today: String): Flow<Long> {
+        return dao.getMaxBreak(today)
     }
 
 }

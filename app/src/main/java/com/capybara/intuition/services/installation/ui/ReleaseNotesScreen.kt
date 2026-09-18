@@ -1,6 +1,5 @@
 package com.capybara.intuition.services.installation.ui
 
-import android.widget.Button
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

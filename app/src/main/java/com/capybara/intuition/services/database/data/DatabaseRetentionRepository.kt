@@ -1,5 +1,4 @@
 package com.capybara.intuition.services.database.data
-import com.capybara.intuition.services.database.data.DatabaseRetentionDataStore
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

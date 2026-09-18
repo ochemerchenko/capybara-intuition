@@ -5,7 +5,7 @@ import com.capybara.intuition.features.tester.components.generator.model.TimeLin
 import com.capybara.intuition.features.tester.components.generator.calculators.calculateRoundsCount
 import com.capybara.intuition.features.tester.components.generator.calculators.distributeSessionsByLevels
 import com.capybara.intuition.features.tester.model.GeneratedSession
-import java.time.ZoneId
+import java.time.ZoneOffset
 
 
 fun generateSessions(
@@ -28,7 +28,7 @@ fun generateSessions(
 
         var sessionStartedAt =
             day.date
-                .atStartOfDay(ZoneId.systemDefault())
+                .atStartOfDay(ZoneOffset.UTC)
                 .toInstant()
                 .toEpochMilli()
 

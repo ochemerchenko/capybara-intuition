@@ -4,6 +4,9 @@ package com.capybara.intuition.features.statistics.presentation.ui
 import android.app.Activity
 import android.util.Log
 import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -12,6 +15,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import com.capybara.intuition.core.ui.ExitDialog
@@ -29,6 +33,7 @@ import com.capybara.intuition.features.statistics.charts.model.data.PreviewByLev
 import com.capybara.intuition.features.statistics.charts.model.data.PreviewByModeRequest
 import com.capybara.intuition.features.statistics.charts.model.data.StatisticsQueryContext
 import com.capybara.intuition.features.statistics.presentation.viewmodel.StatisticsViewModel
+import com.capybara.intuition.core.layout.LocalAppLayoutEnvironment
 
 
 @Composable
@@ -39,7 +44,7 @@ fun StatisticsScreen(
     onNavigateToInfo: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-
+    val env = LocalAppLayoutEnvironment.current
     val emaModelingPeriod = 10
     val analyticPeriod = 30
     val noiseLevel = 3
@@ -54,8 +59,6 @@ fun StatisticsScreen(
     val availableLevels = activeProfile.minLevel .. activeProfile.maxLevel
     val dailyDensitiesPerLevel by statisticsViewModel.dailyDensitiesPerLevel.collectAsState()
     val dailyDensitiesPerMode by statisticsViewModel.dailyDensitiesPerMode.collectAsState()
-
-
 
     val now = System.currentTimeMillis()
     val historyDays = calculateRequiredHistoryDays(
@@ -144,149 +147,159 @@ fun StatisticsScreen(
     // UI
     // =====================================================
 
-    when (licenseType) {
+    // Уніфікація з Settings:
+    // 1. Root Box з падінгом env.screenContentPadding (16.dp).
+    // 2. Ігноруємо вхідний modifier.
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(env.screenContentPadding),
+        contentAlignment = Alignment.TopStart
+    ) {
+        when (licenseType) {
 
-        LicenseType.PREMIUM -> {
+            LicenseType.PREMIUM -> {
 
-            LaunchedEffect(
-                selectionState.selectedFilter
-            ) {
-                statisticsViewModel.loadDailyDensitiesPerMode(
-                    PreviewByModeRequest(
-                        mode = selectionState.selectedFilter.gameMode,
-                        levels = availableLevels.toList(),
-                        scope = StatisticsQueryContext(
-                            profileId = activeProfile.id,
-                            fromTimestamp = from,
-                            toTimestamp = now,
-                            noiseLevel = noiseLevel,
-                        )
-                    )
-                )
-            }
-
-            LaunchedEffect(
-                selectionState.selectedLevel
-            ) {
-                statisticsViewModel.loadDailyDensitiesPerLevel(
-                    PreviewByLevelRequest(
-                        level = selectionState.selectedLevel,
-                        gameModes = SessionFilter.entries.map { it.gameMode },
-                        scope = StatisticsQueryContext(
-                            profileId = activeProfile.id,
-                            fromTimestamp = from,
-                            toTimestamp = now,
-                            noiseLevel = noiseLevel,
-                        )
-                    )
-                )
-            }
-
-            val analyticalGraphsPerLevel = LinkedHashMap<SessionFilter, List<DayDensity>>()
-
-            dailyDensitiesPerLevel?.datasets?.forEach {
-                    (gameMode, dayDensities) ->
-                analyticalGraphsPerLevel[
-                    SessionFilter.fromGameMode(gameMode)
-                ] = dayDensities
-            }
-
-            if (dailyDensitiesPerLevel?.datasets?.isNotEmpty() == true ||
-                dailyDensitiesPerMode?.datasets?.isNotEmpty() == true) {
-                PremiumStatisticsScreen(
-                    availableLevels = availableLevels,
-                    selectionState = selectionState,
-                    onSelectionStateChanged = {
-                        selectionState = it
-                        Log.d(
-                            "SELECTION",
-                            "callback: $it"
-                        )
-                    },
-                    onNavigateToInfo = onNavigateToInfo,
-                    emaModelingPeriod = emaModelingPeriod,
-                    analyticPeriod = analyticPeriod,
-                    dateFrom = from,
-                    dateNow = now,
-
-                    noiseCorridorVisibility = activeProfile.noiseCorridorVisibility,
-                    physicalStateVisibility = activeProfile.physicalStateVisibility,
-                    happinessVisibility = activeProfile.happinessVisibility,
-                    selfConfidenceVisibility = activeProfile.selfConfidenceVisibility,
-
-                    onToggleNoiseCorridor = profileViewModel::toggleNoiseCorridorVisibility,
-                    onTogglePhysicalState = profileViewModel::togglePhysicalStateVisibility,
-                    onToggleHappiness = profileViewModel::toggleHappinessVisibility,
-                    onToggleSelfConfidence = profileViewModel::toggleSelfConfidenceVisibility,
-
-                    analyticalGraphsPerLevel = analyticalGraphsPerLevel,
-                    analyticalGraphsPerMode = dailyDensitiesPerMode?.datasets,
-                    onHelpLinkClick = {
-                        onNavigateToInfo()
-                    }
-                )
-            } else {
-                EmptyStatisticsScreen()
-            }
-        }
-
-        LicenseType.FREE -> {
-
-            LaunchedEffect(
-                selectionState.selectedLevel
-            ) {
-                statisticsViewModel.loadDailyDensitiesPerMode(
-                    PreviewByModeRequest(
-                        mode = GameMode.AFTER,
-                        levels = availableLevels.toList(),
-                        scope = StatisticsQueryContext(
-                            profileId = activeProfile.id,
-                            fromTimestamp = from,
-                            toTimestamp = now,
-                            noiseLevel = noiseLevel,
-                        )
-                    )
-                )
-            }
-
-            val dailyDensities = dailyDensitiesPerMode
-                ?.datasets
-                ?.get(selectionState.selectedLevel)
-                ?: emptyList()
-
-
-            if (dailyDensities.isNotEmpty()) {
-                FreeStatisticsScreen(
-                    selectedLevel = selectionState.selectedLevel,
-                    availableLevels = availableLevels,
-                    emaModelingPeriod  = emaModelingPeriod,
-                    analyticPeriod = analyticPeriod,
-                    dateFrom = from,
-                    dateNow = now,
-                    analyticalGraph = dailyDensities,
-
-                    noiseCorridorVisibility = activeProfile.noiseCorridorVisibility,
-                    physicalStateVisibility = activeProfile.physicalStateVisibility,
-                    happinessVisibility = activeProfile.happinessVisibility,
-                    selfConfidenceVisibility = activeProfile.selfConfidenceVisibility,
-
-                    onToggleNoiseCorridor = profileViewModel::toggleNoiseCorridorVisibility,
-                    onTogglePhysicalState = profileViewModel::togglePhysicalStateVisibility,
-                    onToggleHappiness = profileViewModel::toggleHappinessVisibility,
-                    onToggleSelfConfidence = profileViewModel::toggleSelfConfidenceVisibility,
-
-                    onLevelSelected = { level ->
-                        selectionState =
-                            selectionState.copy(
-                                selectedLevel = level
+                LaunchedEffect(
+                    selectionState.selectedFilter
+                ) {
+                    statisticsViewModel.loadDailyDensitiesPerMode(
+                        PreviewByModeRequest(
+                            mode = selectionState.selectedFilter.gameMode,
+                            levels = availableLevels.toList(),
+                            scope = StatisticsQueryContext(
+                                profileId = activeProfile.id,
+                                fromTimestamp = from,
+                                toTimestamp = now,
+                                noiseLevel = noiseLevel,
                             )
-                    },
-                    onHelpLinkClick = {
-                        onNavigateToInfo()
-                    }
-                )
-            } else {
-                EmptyStatisticsScreen()
+                        )
+                    )
+                }
+
+                LaunchedEffect(
+                    selectionState.selectedLevel
+                ) {
+                    statisticsViewModel.loadDailyDensitiesPerLevel(
+                        PreviewByLevelRequest(
+                            level = selectionState.selectedLevel,
+                            gameModes = SessionFilter.entries.map { it.gameMode },
+                            scope = StatisticsQueryContext(
+                                profileId = activeProfile.id,
+                                fromTimestamp = from,
+                                toTimestamp = now,
+                                noiseLevel = noiseLevel,
+                            )
+                        )
+                    )
+                }
+
+                val analyticalGraphsPerLevel = LinkedHashMap<SessionFilter, List<DayDensity>>()
+
+                dailyDensitiesPerLevel?.datasets?.forEach {
+                        (gameMode, dayDensities) ->
+                    analyticalGraphsPerLevel[
+                        SessionFilter.fromGameMode(gameMode)
+                    ] = dayDensities
+                }
+
+                if (dailyDensitiesPerLevel?.datasets?.isNotEmpty() == true ||
+                    dailyDensitiesPerMode?.datasets?.isNotEmpty() == true) {
+                    PremiumStatisticsScreen(
+                        availableLevels = availableLevels,
+                        selectionState = selectionState,
+                        onSelectionStateChanged = {
+                            selectionState = it
+                            Log.d(
+                                "SELECTION",
+                                "callback: $it"
+                            )
+                        },
+                        onNavigateToInfo = onNavigateToInfo,
+                        emaModelingPeriod = emaModelingPeriod,
+                        analyticPeriod = analyticPeriod,
+                        dateFrom = from,
+                        dateNow = now,
+
+                        noiseCorridorVisibility = activeProfile.noiseCorridorVisibility,
+                        physicalStateVisibility = activeProfile.physicalStateVisibility,
+                        happinessVisibility = activeProfile.happinessVisibility,
+                        selfConfidenceVisibility = activeProfile.selfConfidenceVisibility,
+
+                        onToggleNoiseCorridor = profileViewModel::toggleNoiseCorridorVisibility,
+                        onTogglePhysicalState = profileViewModel::togglePhysicalStateVisibility,
+                        onToggleHappiness = profileViewModel::toggleHappinessVisibility,
+                        onToggleSelfConfidence = profileViewModel::toggleSelfConfidenceVisibility,
+
+                        analyticalGraphsPerLevel = analyticalGraphsPerLevel,
+                        analyticalGraphsPerMode = dailyDensitiesPerMode?.datasets,
+                        onHelpLinkClick = {
+                            onNavigateToInfo()
+                        }
+                    )
+                } else {
+                    EmptyStatisticsScreen()
+                }
+            }
+
+            LicenseType.FREE -> {
+
+                LaunchedEffect(
+                    selectionState.selectedLevel
+                ) {
+                    statisticsViewModel.loadDailyDensitiesPerMode(
+                        PreviewByModeRequest(
+                            mode = GameMode.AFTER,
+                            levels = availableLevels.toList(),
+                            scope = StatisticsQueryContext(
+                                profileId = activeProfile.id,
+                                fromTimestamp = from,
+                                toTimestamp = now,
+                                noiseLevel = noiseLevel,
+                            )
+                        )
+                    )
+                }
+
+                val dailyDensities = dailyDensitiesPerMode
+                    ?.datasets
+                    ?.get(selectionState.selectedLevel)
+                    ?: emptyList()
+
+
+                if (dailyDensities.isNotEmpty()) {
+                    FreeStatisticsScreen(
+                        selectedLevel = selectionState.selectedLevel,
+                        availableLevels = availableLevels,
+                        emaModelingPeriod  = emaModelingPeriod,
+                        analyticPeriod = analyticPeriod,
+                        dateFrom = from,
+                        dateNow = now,
+                        analyticalGraph = dailyDensities,
+
+                        noiseCorridorVisibility = activeProfile.noiseCorridorVisibility,
+                        physicalStateVisibility = activeProfile.physicalStateVisibility,
+                        happinessVisibility = activeProfile.happinessVisibility,
+                        selfConfidenceVisibility = activeProfile.selfConfidenceVisibility,
+
+                        onToggleNoiseCorridor = profileViewModel::toggleNoiseCorridorVisibility,
+                        onTogglePhysicalState = profileViewModel::togglePhysicalStateVisibility,
+                        onToggleHappiness = profileViewModel::toggleHappinessVisibility,
+                        onToggleSelfConfidence = profileViewModel::toggleSelfConfidenceVisibility,
+
+                        onLevelSelected = { level ->
+                            selectionState =
+                                selectionState.copy(
+                                    selectedLevel = level
+                                )
+                        },
+                        onHelpLinkClick = {
+                            onNavigateToInfo()
+                        }
+                    )
+                } else {
+                    EmptyStatisticsScreen()
+                }
             }
         }
     }

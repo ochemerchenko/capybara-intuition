@@ -11,7 +11,6 @@ import com.capybara.intuition.features.profile.domain.security.PinHasher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import java.util.Objects.toString
-import java.util.UUID
 
 class ProfileRepository(
 
@@ -42,20 +41,6 @@ class ProfileRepository(
     ): ProfileEntity? {
         return profileDao.getProfileById(profileId)
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     // =================================================
     // UPDATE SINGLE PROFILE

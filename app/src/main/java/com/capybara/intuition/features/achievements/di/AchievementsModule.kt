@@ -3,9 +3,11 @@ package com.capybara.intuition.features.achievements.di
 import com.capybara.intuition.features.achievements.data.repository.AchievementsRepository
 import com.capybara.intuition.features.achievements.presentation.viewmodel.AchievementsViewModel
 import com.capybara.intuition.app.AppDatabase
+import com.capybara.intuition.services.installation.data.repository.InstallationRepository
 
 class AchievementsModule(
-    database: AppDatabase
+    database: AppDatabase,
+    installationRepository: InstallationRepository
 ) {
 
     val achievementsDao = database.achievementsDao()
@@ -16,6 +18,7 @@ class AchievementsModule(
     )
 
     val achievementsViewModel = AchievementsViewModel(
-        achievementsRepository = achievementsRepository
+        achievementsRepository = achievementsRepository,
+        installationRepository = installationRepository
     )
 }

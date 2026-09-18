@@ -7,7 +7,6 @@ import androidx.lifecycle.viewModelScope
 import com.capybara.intuition.features.game.domain.model.GameMode
 import com.capybara.intuition.features.statistics.data.repository.StatisticsRepository
 import com.capybara.intuition.features.statistics.presentation.model.SessionFilter
-import com.capybara.intuition.features.statistics.charts.model.data.DayDensity
 import com.capybara.intuition.features.statistics.charts.model.data.PreviewByLevelRequest
 import com.capybara.intuition.features.statistics.charts.model.data.PreviewByLevelResponse
 import com.capybara.intuition.features.statistics.charts.model.data.PreviewByModeRequest
@@ -22,10 +21,6 @@ class StatisticsViewModel(
 
 
 ) : ViewModel() {
-
-    private val _dailyDensities = MutableStateFlow(
-        emptyList<DayDensity>()
-    )
 
     private val _dailyDensitiesPerLevel = MutableStateFlow<PreviewByLevelResponse?>(null)
     val dailyDensitiesPerLevel: StateFlow<PreviewByLevelResponse?> = _dailyDensitiesPerLevel
@@ -51,7 +46,6 @@ class StatisticsViewModel(
                 toTimestamp = toTimestamp,
                 noiseLevel = noiseLevel,
             )
-            _dailyDensities.value = dayDensities
 
             Log.d(
                 "ANALYTICS",
